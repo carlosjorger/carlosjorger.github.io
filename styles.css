@@ -1,0 +1,37 @@
+html {
+    background-color: rgb(9, 3, 15);
+}
+
+h1 {
+    color: rgb(148, 112, 220);
+}
+
+h2 {
+    color: rgb(148, 112, 220);
+}
+
+ul {
+    list-style-type: circle;
+}
+ul li{
+    color: aqua;
+}
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: rgb(148, 112, 220);
+}
+
+/* mouse over link */
+a:hover {
+    color: aqua;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
