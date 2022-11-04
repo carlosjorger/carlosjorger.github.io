@@ -4,10 +4,13 @@ html {
 
 h1 {
     color: rgb(148, 112, 220);
+    font-family:"Lato", sans-serif;
 }
 
 h2 {
     color: rgb(148, 112, 220);
+    font-family:"Lato", sans-serif;
+
 }
 
 ul {
@@ -16,6 +19,11 @@ ul {
 ul li{
     color: aqua;
 }
+a{
+    text-decoration: none;
+    font-family:"Lato", sans-serif;
+
+}
 /* unvisited link */
 a:link {
     color: red;
@@ -23,12 +31,13 @@ a:link {
 
 /* visited link */
 a:visited {
-    color: rgb(148, 112, 220);
+    color: rgb(81, 160, 160);
 }
 
 /* mouse over link */
 a:hover {
     color: aqua;
+    text-decoration: underline;
 }
 
 /* selected link */
