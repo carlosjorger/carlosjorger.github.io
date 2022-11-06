@@ -17,7 +17,7 @@ ul {
     list-style-type: circle;
 }
 ul li{
-    color: aqua;
+    color: rgb(148, 112, 220);
 }
 a{
     text-decoration: none;
