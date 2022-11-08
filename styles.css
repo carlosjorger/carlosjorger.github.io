@@ -1,46 +1,72 @@
 html {
-    background-color: rgb(9, 3, 15);
+  background-color: rgb(9, 3, 15);
+}
+
+
+.title {
+  width: 80vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  margin-top: 3rem;
+
+}
+
+
+section {
+  width: 80vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+footer {
+  width: 80vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  margin-top: 3rem;
 }
 
 h1 {
-    color: rgb(148, 112, 220);
-    font-family:"Lato", sans-serif;
+  color: rgb(148, 112, 220);
+  font-family: "Lato", sans-serif;
 }
 
 h2 {
-    color: rgb(148, 112, 220);
-    font-family:"Lato", sans-serif;
+  color: rgb(148, 112, 220);
+  font-family: "Lato", sans-serif;
 
 }
 
 ul {
-    list-style-type: circle;
+  list-style-type: circle;
 }
-ul li{
-    color: rgb(148, 112, 220);
+
+ul li {
+  color: rgb(148, 112, 220);
 }
-a{
-    text-decoration: none;
-    font-family:"Lato", sans-serif;
+
+a {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
 
 }
+
 /* unvisited link */
 a:link {
-    color: rgb(255, 112, 112);
+  color: rgb(255, 112, 112);
 }
 
 /* visited link */
 a:visited {
-    color: rgb(81, 160, 160);
+  color: rgb(81, 160, 160);
 }
 
 /* mouse over link */
 a:hover {
-    color: aqua;
-    text-decoration: underline;
+  color: aqua;
+  text-decoration: underline;
 }
 
 /* selected link */
 a:active {
-    color: rgb(148, 112, 220);
+  color: rgb(148, 112, 220);
 }
