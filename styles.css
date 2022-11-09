@@ -4,11 +4,7 @@ html {
 
 
 .title {
-  width: 80vw;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  margin-top: 3rem;
-
+  /* background-color: red; */
 }
 
 
@@ -17,7 +13,9 @@ section {
   max-width: var(--max-width);
   margin: 0 auto;
   margin-top: 3rem;
+  height: 90vh;
 }
+
 footer {
   width: 80vw;
   max-width: var(--max-width);
@@ -25,16 +23,11 @@ footer {
   margin-top: 3rem;
 }
 
-h1 {
+h1, h2,h6 {
   color: rgb(148, 112, 220);
   font-family: "Lato", sans-serif;
 }
 
-h2 {
-  color: rgb(148, 112, 220);
-  font-family: "Lato", sans-serif;
-
-}
 
 ul {
   list-style-type: circle;
