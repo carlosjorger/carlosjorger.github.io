@@ -32,14 +32,15 @@ section {
   width: 80vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  height: 90vh;
+  height: 75vh;
 }
 
 footer {
-  width: 70vw;
+  width: 80vw;
   max-width: var(--max-width);
   margin: 0 auto;
   margin-bottom: 5rem;
+  height: 75vh;
 }
 
 
