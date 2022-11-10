@@ -1,41 +1,54 @@
 html {
   background-color: rgb(9, 3, 15);
 }
-
-
-.title {
-  /* background-color: red; */
+.presentation{
+  color: rgb(148, 112, 220);
+  font-family: "Lato", sans-serif;
+}
+#presentation{
+  color: aqua;
+  font-size: 4vw;
+}
+#presentation-main-skill{
+  font-size: 3vw;
+}
+#presentation-description{
+  font-size: 2vw;
 }
 
+.title{
+  color: rgb(148, 112, 220);
+  font-family: "Lato", sans-serif;
+  font-size: 3vw;
+}
+article p{
+  font-size: 2vw;
+  color: rgb(148, 112, 220);
+  font-family: "Lato", sans-serif;
 
+}
 section {
   width: 80vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 10rem;
   height: 90vh;
 }
 
 footer {
-  width: 80vw;
+  width: 70vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
 }
 
-h1, h2,h6 {
-  color: rgb(148, 112, 220);
-  font-family: "Lato", sans-serif;
-}
 
 
 ul {
   list-style-type: circle;
 }
 
-ul li {
-  color: rgb(148, 112, 220);
-}
 
 a {
   text-decoration: none;
