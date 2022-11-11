@@ -1,4 +1,4 @@
-html {
+:root {
   --default-font-family:"Lato", sans-serif;
   --default-font-color:rgb(148, 112, 220);
   background-color: rgb(9, 3, 15);
