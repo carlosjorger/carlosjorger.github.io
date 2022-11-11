@@ -1,10 +1,12 @@
 html {
+  --default-font-family:"Lato", sans-serif;
+  --default-font-color:rgb(148, 112, 220);
   background-color: rgb(9, 3, 15);
 }
 .presentation{
   margin-top: 10rem;
   color: rgb(148, 112, 220);
-  font-family: "Lato", sans-serif;
+  font-family: var(--default-font-family);
 }
 #presentation{
   color: aqua;
@@ -18,14 +20,14 @@ html {
 }
 
 .title{
-  color: rgb(148, 112, 220);
-  font-family: "Lato", sans-serif;
+  color: var(--default-font-color);
+  font-family: var(--default-font-family);
   font-size: 3vw;
 }
 article p{
   font-size: 2vw;
-  color: rgb(148, 112, 220);
-  font-family: "Lato", sans-serif;
+  color: var(--default-font-color);
+  font-family: var(--default-font-family);
 
 }
 section {
@@ -52,7 +54,7 @@ ul {
 
 a {
   text-decoration: none;
-  font-family: "Lato", sans-serif;
+  font-family: var(--default-font-family);
 
 }
 
@@ -74,5 +76,5 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: rgb(148, 112, 220);
+  color: var(--default-font-color);
 }
