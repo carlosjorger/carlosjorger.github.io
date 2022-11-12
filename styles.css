@@ -8,7 +8,7 @@
   color: rgb(148, 112, 220);
   font-family: var(--default-font-family);
 }
-#presentation{
+#presentation-title{
   color: aqua;
   font-size: 4vw;
 }
@@ -19,7 +19,7 @@
   font-size: 2vw;
 }
 
-.title{
+.subtitle{
   color: var(--default-font-color);
   font-family: var(--default-font-family);
   font-size: 3vw;
@@ -30,11 +30,12 @@ article p{
   font-family: var(--default-font-family);
 
 }
-section {
+
+header, section {
   width: 80vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  height: 75vh;
+  height: 80vh;
 }
 
 footer {
@@ -42,7 +43,7 @@ footer {
   max-width: var(--max-width);
   margin: 0 auto;
   margin-bottom: 5rem;
-  height: 75vh;
+  height: 80vh;
 }
 
 
@@ -53,28 +54,33 @@ ul {
 
 
 a {
-  text-decoration: none;
   font-family: var(--default-font-family);
+  color: var(--default-font-color);
 
 }
 
 /* unvisited link */
 a:link {
-  color: rgb(255, 112, 112);
-}
-
-/* visited link */
-a:visited {
-  color: rgb(81, 160, 160);
+  color: var(--default-font-family);
+  text-decoration: underline;
+  text-decoration-color: aqua;
 }
 
 /* mouse over link */
 a:hover {
-  color: aqua;
-  text-decoration: underline;
+  /* color: aqua; */
+  background-color: aqua;
+  
+  /* text-decoration:underline solid 1.5vh aqua ; */
+
+
 }
 
 /* selected link */
 a:active {
-  color: var(--default-font-color);
+  color: aqua;
+  background-color: var(--default-font-color);
+  text-decoration: none;
+
+
 }
