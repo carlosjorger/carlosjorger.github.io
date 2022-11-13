@@ -16,15 +16,18 @@ header, section {
   width: 60vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  height: 80vh;
+  margin-top: 15vh;
+  height: 85vh;
+  padding: 10vh 10vw 0;
 }
 
 footer {
   width: 60vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  margin-bottom: 5rem;
-  height: 80vh;
+  margin-top: 15vh;
+  height: 85vh;
+  padding: 10vh 10vw 0;
 }
 
 ul {
@@ -40,7 +43,6 @@ a {
 
 /* Classes */
 .presentation{
-  margin-top: 10rem;
   color: rgb(148, 112, 220);
   font-family: var(--default-font-family);
 }
@@ -50,7 +52,9 @@ a {
   font-family: var(--default-font-family);
   font-size: 3vw;
 }
-
+.contacts{
+  margin-top: 30vh;
+}
 /* Ids */
 #presentation-title{
   color: aqua;
