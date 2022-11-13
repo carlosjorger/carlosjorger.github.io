@@ -64,16 +64,14 @@ a:link {
   color: var(--default-font-family);
   text-decoration: underline;
   text-decoration-color: aqua;
+  background-image: linear-gradient(aqua,aqua);
+  background-position: 0vh 3.5vh;
+  background-repeat: no-repeat;
 }
 
 /* mouse over link */
 a:hover {
-  /* color: aqua; */
-  background-color: aqua;
-  
-  /* text-decoration:underline solid 1.5vh aqua ; */
-
-
+  background-position: 0vh 0vh;
 }
 
 /* selected link */
