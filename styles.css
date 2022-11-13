@@ -11,7 +11,9 @@ p{
   font-family: var(--default-font-family);
 
 }
-
+h1, h2{
+  font-family: 'Raleway', sans-serif !important;
+}
 header, section {
   width: 60vw;
   max-width: var(--max-width);
