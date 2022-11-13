@@ -3,29 +3,10 @@
   --default-font-color:rgb(148, 112, 220);
   background-color: rgb(9, 3, 15);
 }
-.presentation{
-  margin-top: 10rem;
-  color: rgb(148, 112, 220);
-  font-family: var(--default-font-family);
-}
-#presentation-title{
-  color: aqua;
-  font-size: 4vw;
-}
-#presentation-main-skill{
-  font-size: 3vw;
-}
-#presentation-description{
-  font-size: 2vw;
-}
-
-.subtitle{
-  color: var(--default-font-color);
-  font-family: var(--default-font-family);
-  font-size: 3vw;
-}
-article p{
-  font-size: 2vw;
+/* elements */
+p{
+  max-width: 50vw;
+  font-size: 1.5vw;
   color: var(--default-font-color);
   font-family: var(--default-font-family);
 
@@ -46,18 +27,39 @@ footer {
   height: 80vh;
 }
 
-
-
 ul {
   list-style-type: circle;
 }
-
 
 a {
   font-family: var(--default-font-family);
   color: var(--default-font-color);
 
 }
+
+
+/* Classes */
+.presentation{
+  margin-top: 10rem;
+  color: rgb(148, 112, 220);
+  font-family: var(--default-font-family);
+}
+
+.subtitle{
+  color: var(--default-font-color);
+  font-family: var(--default-font-family);
+  font-size: 3vw;
+}
+
+/* Ids */
+#presentation-title{
+  color: aqua;
+  font-size: 4vw;
+}
+#presentation-main-skill{
+  font-size: 3vw;
+}
+
 
 /* unvisited link */
 a:link {
@@ -76,9 +78,7 @@ a:hover {
 
 /* selected link */
 a:active {
-  color: aqua;
-  background-color: var(--default-font-color);
-  text-decoration: none;
-
-
+  color: aqua;  
+  background-position: 0vh 3.5vh;
+  text-decoration-color:--default-font-color;
 }
