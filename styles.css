@@ -62,7 +62,7 @@ a {
 
 
 /* unvisited link */
-a:link {
+a:link[href^="https://github.com"]{
   color: var(--default-font-family);
   text-decoration: underline;
   text-decoration-color: aqua;
@@ -72,13 +72,23 @@ a:link {
 }
 
 /* mouse over link */
-a:hover {
+a:hover[href^="https://github.com"]{
   background-position: 0vh 0vh;
 }
 
 /* selected link */
-a:active {
+a:active[href^="https://github.com"]{
   color: aqua;  
   background-position: 0vh 3.5vh;
   text-decoration-color:--default-font-color;
+}
+i{
+  font-size: 3vw !important;
+  color: rgb(148, 112, 220);
+}
+a:link[href^="mailto:"]>i{
+  background-image: none;
+}
+a:hover[href^="mailto:"]>i{
+  color: aqua;
 }
