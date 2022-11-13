@@ -13,14 +13,14 @@ p{
 }
 
 header, section {
-  width: 80vw;
+  width: 60vw;
   max-width: var(--max-width);
   margin: 0 auto;
   height: 80vh;
 }
 
 footer {
-  width: 80vw;
+  width: 60vw;
   max-width: var(--max-width);
   margin: 0 auto;
   margin-bottom: 5rem;
