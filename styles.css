@@ -40,6 +40,12 @@ a {
 
 }
 
+i{
+  font-size: 3vw !important;
+  color: rgb(148, 112, 220);
+  margin: 0.5vh 0.5vw ;
+  color: aqua;
+}
 
 /* Classes */
 .presentation{
@@ -59,18 +65,17 @@ a {
 /* Ids */
 #presentation-title{
   color: aqua;
-  font-size: 4vw;
+  font-size: 5vw;
 }
 #presentation-main-skill{
-  font-size: 3vw;
+  font-size: 4vw;
 }
 
 
 /* unvisited link */
 a:link[href^="https://github.com/CarlosJorgeR/"]{
   color: var(--default-font-family);
-  text-decoration: underline;
-  text-decoration-color: aqua !important;
+  text-decoration-color: aqua;
   background-image: linear-gradient(aqua,aqua);
   background-position: 0vh 3.5vh;
   background-repeat: no-repeat;
@@ -87,14 +92,11 @@ a:active[href^="https://github.com/CarlosJorgeR/"]{
   background-position: 0vh 3.5vh;
   text-decoration-color:--default-font-color;
 }
-i{
-  font-size: 3vw !important;
-  color: rgb(148, 112, 220);
-  margin: 0.5vh 0.5vw ;
-}
+
 a:link>i{
   background-image: none;
 }
 a:hover>i{
-  color: aqua;
+  color:black;
+  text-shadow: 0px 0px 15px aqua;
 }
