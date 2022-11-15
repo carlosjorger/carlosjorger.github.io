@@ -1,20 +1,25 @@
 :root {
-  --default-font-family:"Lato", sans-serif;
-  --default-font-color:rgb(148, 112, 220);
+  --default-font-family: "Lato", sans-serif;
+  --default-font-color: rgb(148, 112, 220);
   background-color: rgb(9, 3, 15);
 }
+
 /* elements */
-p{
+p {
   max-width: 50vw;
   font-size: 1.5vw;
   color: var(--default-font-color);
   font-family: var(--default-font-family);
 
 }
-h1, h2{
+
+h1,
+h2 {
   font-family: 'Raleway', sans-serif !important;
 }
-header, section {
+
+header,
+section {
   width: 60vw;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -27,7 +32,7 @@ footer {
   max-width: var(--max-width);
   margin: 0 auto;
   margin-top: 20vh;
-  height: 80vh; 
+  height: 80vh;
 }
 
 ul {
@@ -40,69 +45,87 @@ a {
 
 }
 
-i{
+i {
   font-size: 3vw !important;
   color: rgb(148, 112, 220);
-  margin: 0.5vh 0.5vw ;
+  margin: 0.5vh 0.5vw;
   color: aqua;
 }
 
 /* Classes */
-.presentation{
+.presentation {
   padding-top: 5vh;
   color: rgb(148, 112, 220);
   font-family: var(--default-font-family);
- 
+
 }
 
-.subtitle{
+.subtitle {
   color: var(--default-font-color);
   font-family: var(--default-font-family);
   font-size: 3vw;
- 
+
 }
-.contacts{
+
+.contacts {
   padding-top: 20vh;
 }
+
+
+.reveal {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translate(0vh, 2vh);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translate(0vh, 0vh);
+
+}
+
 /* Ids */
-#presentation-title{
+#presentation-title {
   color: aqua;
   font-size: 5vw;
   animation: 1s show-presentation ease;
 }
 
-@keyframes show-presentation{
-  0%{
-    color: transparent;
-    transform: translate(0px,-10px);
+@keyframes show-presentation {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -10px);
   }
- 
+
 }
 
-#presentation-main-skill{
-  color: transparent;
+#presentation-main-skill {
+  opacity: 0;
   font-size: 4vw;
-  animation-name:show-presentation-main-skill;
-  animation-timing-function:ease;
+  animation-name: show-presentation-main-skill;
+  animation-timing-function: ease;
   animation-duration: 1s;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
-@keyframes show-presentation-main-skill{
-  0%{
-    color: transparent;
-    transform: translate(0px,-10px);
+
+@keyframes show-presentation-main-skill {
+  0% {
+    opacity: 0;
+    transform: translate(0px, -10px);
   }
-  100%{
-    color: var(--default-font-color);
-    transform: translate(0px,0px);
+
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
 
   }
 }
-#presentation-description{
-  color: transparent;
-  animation-name:show-presentation-main-skill;
-  animation-timing-function:ease;
+
+#presentation-description {
+  opacity: 0;
+  animation-name: show-presentation-main-skill;
+  animation-timing-function: ease;
   animation-duration: 1s;
   animation-delay: 0.4s;
   animation-fill-mode: forwards;
@@ -110,10 +133,10 @@ i{
 
 
 /* unvisited link */
-a:link[href^="https://github.com/CarlosJorgeR/"]{
+a:link[href^="https://github.com/CarlosJorgeR/"] {
   color: var(--default-font-family);
   text-decoration-color: aqua;
-  background-image: linear-gradient(aqua,aqua);
+  background-image: linear-gradient(aqua, aqua);
   background-position: 0vh 3.5vh;
   background-repeat: no-repeat;
   transition: background-position 0.5s ease-in-out;
@@ -121,23 +144,24 @@ a:link[href^="https://github.com/CarlosJorgeR/"]{
 }
 
 /* mouse over link */
-a:hover[href^="https://github.com/CarlosJorgeR/"]{
+a:hover[href^="https://github.com/CarlosJorgeR/"] {
   background-position: 0vh 0vh;
 }
 
 /* selected link */
-a:active[href^="https://github.com/CarlosJorgeR/"]{
-  color: aqua;  
+a:active[href^="https://github.com/CarlosJorgeR/"] {
+  color: aqua;
   background-position: 0vh 3.5vh;
-  text-decoration-color:aqua;
+  text-decoration-color: aqua;
 }
 
-a:link>i{
+a:link>i {
   background-image: none;
   transition: all 0.5s ease-in-out;
 
 }
-a:hover>i{
-  color:black;
+
+a:hover>i {
+  color: black;
   text-shadow: 0px 0px 15px aqua;
 }
