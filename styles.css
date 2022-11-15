@@ -69,8 +69,14 @@ i {
 
 .contacts {
   padding-top: 20vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
+.contacts-item{
+  text-align: center;
+}
 
 .reveal {
   opacity: 0;
