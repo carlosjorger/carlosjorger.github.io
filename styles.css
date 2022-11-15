@@ -79,6 +79,8 @@ a:link[href^="https://github.com/CarlosJorgeR/"]{
   background-image: linear-gradient(aqua,aqua);
   background-position: 0vh 3.5vh;
   background-repeat: no-repeat;
+  transition: background-position 0.5s ease-in-out 0.1s;
+
 }
 
 /* mouse over link */
@@ -90,11 +92,13 @@ a:hover[href^="https://github.com/CarlosJorgeR/"]{
 a:active[href^="https://github.com/CarlosJorgeR/"]{
   color: aqua;  
   background-position: 0vh 3.5vh;
-  text-decoration-color:--default-font-color;
+  text-decoration-color:aqua;
 }
 
 a:link>i{
   background-image: none;
+  transition: all 0.5s ease-in-out 0.1s;
+
 }
 a:hover>i{
   color:black;
