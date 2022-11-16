@@ -6,7 +6,6 @@
 
 /* elements */
 p {
-  max-width: 50vw;
   font-size: 1.5vw;
   color: var(--default-font-color);
   font-family: var(--default-font-family);
@@ -14,7 +13,8 @@ p {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: 'Raleway', sans-serif !important;
 }
 
@@ -31,10 +31,18 @@ footer {
   width: 60vw;
   max-width: var(--max-width);
   margin: 0 auto;
-  margin-top: 20vh;
-  height: 80vh;
+  height: 20vh;
 }
-
+.footer{
+  color: var(--default-font-color);
+  font-family: var(--default-font-family);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer-item{
+  text-align: center;
+}
 ul {
   list-style-type: circle;
 }
@@ -139,30 +147,33 @@ i {
 
 
 /* unvisited link */
-a:link[href^="https://github.com/CarlosJorgeR/"] {
-  color: var(--default-font-family);
+a:link {
+  color: aqua;
   text-decoration-color: aqua;
   background-image: linear-gradient(aqua, aqua);
   background-position: 0vh 3.5vh;
   background-repeat: no-repeat;
-  transition: background-position 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 
 }
 
 /* mouse over link */
-a:hover[href^="https://github.com/CarlosJorgeR/"] {
+a:hover {
+  color: var(--default-font-family);
   background-position: 0vh 0vh;
 }
 
 /* selected link */
-a:active[href^="https://github.com/CarlosJorgeR/"] {
+a:active {
   color: aqua;
   background-position: 0vh 3.5vh;
   text-decoration-color: aqua;
 }
-
+a:link:has(i){
+  background-image:none;
+}
 a:link>i {
-  background-image: none;
+  background-position: 0vh 0vh;
   transition: all 0.5s ease-in-out;
 
 }
