@@ -24,7 +24,7 @@ section {
   max-width: var(--max-width);
   margin: 0 auto;
   margin-top: 20vh;
-  height: 80vh;
+  height: 70vh;
 }
 
 footer {
@@ -76,8 +76,6 @@ i {
 }
 
 .contacts {
-  padding-top: 20vh;
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,8 +86,8 @@ i {
 
 .reveal {
   opacity: 0;
-  transition: all 1s ease;
-  transform: translate(0vh, 2vh);
+  transition: all 1s ease-in;
+  transform: translate(0vh, 3vh);
 }
 
 .reveal.active {
@@ -164,11 +162,6 @@ a:hover {
 }
 
 /* selected link */
-a:active {
-  color: aqua;
-  background-position: 0vh 3.5vh;
-  text-decoration-color: aqua;
-}
 a:link:has(i){
   background-image:none;
 }
