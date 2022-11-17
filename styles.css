@@ -2,14 +2,14 @@
   --default-font-family: "Lato", sans-serif;
   --default-font-color: rgb(148, 112, 220);
   background-color: rgb(9, 3, 15);
+  font-size: 25px;
 }
 
 /* elements */
 p {
-  font-size: 1.5vw;
   color: var(--default-font-color);
   font-family: var(--default-font-family);
-
+  max-width: 650px;
 }
 
 h1,
@@ -22,15 +22,16 @@ header,
 section {
   width: 60%;
   margin: 0 auto;
-  margin-top: 20vh;
-  height: 60vh;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  height: 70vh;
 }
 
 footer {
   width: 60%;
   margin: 0 auto;
-  margin-bottom: 10vh;
-  height: 20vh;
+  margin-bottom: 5em;
+  height: 15vh;
 }
 .footer{
   color: var(--default-font-color);
@@ -54,24 +55,22 @@ a {
 }
 
 i {
-  font-size: 3vw !important;
   color: rgb(148, 112, 220);
-  margin: 0.5vh 0.5vw;
+  margin: 0.2em 0.2em;
   color: aqua;
 }
 
 /* Classes */
 .presentation {
-  padding-top: 5vh;
   color: rgb(148, 112, 220);
   font-family: var(--default-font-family);
-
 }
 
 .subtitle {
   color: var(--default-font-color);
   font-family: var(--default-font-family);
-  font-size: 3vw;
+  /* for font-size I use to avoid cascading problem*/
+  font-size: 1.7rem;
 
 }
 
@@ -79,6 +78,7 @@ i {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 .contacts-item{
   text-align: center;
@@ -98,8 +98,8 @@ i {
 
 /* Ids */
 #presentation-title {
+  font-size: 2.6rem;
   color: aqua;
-  font-size: 5vw;
   animation: 1s show-presentation ease;
 }
 
@@ -112,8 +112,8 @@ i {
 }
 
 #presentation-main-skill {
+  font-size: 2.1rem;
   opacity: 0;
-  font-size: 4vw;
   animation-name: show-presentation-main-skill;
   animation-timing-function: ease;
   animation-duration: 1s;
