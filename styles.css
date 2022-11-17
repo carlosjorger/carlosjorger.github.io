@@ -43,9 +43,11 @@ footer {
   margin-bottom: 5em;
   height: 25vh;
 }
-article{
+
+article {
   padding: 2.5em;
 }
+
 .footer {
   color: var(--default-font-color);
   font-family: var(--default-font-family);
@@ -56,6 +58,7 @@ article{
 }
 
 .footer-item {
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -193,26 +196,38 @@ a:hover>i {
   color: black;
   text-shadow: 0px 0px 15px aqua;
 }
-.br-show{
+
+.br-show {
   display: none;
 }
+
 @media (max-width: 1100px) {
   :root {
-    font-size: 22px;
+    font-size: 23px;
+
+
   }
+
   header,
   section,
   footer {
     width: 75%;
   }
+
+  p {
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 885px) {
   :root {
-    font-size: 15px;
+    font-size: 17px;
 
   }
 
+  p {
+    max-width: 450px;
+  }
   header,
   section,
   footer {
@@ -222,18 +237,25 @@ a:hover>i {
 
 @media (max-width: 665px) {
   :root {
-    font-size: 10px;
+    font-size: 13px;
   }
-
+  p {
+    max-width: 330px;
+  }
   header,
   section,
   footer {
     width: 80%;
   }
 }
-@media (max-width: 340px) {
+
+@media (max-width: 450px) {
   :root {
-    font-size: 10px;
+    font-size: 13px;
+  }
+
+  p {
+    max-width: 80%;
   }
 
   header,
@@ -241,17 +263,22 @@ a:hover>i {
   footer {
     width: 80%;
   }
-  .br-show{
-    display:inline;
+
+  .br-show {
+    display: inline;
   }
 }
-@media (min-height:700px){
+
+@media (min-height:700px) {
+
   header,
   section {
     height: 80vh;
   }
 }
-@media (min-height:800px){
+
+@media (min-height:800px) {
+
   header,
   section {
     height: 90vh;
