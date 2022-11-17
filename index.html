@@ -22,20 +22,30 @@
   <link rel="icon" type="image/x-icon" href="images/github.ico">
   <title>My github repositories</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
   <script src="index.js"></script>
-
-
-
 </head>
 
 <body>
   <header>
+    <nav>
+      <ul class="menu">
+        <li id="home"> <a href="#"><i class="fa fa-house fa-xl"></i></a></li>
+        <li>
+          <a class="nav-link" href="#work">Work</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section>
     <div class="presentation">
       <h1 id="presentation-title">Hi, I am <br class='br-show'>Carlos Jorge!</h1>
       <h2 id="presentation-main-skill">I'm an <br class='br-show'>full-stack engineer</h2>
@@ -44,17 +54,19 @@
         Currently, I'm working as full-stack engineer focused in building .net application, and angular applications.
       </p>
     </div>
-  </header>
+  </section>
   <section>
-    <article>
+    <article id="work">
       <h2 class="subtitle reveal">These are my github repositories:</h2>
       <ul>
         <li class="reveal">
-          <p><a href="https://github.com/CarlosJorgeR/openEcommerce" target="_blank" rel="noopener noreferrer">
+          <p><a class="work-link" href="https://github.com/CarlosJorgeR/openEcommerce" target="_blank"
+              rel="noopener noreferrer">
               OpenEcommerce</a> is an ecommerce builded with .net.</p>
         </li>
         <li class="reveal">
-          <p><a href="https://github.com/CarlosJorgeR/portfolio" target="_blank" rel="noopener noreferrer">
+          <p><a class="work-link" href="https://github.com/CarlosJorgeR/portfolio" target="_blank"
+              rel="noopener noreferrer">
               My portfolio</a> is a personal portfolio builded with angular.</p>
         </li>
       </ul>
@@ -62,7 +74,7 @@
   </section>
   <footer>
     <article>
-      <div class="contacts reveal">
+      <div id="contact" class="contacts reveal">
         <h1 class="subtitle contacts-item">Contact</h1>
         <div class="contacts-item">
           <a href="mailto:rodriguezcuelloc@gmail.com"><i class="fab fa-google fa-2xl"></i></a>
@@ -74,12 +86,13 @@
     </article>
     <article>
       <div class="footer reveal">
-        <p class="footer-item"> 
+        <p class="footer-item">
           © 2022 Carlos Jorge
           </br>
-          <a href="https://github.com/CarlosJorgeR/carlosjorger.github.io">Published</a> in <a href="https://pages.github.com/">Github Page</a>
+          <a href="https://github.com/CarlosJorgeR/carlosjorger.github.io">Published</a> in <a
+            href="https://pages.github.com/">Github Page</a>
         </p>
-       
+
       </div>
     </article>
   </footer>

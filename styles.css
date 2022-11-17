@@ -3,9 +3,11 @@
   --default-font-color: rgb(148, 112, 220);
   background-color: rgb(9, 3, 15);
   font-size: 25px;
-
+  scroll-behavior: smooth;
 }
-
+body{
+  margin: 0;
+}
 /* elements */
 p {
   color: var(--default-font-color);
@@ -24,7 +26,9 @@ h3 {
 }
 
 /* % always with the property width */
-header,
+header{
+
+}
 section {
   /* for guide */
   /* border: solid 3px aqua; */
@@ -164,7 +168,7 @@ i {
 
 
 /* unvisited link */
-a:link {
+.work-link:link {
   color: aqua;
   text-decoration-color: aqua;
   background-image: linear-gradient(aqua, aqua);
@@ -174,9 +178,12 @@ a:link {
   transition: all 0.5s ease-in-out;
 
 }
-
+.work-link:visited{
+  color: aqua;
+  text-decoration-color: aqua;
+}
 /* mouse over link */
-a:hover {
+.work-link:hover {
   color: var(--default-font-family);
   background-size: 100% 100%;
 }
@@ -200,7 +207,37 @@ a:hover>i {
 .br-show {
   display: none;
 }
+nav{
+  position:fixed;
+  top: 0;
+  width: 100%;
+}
+.menu{
+  list-style-type: none;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+#home{
+  padding: 0.5em;
+}
+.nav-link{
+  padding: 1em;
+  color: white;
+  text-decoration:none;
+  /* background-image:none; */
+  transition: all 0.5s ease-in-out;
 
+}
+.nav-link:hover{
+  background-color: rgb(36, 28, 45);
+  color: aqua !important
+}
+.nav-link:visited{
+  color: white ;
+  text-decoration:none;
+  background-image:none;
+}
 @media (max-width: 1100px) {
   :root {
     font-size: 23px;
@@ -208,7 +245,6 @@ a:hover>i {
 
   }
 
-  header,
   section,
   footer {
     width: 75%;
@@ -228,7 +264,7 @@ a:hover>i {
   p {
     max-width: 450px;
   }
-  header,
+
   section,
   footer {
     width: 70%;
@@ -242,7 +278,6 @@ a:hover>i {
   p {
     max-width: 330px;
   }
-  header,
   section,
   footer {
     width: 80%;
@@ -258,7 +293,6 @@ a:hover>i {
     max-width: 80%;
   }
 
-  header,
   section,
   footer {
     width: 80%;
@@ -271,7 +305,6 @@ a:hover>i {
 
 @media (min-height:700px) {
 
-  header,
   section {
     height: 80vh;
   }
@@ -279,7 +312,6 @@ a:hover>i {
 
 @media (min-height:800px) {
 
-  header,
   section {
     height: 90vh;
   }
