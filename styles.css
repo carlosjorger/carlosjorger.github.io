@@ -27,6 +27,7 @@ h3 {
 
 /* % always with the property width */
 header{
+  /* background-color: rgba(9, 3, 15, 0.551); */
 
 }
 section {
@@ -37,6 +38,8 @@ section {
   margin-top: 5em;
   margin-bottom: 5em;
   height: 70vh;
+  z-index: 2;
+  
 }
 
 footer {
@@ -211,6 +214,9 @@ nav{
   position:fixed;
   top: 0;
   width: 100%;
+  z-index: 9999;
+  background-color: rgba(9, 3, 15, 0.9);
+
 }
 .menu{
   list-style-type: none;
