@@ -161,16 +161,26 @@ nav {
   font-size: 0.6em;
   background-color: rgb(25, 18, 33);
 }
-#open-ecommerce{
-  border-left: groove 0.2rem aqua;
-  border-top: groove 0.2rem aqua;
-  margin-left: 5em;
+.card-links{
+  padding: 0.5em;
+  display: flex;
 }
-#angular-portfolio{
+#open-ecommerce{
   border-right: groove 0.2rem aqua;
   border-top: groove 0.2rem aqua;
-  margin-right: 5em;
+  border-bottom: groove 0.2rem aqua;
 
+  margin-left: 3em;
+}
+#angular-portfolio{
+  border-left: groove 0.2rem aqua;
+  border-top: groove 0.2rem aqua;
+  border-bottom: groove 0.2rem aqua;
+
+  margin-right: 3em;
+}
+#angular-portfolio .card-links{
+  justify-content: end;
 }
 /* Ids */
 #presentation-title {
