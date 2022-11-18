@@ -114,7 +114,6 @@ nav {
   text-align: center;
 }
 
-/* Classes */
 .presentation {
   color: rgb(148, 112, 220);
   font-family: var(--default-font-family);
@@ -140,8 +139,36 @@ nav {
   text-align: center;
 }
 
+.card-project{
 
+  padding: 0.5em;
+  margin: 1em;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--default-font-family);
+}
+.card-title{
+  color: var(--default-font-color);
 
+}
+.card-description{
+  padding: 1em;
+  color: rgb(153, 249, 249);
+  font-size: 0.6em;
+  background-color: rgb(25, 18, 33);
+}
+#open-ecommerce{
+  border-left: groove 0.2rem aqua;
+  border-top: groove 0.2rem aqua;
+  margin-left: 5em;
+}
+#angular-portfolio{
+  border-right: groove 0.2rem aqua;
+  border-top: groove 0.2rem aqua;
+  margin-right: 5em;
+
+}
 /* Ids */
 #presentation-title {
   font-size: 2.6rem;
@@ -274,7 +301,9 @@ nav {
 
 
   }
-
+  .card-project{
+    width: 65%;
+  }
   section,
   footer {
     width: 75%;
@@ -290,14 +319,16 @@ nav {
     font-size: 17px;
 
   }
-
+  .card-project{
+    width: 70%;
+  }
   p {
     max-width: 450px;
   }
 
   section,
   footer {
-    width: 70%;
+    width: 75%;
   }
 }
 
@@ -305,7 +336,9 @@ nav {
   :root {
     font-size: 13px;
   }
-
+  .card-project{
+    width: 80%;
+  }
   p {
     max-width: 330px;
   }
