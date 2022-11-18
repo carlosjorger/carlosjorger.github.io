@@ -5,9 +5,11 @@
   font-size: 25px;
   scroll-behavior: smooth;
 }
-body{
+
+body {
   margin: 0;
 }
+
 /* elements */
 p {
   color: var(--default-font-color);
@@ -26,10 +28,7 @@ h3 {
 }
 
 /* % always with the property width */
-header{
-  /* background-color: rgba(9, 3, 15, 0.551); */
 
-}
 section {
   /* for guide */
   /* border: solid 3px aqua; */
@@ -39,7 +38,7 @@ section {
   margin-bottom: 5em;
   height: 70vh;
   z-index: 2;
-  
+
 }
 
 footer {
@@ -181,10 +180,12 @@ i {
   transition: all 0.5s ease-in-out;
 
 }
-.work-link:visited{
+
+.work-link:visited {
   color: aqua;
   text-decoration-color: aqua;
 }
+
 /* mouse over link */
 .work-link:hover {
   color: var(--default-font-family);
@@ -210,40 +211,52 @@ a:hover>i {
 .br-show {
   display: none;
 }
-nav{
-  position:fixed;
+
+nav {
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 9999;
   background-color: rgba(9, 3, 15, 0.9);
 
 }
-.menu{
+
+.menu {
   list-style-type: none;
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: space-between;
 }
-#home{
+
+#home {
   padding: 0.5em;
+  align-self: center;
 }
-.nav-link{
+
+.nav-link {
   padding: 1em;
   color: white;
-  text-decoration:none;
+  text-decoration: none;
   /* background-image:none; */
   transition: all 0.5s ease-in-out;
 
 }
-.nav-link:hover{
+
+.nav-link:hover {
   background-color: rgb(36, 28, 45);
   color: aqua !important
 }
-.nav-link:visited{
-  color: white ;
-  text-decoration:none;
-  background-image:none;
+
+.nav-link:visited {
+  color: white;
+  text-decoration: none;
+  background-image: none;
 }
+
+.menu>li {
+  align-self: center;
+}
+
 @media (max-width: 1100px) {
   :root {
     font-size: 23px;
@@ -281,9 +294,11 @@ nav{
   :root {
     font-size: 13px;
   }
+
   p {
     max-width: 330px;
   }
+
   section,
   footer {
     width: 80%;
