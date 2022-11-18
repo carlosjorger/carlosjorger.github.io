@@ -35,9 +35,9 @@ section {
   /* border: solid 3px aqua; */
   width: 60%;
   margin: 0 auto;
-  margin-top: 5em;
-  margin-bottom: 5em;
-  height: 25em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  height: calc(100vh - 4em);
   z-index: 2;
 
 }
@@ -165,19 +165,22 @@ nav {
   padding: 0.5em;
   display: flex;
 }
+.card-projects{
+  display: flex;
+  flex-direction: column;
+}
 #open-ecommerce{
   border-right: groove 0.2rem aqua;
   border-top: groove 0.2rem aqua;
   border-bottom: groove 0.2rem aqua;
-
-  margin-left: 3em;
+  align-self:flex-end;
 }
 #angular-portfolio{
   border-left: groove 0.2rem aqua;
   border-top: groove 0.2rem aqua;
   border-bottom: groove 0.2rem aqua;
+  align-self:flex-start;
 
-  margin-right: 3em;
 }
 #angular-portfolio .card-links{
   justify-content: end;
@@ -332,9 +335,6 @@ nav {
     font-size: 20px;
 
   }
-  .card-project{
-    width: 70%;
-  }
   p {
     max-width: 450px;
   }
@@ -342,7 +342,6 @@ nav {
   section,
   footer {
     width: 75%;
-    height: 30em;
 
   }
 }
@@ -351,9 +350,6 @@ nav {
   :root {
     font-size: 15px;
   }
-  .card-project{
-    width: 80%;
-  }
   p {
     max-width: 330px;
   }
@@ -361,7 +357,6 @@ nav {
   section,
   footer {
     width: 80%;
-    height: 35em;
 
   }
 }
@@ -370,9 +365,6 @@ nav {
   :root {
     font-size: 17px;
   }
-  .card-project{
-    width: 85%;
-  }
   p {
     max-width: 85%;
   }
@@ -380,7 +372,23 @@ nav {
   section,
   footer {
     width: 83%;
-    height: 40em;
+  }
+
+  .br-show {
+    display: inline;
+  }
+}
+@media (max-width: 350px) {
+  :root {
+    font-size: 13px;
+  }
+  p {
+    max-width: 90%;
+  }
+
+  section,
+  footer {
+    width: 88%;
   }
 
   .br-show {
