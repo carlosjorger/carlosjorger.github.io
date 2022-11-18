@@ -29,7 +29,7 @@ h3 {
 }
 
 /* % always with the property width */
-
+footer ,
 section {
   /* for guide */
   /* border: solid 3px aqua; */
@@ -37,7 +37,7 @@ section {
   margin: 0 auto;
   margin-top: 5em;
   margin-bottom: 5em;
-  height: 70vh;
+  height: 25em;
   z-index: 2;
 
 }
@@ -47,8 +47,8 @@ footer {
   /* border: solid 3px aqua; */
   width: 60%;
   margin: 0 auto;
+  margin-top: 5em;
   margin-bottom: 5em;
-  height: 25vh;
 }
 
 article {
@@ -99,8 +99,11 @@ nav {
 
 
 /* || SITEWIDE */
-
-.footer {
+.footer{
+  display: grid;
+  height: inherit;
+}
+.footer-info {
   color: var(--default-font-color);
   font-family: var(--default-font-family);
   display: flex;
@@ -109,7 +112,7 @@ nav {
 
 }
 
-.footer-item {
+.footer-info-item {
   margin: 0 auto;
   text-align: center;
 }
@@ -185,7 +188,7 @@ nav {
 }
 
 #presentation-main-skill {
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   opacity: 0;
   animation-name: show-presentation-main-skill;
   animation-timing-function: ease;
@@ -297,7 +300,7 @@ nav {
 
 @media (max-width: 1100px) {
   :root {
-    font-size: 23px;
+    font-size: 25px;
 
 
   }
@@ -316,7 +319,7 @@ nav {
 
 @media (max-width: 885px) {
   :root {
-    font-size: 17px;
+    font-size: 20px;
 
   }
   .card-project{
@@ -329,12 +332,14 @@ nav {
   section,
   footer {
     width: 75%;
+    height: 30em;
+
   }
 }
 
 @media (max-width: 665px) {
   :root {
-    font-size: 13px;
+    font-size: 15px;
   }
   .card-project{
     width: 80%;
@@ -346,38 +351,29 @@ nav {
   section,
   footer {
     width: 80%;
+    height: 35em;
+
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 510px) {
   :root {
-    font-size: 13px;
+    font-size: 17px;
   }
-
+  .card-project{
+    width: 85%;
+  }
   p {
-    max-width: 80%;
+    max-width: 85%;
   }
 
   section,
   footer {
-    width: 80%;
+    width: 83%;
+    height: 40em;
   }
 
   .br-show {
     display: inline;
-  }
-}
-
-@media (min-height:700px) {
-
-  section {
-    height: 80vh;
-  }
-}
-
-@media (min-height:800px) {
-
-  section {
-    height: 90vh;
   }
 }
