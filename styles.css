@@ -88,6 +88,7 @@ i {
 .presentation {
   color: rgb(148, 112, 220);
   font-family: var(--default-font-family);
+  padding: 1em;
 }
 
 .subtitle {
@@ -222,14 +223,14 @@ nav {
 }
 
 .menu {
-  list-style-type: none;
+  padding: 0.5em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 #home {
-  padding: 0.5em;
+  padding: 1em;
   align-self: center;
 }
 
@@ -252,7 +253,9 @@ nav {
   text-decoration: none;
   background-image: none;
 }
-
+.menu{
+  margin: 0;
+}
 .menu>li {
   align-self: center;
 }
