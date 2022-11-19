@@ -153,6 +153,8 @@ nav {
 }
 .card-title{
   color: var(--default-font-color);
+  padding: 0.5em;
+
 
 }
 .card-description{
