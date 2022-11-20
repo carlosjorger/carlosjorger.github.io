@@ -29,7 +29,7 @@ h3 {
 }
 
 /* % always with the property width */
-footer ,
+footer,
 section {
   /* for guide */
   /* border: solid 3px aqua; */
@@ -42,14 +42,7 @@ section {
 
 }
 
-footer {
-  /* for guide */
-  /* border: solid 3px aqua; */
-  width: 60%;
-  margin: 0 auto;
-  margin-top: 5em;
-  margin-bottom: 5em;
-}
+
 
 article {
   padding: 2.5em;
@@ -99,29 +92,6 @@ nav {
 
 
 /* || SITEWIDE */
-.footer{
-  display: grid;
-  height: inherit;
-}
-.footer-info {
-  color: var(--default-font-color);
-  font-family: var(--default-font-family);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-}
-
-.footer-info-item {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.presentation {
-  color: rgb(148, 112, 220);
-  font-family: var(--default-font-family);
-  padding: 1em;
-}
 
 .subtitle {
   color: var(--default-font-color);
@@ -131,68 +101,8 @@ nav {
 
 }
 
-.contacts {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-}
-
-.contacts-item {
-  text-align: center;
-}
-
-.card-project{
-
-  padding: 0.5em;
-  margin: 1em;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  font-family: var(--default-font-family);
-}
-.card-title{
-  color: var(--default-font-color);
-  padding: 0.5em;
-
-
-}
-.card-description{
-  padding: 1em;
-  color: rgb(153, 249, 249);
-  font-size: 0.6em;
-  background-color: rgb(25, 18, 33);
-}
-.card-links{
-  padding: 0.5em;
-  display: flex;
-}
-.card-projects{
-  display: flex;
-  flex-direction: column;
-}
-#open-ecommerce{
-  border-right: groove 0.2rem aqua;
-  border-top: groove 0.2rem aqua;
-  border-bottom: groove 0.2rem aqua;
-  align-self:flex-end;
-}
-#angular-portfolio{
-  border-left: groove 0.2rem aqua;
-  border-top: groove 0.2rem aqua;
-  border-bottom: groove 0.2rem aqua;
-  align-self:flex-start;
-
-}
-#angular-portfolio .card-links{
-  justify-content: end;
-}
 /* Ids */
-#presentation-title {
-  font-size: 2.6rem;
-  color: aqua;
-  animation: 1s show-presentation ease;
-}
+
 
 @keyframes show-presentation {
   0% {
@@ -200,16 +110,6 @@ nav {
     transform: translate(0px, -10px);
   }
 
-}
-
-#presentation-main-skill {
-  font-size: 1.8rem;
-  opacity: 0;
-  animation-name: show-presentation-main-skill;
-  animation-timing-function: ease;
-  animation-duration: 1s;
-  animation-delay: 0.2s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes show-presentation-main-skill {
@@ -224,16 +124,6 @@ nav {
 
   }
 }
-
-#presentation-description {
-  opacity: 0;
-  animation-name: show-presentation-main-skill;
-  animation-timing-function: ease;
-  animation-duration: 1s;
-  animation-delay: 0.4s;
-  animation-fill-mode: forwards;
-}
-
 
 /* unvisited link */
 .work-link:link {
@@ -259,7 +149,7 @@ nav {
 }
 
 /* selected link */
-.icon-link{
+.icon-link {
   background-image: none;
 }
 
@@ -273,55 +163,17 @@ nav {
   text-shadow: 0px 0px 15px aqua;
 }
 
-.menu {
-  padding: 0.5em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#home {
-  padding: 1em;
-  align-self: center;
-}
-
-.nav-link {
-  padding: 1em;
-  color: white;
-  text-decoration: none;
-  /* background-image:none; */
-  transition: all 0.5s ease-in-out;
-
-}
-
-.nav-link:hover {
-  background-color: rgb(36, 28, 45);
-  color: aqua !important
-}
-
-.nav-link:visited {
-  color: white;
-  text-decoration: none;
-  background-image: none;
-}
-
-.menu {
-  margin: 0;
-}
-
-.menu>li {
-  align-self: center;
-}
-
 @media (max-width: 1100px) {
   :root {
     font-size: 25px;
 
 
   }
-  .card-project{
+
+  .card-project {
     width: 65%;
   }
+
   section,
   footer {
     width: 75%;
@@ -337,6 +189,7 @@ nav {
     font-size: 20px;
 
   }
+
   p {
     max-width: 450px;
   }
@@ -352,6 +205,7 @@ nav {
   :root {
     font-size: 15px;
   }
+
   p {
     max-width: 330px;
   }
@@ -367,6 +221,7 @@ nav {
   :root {
     font-size: 17px;
   }
+
   p {
     max-width: 85%;
   }
@@ -380,10 +235,12 @@ nav {
     display: inline;
   }
 }
+
 @media (max-width: 350px) {
   :root {
     font-size: 13px;
   }
+
   p {
     max-width: 90%;
   }

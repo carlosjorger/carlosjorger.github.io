@@ -1,0 +1,36 @@
+.navbar {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
+
+#home {
+    padding: 1em;
+    align-self: center;
+}
+
+.nav-link {
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    /* background-image:none; */
+    transition: all 0.5s ease-in-out;
+
+}
+
+.nav-link:hover {
+    background-color: rgb(36, 28, 45);
+    color: aqua !important
+}
+
+.nav-link:visited {
+    color: white;
+    text-decoration: none;
+    background-image: none;
+}
+
+.navbar>li {
+    align-self: center;
+}
