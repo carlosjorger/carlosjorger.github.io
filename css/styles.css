@@ -18,7 +18,8 @@ p {
   color: var(--default-font-color);
   font-family: var(--default-font-family);
   max-width: 650px;
-
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 h1,
