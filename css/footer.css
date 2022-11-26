@@ -1,12 +1,3 @@
-footer {
-    /* for guide */
-    /* border: solid 3px aqua; */
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 5em;
-    margin-bottom: 5em;
-}
-
 .contacts {
     display: flex;
     flex-direction: column;
