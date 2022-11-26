@@ -45,6 +45,7 @@
       <ul class="navbar">
         <li id="home"> <a href="#" class="icon-link"><i class="fa fa-house fa-lg"></i></a></li>
         <li>
+          <a class="nav-link" href="#aboutMe">About me</a>
           <a class="nav-link" href="#work">Work</a>
           <a class="nav-link" href="#contact">Contact</a>
         </li>
@@ -52,47 +53,70 @@
     </nav>
   </header>
   <section>
-    <div class="presentation">
+    <div class="presentation centered-article">
       <h1 id="presentation-title">Hi, I am <br class='br-show'>Carlos Jorge!</h1>
       <h3 id="presentation-main-skill">I'm an <br class='br-show'>full-stack engineer</h3>
       <p id="presentation-description">
         I'm a cuban computer science from Havana University.
-        Currently, I'm working as full-stack engineer focused in building .net application, and frontend applications in frameworks like angular, vue or react.
+        Currently, I'm working as full-stack engineer focused in building .net application, and frontend applications in
+        frameworks like angular, vue or react.
       </p>
     </div>
   </section>
   <section>
+    <article id="aboutMe" class="centered-article">
+      <h2 class="subtitle reveal">
+        About me
+      </h2>
+      <p class="reveal">
+        Hello, My name is Carlos Jorge. I'm a full-stack engineer that enjoy coding on and off the work.
+        I started working as a backend developer in 2020 using .net technologies and sql server.
+      </p>
+      <p class="reveal">
+        Currently, I'm also working on frontend technologies like angular, vue, html, css.
+      </p>
+      <p class="reveal">
+        In my free time I like listening to music, reading books or watching movies from favorite directors.
+      </p>
+    </article>
+  </section>
+  <section>
     <article id="work">
-      <h2 class="subtitle reveal">These are my github repositories</h2>
-     <div class="card-projects">
-      <div id="open-ecommerce" class="card-project reveal">
-        <div class="card-title">
-          OpenEcommerce
+      <h2 class="subtitle reveal">Some projects I've make</h2>
+      <div class="card-projects">
+        <div id="open-ecommerce" class="card-project reveal">
+          <div class="card-title">
+            OpenEcommerce
+          </div>
+          <div class="card-description">
+            <p>
+              OpenEcommerce is an ecommerce builded with .net. Using a hexagonal architecture, cqrs pattern and more
+              interesting patterns.
+            </p>
+          </div>
+          <div class="card-links">
+            <a class="icon-link" href="https://github.com/CarlosJorgeR/openEcommerce"><i
+                class="fab fa-github fa-gl"></i></a>
+          </div>
         </div>
-        <div class="card-description">
-          OpenEcommerce is an ecommerce builded with .net. Using a hexagonal architecture, cqrs pattern and more interesting patterns.
-        </div>
-        <div class="card-links">
-          <a class="icon-link" href="https://github.com/CarlosJorgeR/openEcommerce"><i class="fab fa-github fa-gl"></i></a>
+        <div id="angular-portfolio" class="card-project reveal">
+          <div class="card-title">
+            Angular Portfolio
+          </div>
+          <div class="card-description">
+            <p>It is a personal portfolio builded with angular using really cool animation (Angular animations).</p>
+          </div>
+          <div class="card-links">
+            <a class="icon-link" href="https://github.com/CarlosJorgeR/portfolio"><i
+                class="fab fa-github fa-gl"></i></a>
+          </div>
         </div>
       </div>
-      <div id="angular-portfolio" class="card-project reveal">
-        <div class="card-title">
-          Angular Portfolio
-        </div>
-        <div class="card-description">
-          It is a personal portfolio builded with angular using really cool animation (Angular animations).
-        </div>
-        <div class="card-links">
-          <a class="icon-link" href="https://github.com/CarlosJorgeR/portfolio"><i class="fab fa-github fa-gl"></i></a>
-        </div>
-      </div>
-     </div>
     </article>
   </section>
   <footer>
     <div class="footer">
-     
+
       <div id="contact" class="contacts reveal">
         <h1 class="subtitle contacts-item">Contact</h1>
         <div class="contacts-item">
@@ -111,7 +135,7 @@
         </p>
       </div>
     </div>
-    
+
   </footer>
 </body>
 

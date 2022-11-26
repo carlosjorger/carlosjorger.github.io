@@ -1,6 +1,8 @@
 :root {
   --default-font-family: "Lato", sans-serif;
-  --default-font-color: rgb(148, 112, 220);
+  --default-font-color: rgb(217, 200, 255);
+  --default-secundary-font-color: rgb(6, 232, 232);
+
   background-color: rgb(9, 3, 15);
   font-size: 25px;
   scroll-behavior: smooth;
@@ -16,7 +18,8 @@ p {
   color: var(--default-font-color);
   font-family: var(--default-font-family);
   max-width: 650px;
-
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 h1,
@@ -35,9 +38,9 @@ section {
   /* border: solid 3px aqua; */
   width: 60%;
   margin: 0 auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  height: calc(100vh - 4em);
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  height: calc(100vh - 5em);
   z-index: 2;
 
 }
@@ -61,7 +64,7 @@ a {
 i {
   color: rgb(148, 112, 220);
   margin: 0.2em 0.2em;
-  color: aqua;
+  color: var(--default-secundary-font-color);
 }
 
 nav {
@@ -97,12 +100,15 @@ nav {
   color: var(--default-font-color);
   font-family: var(--default-font-family);
   /* for font-size I use to avoid cascading problem*/
-  font-size: 1.7rem;
+  font-size: 2rem;
 
 }
-
-/* Ids */
-
+.centered-article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+}
 
 @keyframes show-presentation {
   0% {
@@ -127,9 +133,9 @@ nav {
 
 /* unvisited link */
 .work-link:link {
-  color: aqua;
-  text-decoration-color: aqua;
-  background-image: linear-gradient(aqua, aqua);
+  color: var(--default-secundary-font-color);
+  text-decoration-color: var(--default-secundary-font-color);
+  background-image: linear-gradient(var(--default-secundary-font-color), var(--default-secundary-font-color));
   background-size: 100% 0%;
   background-position: 0% 100%;
   background-repeat: no-repeat;
@@ -138,8 +144,8 @@ nav {
 }
 
 .work-link:visited {
-  color: aqua;
-  text-decoration-color: aqua;
+  color: var(--default-secundary-font-color);
+  text-decoration-color: var(--default-secundary-font-color);
 }
 
 /* mouse over link */
@@ -160,7 +166,7 @@ nav {
 
 .icon-link:hover>i {
   color: black;
-  text-shadow: 0px 0px 15px aqua;
+  text-shadow: 0rem 0rem 1rem aqua;
 }
 
 @media (max-width: 1100px) {
@@ -219,7 +225,7 @@ nav {
 
 @media (max-width: 510px) {
   :root {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   p {
@@ -238,7 +244,7 @@ nav {
 
 @media (max-width: 350px) {
   :root {
-    font-size: 13px;
+    font-size: 10px;
   }
 
   p {

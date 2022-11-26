@@ -5,7 +5,7 @@
 
 .card-project {
 
-    padding: 0.5em;
+    padding: 0.3em;
     margin: 1em;
     width: 60%;
     display: flex;
@@ -15,34 +15,34 @@
 
 .card-title {
     color: var(--default-font-color);
-    padding: 0.5em;
+    padding: 0.3em;
 
 
 }
 
 .card-description {
-    padding: 1em;
+    padding: 0.3em;
     color: rgb(153, 249, 249);
     font-size: 0.6em;
     background-color: rgb(25, 18, 33);
 }
 
 .card-links {
-    padding: 0.5em;
+    padding: 0.3em;
     display: flex;
 }
 
 #open-ecommerce {
-    border-right: groove 0.2rem aqua;
-    border-top: groove 0.2rem aqua;
-    border-bottom: groove 0.2rem aqua;
+    border-right: solid 0.1rem var(--default-secundary-font-color);
+    border-top: solid 0.1rem var(--default-secundary-font-color);
+    border-bottom: solid 0.1rem var(--default-secundary-font-color);
     align-self: flex-end;
 }
 
 #angular-portfolio {
-    border-left: groove 0.2rem aqua;
-    border-top: groove 0.2rem aqua;
-    border-bottom: groove 0.2rem aqua;
+    border-left: solid 0.1rem var(--default-secundary-font-color);
+    border-top: solid 0.1rem var(--default-secundary-font-color);
+    border-bottom: solid 0.1rem var(--default-secundary-font-color);
     align-self: flex-start;
 
 }
