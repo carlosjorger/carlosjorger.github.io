@@ -102,9 +102,12 @@ nav {
   font-size: 1.7rem;
 
 }
-
-/* Ids */
-
+.centered-article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+}
 
 @keyframes show-presentation {
   0% {
