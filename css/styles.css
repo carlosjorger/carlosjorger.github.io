@@ -1,7 +1,7 @@
 :root {
   --default-font-family: "Lato", sans-serif;
-  --default-font-color: rgb(213, 193, 255);
-  --default-secundary-font-color: rgb(133, 249, 249);
+  --default-font-color: rgb(217, 200, 255);
+  --default-secundary-font-color: rgb(6, 232, 232);
 
   background-color: rgb(9, 3, 15);
   font-size: 25px;
