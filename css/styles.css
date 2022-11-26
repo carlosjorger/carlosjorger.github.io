@@ -37,9 +37,9 @@ section {
   /* border: solid 3px aqua; */
   width: 60%;
   margin: 0 auto;
-  margin-top: 3em;
-  margin-bottom: 3em;
-  height: calc(100vh - 6em);
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  height: calc(100vh - 5em);
   z-index: 2;
 
 }
@@ -99,7 +99,7 @@ nav {
   color: var(--default-font-color);
   font-family: var(--default-font-family);
   /* for font-size I use to avoid cascading problem*/
-  font-size: 1.7rem;
+  font-size: 2rem;
 
 }
 .centered-article{
@@ -224,7 +224,7 @@ nav {
 
 @media (max-width: 510px) {
   :root {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   p {
@@ -243,7 +243,7 @@ nav {
 
 @media (max-width: 350px) {
   :root {
-    font-size: 13px;
+    font-size: 10px;
   }
 
   p {
