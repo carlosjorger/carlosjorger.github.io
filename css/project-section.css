@@ -33,16 +33,16 @@
 }
 
 #open-ecommerce {
-    border-right: groove 0.2rem aqua;
-    border-top: groove 0.2rem aqua;
-    border-bottom: groove 0.2rem aqua;
+    border-right: groove 0.2rem var(--default-secundary-font-color);
+    border-top: groove 0.2rem var(--default-secundary-font-color);
+    border-bottom: groove 0.2rem var(--default-secundary-font-color);
     align-self: flex-end;
 }
 
 #angular-portfolio {
-    border-left: groove 0.2rem aqua;
-    border-top: groove 0.2rem aqua;
-    border-bottom: groove 0.2rem aqua;
+    border-left: groove 0.2rem var(--default-secundary-font-color);
+    border-top: groove 0.2rem var(--default-secundary-font-color);
+    border-bottom: groove 0.2rem var(--default-secundary-font-color);
     align-self: flex-start;
 
 }

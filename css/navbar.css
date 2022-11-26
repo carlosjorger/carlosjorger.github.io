@@ -22,7 +22,7 @@
 
 .nav-link:hover {
     background-color: rgb(36, 28, 45);
-    color: aqua !important
+    color: var(--default-secundary-font-color)aqua !important
 }
 
 .nav-link:visited {
