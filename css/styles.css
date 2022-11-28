@@ -13,7 +13,10 @@ body {
   margin: 0;
 }
 
-/* elements */
+main {
+  transition: all 0.8s ease-in;
+}
+
 p {
   color: var(--default-font-color);
   font-family: var(--default-font-family);
@@ -25,9 +28,6 @@ p {
 h1,
 h2,
 h3 {
-  /* for guide */
-  /* border: solid 3px aqua; */
-
   font-family: 'Raleway', sans-serif !important;
 }
 
@@ -45,6 +45,9 @@ section {
 
 }
 
+.opacity-effect {
+  filter: opacity(20%) grayscale(70%);
+}
 
 
 article {
@@ -228,9 +231,11 @@ i {
   .navbar {
     display: none !important;
   }
+
   .navbar-compressed {
     display: block !important;
   }
+
   section,
   footer {
     width: 83%;
@@ -245,12 +250,15 @@ i {
   :root {
     font-size: 10px;
   }
+
   .navbar {
-    display: none !important ;
+    display: none !important;
   }
+
   .navbar-compressed {
     display: block !important;
   }
+
   p {
     max-width: 90%;
   }

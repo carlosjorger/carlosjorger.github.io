@@ -21,23 +21,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const navColumnarMenu = document.getElementById('nav-columnar-menu');
         if (navColumnarMenu.classList.contains('active')) {
           navColumnarMenu.classList.remove("active");
+          document.getElementsByTagName("main")[0].classList.remove('opacity-effect')
         }
         else if(element.id==='show-nav-columnar-menu'){
           navColumnarMenu.classList.add("active");
+          document.getElementsByTagName("main")[0].classList.add('opacity-effect')
         }
 
       })
     }
   )
-  // Your code to run since DOM is loaded and ready
 })
-// ([...document.getElementsByTagName('a')]).forEach(
-//     // (a)=>{
-
-//     // }
-//     // (element=>{
-//     //   element.addEventListener('click',function(){
-//     //     console.log('aaaaaaaaa')
-//     //   })
-//     // })
-// )

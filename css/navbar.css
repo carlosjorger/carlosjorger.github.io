@@ -66,11 +66,11 @@
     position: absolute;
     margin-top: 0;
     padding-left: 0;
-    height: 50vh;
+    height: 40vh;
     background-color: rgb(38, 26, 50);
     width: 100%;
     z-index: 2;
-    top: -50vh;
+    top: -40vh;
     transition: all 0.3s ease-in;
 
 }
