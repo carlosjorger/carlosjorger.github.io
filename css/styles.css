@@ -67,14 +67,6 @@ i {
   color: var(--default-secundary-font-color);
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-  background-color: rgba(9, 3, 15, 0.9);
-
-}
 
 /* || UTILITIES */
 
@@ -103,7 +95,8 @@ nav {
   font-size: 2rem;
 
 }
-.centered-article{
+
+.centered-article {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -232,6 +225,12 @@ nav {
     max-width: 85%;
   }
 
+  .navbar {
+    display: none !important;
+  }
+  .navbar-compressed {
+    display: block !important;
+  }
   section,
   footer {
     width: 83%;
@@ -246,7 +245,12 @@ nav {
   :root {
     font-size: 10px;
   }
-
+  .navbar {
+    display: none !important ;
+  }
+  .navbar-compressed {
+    display: block !important;
+  }
   p {
     max-width: 90%;
   }

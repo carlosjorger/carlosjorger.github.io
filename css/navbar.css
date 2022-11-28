@@ -1,3 +1,13 @@
+.navbar-uncompressed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(9, 3, 15, 0.9);
+
+}
+
+
 .navbar {
     padding: 0.5em;
     display: flex;
@@ -15,9 +25,8 @@
     padding: 1em;
     color: var(--default-font-color);
     text-decoration: none;
-    /* background-image:none; */
     transition: all 0.5s ease-in-out;
-
+    
 }
 
 .nav-link:hover {
@@ -33,4 +42,38 @@
 
 .navbar>li {
     align-self: center;
+}
+
+.navbar-compressed {
+    display: none;
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index: 9999;
+    background-color: rgb(38, 26, 50);
+
+}
+
+.nav-header-menu {
+    padding: 0.5em;
+}
+
+.nav-menu {
+    margin-top: 0;
+    padding-left: 0;
+    height: 70vh;
+}
+
+.nav-element {
+    text-align: center;
+    padding: 0.5em;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-element:hover {
+    background-color: rgb(36, 28, 45);
+}
+
+.nav-link.compressed {
+    padding: 0;
 }
