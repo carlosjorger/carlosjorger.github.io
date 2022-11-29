@@ -22,10 +22,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         if (navColumnarMenu.classList.contains('active')) {
           navColumnarMenu.classList.remove("active");
           document.getElementsByTagName("main")[0].classList.remove('opacity-effect')
+          document.getElementsByClassName("nav-header-menu")[0].classList.remove('opacity-effect')
         }
         else if(element.id==='show-nav-columnar-menu'){
           navColumnarMenu.classList.add("active");
           document.getElementsByTagName("main")[0].classList.add('opacity-effect')
+          document.getElementsByClassName("nav-header-menu")[0].classList.add('opacity-effect')
+
         }
 
       })
