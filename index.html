@@ -41,7 +41,7 @@
 
 <body>
   <header>
-    <nav>
+    <nav class="navbar-uncompressed">
       <ul class="navbar">
         <li id="home"> <a href="#" class="icon-link"><i class="fa fa-house fa-lg"></i></a></li>
         <li>
@@ -51,7 +51,28 @@
         </li>
       </ul>
     </nav>
+    <nav class="navbar-compressed">
+      <div class="nav-header-menu">
+        <a class="icon-link" id="show-nav-columnar-menu"><i class="fa fa-bars fa-xl"></i></a>
+      </div>
+      <ul id="nav-columnar-menu">
+        <li class="nav-element">
+          <a class="nav-link compressed" href="#"><h1 class="nav-link-label">Home</h1></a>
+        </li>
+        <li class="nav-element">
+          <a class="nav-link compressed" href="#aboutMe"><h1 class="nav-link-label">About me</h1></a>
+        </li>
+        <li class="nav-element">
+          <a class="nav-link compressed" href="#work"><h1 class="nav-link-label">Work</h1></a>
+        </li>
+        <li class="nav-element">
+          <a class="nav-link compressed" href="#contact"><h1 class="nav-link-label">Contact</h1></a>
+        </li>
+
+      </ul>
+    </nav>
   </header>
+ <main>
   <section>
     <div class="presentation centered-article">
       <h1 id="presentation-title">Hi, I am <br class='br-show'>Carlos Jorge!</h1>
@@ -135,8 +156,8 @@
         </p>
       </div>
     </div>
-
   </footer>
+ </main>
 </body>
 
 </html>

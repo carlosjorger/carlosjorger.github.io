@@ -13,4 +13,35 @@ function reveal() {
     }
   })
 }
-window.addEventListener("scroll", reveal)
+window.addEventListener("scroll", reveal);
+
+function activeNav(element){
+  const navColumnarMenu = document.getElementById('nav-columnar-menu');
+  if (navColumnarMenu.classList.contains('active')) {
+    navColumnarMenu.classList.remove("active");
+    document.getElementsByTagName("main")[0].classList.remove('opacity-effect')
+    document.getElementsByClassName("nav-header-menu")[0].classList.remove('opacity-effect')
+  }
+  else if(element.id==='show-nav-columnar-menu'){
+    navColumnarMenu.classList.add("active");
+    document.getElementsByTagName("main")[0].classList.add('opacity-effect')
+    document.getElementsByClassName("nav-header-menu")[0].classList.add('opacity-effect')
+    // document.getElementsByClassName("nav-header-menu")[0].
+  }
+
+}
+document.addEventListener("DOMContentLoaded", function (event) {
+  [...document.getElementsByTagName("a")].forEach(
+    function (element) {
+      element.addEventListener('click', ()=>activeNav(element))
+    }
+  )
+  document.addEventListener('touchstart', (ev) => {
+    if(ev.path.some(element=>(element.tagName==='MAIN'||element.classList?.contains('nav-header-menu')))){
+      const navColumnarMenu = document.getElementById("nav-columnar-menu");
+      navColumnarMenu.classList.remove("active");
+      document.getElementsByTagName("main")[0].classList.remove('opacity-effect')
+      document.getElementsByClassName("nav-header-menu")[0].classList.remove('opacity-effect')
+    }
+  }, false);
+})
