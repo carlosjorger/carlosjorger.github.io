@@ -6,6 +6,7 @@
   background-color: rgb(9, 3, 15);
   font-size: 25px;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
 }
 
 /* || GENERAL STYLES */
@@ -45,12 +46,6 @@ section {
 
 }
 
-.opacity-effect {
-  filter: opacity(50%);
-  -webkit-filter:  opacity(50%) ;
-  /* backdrop-filter: opacity(20%) grayscale(70%); */
-}
-
 
 article {
   padding: 2.5em;
@@ -74,6 +69,15 @@ i {
 
 
 /* || UTILITIES */
+.oscured{
+  transition: all 0.3s ease-in;
+}
+.oscured.opacity-effect {
+  filter: opacity(50%);
+  -webkit-filter:  opacity(50%) ;
+  transition: all 0.8s ease-in;
+
+}
 
 .reveal {
   opacity: 0;
@@ -140,7 +144,9 @@ i {
   transition: all 0.5s ease-in-out;
 
 }
-
+.work-link:active{
+  background-color: transparent;
+}
 .work-link:visited {
   color: var(--default-secundary-font-color);
   text-decoration-color: var(--default-secundary-font-color);
@@ -156,7 +162,9 @@ i {
 .icon-link {
   background-image: none;
 }
-
+.icon-link:active{
+  background-color: transparent;
+}
 .icon-link:link>i {
   background-size: 100% 100%;
   transition: all 0.5s ease-in-out;
