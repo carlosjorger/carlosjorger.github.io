@@ -60,14 +60,16 @@
 
 #nav-columnar-menu {
   position: absolute;
+  padding: 0em;
   margin-top: 0;
-  padding:2em;
   background-color: rgb(38, 26, 50);
   width: 60%;
   z-index: 3;
   left: -100vw;
   list-style-type: none;  
   transition: all 0.3s ease-in;
+  height: 100vh;
+
 }
 
 #nav-columnar-menu.active {
@@ -90,4 +92,7 @@
 
 .nav-link.compressed {
   padding: 0;
+}
+.nav-link-label{
+    padding-left: 2em;
 }
