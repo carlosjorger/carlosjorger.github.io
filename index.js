@@ -13,28 +13,31 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 function removeActive(navColumnarMenu) {
   navColumnarMenu.classList.remove("active");
-  [...document.getElementsByClassName('oscured')].forEach(
-    (element)=>{
-      element.classList.remove("opacity-effect");
-    }
-  )
+  [...document.getElementsByClassName("oscured")].forEach((element) => {
+    element.classList.remove("opacity-effect");
+  });
 }
 function addActive(navColumnarMenu) {
   navColumnarMenu.classList.add("active");
-  [...document.getElementsByClassName('oscured')].forEach(
-    (element)=>{
-      element.classList.add("opacity-effect");
-    }
-  )
+  [...document.getElementsByClassName("oscured")].forEach((element) => {
+    element.classList.add("opacity-effect");
+  });
 }
 document.addEventListener("DOMContentLoaded", function (event) {
   [...document.getElementsByTagName("a")].forEach(function (element) {
     element.addEventListener("click", () => {
       const navColumnarMenu = document.getElementById("nav-columnar-menu");
+      const navColumnarMenuBackground = document.getElementById(
+        "nav-columnar-menu-background"
+      );
       if (navColumnarMenu.classList.contains("active")) {
+        navColumnarMenuBackground.style.visibility="hidden";
+        navColumnarMenuBackground.classList.remove("active");
         removeActive(navColumnarMenu);
       }
       if (element.id === "show-nav-columnar-menu") {
+        navColumnarMenuBackground.style.visibility="visible";
+        navColumnarMenuBackground.classList.add("active");
         addActive(navColumnarMenu);
       }
     });
@@ -43,12 +46,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     "touchstart",
     (ev) => {
       const navColumnarMenu = document.getElementById("nav-columnar-menu");
-      if (
-        ev.path.some(
-          (element) =>
-            element.classList?.contains("oscured")
-        )
-      ) {
+      const navColumnarMenuBackground = document.getElementById(
+        "nav-columnar-menu-background"
+      );
+      if (ev.path[0].id=='nav-columnar-menu-background') {
+        navColumnarMenuBackground.style.visibility="hidden";
+        navColumnarMenuBackground.classList.remove("active");
         removeActive(navColumnarMenu);
       }
     },

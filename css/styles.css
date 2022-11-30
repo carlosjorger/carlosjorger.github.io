@@ -69,15 +69,7 @@ i {
 
 
 /* || UTILITIES */
-.oscured{
-  transition: all 0.3s ease-in;
-}
-.oscured.opacity-effect {
-  filter: opacity(50%);
-  -webkit-filter:  opacity(50%) ;
-  transition: all 0.8s ease-in;
 
-}
 
 .reveal {
   opacity: 0;
