@@ -1,29 +1,28 @@
 .contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contacts-item {
-    text-align: center;
+  text-align: center;
 }
 
 .footer {
-    display: grid;
-    height: inherit;
+  display: grid;
+  height: inherit;
 }
 
 .footer-info {
-    color: var(--default-font-color);
-    font-family: var(--default-font-family);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+  color: var(--default-font-color);
+  font-family: var(--default-font-family);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer-info-item {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.3rem;
 }

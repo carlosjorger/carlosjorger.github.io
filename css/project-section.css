@@ -1,52 +1,48 @@
 .card-projects {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-project {
-
-    padding: 0.3em;
-    margin: 1em;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    font-family: var(--default-font-family);
+  padding: 0.3em;
+  margin: 1em;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--default-font-family);
 }
 
 .card-title {
-    color: var(--default-font-color);
-    padding: 0.3em;
-
-
+  color: var(--default-font-color);
+  padding: 0.3em;
 }
 
 .card-description {
-    padding: 0.3em;
-    color: rgb(153, 249, 249);
-    font-size: 0.6em;
-    background-color: rgb(25, 18, 33);
+  padding: 0.3em;
+  color: rgb(153, 249, 249);
+  font-size: 0.6em;
+  background-color: rgb(25, 18, 33);
 }
 
 .card-links {
-    padding: 0.3em;
-    display: flex;
+  padding: 0.3em;
+  display: flex;
 }
 
 #open-ecommerce {
-    border-right: solid 0.1rem var(--default-secundary-font-color);
-    border-top: solid 0.1rem var(--default-secundary-font-color);
-    border-bottom: solid 0.1rem var(--default-secundary-font-color);
-    align-self: flex-end;
+  border-right: solid 0.1rem var(--default-secundary-font-color);
+  border-top: solid 0.1rem var(--default-secundary-font-color);
+  border-bottom: solid 0.1rem var(--default-secundary-font-color);
+  align-self: flex-end;
 }
 
 #angular-portfolio {
-    border-left: solid 0.1rem var(--default-secundary-font-color);
-    border-top: solid 0.1rem var(--default-secundary-font-color);
-    border-bottom: solid 0.1rem var(--default-secundary-font-color);
-    align-self: flex-start;
-
+  border-left: solid 0.1rem var(--default-secundary-font-color);
+  border-top: solid 0.1rem var(--default-secundary-font-color);
+  border-bottom: solid 0.1rem var(--default-secundary-font-color);
+  align-self: flex-start;
 }
 
 #angular-portfolio .card-links {
-    justify-content: end;
+  justify-content: end;
 }

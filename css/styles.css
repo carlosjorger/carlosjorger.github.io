@@ -6,7 +6,7 @@
   background-color: rgb(9, 3, 15);
   font-size: 25px;
   scroll-behavior: smooth;
-  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* || GENERAL STYLES */
@@ -29,7 +29,7 @@ p {
 h1,
 h2,
 h3 {
-  font-family: 'Raleway', sans-serif !important;
+  font-family: "Raleway", sans-serif !important;
 }
 
 /* % always with the property width */
@@ -43,9 +43,7 @@ section {
   margin-bottom: 2.5em;
   height: calc(100vh - 5em);
   z-index: 2;
-
 }
-
 
 article {
   padding: 2.5em;
@@ -58,18 +56,15 @@ ul {
 a {
   font-family: var(--default-font-family);
   color: var(--default-font-color);
-
 }
 
 i {
   color: rgb(148, 112, 220);
-  margin: 0.2em 0.2em;
+  margin: 0.1em;
   color: var(--default-secundary-font-color);
 }
 
-
 /* || UTILITIES */
-
 
 .reveal {
   opacity: 0;
@@ -86,7 +81,6 @@ i {
   display: none;
 }
 
-
 /* || SITEWIDE */
 
 .subtitle {
@@ -94,7 +88,6 @@ i {
   font-family: var(--default-font-family);
   /* for font-size I use to avoid cascading problem*/
   font-size: 2rem;
-
 }
 
 .centered-article {
@@ -109,7 +102,6 @@ i {
     opacity: 0;
     transform: translate(0px, -10px);
   }
-
 }
 
 @keyframes show-presentation-main-skill {
@@ -121,7 +113,6 @@ i {
   100% {
     opacity: 1;
     transform: translate(0px, 0px);
-
   }
 }
 
@@ -129,14 +120,16 @@ i {
 .work-link:link {
   color: var(--default-secundary-font-color);
   text-decoration-color: var(--default-secundary-font-color);
-  background-image: linear-gradient(var(--default-secundary-font-color), var(--default-secundary-font-color));
+  background-image: linear-gradient(
+    var(--default-secundary-font-color),
+    var(--default-secundary-font-color)
+  );
   background-size: 100% 0%;
   background-position: 0% 100%;
   background-repeat: no-repeat;
   transition: all 0.5s ease-in-out;
-
 }
-.work-link:active{
+.work-link:active {
   background-color: transparent;
 }
 .work-link:visited {
@@ -154,15 +147,15 @@ i {
 .icon-link {
   background-image: none;
 }
-.icon-link:active{
+.icon-link:active {
   background-color: transparent;
 }
-.icon-link:link>i {
+.icon-link:link > i {
   background-size: 100% 100%;
   transition: all 0.5s ease-in-out;
 }
 
-.icon-link:hover>i {
+.icon-link:hover > i {
   color: black;
   text-shadow: 0rem 0rem 1rem aqua;
 }
@@ -170,8 +163,6 @@ i {
 @media (max-width: 1100px) {
   :root {
     font-size: 25px;
-
-
   }
 
   .card-project {
@@ -191,7 +182,6 @@ i {
 @media (max-width: 885px) {
   :root {
     font-size: 20px;
-
   }
 
   p {
@@ -201,7 +191,6 @@ i {
   section,
   footer {
     width: 75%;
-
   }
 }
 
@@ -217,7 +206,6 @@ i {
   section,
   footer {
     width: 80%;
-
   }
 }
 
