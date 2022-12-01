@@ -119,12 +119,12 @@ i {
 /* unvisited link */
 .work-link:link {
   color: var(--default-secundary-font-color);
-  text-decoration-color: var(--default-secundary-font-color);
+  text-decoration: none;
   background-image: linear-gradient(
     var(--default-secundary-font-color),
     var(--default-secundary-font-color)
   );
-  background-size: 100% 0%;
+  background-size: 0% 15%;
   background-position: 0% 100%;
   background-repeat: no-repeat;
   transition: all 0.5s ease-in-out;
@@ -134,13 +134,11 @@ i {
 }
 .work-link:visited {
   color: var(--default-secundary-font-color);
-  text-decoration-color: var(--default-secundary-font-color);
 }
 
 /* mouse over link */
 .work-link:hover {
-  color: var(--default-font-family);
-  background-size: 100% 100%;
+  background-size: 100% 15%;
 }
 
 /* selected link */
