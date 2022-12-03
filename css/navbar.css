@@ -1,9 +1,9 @@
 img {
-  width: 74%;
+  width: 50%;
   border-radius: 50%;
 }
 .image-container {
-  padding: 13%;
+  padding: 25%;
   width: 100%;
 }
 .navbar-uncompressed {
@@ -86,7 +86,7 @@ img {
   position: absolute;
   margin-top: 0;
   background-color: rgb(38, 26, 50);
-  width: 70%;
+  width: 75%;
   height: 100vh;
   left: -100vw;
   transition: all 0.3s ease-in;
