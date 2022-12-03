@@ -1,0 +1,22 @@
+{
+  "artificialDelayMilliseconds": 500,
+  "keepExistingTerminalsOpen": false,
+  "runOnStartup": true,
+  "terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "My terminal",
+          "color": "terminal.ansiBlue"
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "Git"
+        }
+      ]
+    }
+  ]
+}
