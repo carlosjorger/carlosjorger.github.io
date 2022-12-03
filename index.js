@@ -18,6 +18,7 @@ function removeActive(navColumnarMenu, navColumnarMenuBackground) {
   navColumnarMenuBackground.style.visibility = "hidden";
   navColumnarMenuBackground.classList.remove("active");
   navColumnarMenu.classList.remove("active");
+  document.getElementsByClassName("logo")[0].classList.remove("active");
   [...document.getElementsByClassName("oscured")].forEach((element) => {
     element.classList.remove("opacity-effect");
   });
@@ -26,6 +27,7 @@ function addActive(navColumnarMenu, navColumnarMenuBackground) {
   navColumnarMenuBackground.style.visibility = "visible";
   navColumnarMenuBackground.classList.add("active");
   navColumnarMenu.classList.add("active");
+  document.getElementsByClassName("logo")[0].classList.add("active");
   [...document.getElementsByClassName("oscured")].forEach((element) => {
     element.classList.add("opacity-effect");
   });
