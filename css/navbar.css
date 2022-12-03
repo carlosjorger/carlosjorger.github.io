@@ -1,3 +1,11 @@
+img {
+  width: 74%;
+  border-radius: 50%;
+}
+.image-container {
+  padding: 13%;
+  width: 100%;
+}
 .navbar-uncompressed {
   position: fixed;
   top: 0;
@@ -70,20 +78,22 @@
   background-color: rgba(0, 0, 0, 0);
   transition: all 0.3s 0.1s ease-in;
 }
-#nav-columnar-menu-background.active{
+#nav-columnar-menu-background.active {
   background-color: rgba(0, 0, 0, 0.5);
   transition: all 0.8s ease-in;
 }
-#nav-columnar-menu{
+#nav-columnar-menu {
   position: absolute;
   margin-top: 0;
   background-color: rgb(38, 26, 50);
-  padding:0;
   width: 70%;
   height: 100vh;
   left: -100vw;
-  list-style-type: none;
   transition: all 0.3s ease-in;
+}
+#nav-columnar-menu-list {
+  list-style-type: none;
+  padding: 0;
 }
 #nav-columnar-menu.active {
   left: 0;
