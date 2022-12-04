@@ -1,174 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="CarlosJorgeR's github repositories, custom portfolio. The main goals of these projects is having fun and learn new technologies and good practices"
+    />
+    <meta
+      name="keywords"
+      content="HTML,CSS,JavaScript,Github,Repository,Portfolio"
+    />
+    <meta name="author" content="CarlosJorgeR" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:url"
+      content="https://carlosjorger.github.io/my-repositories/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CarlosJorgeR's github repositories" />
+    <meta
+      property="og:description"
+      content="CarlosJorgeR's github repositories, custom portfolio. The main goals of these projects is having fun and learn new technologies and good practices"
+    />
+    <meta property="og:site_name" content="My repositories" />
+    <meta
+      property="og:image"
+      content="https://carlosjorger.github.io/my-repositories/images/logo.png"
+    />
+    <meta
+      property="twitter:description"
+      content="CarlosJorgeR's github repositories, custom portfolio. The main goals of these projects is having fun and learn new technologies and good practices"
+    />
+    <meta
+      property="twitter:title"
+      content="CarlosJorgeR's github repositories"
+    />
+    <link rel="icon" type="image/x-icon" href="images/github.ico" />
+    <title>My github repositories</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/navbar.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/presentation-section.css"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/project-section.css" />
+    <link rel="stylesheet" type="text/css" href="./css/footer.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="description"
-    content="CarlosJorgeR's github repositories, custom portfolio. The main goals of these projects is having fun and learn new technologies and good practices">
-  <meta name="keywords" content="HTML,CSS,JavaScript,Github,Repository,Portfolio">
-  <meta name="author" content="CarlosJorgeR">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://carlosjorger.github.io/my-repositories/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="CarlosJorgeR's github repositories">
-  <meta property="og:description"
-    content="CarlosJorgeR's github repositories, custom portfolio. The main goals of these projects is having fun and learn new technologies and good practices">
-  <meta property="og:site_name" content="My repositories">
-  <meta property="og:image" content="https://carlosjorger.github.io/my-repositories/images/logo.png">
-  <meta property="twitter:description"
-    content="CarlosJorgeR's github repositories, custom portfolio. The main goals of these projects is having fun and learn new technologies and good practices">
-  <meta property="twitter:title" content="CarlosJorgeR's github repositories">
-  <link rel="icon" type="image/x-icon" href="images/github.ico">
-  <title>My github repositories</title>
-  <link rel="stylesheet" type="text/css" href="./css/styles.css">
-  <link rel="stylesheet" type="text/css" href="./css/navbar.css">
-  <link rel="stylesheet" type="text/css" href="./css/presentation-section.css">
-  <link rel="stylesheet" type="text/css" href="./css/project-section.css">
-  <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js"></script>
+  </head>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
-  <script src="index.js"></script>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar-uncompressed">
-      <ul class="navbar">
-        <li id="home"> <a href="#" class="icon-link"><i class="fa fa-house fa-lg"></i></a></li>
-        <li>
-          <a class="nav-link" href="#aboutMe">About me</a>
-          <a class="nav-link" href="#work">Work</a>
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <nav class="navbar-compressed">
-      <div class="nav-header-menu">
-        <a class="icon-link" id="show-nav-columnar-menu"><i class="fa fa-bars fa-xl"></i></a>
-      </div>
-     <div id="nav-columnar-menu-background">
-      <div id="nav-columnar-menu">
-        <div class="image-container">
-          <img class="logo" src="./images/logo.png" alt="logo">
-        </div>
-        <ul id="nav-columnar-menu-list">
-          <li class="nav-element">
-            <i class="fa fa-house fa-xl"></i>
-            <a class="nav-link compressed" href="#"><h2 class="nav-link-label">Home</h2></a>
+  <body>
+    <header>
+      <nav class="navbar-uncompressed">
+        <ul class="navbar">
+          <li id="home">
+            <a href="#" class="icon-link"><i class="fa fa-house fa-lg"></i></a>
           </li>
-          <li class="nav-element">
-            <i class="fa fa-user fa-xl"></i>
-            <a class="nav-link compressed" href="#aboutMe"><h2 class="nav-link-label">About me</h2></a>
-          </li>
-          <li class="nav-element">
-            <i class="fa fa-tasks fa-xl"></i>
-            <a class="nav-link compressed" href="#work"><h2 class="nav-link-label">Work</h2></a>
-          </li>
-          <li class="nav-element">
-            <i class="fa fa-phone fa-xl"></i>
-            <a class="nav-link compressed" href="#contact"><h2 class="nav-link-label">Contact</h2></a>
+          <li>
+            <a class="nav-link" href="#aboutMe">About me</a>
+            <a class="nav-link" href="#work">Work</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
-      </div>
- 
-     </div>
-    </nav>
-  </header>
- <main>
-  <section>
-    <div class="presentation centered-article">
-      <h1 id="presentation-title">Hi, I am <br class='br-show'>Carlos Jorge!</h1>
-      <h3 id="presentation-main-skill">I'm an <br class='br-show'>full-stack engineer</h3>
-      <p id="presentation-description">
-        I'm a cuban computer science from Havana University.
-        Currently, I'm working as full-stack engineer focused in building .net application, and frontend applications in
-        frameworks like angular, vue or react.
-      </p>
-    </div>
-  </section>
-  <section>
-    <article id="aboutMe" class="centered-article">
-      <h1 class="subtitle reveal">
-        About me
-      </h1>
-      <p class="reveal">
-        Hello, My name is Carlos Jorge. I'm a full-stack engineer that enjoy coding on and off the work.
-        I started working as a backend developer in 2020 using .net technologies and sql server.
-      </p>
-      <p class="reveal">
-        Currently, I'm also working on frontend technologies like angular, vue, html, css.
-      </p>
-      <p class="reveal">
-        In my free time I like listening to music, reading books or watching movies from favorite directors.
-      </p>
-    </article>
-  </section>
-  <section>
-    <article id="work">
-      <h1 class="subtitle reveal">Some projects I've make</h1>
-      <div class="card-projects">
-        <div id="open-ecommerce" class="card-project reveal">
-          <div class="card-title">
-            OpenEcommerce
+      </nav>
+      <nav class="navbar-compressed">
+        <div class="nav-header-menu">
+          <a class="icon-link" id="show-nav-columnar-menu"
+            ><i class="fa fa-bars fa-xl"></i
+          ></a>
+        </div>
+        <div id="nav-columnar-menu-background">
+          <div id="nav-columnar-menu">
+            <div class="image-container">
+              <img class="logo" src="./images/logo.png" alt="logo" />
+            </div>
+            <ul id="nav-columnar-menu-list">
+              <li class="nav-element">
+                <i class="fa fa-house fa-xl"></i>
+                <a class="nav-link compressed" href="#"
+                  ><h2 class="nav-link-label">Home</h2></a
+                >
+              </li>
+              <li class="nav-element">
+                <i class="fa fa-user fa-xl"></i>
+                <a class="nav-link compressed" href="#aboutMe"
+                  ><h2 class="nav-link-label">About me</h2></a
+                >
+              </li>
+              <li class="nav-element">
+                <i class="fa fa-tasks fa-xl"></i>
+                <a class="nav-link compressed" href="#work"
+                  ><h2 class="nav-link-label">Work</h2></a
+                >
+              </li>
+              <li class="nav-element">
+                <i class="fa fa-phone fa-xl"></i>
+                <a class="nav-link compressed" href="#contact"
+                  ><h2 class="nav-link-label">Contact</h2></a
+                >
+              </li>
+            </ul>
           </div>
-          <div class="card-description">
-            <p>
-              OpenEcommerce is an ecommerce builded with .net. Using a hexagonal architecture, cqrs pattern and more
-              interesting patterns.
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="presentation centered-article">
+          <h1 id="presentation-title">
+            Hi, I am <br class="br-show" />Carlos Jorge!
+          </h1>
+          <h3 id="presentation-main-skill">
+            I'm an <br class="br-show" />full-stack engineer
+          </h3>
+          <p id="presentation-description">
+            I'm a cuban computer science from Havana University. Currently, I'm
+            working as full-stack engineer focused in building .net application,
+            and frontend applications in frameworks like angular, vue or react.
+          </p>
+        </div>
+      </section>
+      <section>
+        <article id="aboutMe" class="centered-article">
+          <h1 class="subtitle reveal">About me</h1>
+          <p class="reveal">
+            Hello, My name is Carlos Jorge. I'm a full-stack engineer that enjoy
+            coding on and off the work. I started working as a backend developer
+            in 2020 using .net technologies and sql server.
+          </p>
+          <p class="reveal">
+            Currently, I'm also working on frontend technologies like angular,
+            vue, html, css.
+          </p>
+          <p class="reveal">
+            In my free time I like listening to music, reading books or watching
+            movies from favorite directors.
+          </p>
+        </article>
+      </section>
+      <section>
+        <article id="work">
+          <h1 class="subtitle reveal">Some projects I've make</h1>
+          <div class="card-projects">
+            <div id="open-ecommerce" class="card-project reveal">
+              <div class="card-title">OpenEcommerce</div>
+              <div class="card-description">
+                <p>
+                  OpenEcommerce is an ecommerce builded with .net. Using a
+                  hexagonal architecture, cqrs pattern and more interesting
+                  patterns.
+                </p>
+              </div>
+              <div class="card-links">
+                <a
+                  class="icon-link"
+                  href="https://github.com/CarlosJorgeR/openEcommerce"
+                  ><i class="fab fa-github fa-gl"></i
+                ></a>
+              </div>
+            </div>
+            <div id="angular-portfolio" class="card-project reveal">
+              <div class="card-title">Angular Portfolio</div>
+              <div class="card-description">
+                <p>
+                  It is a personal portfolio builded with angular using really
+                  cool animation (Angular animations).
+                </p>
+              </div>
+              <div class="card-links">
+                <a
+                  class="icon-link"
+                  href="https://github.com/CarlosJorgeR/portfolio"
+                  ><i class="fab fa-github fa-gl"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <footer>
+        <div class="footer">
+          <div id="contact" class="contacts reveal">
+            <h1 class="subtitle contacts-item">Contact</h1>
+            <div class="contacts-item">
+              <a class="icon-link" href="mailto:rodriguezcuelloc@gmail.com"
+                ><i class="fab fa-google fa-3x"></i
+              ></a>
+              <a class="icon-link" href="https://github.com/CarlosJorgeR"
+                ><i class="fab fa-github fa-3x"></i
+              ></a>
+              <a class="icon-link" href="https://www.linkedin.com/in/cjrcuello/"
+                ><i class="fab fa-linkedin fa-3x"></i
+              ></a>
+              <a class="icon-link" href="https://twitter.com/CarlosJorgeRod3"
+                ><i class="fab fa-twitter fa-3x"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-info reveal">
+            <p class="footer-info-item">
+              © 2022 Carlos Jorge
+              <br />
+              <a
+                class="work-link"
+                href="https://github.com/CarlosJorgeR/carlosjorger.github.io"
+                >Published</a
+              >
+              in
+              <a class="work-link" href="https://pages.github.com/"
+                >Github Page</a
+              >
             </p>
           </div>
-          <div class="card-links">
-            <a class="icon-link" href="https://github.com/CarlosJorgeR/openEcommerce"><i
-                class="fab fa-github fa-gl"></i></a>
-          </div>
         </div>
-        <div id="angular-portfolio" class="card-project reveal">
-          <div class="card-title">
-            Angular Portfolio
-          </div>
-          <div class="card-description">
-            <p>It is a personal portfolio builded with angular using really cool animation (Angular animations).</p>
-          </div>
-          <div class="card-links">
-            <a class="icon-link" href="https://github.com/CarlosJorgeR/portfolio"><i
-                class="fab fa-github fa-gl"></i></a>
-          </div>
-        </div>
-      </div>
-    </article>
-  </section>
-  <footer>
-    <div class="footer">
-
-      <div id="contact" class="contacts reveal">
-        <h1 class="subtitle contacts-item">Contact</h1>
-        <div class="contacts-item">
-          <a class="icon-link" href="mailto:rodriguezcuelloc@gmail.com"><i class="fab fa-google fa-3x"></i></a>
-          <a class="icon-link" href="https://github.com/CarlosJorgeR"><i class="fab fa-github fa-3x"></i></a>
-          <a class="icon-link" href="https://www.linkedin.com/in/cjrcuello/"><i class="fab fa-linkedin fa-3x"></i></a>
-          <a class="icon-link" href="https://twitter.com/CarlosJorgeRod3"><i class="fab fa-twitter fa-3x"></i></a>
-        </div>
-      </div>
-      <div class="footer-info reveal">
-        <p class="footer-info-item">
-          © 2022 Carlos Jorge
-          </br>
-          <a class="work-link" href="https://github.com/CarlosJorgeR/carlosjorger.github.io">Published</a> in
-          <a class="work-link" href="https://pages.github.com/">Github Page</a>
-        </p>
-      </div>
-    </div>
-  </footer>
- </main>
-</body>
-
+      </footer>
+    </main>
+  </body>
 </html>
