@@ -45,10 +45,6 @@ section {
   z-index: 2;
 }
 
-article {
-  padding: 2.5em;
-}
-
 ul {
   list-style-type: circle;
 }
@@ -178,7 +174,7 @@ hr {
 
   section,
   footer {
-    width: 75%;
+    width: 70%;
   }
 
   p {
@@ -197,7 +193,7 @@ hr {
 
   section,
   footer {
-    width: 75%;
+    width: 70%;
   }
 }
 
@@ -212,7 +208,7 @@ hr {
 
   section,
   footer {
-    width: 80%;
+    width: 75%;
   }
 }
 
@@ -235,7 +231,7 @@ hr {
 
   section,
   footer {
-    width: 83%;
+    width: 80%;
   }
 
   .br-show {
@@ -262,7 +258,7 @@ hr {
 
   section,
   footer {
-    width: 88%;
+    width: 85%;
   }
 
   .br-show {
