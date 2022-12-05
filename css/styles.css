@@ -63,7 +63,16 @@ i {
   margin: 0.1em;
   color: var(--default-secundary-font-color);
 }
-
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    black,
+    rgba(0, 255, 255, 0.75),
+    black
+  );
+}
 /* || UTILITIES */
 
 .reveal {
