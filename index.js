@@ -13,25 +13,23 @@ function reveal() {
     }
   });
 }
+function changeState(navColumnarMenu, navColumnarMenuBackground) {
+  if (
+    !navColumnarMenuBackground.style.visibility ||
+    navColumnarMenuBackground.style.visibility === "hidden"
+  ) {
+    navColumnarMenuBackground.style.visibility = "visible";
+  } else {
+    navColumnarMenuBackground.style.visibility = "hidden";
+  }
+  navColumnarMenuBackground.classList.toggle("active");
+  navColumnarMenu.classList.toggle("active");
+  document.getElementsByClassName("logo")[0].classList.toggle("active");
+  [...document.getElementsByClassName("oscured")].forEach((element) => {
+    element.classList.toggle("opacity-effect");
+  });
+}
 window.addEventListener("scroll", reveal);
-function removeActive(navColumnarMenu, navColumnarMenuBackground) {
-  navColumnarMenuBackground.style.visibility = "hidden";
-  navColumnarMenuBackground.classList.remove("active");
-  navColumnarMenu.classList.remove("active");
-  document.getElementsByClassName("logo")[0].classList.remove("active");
-  [...document.getElementsByClassName("oscured")].forEach((element) => {
-    element.classList.remove("opacity-effect");
-  });
-}
-function addActive(navColumnarMenu, navColumnarMenuBackground) {
-  navColumnarMenuBackground.style.visibility = "visible";
-  navColumnarMenuBackground.classList.add("active");
-  navColumnarMenu.classList.add("active");
-  document.getElementsByClassName("logo")[0].classList.add("active");
-  [...document.getElementsByClassName("oscured")].forEach((element) => {
-    element.classList.add("opacity-effect");
-  });
-}
 document.addEventListener("DOMContentLoaded", function (event) {
   [...document.getElementsByTagName("a")].forEach(function (element) {
     element.addEventListener("click", () => {
@@ -39,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
       const navColumnarMenuBackground = document.getElementById(
         "nav-columnar-menu-background"
       );
-      if (navColumnarMenu.classList.contains("active")) {
-        removeActive(navColumnarMenu, navColumnarMenuBackground);
-      }
-      if (element.id === "show-nav-columnar-menu") {
-        addActive(navColumnarMenu, navColumnarMenuBackground);
+      if (
+        navColumnarMenu.classList.contains("active") ||
+        element.id === "show-nav-columnar-menu"
+      ) {
+        changeState(navColumnarMenu, navColumnarMenuBackground);
       }
     });
   });
@@ -55,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         "nav-columnar-menu-background"
       );
       if (ev.path[0].id == "nav-columnar-menu-background") {
-        removeActive(navColumnarMenu, navColumnarMenuBackground);
+        changeState(navColumnarMenu, navColumnarMenuBackground);
       }
     },
     false
