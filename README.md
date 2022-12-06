@@ -1,6 +1,6 @@
 # carlosjorger.github.io
 
-A portfolio website deploy in [github page](https://carlosjorger.github.io/) made only with html, css and js.
+A personal website porfolio deploy in [github page](https://carlosjorger.github.io/) made only with html, css and js.
 
 ## Demo
 
