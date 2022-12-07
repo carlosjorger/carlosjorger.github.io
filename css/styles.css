@@ -60,14 +60,10 @@ i {
   color: var(--default-secundary-font-color);
 }
 hr {
+  width: 80%;
   border: 0;
-  height: 1px;
-  background-image: linear-gradient(
-    to right,
-    black,
-    rgba(0, 255, 255, 0.75),
-    black
-  );
+  height: 0.05em;
+  background: var(--default-font-color);
 }
 /* || UTILITIES */
 

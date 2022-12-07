@@ -16,7 +16,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 4;
   background-color: rgba(var(--default-background-color), 0.5);
   backdrop-filter: blur(6px);
   box-shadow: 5px 0px 20px;
@@ -92,13 +92,14 @@
   transition: all 0.8s ease-in;
 }
 #nav-columnar-menu {
+  font-size: 0.9rem;
   position: absolute;
   margin-top: 0;
   background-color: rgb(38, 26, 50);
   width: 75%;
   height: 100vh;
   left: -100vw;
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-out;
 }
 #nav-columnar-menu-list {
   list-style-type: none;
@@ -106,14 +107,14 @@
 }
 #nav-columnar-menu.active {
   left: 0;
-  transition: all 0.8s ease-in;
+  transition: all 0.8s ease-out;
 }
 
 .nav-element {
   display: flex;
   text-align: left;
   padding: 0.5em;
-  padding-left: 2em;
+  padding-left: 5em;
   transition: all 0.5s ease-in-out;
   justify-content: flex-start;
   align-items: center;
@@ -127,5 +128,5 @@
   padding: 0;
 }
 .nav-link-label {
-  padding-left: 2em;
+  padding-left: 1.5em;
 }
