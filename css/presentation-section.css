@@ -14,7 +14,6 @@
 
 .presentation-main-skill {
   font-size: 1.8rem;
-  opacity: 0;
   animation-name: show-presentation-main-skill;
   animation-timing-function: ease;
   animation-duration: 1s;
@@ -24,8 +23,7 @@
   margin-bottom: 0.7rem;
 }
 
-#presentation-description {
-  opacity: 0;
+.presentation-description {
   animation-name: show-presentation-main-skill;
   animation-timing-function: ease;
   animation-duration: 1s;

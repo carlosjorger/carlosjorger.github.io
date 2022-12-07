@@ -72,13 +72,14 @@ hr {
 /* || UTILITIES */
 
 .reveal {
-  opacity: 0;
+  opacity: 0 !important;
   transition: all 1s ease-in;
   transform: translate(0vh, 3vh);
 }
 
 .reveal.active {
-  opacity: 1;
+  opacity: 1 !important;
+  transition: all 1s ease-in;
   transform: translate(0vh, 0vh);
 }
 

@@ -3,10 +3,13 @@ function reveal() {
   [...revealElements].forEach((element) => {
     var windowHeight = window.innerHeight;
     const elementTop = element.getBoundingClientRect().top;
+    const elementBottom = element.getBoundingClientRect().bottom;
     if (
       elementTop <
-      windowHeight - element.getBoundingClientRect().height + 150
+        windowHeight - element.getBoundingClientRect().height + 150 &&
+      elementBottom >= 150
     ) {
+      console.log(element);
       element.classList.add("active");
     } else {
       element.classList.remove("active");
