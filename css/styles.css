@@ -1,8 +1,8 @@
 :root {
   --default-font-family: "Lato", sans-serif;
-  --default-font-color: rgb(217, 200, 255);
+  --default-font-color: rgb(222, 207, 253);
   --default-secundary-font-color: rgb(6, 232, 232);
-  --default-background-color: rgb(19, 12, 26);
+  --default-background-color: rgb(25, 16, 33);
   background-color: var(--default-background-color);
   font-size: 25px;
   scroll-behavior: smooth;
