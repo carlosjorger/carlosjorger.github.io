@@ -7,7 +7,7 @@ function reveal() {
     if (
       elementTop <
         windowHeight - element.getBoundingClientRect().height + 150 &&
-      elementBottom >= 150
+      elementBottom >= 140
     ) {
       console.log(element);
       element.classList.add("active");
