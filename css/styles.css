@@ -2,8 +2,8 @@
   --default-font-family: "Lato", sans-serif;
   --default-font-color: rgb(217, 200, 255);
   --default-secundary-font-color: rgb(6, 232, 232);
-
-  background-color: rgb(9, 3, 15);
+  --default-background-color: rgb(19, 12, 26);
+  background-color: var(--default-background-color);
   font-size: 25px;
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

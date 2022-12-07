@@ -17,7 +17,9 @@
   top: 0;
   width: 100%;
   z-index: 9999;
-  background-color: rgba(9, 3, 15, 0.9);
+  background-color: rgba(var(--default-background-color), 0.5);
+  backdrop-filter: blur(6px);
+  box-shadow: 5px 0px 20px;
 }
 
 .navbar {
@@ -61,14 +63,15 @@
   top: 0;
   width: 100%;
   z-index: 2;
-  background-color: rgb(38, 26, 50);
 }
 
 .nav-header-menu {
   padding: 1em;
   z-index: 2;
   width: 100%;
-  background-color: rgb(38, 26, 50);
+  background-color: rgba(var(--default-background-color), 0.5);
+  backdrop-filter: blur(6px);
+  box-shadow: 5px 0px 20px;
 }
 
 #nav-columnar-menu-background {
