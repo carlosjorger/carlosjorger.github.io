@@ -11,6 +11,7 @@
   padding: 15%;
   width: 70%;
   text-align: center;
+  display: block;
 }
 .navbar-uncompressed {
   position: fixed;
