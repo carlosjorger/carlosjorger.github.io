@@ -15,13 +15,15 @@ A personal website porfolio deploy in [github page](https://carlosjorger.github.
 
 ## Why?
 
-This proyect is made with the objetive of learning the basis of frontend development (html/css/js).
+This proyect is made with the objetive of learning the basis of frontend development (html/css/js) Without depending on a frontend framework like (react, angular, vue or svelte)
 
 ## Tools:
 
 - CSS animations and transitions.
 - media querys for made the project responsive.
 - flexbox and grid.
+- responsive navbar (horizontal navbar with a longer width and columnar navbar with a shorter width)
+- font-awesome icons
 
 ## How to run this project?
 
