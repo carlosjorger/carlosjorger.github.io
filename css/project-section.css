@@ -17,7 +17,9 @@
   color: var(--default-font-color);
   padding: 0.3em;
 }
-
+.card-title > h3 {
+  margin: 0;
+}
 .card-description {
   padding: 0.3em;
   color: rgb(153, 249, 249);
