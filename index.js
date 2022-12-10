@@ -24,11 +24,9 @@ function changeState(navColumnarMenu, navColumnarMenuBackground) {
   } else {
     navColumnarMenuBackground.style.visibility = "hidden";
   }
-  navColumnarMenuBackground.classList.toggle("active");
-  navColumnarMenu.classList.toggle("active");
-  document.getElementsByClassName("logo")[0].classList.toggle("active");
-  [...document.getElementsByClassName("oscured")].forEach((element) => {
-    element.classList.toggle("opacity-effect");
+
+  [...document.getElementsByClassName("changeable")].forEach((element) => {
+    element.classList.toggle("active");
   });
 }
 window.addEventListener("scroll", reveal);
@@ -36,25 +34,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
   [...document.getElementsByTagName("a")].forEach(function (element) {
     element.addEventListener("click", () => {
       const navColumnarMenu = document.getElementById("nav-columnar-menu");
-      const navColumnarMenuBackground = document.getElementById(
+      const navColumnarMenuBackground = document.getElementsByClassName(
         "nav-columnar-menu-background"
-      );
-      if (
-        navColumnarMenu.classList.contains("active") ||
-        element.id === "show-nav-columnar-menu"
-      ) {
-        changeState(navColumnarMenu, navColumnarMenuBackground);
-      }
+      )[0];
+      changeState(navColumnarMenu, navColumnarMenuBackground);
     });
   });
   document.addEventListener(
     "touchstart",
     (ev) => {
       const navColumnarMenu = document.getElementById("nav-columnar-menu");
-      const navColumnarMenuBackground = document.getElementById(
+      const navColumnarMenuBackground = document.getElementsByClassName(
         "nav-columnar-menu-background"
-      );
-      if (ev.path[0].id == "nav-columnar-menu-background") {
+      )[0];
+      if (ev.path[0].classList.contains("nav-columnar-menu-background")) {
         changeState(navColumnarMenu, navColumnarMenuBackground);
       }
     },
