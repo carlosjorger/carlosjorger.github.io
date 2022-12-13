@@ -4,8 +4,8 @@ A personal website porfolio deploy in [github page](https://carlosjorger.github.
 
 ## Demo
 
-![demo](./images/demo.jpg)
-![demo](./images/demo2.jpg)
+![demo](./images/demo.svg)
+![demo](./images/demo2.svg)
 
 ## Mobile Demo
 
