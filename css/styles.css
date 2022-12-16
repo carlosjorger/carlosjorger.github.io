@@ -159,7 +159,7 @@ hr {
 
 .icon-link:hover > i {
   color: black;
-  text-shadow: 0rem 0rem 1rem 1em aqua;
+  text-shadow: 0rem 0rem 1rem aqua;
 }
 
 @media (max-width: 1100px) {
