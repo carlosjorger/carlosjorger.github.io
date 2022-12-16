@@ -1,6 +1,6 @@
 function reveal() {
   var revealElements = document.getElementsByClassName("reveal");
-  [...revealElements].forEach((element) => {
+  [...revealElements].forEach(element => {
     var windowHeight = window.innerHeight;
     const elementTop = element.getBoundingClientRect().top;
     const elementBottom = element.getBoundingClientRect().bottom;
@@ -25,13 +25,15 @@ function changeState(navColumnarMenu, navColumnarMenuBackground) {
     navColumnarMenuBackground.style.visibility = "hidden";
   }
 
-  [...document.getElementsByClassName("changeable")].forEach((element) => {
+  [...document.getElementsByClassName("changeable")].forEach(element => {
     element.classList.toggle("active");
   });
 }
 window.addEventListener("scroll", reveal);
 document.addEventListener("DOMContentLoaded", function (event) {
-  [...document.getElementsByTagName("a")].forEach(function (element) {
+  [...document.getElementsByClassName("change-sidebar")].forEach(function (
+    element
+  ) {
     element.addEventListener("click", () => {
       const navColumnarMenu = document.getElementById("nav-columnar-menu");
       const navColumnarMenuBackground = document.getElementsByClassName(
@@ -42,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
   document.addEventListener(
     "touchstart",
-    (ev) => {
+    ev => {
       const navColumnarMenu = document.getElementById("nav-columnar-menu");
       const navColumnarMenuBackground = document.getElementsByClassName(
         "nav-columnar-menu-background"
