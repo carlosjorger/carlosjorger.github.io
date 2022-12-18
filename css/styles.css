@@ -161,6 +161,36 @@ hr {
   color: black;
   text-shadow: 0rem 0rem 1rem aqua;
 }
+.icon-github {
+  background-image: url(../images/github.svg);
+}
+.icon-twitter {
+  background-image: url(../images/twitter.svg);
+}
+.icon-linkedin {
+  background-image: url(../images/linkedin.svg);
+}
+.icon-google {
+  background-image: url(../images/google.svg);
+}
+.svg-icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  filter: invert(92%) sepia(45%) saturate(2282%) hue-rotate(102deg)
+    brightness(93%) contrast(96%);
+  transition: all 0.5s ease-in-out;
+}
+.svg-icon:hover {
+  transition: all 0.5s ease-in-out;
+  filter: invert(0%) sepia(95%) saturate(0%) hue-rotate(273deg) brightness(105%)
+    contrast(101%) drop-shadow(0rem 0rem 1rem aqua);
+}
+/* .svg-icon > img {
+  fill: aqua;
+  height: inherit;
+} */
 
 @media (max-width: 1100px) {
   :root {
