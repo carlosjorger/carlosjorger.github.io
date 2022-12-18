@@ -5,7 +5,7 @@
 }
 
 .card-project {
-  padding: 0.3em;
+  padding: 0.2em;
   margin: 1em;
   width: 60%;
   display: flex;
@@ -15,20 +15,20 @@
 
 .card-title {
   color: var(--default-font-color);
-  padding: 0.3em;
+  padding: 0.2em;
 }
 .card-title > h3 {
   margin: 0;
 }
 .card-description {
-  padding: 0.3em;
+  padding: 0.2em;
   color: rgb(153, 249, 249);
   font-size: 0.6em;
   background-color: rgb(25, 18, 33);
 }
 
 .card-links {
-  padding: 0.3em;
+  padding: 0.2em;
   display: flex;
 }
 
