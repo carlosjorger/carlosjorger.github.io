@@ -53,6 +53,7 @@ ul {
 a {
   font-family: var(--default-font-family);
   color: var(--default-font-color);
+  display: inline-block;
 }
 
 i {
