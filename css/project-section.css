@@ -11,20 +11,23 @@
   display: flex;
   flex-direction: column;
   font-family: var(--default-font-family);
+  box-shadow: 0.8rem 0.8rem 5px rgb(20, 16, 26);
+  background-color: rgb(30, 23, 39);
+  border-radius: 0.2rem;
+  border: solid 0.1rem var(--default-secundary-font-color);
 }
 
 .card-title {
   color: var(--default-font-color);
-  padding: 0.2em;
+  padding: 0.5em;
 }
 .card-title > h3 {
   margin: 0;
 }
 .card-description {
-  padding: 0.2em;
+  padding: 0.5em;
   color: rgb(153, 249, 249);
   font-size: 0.6em;
-  background-color: rgb(25, 18, 33);
 }
 
 .card-links {
@@ -33,16 +36,10 @@
 }
 
 #open-ecommerce {
-  border-right: solid 0.1rem var(--default-secundary-font-color);
-  border-top: solid 0.1rem var(--default-secundary-font-color);
-  border-bottom: solid 0.1rem var(--default-secundary-font-color);
   align-self: flex-end;
 }
 
 #angular-portfolio {
-  border-left: solid 0.1rem var(--default-secundary-font-color);
-  border-top: solid 0.1rem var(--default-secundary-font-color);
-  border-bottom: solid 0.1rem var(--default-secundary-font-color);
   align-self: flex-start;
 }
 
