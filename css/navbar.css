@@ -24,7 +24,7 @@
 }
 
 .navbar {
-  padding: 0.3em;
+  padding: 0.2em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -32,12 +32,12 @@
 }
 
 #home {
-  padding: 0.3em;
+  padding: 0.2em;
   align-self: center;
 }
 
 .nav-link {
-  padding: 1em;
+  padding: 0.7em;
   color: var(--default-font-color);
   text-decoration: none;
   transition: all 0.5s ease-in-out;

@@ -23,14 +23,14 @@ p {
   color: var(--default-font-color);
   font-family: var(--default-font-family);
   max-width: 650px;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 
 h1,
 h2,
 h3 {
   font-family: "Raleway", sans-serif !important;
+  margin: 0.7rem 0;
 }
 
 /* % always with the property width */
@@ -39,9 +39,7 @@ section {
   /* for guide */
   /* border: solid 3px aqua; */
   width: 60%;
-  margin: 0 auto;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  margin: 3em auto;
   padding-top: 2em;
   height: calc(100vh - 6em);
   z-index: 2;
