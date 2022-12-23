@@ -8,24 +8,16 @@
   font-size: 2.4rem;
   color: var(--default-secundary-font-color);
   animation: 1s show-presentation ease;
-  margin: 0.7rem;
+  margin: 0.7rem 0;
 }
 
 .presentation-main-skill {
   font-size: 1.8rem;
-  animation-name: show-presentation-main-skill;
-  animation-timing-function: ease;
-  animation-duration: 1s;
-  animation-delay: 0.2s;
-  animation-fill-mode: forwards;
+  animation: 1s ease 0.2s forwards show-presentation-main-skill;
   margin: 0.7rem 0;
 }
 
 .presentation-description {
-  animation-name: show-presentation-main-skill;
-  animation-timing-function: ease;
-  animation-duration: 1s;
-  animation-delay: 0.4s;
-  animation-fill-mode: forwards;
+  animation: show-presentation-main-skill 1s ease 0.4s forwards;
   margin: 0.7rem 0;
 }
