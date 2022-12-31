@@ -4,14 +4,14 @@ A personal website porfolio deploy in [github page](https://carlosjorger.github.
 
 ## Demo
 
-![demo](./images/demo.webp)
-![demo](./images/demo2.webp)
+![demo](./images/demo1.jpg)
+![demo](./images/demo2.jpg)
 
 ## Mobile Demo
 
-|                              |                              |                              |
-| :--------------------------: | :--------------------------: | :--------------------------: |
-| ![demo](./images/demo4.webp) | ![demo](./images/demo3.webp) | ![demo](./images/demo5.webp) |
+|                             |                             |                             |
+| :-------------------------: | :-------------------------: | :-------------------------: |
+| ![demo](./images/demo3.jpg) | ![demo](./images/demo4.jpg) | ![demo](./images/demo5.jpg) |
 
 ## Why?
 
