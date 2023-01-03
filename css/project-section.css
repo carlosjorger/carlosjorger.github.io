@@ -1,3 +1,7 @@
+#work {
+  height: calc(120vh - 6em);
+}
+
 .card-projects {
   display: flex;
   flex-direction: column;
@@ -27,7 +31,7 @@
 .card-description {
   padding: 0.5em;
   color: rgb(153, 249, 249);
-  font-size: 0.6em;
+  font-size: 0.7em;
 }
 
 .card-links {
@@ -45,4 +49,7 @@
 
 #angular-portfolio .card-links {
   justify-content: end;
+}
+#online-cv-maker {
+  align-self: flex-end;
 }

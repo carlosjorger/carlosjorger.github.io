@@ -242,6 +242,9 @@ hr {
   footer {
     width: 75%;
   }
+  .card-project {
+    width: 70% !important;
+  }
 }
 
 @media (max-width: 510px) {
@@ -265,7 +268,9 @@ hr {
   footer {
     width: 80%;
   }
-
+  #work {
+    height: calc(100vh - 6em) !important;
+  }
   .br-show {
     display: inline;
   }
@@ -292,7 +297,6 @@ hr {
   footer {
     width: 85%;
   }
-
   .br-show {
     display: inline;
   }
