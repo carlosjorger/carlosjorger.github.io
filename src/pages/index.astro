@@ -1,80 +1,81 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import AboutMe from '../components/AboutMe.astro';
-import Footer from '../components/Footer.astro';
-import Work from '../components/Work/Work.astro';
-import Presentation from '../components/Presentation.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Footer from "../components/Footer.astro";
+import Work from "../components/Work/Work.astro";
+import Presentation from "../components/Presentation.astro";
 ---
 
 <script>
-	function reveal() {
-  var revealElements = document.getElementsByClassName("reveal");
-  [...revealElements].forEach(element => {
-    var windowHeight = window.innerHeight;
-    const elementTop = element.getBoundingClientRect().top;
-    const elementBottom = element.getBoundingClientRect().bottom;
-    if (
-      elementTop <
-        windowHeight - element.getBoundingClientRect().height + 150 &&
-      elementBottom >= 130
-    ) {
-      element.classList.add("active");
-    } else {
-      element.classList.remove("active");
-    }
-  });
-}
-function changeState( navColumnarMenuBackground) {
-  if (
-    !navColumnarMenuBackground.style.visibility ||
-    navColumnarMenuBackground.style.visibility === "hidden"
-  ) {
-    navColumnarMenuBackground.style.visibility = "visible";
-  } else {
-    navColumnarMenuBackground.style.visibility = "hidden";
-  }
-
-  [...document.getElementsByClassName("changeable")].forEach(element => {
-    element.classList.toggle("active");
-  });
-}
-window.addEventListener("scroll", reveal);
-document.addEventListener("DOMContentLoaded", function (event) {
-  [...document.getElementsByClassName("change-sidebar")].forEach(function (
-    element
-  ) {
-    element.addEventListener("click", () => {
-      const navColumnarMenuBackground = document.getElementsByClassName(
-        "nav-columnar-menu-background"
-      )[0];
-      changeState( navColumnarMenuBackground);
-    });
-  });
-  document.addEventListener(
-    "touchstart",
-    ev => {
-      const navColumnarMenuBackground = document.getElementsByClassName(
-        "nav-columnar-menu-background"
-      ).item(0);
-	  const navColumnarMenu=document.getElementById("nav-columnar-menu");
-	  let targetElement=ev.targetTouches[0].target;
-      if (navColumnarMenuBackground.contains(targetElement as Node)&&
-	  	!navColumnarMenu.contains(targetElement as Node)) {
-        changeState(navColumnarMenuBackground);
+  function reveal() {
+    var revealElements = document.getElementsByClassName("reveal");
+    [...revealElements].forEach((element) => {
+      var windowHeight = window.innerHeight;
+      const elementTop = element.getBoundingClientRect().top;
+      const elementBottom = element.getBoundingClientRect().bottom;
+      if (
+        elementTop <
+          windowHeight - element.getBoundingClientRect().height + 150 &&
+        elementBottom >= 130
+      ) {
+        element.classList.add("active");
+      } else {
+        element.classList.remove("active");
       }
-    },
-    false
-  );
-});
+    });
+  }
+  function changeState(navColumnarMenuBackground) {
+    if (
+      !navColumnarMenuBackground.style.visibility ||
+      navColumnarMenuBackground.style.visibility === "hidden"
+    ) {
+      navColumnarMenuBackground.style.visibility = "visible";
+    } else {
+      navColumnarMenuBackground.style.visibility = "hidden";
+    }
+
+    [...document.getElementsByClassName("changeable")].forEach((element) => {
+      element.classList.toggle("active");
+    });
+  }
+  window.addEventListener("scroll", reveal);
+  document.addEventListener("DOMContentLoaded", function (event) {
+    [...document.getElementsByClassName("change-sidebar")].forEach(function (
+      element
+    ) {
+      element.addEventListener("click", () => {
+        const navColumnarMenuBackground = document.getElementsByClassName(
+          "nav-columnar-menu-background"
+        )[0];
+        changeState(navColumnarMenuBackground);
+      });
+    });
+    document.addEventListener(
+      "touchstart",
+      (ev) => {
+        const navColumnarMenuBackground = document
+          .getElementsByClassName("nav-columnar-menu-background")
+          .item(0);
+        const navColumnarMenu = document.getElementById("nav-columnar-menu");
+        let targetElement = ev.targetTouches[0].target;
+        if (
+          navColumnarMenuBackground.contains(targetElement as Node) &&
+          !navColumnarMenu.contains(targetElement as Node)
+        ) {
+          changeState(navColumnarMenuBackground);
+        }
+      },
+      false
+    );
+  });
 </script>
 <Layout title="Carlos Jorge's personal portfolio website">
-	<Header/>
-	<main>
-		<Presentation/>
-		<AboutMe/>
-		<Work/>
-	  </main>
-	  <Footer/>
+  <Header />
+  <main>
+    <Presentation />
+    <AboutMe />
+    <Work />
+  </main>
+  <Footer />
 </Layout>
-
