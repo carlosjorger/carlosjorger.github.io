@@ -200,10 +200,6 @@ hr {
     font-size: 25px;
   }
 
-  .card-project {
-    width: 65%;
-  }
-
   section,
   footer {
     width: 70%;
@@ -241,9 +237,6 @@ hr {
   section,
   footer {
     width: 75%;
-  }
-  .card-project {
-    width: 70% !important;
   }
 }
 

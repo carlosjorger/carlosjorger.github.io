@@ -9,7 +9,10 @@ export interface Props {
 const { id, title, description, anchorLabel, githubLink } = Astro.props;
 ---
 
-<article id={id} class="card-project reveal">
+<article
+  id={id}
+  class="font-lato p-1 m-4 lg:w-[60%] md:w-[65%] sm:w-[70%] flex flex-col bg-[#322644] rounded border-solid border-[0.1rem] border-[var(--default-secundary-font-color)] reveal"
+>
   <header class="card-title">
     <h3>{title}</h3>
   </header>
