@@ -11,15 +11,15 @@ const { id, title, description, anchorLabel, githubLink } = Astro.props;
 
 <article
   id={id}
-  class="font-lato p-1 m-4 lg:w-[60%] md:w-[65%] sm:w-[70%] flex flex-col bg-[#322644] rounded border-solid border-[0.1rem] border-[var(--default-secundary-font-color)] reveal"
+  class="font-lato p-1 m-2 lg:w-[60%] md:w-[65%] sm:w-[70%] flex flex-col bg-[#322644] rounded border-solid border-[0.1rem] border-[var(--default-secundary-font-color)] reveal"
 >
-  <header class="card-title">
-    <h3>{title}</h3>
+  <header class="text-[var(--default-font-color)] p-2">
+    <h3 class="m-0">{title}</h3>
   </header>
-  <div class="card-description">
-    <p>{description}</p>
+  <div class="p-2 text-[#99F9F9] text-xs">
+    <p class="m-0">{description}</p>
   </div>
-  <div class="card-links">
+  <div class="flex p-1 self-end">
     <a href={githubLink} aria-label={anchorLabel}
       ><i class="svg-icon svg-icon-s icon-github"></i></a
     >

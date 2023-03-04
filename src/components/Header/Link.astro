@@ -1,0 +1,8 @@
+---
+export interface Props {
+  href: string;
+}
+const { href } = Astro.props;
+---
+
+<a class="nav-link change-sidebar" href={href}> <slot /></a>

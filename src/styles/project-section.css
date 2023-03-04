@@ -8,19 +8,6 @@
   padding: 1rem;
 }
 
-.card-title {
-  color: var(--default-font-color);
-  padding: 0.5em;
-}
-.card-title > h3 {
-  margin: 0;
-}
-.card-description {
-  padding: 0.5em;
-  color: rgb(153, 249, 249);
-  font-size: 0.7em;
-}
-
 .card-links {
   padding: 0.2em;
   display: flex;

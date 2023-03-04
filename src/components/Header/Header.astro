@@ -1,0 +1,60 @@
+---
+import Link from "./Link.astro";
+import SideBarLink from "./SideBarLink.astro";
+---
+
+<header>
+  <nav class="navbar-uncompressed">
+    <ul class="navbar">
+      <li id="home">
+        <a href="#" aria-label="Go to the presentation section">
+          <i class="svg-icon svg-icon-m icon-house"> </i>
+        </a>
+      </li>
+      <li>
+        <Link href="#aboutMe">About me</Link>
+        <Link href="#work">Work</Link>
+        <Link href="#contact">Contact</Link>
+      </li>
+    </ul>
+  </nav>
+  <nav class="navbar-compressed">
+    <div class="nav-header-menu changeable">
+      <i
+        class="svg-icon svg-icon-m icon-bars change-sidebar"
+        id="show-nav-columnar-menu"
+      >
+      </i>
+    </div>
+    <div class="nav-columnar-menu-background changeable">
+      <div id="nav-columnar-menu" class="changeable">
+        <picture class="image-container">
+          <img
+            class="logo changeable"
+            src="./images/logo-1.svg"
+            alt="logo"
+            width="200"
+            height="200"
+          />
+        </picture>
+        <hr />
+        <nav>
+          <ul id="nav-columnar-menu-list">
+            <SideBarLink href="#" label="Home" iconType="icon-house" />
+            <SideBarLink
+              href="#aboutMe"
+              label="About me"
+              iconType="icon-user"
+            />
+            <SideBarLink href="#work" label="Work" iconType="icon-file-code" />
+            <SideBarLink
+              href="#contact"
+              label="Contact"
+              iconType="icon-phone"
+            />
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </nav>
+</header>

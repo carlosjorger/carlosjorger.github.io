@@ -1,0 +1,16 @@
+---
+import Link from "./Link.astro";
+export interface Props {
+  iconType: string;
+  href: string;
+  label: string;
+}
+const { iconType, href, label } = Astro.props;
+---
+
+<li class="nav-element">
+  <i class:list={["svg-icon", "svg-icon-s", iconType]}> </i>
+  <Link href={href}>
+    <h2 class="pl-1">{label}</h2>
+  </Link>
+</li>
