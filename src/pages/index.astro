@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-
-
+import AboutMe from '../components/AboutMe.astro';
+import Footer from '../components/Footer.astro';
+import Work from '../components/Work/Work.astro';
+import Presentation from '../components/Presentation.astro';
 ---
 
 <script>
@@ -54,8 +56,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     ev => {
       const navColumnarMenuBackground = document.getElementsByClassName(
         "nav-columnar-menu-background"
-      )[0];
-      if (ev.path[0].classList.contains("nav-columnar-menu-background")) {
+      ).item(0);
+	  const navColumnarMenu=document.getElementById("nav-columnar-menu");
+	  let targetElement=ev.targetTouches[0].target;
+      if (navColumnarMenuBackground.contains(targetElement as Node)&&
+	  	!navColumnarMenu.contains(targetElement as Node)) {
         changeState(navColumnarMenuBackground);
       }
     },
@@ -66,153 +71,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 <Layout title="Carlos Jorge's personal portfolio website">
 	<Header/>
 	<main>
-		<section>
-		  <div class="presentation centered-article">
-			<div class="reveal active">
-			  <h1 class="presentation-title">
-				Hi, I am <br class="br-show" />Carlos Jorge, <br />
-				Web developer!
-			  </h1>
-			</div>
-			<div class="reveal active">
-			  <h2 class="presentation-main-skill">
-				Welcome to my personal portfolio!
-			  </h2>
-			</div>
-			<div class="reveal active">
-			  <p class="presentation-description">
-				I'm a cuban computer science from Havana University. Currently,
-				I'm working as full-stack engineer focused in building .net
-				application and their performance. Also, I work in frontend
-				websites using frameworks like angular, vue or react.
-			  </p>
-			</div>
-		  </div>
-		</section>
-		<section id="aboutMe">
-		  <div class="centered-article">
-			<header><h2 class="subtitle reveal">About me</h2></header>
-			<p class="reveal">
-			  Hello, My name is Carlos Jorge. I'm a full-stack engineer that enjoy
-			  coding on and off the work. I started working as a backend developer
-			  in 2020 using .net technologies and sql server.
-			</p>
-			<p class="reveal">
-			  Currently, I'm also working on frontend technologies like angular,
-			  vue, html, css.
-			</p>
-			<p class="reveal">
-			  In my free time I like listening to music, reading books or watching
-			  movies from favorite directors.
-			</p>
-		  </div>
-		</section>
-		<section id="work">
-		  <div class="card-projects">
-			<header>
-			  <h2 class="subtitle reveal">
-				Some projects<br />
-				I've made
-			  </h2>
-			</header>
-  
-			<article id="open-ecommerce" class="card-project reveal">
-			  <header class="card-title">
-				<h3>OpenEcommerce</h3>
-			  </header>
-			  <div class="card-description">
-				<p>
-				  OpenEcommerce is an ecommerce builded with .net using a
-				  hexagonal architecture, cqrs pattern and other patterns.
-				</p>
-			  </div>
-			  <div class="card-links">
-				<a
-				  aria-label="See my ecommerce github project"
-				  href="https://github.com/carlosjorger/openEcommerce"
-				  ><i class="svg-icon icon-github svg-icon-s"></i
-				></a>
-			  </div>
-			</article>
-			<article id="angular-portfolio" class="card-project reveal">
-			  <header class="card-title">
-				<h3>Angular Portfolio</h3>
-			  </header>
-			  <div class="card-description">
-				<p>
-				  It is a personal portfolio builded with angular using really
-				  cool animation (Angular animations).
-				</p>
-			  </div>
-			  <div class="card-links">
-				<a
-				  aria-label="See my portfolio github project"
-				  href="https://github.com/carlosjorger/portfolio"
-				  ><i class="svg-icon icon-github svg-icon-s"></i
-				></a>
-			  </div>
-			</article>
-			<article id="online-cv-maker" class="card-project reveal">
-			  <header class="card-title">
-				<h3>Online CV Maker</h3>
-			  </header>
-			  <div class="card-description">
-				<p>An online cv maker made in astro using vuejs components.</p>
-			  </div>
-			  <div class="card-links">
-				<a
-				  aria-label="See online cv maker"
-				  href="https://github.com/carlosjorger/astro-vue-online-cv-maker"
-				  ><i class="svg-icon icon-github svg-icon-s"></i
-				></a>
-			  </div>
-			</article>
-		  </div>
-		</section>
+		<Presentation/>
+		<AboutMe/>
+		<Work/>
 	  </main>
-	  <footer>
-		<div class="footer">
-		  <div id="contact" class="contacts reveal">
-			<h2 class="subtitle contacts-item">Contact</h2>
-			<address class="contacts-item">
-			  <a
-				href="mailto:rodriguezcuelloc@gmail.com"
-				aria-label="contact via this email address"
-				><i class="svg-icon icon-google"></i
-			  ></a>
-			  <a
-				href="https://github.com/carlosjorger"
-				aria-label="See my github profile"
-				><i class="svg-icon icon-github"></i
-			  ></a>
-			  <a
-				href="https://www.linkedin.com/in/carlosjorger/"
-				aria-label="See my linkedin profile and connect with me"
-				><i class="svg-icon icon-linkedin"></i
-			  ></a>
-			  <a
-				href="https://twitter.com/carlosjorgerc"
-				aria-label="See my twitter profile and follow me"
-				><i class="svg-icon icon-twitter"> </i
-			  ></a>
-			</address>
-		  </div>
-		  <div class="footer-info reveal">
-			<p class="footer-info-item">
-			  <strong class="year">© 2022 Carlos Jorge</strong>
-			  <br />
-			  <a
-				class="work-link"
-				href="https://github.com/carlosjorger/carlosjorger.github.io"
-				>Published</a
-			  >
-			  in
-			  <a class="work-link" href="https://pages.github.com/"
-				>Github Page</a
-			  >
-			</p>
-		  </div>
-		</div>
-	  </footer>
+	  <Footer/>
 </Layout>
 

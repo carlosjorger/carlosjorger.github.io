@@ -1,0 +1,25 @@
+---
+export interface Props{
+    id:string;
+    title: string;
+    description:string;
+    anchorLabel:string;
+	githubLink: string;
+}
+const { id,title,description,anchorLabel,githubLink } = Astro.props;
+---
+<article id={id} class="card-project reveal">
+    <header class="card-title">
+      <h3>{title}</h3>
+    </header>
+    <div class="card-description">
+      <p>{description}</p>
+    </div>
+    <div class="card-links">
+      <a
+        href={githubLink}
+        aria-label={anchorLabel}
+        ><i class="svg-icon svg-icon-s icon-github"></i
+      ></a>
+    </div>
+</article>
