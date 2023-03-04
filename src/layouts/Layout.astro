@@ -1,4 +1,10 @@
 ---
+import "../styles/styles.css";
+import "../styles/navbar.css";
+import "../styles/footer.css";
+import "../styles/presentation-section.css";
+import "../styles/project-section.css";
+
 export interface Props {
   title: string;
 }
@@ -25,19 +31,6 @@ const { title } = Astro.props;
     <meta property="og:url" content="https://carlosjorger.github.io" />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/images/logo-icon.svg" />
-    <link rel="stylesheet" type="text/css" href="/src/styles/styles.css" />
-    <link rel="stylesheet" type="text/css" href="/src/styles/navbar.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/src/styles/presentation-section.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/src/styles/project-section.css"
-    />
-    <link rel="stylesheet" type="text/css" href="/src/styles/footer.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
