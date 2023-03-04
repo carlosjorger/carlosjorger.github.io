@@ -146,31 +146,31 @@ hr {
 }
 
 .icon-github {
-  background-image: url(../images/github.svg);
+  background-image: url(/public/images/github.svg);
 }
 .icon-twitter {
-  background-image: url(../images/twitter.svg);
+  background-image: url(/public/images/twitter.svg);
 }
 .icon-linkedin {
-  background-image: url(../images/linkedin.svg);
+  background-image: url(/public/images/linkedin.svg);
 }
 .icon-google {
-  background-image: url(../images/google.svg);
+  background-image: url(/public/images/google.svg);
 }
 .icon-house {
-  background-image: url(../images/house.svg);
+  background-image: url(/public/images/house.svg);
 }
 .icon-user {
-  background-image: url(../images/user.svg);
+  background-image: url(/public/images/user.svg);
 }
 .icon-phone {
-  background-image: url(../images/phone.svg);
+  background-image: url(/public/images/phone.svg);
 }
 .icon-bars {
-  background-image: url(../images/bars.svg);
+  background-image: url(/public/images/bars.svg);
 }
 .icon-file-code {
-  background-image: url(../images/file-code.svg);
+  background-image: url(/public/images/file-code.svg);
 }
 .svg-icon {
   background-repeat: no-repeat;
