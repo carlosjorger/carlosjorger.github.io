@@ -43,7 +43,10 @@ import IconElement from "../shared/IconElement.astro";
           class="w-[80%] border-0 h-0.5 bg-[var(--default-font-color)] m-auto"
         />
         <nav>
-          <ul id="nav-columnar-menu-list">
+          <ul
+            id="nav-columnar-menu-list"
+            class="flex flex-col items-center text-xl"
+          >
             <SideBarLink href="#" label="Home" iconType="house" />
             <SideBarLink href="#aboutMe" label="About me" iconType="user" />
             <SideBarLink href="#work" label="Work" iconType="code-blocks" />
