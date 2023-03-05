@@ -2,22 +2,22 @@
 
 A personal full responsive website porfolio deploy in [github page](https://carlosjorger.github.io/) made in Astro and using tailwindcss.
 
-## Demo
+## 🖥️ Demo
 
-![demo](./images/demo1.webp)
-![demo](./images/demo2.webp)
+![demo](public/images/demo1.webp)
+![demo](public/images/demo2.webp)
 
-## Mobile Demo
+## 📱 Mobile Demo
 
-|                              |                              |                              |
-| :--------------------------: | :--------------------------: | :--------------------------: |
-| ![demo](./images/demo3.webp) | ![demo](./images/demo4.webp) | ![demo](./images/demo5.webp) |
+|                                   |                                   |                                   |
+| :-------------------------------: | :-------------------------------: | :-------------------------------: |
+| ![demo](public/images/demo3.webp) | ![demo](public/images/demo4.webp) | ![demo](public/images/demo5.webp) |
 
-## Why?
+## 💁 Why?
 
 This proyect is made with the objetive of showing my work and skills as a software developer.
 
-## Tools
+## 🧰 Tools
 
 - Astro
 - HTML
