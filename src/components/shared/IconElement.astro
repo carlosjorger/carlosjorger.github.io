@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon";
+
+export interface Props {
+  id?: string;
+  iconType: string;
+  height: string;
+  width: string;
+}
+const { iconType, height, width, id = undefined } = Astro.props;
+---
+
+<i
+  id={id}
+  class:list={[
+    "text-teal-300 hover:text-black hover:transition-all hover:duration-500 hover:drop-shadow-[0rem_0rem_1rem_aqua] ease-in-out inline-block bg-no-repeat change-sidebar",
+    height,
+    width,
+    iconType,
+  ]}
+>
+  <Icon name={iconType} />
+</i>

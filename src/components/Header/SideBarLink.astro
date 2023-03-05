@@ -1,5 +1,6 @@
 ---
 import Link from "./Link.astro";
+import IconElement from "../shared/IconElement.astro";
 export interface Props {
   iconType: string;
   href: string;
@@ -11,7 +12,7 @@ const { iconType, href, label } = Astro.props;
 <li
   class="flex text-left p-2 pl-20 items-center justify-start transition-colors ease-in-out active:bg-[#241c2d]"
 >
-  <i class:list={["svg-icon", "svg-icon-s", iconType]}> </i>
+  <IconElement iconType={iconType} height="h-6" width="w-6" />
   <Link href={href}>
     <h2 class="pl-1">{label}</h2>
   </Link>

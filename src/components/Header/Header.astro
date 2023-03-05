@@ -1,6 +1,7 @@
 ---
 import Link from "./Link.astro";
 import SideBarLink from "./SideBarLink.astro";
+import IconElement from "../shared/IconElement.astro";
 ---
 
 <header>
@@ -8,7 +9,7 @@ import SideBarLink from "./SideBarLink.astro";
     <ul class="navbar">
       <li id="home">
         <a href="#" aria-label="Go to the presentation section">
-          <i class="svg-icon svg-icon-m icon-house"> </i>
+          <IconElement iconType="house" height="h-8" width="w-8" />
         </a>
       </li>
       <li>
@@ -20,11 +21,12 @@ import SideBarLink from "./SideBarLink.astro";
   </nav>
   <nav class="navbar-compressed">
     <div class="nav-header-menu changeable">
-      <i
-        class="svg-icon svg-icon-m icon-bars change-sidebar"
+      <IconElement
         id="show-nav-columnar-menu"
-      >
-      </i>
+        iconType="bars"
+        height="h-8"
+        width="w-8"
+      />
     </div>
     <div class="nav-columnar-menu-background changeable">
       <div id="nav-columnar-menu" class="changeable">
@@ -42,17 +44,13 @@ import SideBarLink from "./SideBarLink.astro";
         />
         <nav>
           <ul id="nav-columnar-menu-list">
-            <SideBarLink href="#" label="Home" iconType="icon-house" />
-            <SideBarLink
-              href="#aboutMe"
-              label="About me"
-              iconType="icon-user"
-            />
-            <SideBarLink href="#work" label="Work" iconType="icon-file-code" />
+            <SideBarLink href="#" label="Home" iconType="house" />
+            <SideBarLink href="#aboutMe" label="About me" iconType="user" />
+            <SideBarLink href="#work" label="Work" iconType="code-blocks" />
             <SideBarLink
               href="#contact"
               label="Contact"
-              iconType="icon-phone"
+              iconType="contact-phone"
             />
           </ul>
         </nav>

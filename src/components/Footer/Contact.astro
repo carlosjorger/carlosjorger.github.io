@@ -1,4 +1,6 @@
 ---
+import IconElement from "../shared/IconElement.astro";
+
 export interface Props {
   href: string;
   title: string;
@@ -7,6 +9,6 @@ export interface Props {
 const { href, title, iconType } = Astro.props;
 ---
 
-<a href={href} aria-label={title}
-  ><i class:list={["svg-icon", iconType]} class="svg-icon icon-twitter"> </i></a
->
+<a href={href} aria-label={title}>
+  <IconElement iconType={iconType} height="h-12" width="w-12" />
+</a>

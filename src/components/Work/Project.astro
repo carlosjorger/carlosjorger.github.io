@@ -1,4 +1,5 @@
 ---
+import IconElement from "../shared/IconElement.astro";
 export interface Props {
   id: string;
   title: string;
@@ -21,7 +22,7 @@ const { id, title, description, anchorLabel, githubLink } = Astro.props;
   </div>
   <div class="flex p-1 self-end">
     <a href={githubLink} aria-label={anchorLabel}
-      ><i class="svg-icon svg-icon-s icon-github"></i></a
+      ><IconElement height="h-6" width="w-6" iconType="github" /></a
     >
   </div>
 </article>

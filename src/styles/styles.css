@@ -140,56 +140,6 @@ i {
   background-size: 100% 15%;
 }
 
-.icon-github {
-  background-image: url(/images/github.svg);
-}
-.icon-twitter {
-  background-image: url(/images/twitter.svg);
-}
-.icon-linkedin {
-  background-image: url(/images/linkedin.svg);
-}
-.icon-google {
-  background-image: url(/images/google.svg);
-}
-.icon-house {
-  background-image: url(/images/house.svg);
-}
-.icon-user {
-  background-image: url(/images/user.svg);
-}
-.icon-phone {
-  background-image: url(/images/phone.svg);
-}
-.icon-bars {
-  background-image: url(/images/bars.svg);
-}
-.icon-file-code {
-  background-image: url(/images/file-code.svg);
-}
-.svg-icon {
-  background-repeat: no-repeat;
-  display: inline-block;
-  height: 3rem;
-  width: 3rem;
-  filter: invert(92%) sepia(45%) saturate(2282%) hue-rotate(102deg)
-    brightness(93%) contrast(96%);
-  transition: all 0.5s ease-in-out;
-}
-.svg-icon:hover {
-  transition: all 0.5s ease-in-out;
-  filter: invert(0%) sepia(95%) saturate(0%) hue-rotate(273deg) brightness(105%)
-    contrast(101%) drop-shadow(0rem 0rem 1rem aqua);
-}
-
-.svg-icon-m {
-  height: 2rem;
-  width: 2rem;
-}
-.svg-icon-s {
-  height: 1.5rem;
-  width: 1.5rem;
-}
 @media (max-width: 1100px) {
   :root {
     font-size: 25px;
