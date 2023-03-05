@@ -11,6 +11,7 @@
 .image-container {
   padding: 5%;
   width: 90%;
+  margin: auto;
   text-align: center;
   display: block;
 }
@@ -35,24 +36,6 @@
 #home {
   padding: 0.2em;
   align-self: center;
-}
-
-.nav-link {
-  padding: 0.7em;
-  color: var(--default-font-color);
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
-}
-
-.nav-link:hover {
-  background-color: rgb(36, 28, 45);
-  color: var(--default-secundary-font-color) !important;
-}
-
-.nav-link:visited {
-  color: var(--default-font-color);
-  text-decoration: none;
-  background-image: none;
 }
 
 .navbar > li {
@@ -97,7 +80,7 @@
   font-size: 0.9rem;
   position: absolute;
   margin-top: 0;
-  background-color: rgb(38, 26, 50);
+  background-color: #241c2d;
   width: 75%;
   height: 100vh;
   left: -100vw;
@@ -109,23 +92,5 @@
 }
 #nav-columnar-menu-list {
   list-style-type: none;
-  padding: 0;
-}
-
-.nav-element {
-  display: flex;
-  text-align: left;
-  padding: 0.5em;
-  padding-left: 5em;
-  transition: all 0.5s ease-in-out;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.nav-element:hover {
-  background-color: rgb(36, 28, 45);
-}
-
-.nav-link.compressed {
   padding: 0;
 }

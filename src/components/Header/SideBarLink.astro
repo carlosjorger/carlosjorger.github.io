@@ -8,7 +8,9 @@ export interface Props {
 const { iconType, href, label } = Astro.props;
 ---
 
-<li class="nav-element">
+<li
+  class="flex text-left p-2 pl-20 items-center justify-start transition-colors ease-in-out active:bg-[#241c2d]"
+>
   <i class:list={["svg-icon", "svg-icon-s", iconType]}> </i>
   <Link href={href}>
     <h2 class="pl-1">{label}</h2>

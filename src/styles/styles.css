@@ -60,12 +60,7 @@ i {
   margin: 0.1em;
   color: var(--default-secundary-font-color);
 }
-hr {
-  width: 80%;
-  border: 0;
-  height: 0.05em;
-  background: var(--default-font-color);
-}
+
 /* || UTILITIES */
 
 .reveal {
