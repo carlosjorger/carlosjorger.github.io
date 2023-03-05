@@ -22,7 +22,6 @@
   z-index: 4;
   background-color: rgba(var(--default-background-color), 0.5);
   backdrop-filter: blur(6px);
-  box-shadow: 5px 0px 20px;
 }
 
 .navbar {
