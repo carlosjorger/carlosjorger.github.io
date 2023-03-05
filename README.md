@@ -1,6 +1,6 @@
 # carlosjorger.github.io
 
-A personal website porfolio deploy in [github page](https://carlosjorger.github.io/) made only with html, css and js.
+A personal full responsive website porfolio deploy in [github page](https://carlosjorger.github.io/) made in Astro and using tailwindcss.
 
 ## Demo
 
@@ -15,16 +15,26 @@ A personal website porfolio deploy in [github page](https://carlosjorger.github.
 
 ## Why?
 
-This proyect is made with the objetive of learning the basis of frontend development (html/css/js) Without depending on a frontend framework like (react, angular, vue or svelte)
+This proyect is made with the objetive of showing my work and skills as a software developer.
 
-## Tools:
+## Tools
 
-- CSS animations and transitions.
-- media querys for made the project responsive.
-- flexbox and grid.
-- responsive navbar (horizontal navbar with a longer width and columnar navbar with a shorter width)
-- font-awesome icons
+- Astro
+- HTML
+- CSS
+- Tailwind
+- Prettierrc
+- Typescript
 
-## How to run this project?
+## 🧞 Commands
 
-It easy, open the index.html file in a browse and it's done 👍.
+All commands are run from the root of the project, from a terminal:
+
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `npm install`          | Installs dependencies                            |
+| `npm run dev`          | Starts local dev server at `localhost:3000`      |
+| `npm run build`        | Build your production site to `./dist/`          |
+| `npm run preview`      | Preview your build locally, before deploying     |
+| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro --help` | Get help using the Astro CLI                     |
