@@ -191,9 +191,7 @@ i {
   footer {
     width: 80%;
   }
-  #work {
-    height: calc(100vh - 6em) !important;
-  }
+
   .br-show {
     display: inline;
   }
