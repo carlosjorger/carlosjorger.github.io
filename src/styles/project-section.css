@@ -2,12 +2,6 @@
   height: 120vh;
 }
 
-.card-projects {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-}
-
 .card-links {
   padding: 0.2em;
   display: flex;

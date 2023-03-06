@@ -5,9 +5,9 @@ import Subtitle from "../shared/Subtitle.astro";
 
 <footer>
   <div class="footer">
-    <div id="contact" class="contacts reveal">
+    <div id="contact" class="flex flex-col justify-center reveal">
       <Subtitle center>Contact</Subtitle>
-      <address class="contacts-item">
+      <address class="text-center">
         <Contact
           href="mailto:rodriguezcuelloc@gmail.com"
           title="contact via this email address"
@@ -30,9 +30,11 @@ import Subtitle from "../shared/Subtitle.astro";
         />
       </address>
     </div>
-    <div class="footer-info reveal">
-      <p class="footer-info-item">
-        <strong class="year">© 2022 Carlos Jorge</strong>
+    <div
+      class="text-[var(--default-font-color)] font-lato flex flex-col justify-center reveal"
+    >
+      <p class="text-center text-xl my-0 mx-auto">
+        <strong class="inline italic">© 2022 Carlos Jorge</strong>
         <br />
         <a
           class="work-link"
