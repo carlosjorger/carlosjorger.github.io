@@ -54,17 +54,13 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Lato:400&display=swap"
+      as="font"
     />
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css?family=Lato:400italic%27,700&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-      type="text/css"
+      as="font"
+      href="https://fonts.googleapis.com/css?family=Lato:400italic%27&display=swap"
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
