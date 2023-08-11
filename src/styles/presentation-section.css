@@ -1,11 +1,11 @@
 .presentation-title {
-  animation: 1s show-presentation ease;
+  animation: 500ms show-presentation ease;
 }
 
 .presentation-main-skill {
-  animation: 1s ease 0.2s forwards show-presentation-main-skill;
+  animation: 500ms ease 0.2s forwards show-presentation-main-skill;
 }
 
 .presentation-description {
-  animation: show-presentation-main-skill 1s ease 0.4s forwards;
+  animation: show-presentation-main-skill 500ms ease 0.4s forwards;
 }
