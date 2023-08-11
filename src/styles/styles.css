@@ -34,14 +34,13 @@ h3 {
 }
 
 /* % always with the property width */
-footer,
+
 section {
   /* for guide */
   /* border: solid 3px aqua; */
   width: 60%;
   margin: 3em auto;
   padding-top: 2em;
-  height: 100vh;
   z-index: 2;
 }
 
@@ -71,7 +70,7 @@ i {
 
 .reveal.active {
   opacity: 1 !important;
-  transition: all 1s ease-in;
+  transition: all 400ms ease-in;
   transform: translate(0vh, 0vh);
 }
 
