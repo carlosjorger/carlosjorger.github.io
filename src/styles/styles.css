@@ -11,13 +11,6 @@
 }
 
 /* || GENERAL STYLES */
-body {
-  margin: 0;
-}
-
-main {
-  transition: all 0.8s ease-in;
-}
 
 p {
   color: var(--default-font-color);
@@ -129,8 +122,7 @@ i {
     font-size: 25px;
   }
 
-  section,
-  footer {
+  section{
     width: 70%;
   }
 
@@ -148,8 +140,7 @@ i {
     max-width: 450px;
   }
 
-  section,
-  footer {
+  section{
     width: 70%;
   }
 }
@@ -163,8 +154,7 @@ i {
     max-width: 330px;
   }
 
-  section,
-  footer {
+  section{
     width: 75%;
   }
 }
@@ -186,14 +176,10 @@ i {
     display: block !important;
   }
 
-  section,
-  footer {
+  section {
     width: 80%;
   }
 
-  .br-show {
-    display: inline;
-  }
 }
 
 @media (max-width: 350px) {
@@ -213,11 +199,7 @@ i {
     max-width: 90%;
   }
 
-  section,
-  footer {
+  section{
     width: 85%;
-  }
-  .br-show {
-    display: inline;
   }
 }
