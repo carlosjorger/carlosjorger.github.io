@@ -12,8 +12,8 @@ const { iconType, height, width, id = undefined } = Astro.props;
 
 <i
   id={id}
+  class= "text-teal-300 hover:text-black hover:transition-all hover:duration-500 hover:drop-shadow-[0rem_0rem_1rem_aqua] ease-in-out inline-block bg-no-repeat change-sidebar"
   class:list={[
-    "text-teal-300 hover:text-black hover:transition-all hover:duration-500 hover:drop-shadow-[0rem_0rem_1rem_aqua] ease-in-out inline-block bg-no-repeat change-sidebar",
     height,
     width,
     iconType,
