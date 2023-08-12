@@ -28,8 +28,9 @@ import IconElement from "../shared/IconElement.astro";
         width="w-8"
       />
     </div>
-    <div class="nav-columnar-menu-background changeable">
-      <div id="nav-columnar-menu" class="changeable">
+    <div class="nav-columnar-menu-background absolute p-0 mt-0 w-screen h-screen top-0 overflow-hidden z-50 changeable bg-[rgba(0, 0, 0, 0)] transition-all duration-300 delay-100 ease-in invisible">
+      <div id="nav-columnar-menu" class="changeable absolute mt-0 w-3/4 h-screen left-[-100vw] transition-all ease-out duration-300 text-[0.9rem] bg-[#241c2d]"
+      >
         <picture class="image-container">
           <img
             class="logo changeable"
@@ -45,7 +46,7 @@ import IconElement from "../shared/IconElement.astro";
         <nav>
           <ul
             id="nav-columnar-menu-list"
-            class="flex flex-col items-center text-xl"
+            class="flex flex-col items-center text-xl p-0 list-none"
           >
             <SideBarLink href="#" label="Home" iconType="house" />
             <SideBarLink href="#aboutMe" label="About me" iconType="user" />
