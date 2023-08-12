@@ -8,24 +8,8 @@ import Presentation from "../components/Presentation.astro";
 ---
 
 <script>
+  import {reveal} from "../utils/events"
   // TODO: refactor this code
-  function reveal() {
-    var revealElements = document.getElementsByClassName("reveal");
-    [...revealElements].forEach((element) => {
-      var windowHeight = window.innerHeight;
-      const elementTop = element.getBoundingClientRect().top;
-      const elementBottom = element.getBoundingClientRect().bottom;
-      if (
-        elementTop <
-          windowHeight - element.getBoundingClientRect().height + 150 &&
-        elementBottom >= 130
-      ) {
-        element.classList.add("active");
-      } else {
-        element.classList.remove("active");
-      }
-    });
-  }
   function changeState(navColumnarMenuBackground) {
     if (
       !navColumnarMenuBackground.style.visibility ||
@@ -41,17 +25,16 @@ import Presentation from "../components/Presentation.astro";
     });
   }
   window.addEventListener("scroll", reveal);
-  document.addEventListener("DOMContentLoaded", function (event) {
-    [...document.getElementsByClassName("change-sidebar")].forEach(function (
-      element
-    ) {
-      element.addEventListener("click", () => {
-        const navColumnarMenuBackground = document.getElementsByClassName(
+  document.addEventListener("DOMContentLoaded", function () {
+    const changeSiderElements = document.getElementsByClassName("change-sidebar");
+    for (const element of changeSiderElements) {
+       element.addEventListener("click", () => {
+        const [navColumnarMenuBackground] = document.getElementsByClassName(
           "nav-columnar-menu-background"
-        )[0];
+        );
         changeState(navColumnarMenuBackground);
       });
-    });
+    }
     document.addEventListener(
       "touchstart",
       (ev) => {
