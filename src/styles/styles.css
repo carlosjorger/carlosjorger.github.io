@@ -172,10 +172,6 @@ i {
     display: none !important;
   }
 
-  .navbar-compressed {
-    display: block !important;
-  }
-
   section {
     width: 80%;
   }
@@ -189,10 +185,6 @@ i {
 
   .navbar {
     display: none !important;
-  }
-
-  .navbar-compressed {
-    display: block !important;
   }
 
   p {

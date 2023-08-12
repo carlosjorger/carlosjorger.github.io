@@ -5,7 +5,7 @@ import IconElement from "../shared/IconElement.astro";
 ---
 
 <header>
-  <nav class="navbar-uncompressed shadow-lg shadow-black">
+  <nav class="navbar-uncompressed top-0 w-full fixed z-[4] backdrop-blur shadow-lg shadow-black">
     <ul class="navbar">
       <li id="home">
         <a href="#" aria-label="Go to the presentation section">
@@ -19,7 +19,7 @@ import IconElement from "../shared/IconElement.astro";
       </li>
     </ul>
   </nav>
-  <nav class="navbar-compressed">
+  <nav class="hidden fixed top-0 w-full z-[2] max-sm:block">
     <div class="nav-header-menu changeable">
       <IconElement
         id="show-nav-columnar-menu"

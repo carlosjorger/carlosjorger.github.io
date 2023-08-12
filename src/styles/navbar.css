@@ -16,12 +16,7 @@
   display: block;
 }
 .navbar-uncompressed {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 4;
   background-color: rgba(var(--default-background-color), 0.5);
-  backdrop-filter: blur(6px);
 }
 
 .navbar {
@@ -39,14 +34,6 @@
 
 .navbar > li {
   align-self: center;
-}
-
-.navbar-compressed {
-  display: none;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
 }
 
 .nav-header-menu {
