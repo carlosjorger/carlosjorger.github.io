@@ -19,22 +19,6 @@
   background-color: rgba(var(--default-background-color), 0.5);
 }
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0;
-}
-
-#home {
-  padding: 0.2em;
-  align-self: center;
-}
-
-.navbar > li {
-  align-self: center;
-}
-
 .nav-header-menu {
   padding: 0.8em;
   z-index: 2;

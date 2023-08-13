@@ -168,10 +168,6 @@ i {
     max-width: 85%;
   }
 
-  .navbar {
-    display: none !important;
-  }
-
   section {
     width: 80%;
   }
@@ -181,10 +177,6 @@ i {
 @media (max-width: 350px) {
   :root {
     font-size: 10px;
-  }
-
-  .navbar {
-    display: none !important;
   }
 
   p {
