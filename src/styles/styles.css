@@ -67,10 +67,6 @@ i {
   transform: translate(0vh, 0vh);
 }
 
-.br-show {
-  display: none;
-}
-
 /* || SITEWIDE */
 
 @keyframes show-presentation {
