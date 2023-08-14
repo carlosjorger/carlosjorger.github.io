@@ -9,57 +9,20 @@ import Presentation from "../components/Presentation.astro";
 
 <script>
   import {reveal} from "../utils/events"
-  // TODO: refactor this code
-  function togleVisibility(element:HTMLDivElement){
-    const visibility = element.style.visibility;
-    if (
-      !visibility ||
-      visibility === "hidden"
-    ) {
-      element.style.visibility = "visible";
-    } else {
-      element.style.visibility = "hidden";
-    }
-  }
-  function changeColumnNavbarVisibility(columnNavbar:HTMLDivElement) {
-    togleVisibility(columnNavbar)
-    const changeableElements=document.getElementsByClassName("changeable");
-    for (const changeableElement of changeableElements) {
-      changeableElement.classList.toggle("active");
-    }
-  }
-  window.addEventListener("scroll", reveal);
+  import {touchOutsideColumnNavbar,touchIcon} from "../utils/touchEvents"
+
+  document.addEventListener("scroll", reveal);
+  document.addEventListener(
+    "touchstart",
+    touchOutsideColumnNavbar,
+    {passive: true}
+  );
   document.addEventListener("DOMContentLoaded", function () {
     const changeSiderElements = document.getElementsByClassName("change-sidebar");
     for (const element of changeSiderElements) {
-       element.addEventListener("click", () => {
-        const [navColumnarMenuBackground] = document.getElementsByClassName(
-          "nav-columnar-menu-background"
-        );
-        if (navColumnarMenuBackground instanceof HTMLDivElement) {
-          changeColumnNavbarVisibility(navColumnarMenuBackground);
-        }
-      });
+       element.addEventListener("click", touchIcon);
     }
-    //TODO: try to move this code outside
-    document.addEventListener(
-      "touchstart",
-      (ev) => {
-        const navColumnarMenuBackground = document
-          .getElementsByClassName("nav-columnar-menu-background")
-          .item(0);
-        const navColumnarMenu = document.getElementById("nav-columnar-menu");
-        let targetElement = ev.targetTouches[0].target;
-        if (
-          navColumnarMenuBackground.contains(targetElement as Node) &&
-          !navColumnarMenu.contains(targetElement as Node) &&
-          navColumnarMenuBackground instanceof HTMLDivElement
-        ) {
-            changeColumnNavbarVisibility(navColumnarMenuBackground);
-        }
-      },
-      {passive: true}
-    );
+   
   });
 </script>
 <Layout title="Carlos Jorge's personal portfolio website">
