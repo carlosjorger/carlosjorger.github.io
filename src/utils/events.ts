@@ -1,3 +1,4 @@
+//TODO: Reval method active or inactive element in diferents vertical position
 export function reveal() {
     var revealElements = document.getElementsByClassName("reveal");
     for (const element of revealElements) {

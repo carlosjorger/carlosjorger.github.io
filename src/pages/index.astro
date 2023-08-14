@@ -10,19 +10,23 @@ import Presentation from "../components/Presentation.astro";
 <script>
   import {reveal} from "../utils/events"
   // TODO: refactor this code
-  function changeState(navColumnarMenuBackground) {
+  function togleVisibility(element:HTMLDivElement){
+    const visibility = element.style.visibility;
     if (
-      !navColumnarMenuBackground.style.visibility ||
-      navColumnarMenuBackground.style.visibility === "hidden"
+      !visibility ||
+      visibility === "hidden"
     ) {
-      navColumnarMenuBackground.style.visibility = "visible";
+      element.style.visibility = "visible";
     } else {
-      navColumnarMenuBackground.style.visibility = "hidden";
+      element.style.visibility = "hidden";
     }
-
-    [...document.getElementsByClassName("changeable")].forEach((element) => {
-      element.classList.toggle("active");
-    });
+  }
+  function changeColumnNavbarVisibility(columnNavbar:HTMLDivElement) {
+    togleVisibility(columnNavbar)
+    const changeableElements=document.getElementsByClassName("changeable");
+    for (const changeableElement of changeableElements) {
+      changeableElement.classList.toggle("active");
+    }
   }
   window.addEventListener("scroll", reveal);
   document.addEventListener("DOMContentLoaded", function () {
@@ -32,9 +36,12 @@ import Presentation from "../components/Presentation.astro";
         const [navColumnarMenuBackground] = document.getElementsByClassName(
           "nav-columnar-menu-background"
         );
-        changeState(navColumnarMenuBackground);
+        if (navColumnarMenuBackground instanceof HTMLDivElement) {
+          changeColumnNavbarVisibility(navColumnarMenuBackground);
+        }
       });
     }
+    //TODO: try to move this code outside
     document.addEventListener(
       "touchstart",
       (ev) => {
@@ -45,9 +52,10 @@ import Presentation from "../components/Presentation.astro";
         let targetElement = ev.targetTouches[0].target;
         if (
           navColumnarMenuBackground.contains(targetElement as Node) &&
-          !navColumnarMenu.contains(targetElement as Node)
+          !navColumnarMenu.contains(targetElement as Node) &&
+          navColumnarMenuBackground instanceof HTMLDivElement
         ) {
-          changeState(navColumnarMenuBackground);
+            changeColumnNavbarVisibility(navColumnarMenuBackground);
         }
       },
       {passive: true}
