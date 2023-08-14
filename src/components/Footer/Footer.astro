@@ -5,9 +5,9 @@ import Subtitle from "../shared/Subtitle.astro";
 
 <footer>
   <div class="grid h-screen">
-    <div id="contact" class="flex flex-col justify-center reveal">
-      <Subtitle center>Contact</Subtitle>
-      <address class="text-center">
+    <div id="contact" class="flex flex-col justify-center">
+      <Subtitle class:list={["reveal"]} center>Contact</Subtitle>
+      <address class="text-center reveal">
         <Contact
           href="mailto:rodriguezcuelloc@gmail.com"
           title="contact via this email address"
@@ -31,9 +31,9 @@ import Subtitle from "../shared/Subtitle.astro";
       </address>
     </div>
     <div
-      class="text-[var(--default-font-color)] font-lato flex flex-col justify-center reveal"
+      class="text-[var(--default-font-color)] font-lato flex flex-col justify-center"
     >
-      <p class="text-center text-xl my-0 mx-auto">
+      <p class="text-center text-xl my-0 mx-auto reveal">
         <strong class="inline italic">© 2022 Carlos Jorge</strong>
         <br />
         <a
