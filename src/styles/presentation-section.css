@@ -1,3 +1,4 @@
+/* TODO: create custom animations to tailwind */
 .presentation-title {
   animation: 500ms show-presentation ease;
 }
