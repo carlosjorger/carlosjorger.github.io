@@ -68,13 +68,6 @@ i {
 
 /* || SITEWIDE */
 
-@keyframes show-presentation {
-  0% {
-    opacity: 0;
-    transform: translate(0px, -10px);
-  }
-}
-
 @keyframes show-presentation-main-skill {
   0% {
     opacity: 0;
