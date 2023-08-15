@@ -4,8 +4,8 @@ export function reveal() {
     for (const element of revealElements) {
       const {top, bottom} = element.getBoundingClientRect();
       if (
-        top <= windowHeight - 120 &&
-        bottom >= 120
+        top <= windowHeight - 100 &&
+        bottom >= 100
       ) {
         element.classList.add("active");
       } else {

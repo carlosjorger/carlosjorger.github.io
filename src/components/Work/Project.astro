@@ -18,11 +18,11 @@ const { id, title, description, anchorLabel, githubLink } = Astro.props;
     <h3 class="m-0">{title}</h3>
   </header>
   <div class="p-2 text-[#99F9F9] text-xs">
-    <p class="m-0">{description}</p>
+    <p>{description}</p>
   </div>
-  <div class="flex p-1 self-end">
-    <a href={githubLink} aria-label={anchorLabel}
-      ><IconElement height="h-6" width="w-6" iconType="github" /></a
+  <div class="flex self-end">
+    <a href={githubLink} aria-label={anchorLabel} class="h-7"
+      ><IconElement height="h-auto" width="w-6" iconType="github" /></a
     >
   </div>
 </article>
