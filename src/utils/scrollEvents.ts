@@ -7,9 +7,9 @@ export function reveal() {
         top <= windowHeight - 100 &&
         bottom >= 100
       ) {
-        element.classList.add("active");
+        element.classList.remove("inactive");
       } else {
-        element.classList.remove("active");
+        element.classList.add("inactive");
       }
     }
   }

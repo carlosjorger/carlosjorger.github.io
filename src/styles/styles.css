@@ -54,13 +54,12 @@ i {
 }
 
 /* || UTILITIES */
-.reveal {
+.reveal.inactive {
   opacity: 0 !important;
   transition: all 500ms ease-in;
   transform: translate(0vh, 3vh);
 }
-/* TODO: replace active with inactive */
-.reveal.active {
+.reveal {
   opacity: 1 !important;
   transition: all 500ms ease-out;
   transform: translate(0vh, 0vh);
