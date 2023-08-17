@@ -37,20 +37,10 @@ section {
   z-index: 2;
 }
 
-ul {
-  list-style-type: none;
-}
-
 a {
   font-family: var(--default-font-family);
   color: var(--default-font-color);
   display: inline-block;
-}
-
-i {
-  color: rgb(148, 112, 220);
-  margin: 0.1em;
-  color: var(--default-secundary-font-color);
 }
 
 /* || UTILITIES */
