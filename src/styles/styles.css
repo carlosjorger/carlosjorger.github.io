@@ -42,7 +42,6 @@ a {
   color: var(--default-font-color);
   display: inline-block;
 }
-
 /* || UTILITIES */
 .reveal.inactive {
   opacity: 0 !important;
@@ -68,32 +67,6 @@ a {
     transform: translate(0px, 0px);
   }
 }
-
-/* unvisited link */
-.work-link:link {
-  color: var(--default-secundary-font-color);
-  text-decoration: none;
-  background-image: linear-gradient(
-    var(--default-secundary-font-color),
-    var(--default-secundary-font-color)
-  );
-  background-size: 0% 15%;
-  background-position: 0% 100%;
-  background-repeat: no-repeat;
-  transition: all 0.5s ease-in-out;
-}
-.work-link:active {
-  background-color: transparent;
-}
-.work-link:visited {
-  color: var(--default-secundary-font-color);
-}
-
-/* mouse over link */
-.work-link:hover {
-  background-size: 100% 15%;
-}
-
 @media (max-width: 1100px) {
   :root {
     font-size: 25px;
