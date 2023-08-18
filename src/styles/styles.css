@@ -43,10 +43,15 @@ a {
   display: inline-block;
 }
 /* || UTILITIES */
-.reveal.inactive {
+.reveal.inactive-down {
   opacity: 0 !important;
   transition: all 500ms ease-in;
   transform: translate(0vh, 3vh);
+}
+.reveal.inactive-up {
+  opacity: 0 !important;
+  transition: all 500ms ease-in;
+  transform: translate(0vh, -3vh);
 }
 .reveal {
   opacity: 1 !important;
