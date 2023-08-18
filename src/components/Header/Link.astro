@@ -4,9 +4,8 @@ export interface Props {
 }
 const { href } = Astro.props;
 ---
-
 <a
-  class="p-1 text-[var(--default-font-color)] no-underline hover:transition-colors hover:duration-500 hover:ease-in-out hover:bg-[#241c2d] hover:text-[var(--default-secundary-font-color)] change-sidebar"
+  class="p-1 text-[var(--default-font-color)] no-underline hover:transition-colors hover:duration-500 hover:ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_1rem_aqua] change-sidebar"
   href={href}
 >
   <slot /></a
