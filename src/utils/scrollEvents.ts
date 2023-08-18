@@ -1,3 +1,4 @@
+// TODO: try to use requestAnimationFrame https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event
 export function reveal() {
     const revealElements = document.getElementsByClassName("reveal");
     const isScrollingDown = (window.scrollY > (this.lastScrollTop || 0));
@@ -18,6 +19,7 @@ export function reveal() {
     }
     this.lastScrollTop = window.scrollY;
   }
+
   export function updateLink(section: HTMLElement,sectionId:string ,limit:number) {
     const {top,bottom} = section.getBoundingClientRect();
     const isInsideTheSection= top<limit && bottom>limit;
