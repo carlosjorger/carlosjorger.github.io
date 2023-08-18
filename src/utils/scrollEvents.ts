@@ -13,3 +13,9 @@ export function reveal() {
       }
     }
   }
+  export function updateLink(section: HTMLElement,sectionId:string ,limit:number) {
+    const {top,bottom} = section.getBoundingClientRect();
+    const isInsideTheSection= top<limit&&bottom>limit;
+    const anchor = document.getElementById(`link-${sectionId}`)
+    anchor.classList.toggle('active',isInsideTheSection)
+  }

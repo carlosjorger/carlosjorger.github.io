@@ -7,16 +7,21 @@ const sectionId = href.replace('#','');
 ---
 <!-- TODO: add  this event to home-->
 <script define:vars={{ sectionId }}>
+// TODO: use a web component instead
+  function updateLink(section, limit) {
+    const {top,bottom} = section.getBoundingClientRect();
+    const isInsideTheSection= top<limit&&bottom>limit;
+    const anchor = document.getElementById(`link-${sectionId}`)
+    anchor.classList.toggle('active',isInsideTheSection)
+  }
   document.addEventListener("DOMContentLoaded", function () {
     const section= document.getElementById(sectionId);
     if (section) {
       const windowHeight = window.innerHeight;
+      const limit = windowHeight*0.4;
+      updateLink(section,limit)
       document.addEventListener("scroll", ()=>{
-        const {top,bottom} = section.getBoundingClientRect();
-        const limit = windowHeight*0.4;
-        const isInsideTheSection= top<limit&&bottom>limit;
-        const anchor = document.getElementById(`link-${sectionId}`)
-        anchor.classList.toggle('active',isInsideTheSection)
+        updateLink(section,limit)
       });
     }
   });
