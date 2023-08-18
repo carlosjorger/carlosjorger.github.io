@@ -7,29 +7,32 @@ import CustomLink from "../shared/CustomLink.astro";
 <footer>
   <div class="grid h-screen">
     <div id="contact" class="flex flex-col justify-center">
-      <Subtitle class:list={["reveal"]} center>Contact</Subtitle>
-      <address class="text-center reveal">
-        <Contact
-          href="mailto:rodriguezcuelloc@gmail.com"
-          title="contact via this email address"
-          iconType="google"
-        />
-        <Contact
-          href="https://github.com/carlosjorger"
-          title="See my github profile"
-          iconType="github"
-        />
-        <Contact
-          href="https://www.linkedin.com/in/carlosjorger/"
-          title="See my linkedin profile and connect with me"
-          iconType="linkedin"
-        />
-        <Contact
-          href="https://twitter.com/carlosjorgerc"
-          title="See my twitter profile and follow me"
-          iconType="twitter"
-        />
-      </address>
+      <div class="reveal">
+        <Subtitle center>Contact</Subtitle>
+        <address class="text-center">
+          <Contact
+            href="mailto:rodriguezcuelloc@gmail.com"
+            title="contact via this email address"
+            iconType="google"
+          />
+          <Contact
+            href="https://github.com/carlosjorger"
+            title="See my github profile"
+            iconType="github"
+          />
+          <Contact
+            href="https://www.linkedin.com/in/carlosjorger/"
+            title="See my linkedin profile and connect with me"
+            iconType="linkedin"
+          />
+          <Contact
+            href="https://twitter.com/carlosjorgerc"
+            title="See my twitter profile and follow me"
+            iconType="twitter"
+          />
+        </address>
+      </div>
+      
     </div>
     <div
       class="text-[var(--default-font-color)] font-lato flex flex-col justify-center"

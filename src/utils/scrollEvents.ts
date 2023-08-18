@@ -5,12 +5,12 @@ export function reveal() {
     for (const element of revealElements) {
       const {top, bottom} = element.getBoundingClientRect();
       const isActive =  top <= windowHeight - 100 && bottom >= 100;
-      const [targetClass,oldclass]=isScrollingDown?
+      const [targetClass,oldclass]= isScrollingDown?
                                     ["inactive-down","inactive-up"]
                                     :["inactive-up","inactive-down"]
                                     
       if (element.classList.contains(oldclass)) {
-           element.classList.replace(oldclass,targetClass)
+        element.classList.replace(oldclass,targetClass)
       }
       else{
         element.classList.toggle(targetClass,!isActive)
