@@ -1,6 +1,6 @@
 export function reveal() {
-    var revealElements = document.getElementsByClassName("reveal");
-    var windowHeight = window.innerHeight;
+    const revealElements = document.getElementsByClassName("reveal");
+    const windowHeight = window.innerHeight;
     for (const element of revealElements) {
       const {top, bottom} = element.getBoundingClientRect();
       if (

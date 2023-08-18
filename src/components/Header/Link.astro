@@ -3,10 +3,31 @@ export interface Props {
   href: string;
 }
 const { href } = Astro.props;
+const sectionId = href.replace('#','');
 ---
+<!-- TODO: add  this event to home-->
+<script define:vars={{ sectionId }}>
+  document.addEventListener("DOMContentLoaded", function () {
+    const section= document.getElementById(sectionId);
+    if (section) {
+      const windowHeight = window.innerHeight;
+      document.addEventListener("scroll", ()=>{
+        const {top,bottom} = section.getBoundingClientRect();
+        const limit = windowHeight*0.4;
+        const isInsideTheSection= top<limit&&bottom>limit;
+        const anchor = document.getElementById(`link-${sectionId}`)
+        anchor.classList.toggle('active',isInsideTheSection)
+      });
+    }
+  });
+  
+</script>
+<!-- TODO: change shadow -->
 <a
-  class="p-1 text-[var(--default-font-color)] no-underline hover:transition-colors hover:duration-500 hover:ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_1rem_aqua] change-sidebar"
+  id={`link-${sectionId}`}
+  class="p-1 text-[var(--default-font-color)] no-underline transition-all duration-200 ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_1rem_aqua] [&.active]:drop-shadow-[0rem_0rem_0.5rem_aqua] [&.active]:text-[var(--default-secundary-font-color)] change-sidebar"
   href={href}
->
-  <slot /></a
->
+  >
+    <slot />
+</a>
+
