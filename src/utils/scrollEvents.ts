@@ -22,7 +22,9 @@ export function reveal() {
 
   export function updateLink(section: HTMLElement,sectionId:string ,limit:number) {
     const {top,bottom} = section.getBoundingClientRect();
-    const isInsideTheSection= top<limit && bottom>limit;
-    const anchor = document.getElementById(`link-${sectionId}`)
-    anchor.classList.toggle('active',isInsideTheSection)
+    const isInsideTheSection= top<limit&&bottom>limit;
+    const anchors = document.getElementsByClassName(`link-${sectionId}`)
+    for (const anchor of anchors) {
+      anchor.classList.toggle('active',isInsideTheSection)
+    }
   }
