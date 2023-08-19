@@ -24,6 +24,7 @@ export function reveal() {
     const {top,bottom} = section.getBoundingClientRect();
     const isInsideTheSection= top<limit&&bottom>limit;
     const anchors = document.getElementsByClassName(`link-${sectionId}`)
+    console.log(section,isInsideTheSection,top,bottom,limit)
     for (const anchor of anchors) {
       anchor.classList.toggle('active',isInsideTheSection)
     }

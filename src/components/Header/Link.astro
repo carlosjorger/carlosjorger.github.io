@@ -3,7 +3,8 @@ export interface Props {
   href: string;
 }
 const { href } = Astro.props;
-const sectionId = href.replace('#','');
+const sectionIdWhitoutHome = href.replace('#','');
+const sectionId = sectionIdWhitoutHome?sectionIdWhitoutHome:'home';
 ---
 <!-- TODO: add  this event to home-->
 <script>
