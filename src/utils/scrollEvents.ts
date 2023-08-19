@@ -19,12 +19,13 @@ export function reveal() {
     }
     this.lastScrollTop = window.scrollY;
   }
-
-  export function updateLink(section: HTMLElement,sectionId:string ,limit:number) {
+  // TODO: refactor this code
+  export function updateLink(section: HTMLElement,sectionId:string) {
+    const windowHeight = window.innerHeight;
+    const limit = windowHeight*0.4;
     const {top,bottom} = section.getBoundingClientRect();
     const isInsideTheSection= top<limit&&bottom>limit;
     const anchors = document.getElementsByClassName(`link-${sectionId}`)
-    console.log(section,isInsideTheSection,top,bottom,limit)
     for (const anchor of anchors) {
       anchor.classList.toggle('active',isInsideTheSection)
     }

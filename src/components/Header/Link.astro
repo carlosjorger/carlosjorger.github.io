@@ -6,7 +6,7 @@ const { href } = Astro.props;
 const sectionIdWhitoutHome = href.replace('#','');
 const sectionId = sectionIdWhitoutHome?sectionIdWhitoutHome:'home';
 ---
-<!-- TODO: add  this event to home-->
+<!-- TODO: refactor this code -->
 <script>
   import {updateLink} from '../../utils/scrollEvents'
   class CustomLink extends HTMLElement {
@@ -16,11 +16,9 @@ const sectionId = sectionIdWhitoutHome?sectionIdWhitoutHome:'home';
       document.addEventListener("DOMContentLoaded", function () {
         const section= document.getElementById(sectionId);
         if (section) {
-          const windowHeight = window.innerHeight;
-          const limit = windowHeight*0.4;
-          updateLink(section,sectionId,limit)
+          updateLink(section,sectionId)
           document.addEventListener("scroll", ()=>{
-            updateLink(section,sectionId,limit)
+            updateLink(section,sectionId)
           });
         }
       });
@@ -31,7 +29,7 @@ const sectionId = sectionIdWhitoutHome?sectionIdWhitoutHome:'home';
 </script>
 <custom-link data-section-id={sectionId}>
   <a
-    class="p-1 text-[var(--default-font-color)] no-underline transition-all duration-200 ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_0.3rem_aqua] [&.active]:drop-shadow-[0rem_0rem_0.3rem_aqua] [&.active]:text-[var(--default-secundary-font-color)] change-sidebar"
+    class="p-0.5 text-[var(--default-font-color)] no-underline transition-all duration-200 ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_0.3rem_aqua] [&.active]:drop-shadow-[0rem_0rem_0.3rem_aqua] [&.active]:text-[var(--default-secundary-font-color)] change-sidebar"
     href={href}
     class:list={[`link-${sectionId}`]}
     >
