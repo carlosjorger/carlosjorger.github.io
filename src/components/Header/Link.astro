@@ -11,8 +11,10 @@ const sectionId = href.replace('#','');
   function updateLink(section, limit) {
     const {top,bottom} = section.getBoundingClientRect();
     const isInsideTheSection= top<limit&&bottom>limit;
-    const anchor = document.getElementById(`link-${sectionId}`)
-    anchor.classList.toggle('active',isInsideTheSection)
+    const anchors = document.getElementsByClassName(`link-${sectionId}`)
+    for (const anchor of anchors) {
+      anchor.classList.toggle('active',isInsideTheSection)
+    }
   }
   document.addEventListener("DOMContentLoaded", function () {
     const section= document.getElementById(sectionId);
@@ -28,11 +30,10 @@ const sectionId = href.replace('#','');
   
 </script>
 <!-- TODO: change shadow -->
-<!-- TODO: dont use id to identify the element -->
 <a
-  id={`link-${sectionId}`}
   class="p-1 text-[var(--default-font-color)] no-underline transition-all duration-200 ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_1rem_aqua] [&.active]:drop-shadow-[0rem_0rem_0.5rem_aqua] [&.active]:text-[var(--default-secundary-font-color)] change-sidebar"
   href={href}
+  class:list={[`link-${sectionId}`]}
   >
     <slot />
 </a>
