@@ -1,0 +1,11 @@
+{
+	"trailingComma": "es5",
+	"useTabs": true,
+	"tabWidth": 4,
+	"singleQuote": true,
+	"printWidth": 80,
+	"htmlWhitespaceSensitivity": "css",
+	"vueIndentScriptAndStyle": true,
+	"plugins": ["prettier-plugin-tailwindcss"],
+	"endOfLine": "lf"
+}
