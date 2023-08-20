@@ -6,9 +6,8 @@ const { href } = Astro.props;
 const sectionIdWhitoutHome = href.replace('#','');
 const sectionId = sectionIdWhitoutHome?sectionIdWhitoutHome:'home';
 ---
-<!-- TODO: refactor this code -->
 <script>
-  import {updateLink} from '../../utils/scrollEvents'
+  import {activeLinkBySection} from '../../utils/scrollEvents'
   class CustomLink extends HTMLElement {
     constructor() {
       super();
@@ -16,9 +15,9 @@ const sectionId = sectionIdWhitoutHome?sectionIdWhitoutHome:'home';
       document.addEventListener("DOMContentLoaded", function () {
         const section= document.getElementById(sectionId);
         if (section) {
-          updateLink(section,sectionId)
+          activeLinkBySection(section)
           document.addEventListener("scroll", ()=>{
-            updateLink(section,sectionId)
+            activeLinkBySection(section)
           });
         }
       });
