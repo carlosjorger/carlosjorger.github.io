@@ -1,14 +1,14 @@
 ---
-import IconElement from "../shared/IconElement.astro";
+import IconElement from '../shared/IconElement.astro';
 
 export interface Props {
-  href: string;
-  title: string;
-  iconType: string;
+	href: string;
+	title: string;
+	iconType: string;
 }
 const { href, title, iconType } = Astro.props;
 ---
 
 <a href={href} aria-label={title}>
-  <IconElement iconType={iconType} height="h-12" width="w-12" />
+	<IconElement iconType={iconType} height="h-12" width="w-12" />
 </a>

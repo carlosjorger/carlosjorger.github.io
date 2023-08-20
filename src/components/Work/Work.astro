@@ -1,37 +1,37 @@
 ---
-import Project from "./Project.astro";
-import Subtitle from "../shared/Subtitle.astro";
+import Project from './Project.astro';
+import Subtitle from '../shared/Subtitle.astro';
 ---
 
 <section id="work">
-  <div class="flex flex-col p-4">
-    <header class="p-3 reveal">
-      <Subtitle left>
-        Some projects<br />
-        I've made
-      </Subtitle>
-    </header>
+	<div class="flex flex-col p-4">
+		<header class="reveal p-3">
+			<Subtitle left>
+				Some projects<br />
+				 I've made
+			</Subtitle>
+		</header>
 
-    <Project
-      id="angular-portfolio"
-      description="It is a personal portfolio builded with angular using really cool animation (Angular animations)."
-      title="Angular Portfolio"
-      anchorLabel="See my portfolio github project"
-      githubLink="https://github.com/carlosjorger/portfolio"
-    />
-    <Project
-      id="online-cv-maker"
-      description="An online cv maker web application used to design a custom curriculum vitae."
-      title="Cuvimaker"
-      anchorLabel="See my online cv maker github project"
-      githubLink="https://github.com/carlosjorger/cuvimaker"
-    />
-    <Project
-      id="rusty-copier"
-      description="Its a copier implemented in rust programming language."
-      title="Rusty Copier"
-      anchorLabel="See my rusty copier github project"
-      githubLink="https://github.com/carlosjorger/rustycopier"
-    />
-  </div>
+		<Project
+			id="angular-portfolio"
+			description="It is a personal portfolio builded with angular using really cool animation (Angular animations)."
+			title="Angular Portfolio"
+			anchorLabel="See my portfolio github project"
+			githubLink="https://github.com/carlosjorger/portfolio"
+		/>
+		<Project
+			id="online-cv-maker"
+			description="An online cv maker web application used to design a custom curriculum vitae."
+			title="Cuvimaker"
+			anchorLabel="See my online cv maker github project"
+			githubLink="https://github.com/carlosjorger/cuvimaker"
+		/>
+		<Project
+			id="rusty-copier"
+			description="Its a copier implemented in rust programming language."
+			title="Rusty Copier"
+			anchorLabel="See my rusty copier github project"
+			githubLink="https://github.com/carlosjorger/rustycopier"
+		/>
+	</div>
 </section>

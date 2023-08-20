@@ -1,38 +1,36 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header/Header.astro";
-import AboutMe from "../components/AboutMe.astro";
-import Footer from "../components/Footer/Footer.astro";
-import Work from "../components/Work/Work.astro";
-import Presentation from "../components/Presentation.astro";
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header/Header.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Footer from '../components/Footer/Footer.astro';
+import Work from '../components/Work/Work.astro';
+import Presentation from '../components/Presentation.astro';
 ---
 
 <script>
-  import {reveal} from "../utils/scrollEvents"
-  import {touchOutsideColumnNavbar,touchIcon} from "../utils/touchEvents"
+	import { reveal } from '../utils/scrollEvents';
+	import { touchOutsideColumnNavbar, touchIcon } from '../utils/touchEvents';
 
-  document.addEventListener("scroll", reveal);
-  document.addEventListener(
-    "touchstart",
-    touchOutsideColumnNavbar,
-    {passive: true}
-  );
-  document.addEventListener("DOMContentLoaded", function () {
-    const changeSiderElements = document.getElementsByClassName("change-sidebar");
-    for (const element of changeSiderElements) {
-       element.addEventListener("click", touchIcon);
-    }
-   
-  });
+	document.addEventListener('scroll', reveal);
+	document.addEventListener('touchstart', touchOutsideColumnNavbar, {
+		passive: true,
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+		const changeSiderElements =
+			document.getElementsByClassName('change-sidebar');
+		for (const element of changeSiderElements) {
+			element.addEventListener('click', touchIcon);
+		}
+	});
 </script>
 <Layout title="Carlos Jorge's personal portfolio website">
-  <Header />
-  <main>
-    <!-- TODO: Add Scroll Snap Mandatory -->
-    <!-- https://midu.dev/css-scroll-snap-la-solucion-definitiva-a-la-creacion-de-sliders-en-la-web/ -->
-    <Presentation />
-    <Work />
-    <AboutMe />
-  </main>
-  <Footer />
+	<Header />
+	<main>
+		<!-- TODO: Add Scroll Snap Mandatory -->
+		<!-- https://midu.dev/css-scroll-snap-la-solucion-definitiva-a-la-creacion-de-sliders-en-la-web/ -->
+		<Presentation />
+		<Work />
+		<AboutMe />
+	</main>
+	<Footer />
 </Layout>

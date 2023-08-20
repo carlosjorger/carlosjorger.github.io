@@ -1,39 +1,37 @@
 ---
 export interface Props {
-  href: string;
+	href: string;
 }
 const { href } = Astro.props;
-const sectionIdWhitoutHome = href.replace('#','');
-const sectionId = sectionIdWhitoutHome?sectionIdWhitoutHome:'home';
+const sectionIdWhitoutHome = href.replace('#', '');
+const sectionId = sectionIdWhitoutHome ? sectionIdWhitoutHome : 'home';
 ---
+
 <script>
-  import {activeLinkBySection} from '../../utils/scrollEvents'
-  class CustomLink extends HTMLElement {
-    constructor() {
-      super();
-      const sectionId = this.dataset.sectionId;
-      document.addEventListener("DOMContentLoaded", function () {
-        const section= document.getElementById(sectionId);
-        if (section) {
-          activeLinkBySection(section)
-          document.addEventListener("scroll", ()=>{
-            activeLinkBySection(section)
-          });
-        }
-      });
-    }
-  }
-  customElements.define('custom-link', CustomLink);
-  
+	import { activeLinkBySection } from '../../utils/scrollEvents';
+	class CustomLink extends HTMLElement {
+		constructor() {
+			super();
+			const sectionId = this.dataset.sectionId;
+			document.addEventListener('DOMContentLoaded', function () {
+				const section = document.getElementById(sectionId);
+				if (section) {
+					activeLinkBySection(section);
+					document.addEventListener('scroll', () => {
+						activeLinkBySection(section);
+					});
+				}
+			});
+		}
+	}
+	customElements.define('custom-link', CustomLink);
 </script>
 <custom-link data-section-id={sectionId}>
-  <a
-    class="p-0.5 text-[var(--default-font-color)] no-underline transition-all duration-200 ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_0.3rem_aqua] [&.active]:drop-shadow-[0rem_0rem_0.3rem_aqua] [&.active]:text-[var(--default-secundary-font-color)] change-sidebar"
-    href={href}
-    class:list={[`link-${sectionId}`]}
-    >
-      <slot />
-  </a>
+	<a
+		class="change-sidebar p-0.5 text-[var(--default-font-color)] no-underline transition-all duration-200 ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_0.3rem_aqua] [&.active]:text-[var(--default-secundary-font-color)] [&.active]:drop-shadow-[0rem_0rem_0.3rem_aqua]"
+		href={href}
+		class:list={[`link-${sectionId}`]}
+	>
+		<slot />
+	</a>
 </custom-link>
-
-

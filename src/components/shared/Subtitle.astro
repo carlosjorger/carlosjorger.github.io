@@ -1,17 +1,17 @@
 ---
 export interface Props {
-  left?: boolean;
-  center?: boolean;
-  right?: boolean;
+	left?: boolean;
+	center?: boolean;
+	right?: boolean;
 }
 const { center = false, left = false, right = false } = Astro.props;
 ---
 
 <h2
-  class="text-[var(--default-font-color)] text-3xl my-2"
-  class:list={[
-    { "text-left": left, "text-center": center, "text-right": right },
-  ]}
+	class="my-2 text-3xl text-[var(--default-font-color)]"
+	class:list={[
+		{ 'text-left': left, 'text-center': center, 'text-right': right },
+	]}
 >
-  <slot />
+	<slot />
 </h2>

@@ -1,63 +1,82 @@
 ---
-import Link from "./Link.astro";
-import SideBarLink from "./SideBarLink.astro";
-import IconElement from "../shared/IconElement.astro";
+import Link from './Link.astro';
+import SideBarLink from './SideBarLink.astro';
+import IconElement from '../shared/IconElement.astro';
 ---
+
 <header>
-  <nav class="top-0 w-full fixed z-[4] backdrop-blur shadow-lg shadow-black">
-    <ul class="flex flex-row justify-between m-0 p-0.5 [&>li]:self-center max-sm:hidden list-none">
-      <li class="p-1">
-        <Link href="#">
-          <IconElement iconType="house" height="h-6" width="w-7" />
-        </Link>
-      </li>
-      <li class="mx-2">
-        <Link href="#work">Work</Link>
-        <Link href="#aboutMe">About me</Link>
-        <Link href="#contact">Contact</Link>
-      </li>
-    </ul>
-  </nav>
-  <nav class="hidden fixed top-0 w-full z-[2] max-sm:block">
-    <div class="changeable p-3 z-[2] w-full backdrop-blur shadow-[0px_0px_20px]">
-      <IconElement
-        id="show-nav-columnar-menu"
-        iconType="bars"
-        height="h-8"
-        width="w-8"
-      />
-    </div>
-    <div class="nav-columnar-menu-background absolute p-0 mt-0 w-screen h-screen top-0 overflow-hidden z-50 changeable bg-[rgba(0, 0, 0, 0)] transition-all duration-300 delay-100 ease-out invisible [&.active]:ease-in-out [&.active]:bg-[#00000080]">
-      <div id="nav-columnar-menu" class="changeable absolute mt-0 w-3/4 h-screen left-[-100vw] transition-all ease-out duration-500 text-[0.9rem] bg-[#241c2d] [&.active]:left-0 [&.active]:ease-in-out"
-      >
-        <picture class="image-container p-2 w-11/12 m-auto block text-center">
-          <img
-            class="logo m-auto h-auto transition-all duration-500 ease-out rotate-180 [&.active]:rotate-0 changeable"
-            src="./images/logo-1.svg"
-            alt="logo"
-            width="200"
-            height="200"
-          />
-        </picture>
-        <hr
-          class="w-[80%] border-0 h-0.5 bg-[var(--default-font-color)] m-auto"
-        />
-        <nav>
-          <ul
-            id="nav-columnar-menu-list"
-            class="flex flex-col items-center text-xl p-0 list-none"
-          >
-            <SideBarLink href="#" label="Home" iconType="house" />
-            <SideBarLink href="#work" label="Work" iconType="code-blocks" />
-            <SideBarLink href="#aboutMe" label="About me" iconType="user" />
-            <SideBarLink
-              href="#contact"
-              label="Contact"
-              iconType="contact-phone"
-            />
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </nav>
+	<nav class="fixed top-0 z-[4] w-full shadow-lg shadow-black backdrop-blur">
+		<ul
+			class="m-0 flex list-none flex-row justify-between p-0.5 max-sm:hidden [&>li]:self-center"
+		>
+			<li class="p-1">
+				<Link href="#">
+					<IconElement iconType="house" height="h-6" width="w-7" />
+				</Link>
+			</li>
+			<li class="mx-2">
+				<Link href="#work">Work</Link>
+				<Link href="#aboutMe">About me</Link>
+				<Link href="#contact">Contact</Link>
+			</li>
+		</ul>
+	</nav>
+	<nav class="fixed top-0 z-[2] hidden w-full max-sm:block">
+		<div
+			class="changeable z-[2] w-full p-3 shadow-[0px_0px_20px] backdrop-blur"
+		>
+			<IconElement
+				id="show-nav-columnar-menu"
+				iconType="bars"
+				height="h-8"
+				width="w-8"
+			/>
+		</div>
+		<div
+			class="nav-columnar-menu-background changeable bg-[rgba(0, 0, 0, 0)] invisible absolute top-0 z-50 mt-0 h-screen w-screen overflow-hidden p-0 transition-all delay-100 duration-300 ease-out [&.active]:bg-[#00000080] [&.active]:ease-in-out"
+		>
+			<div
+				id="nav-columnar-menu"
+				class="changeable absolute left-[-100vw] mt-0 h-screen w-3/4 bg-[#241c2d] text-[0.9rem] transition-all duration-500 ease-out [&.active]:left-0 [&.active]:ease-in-out"
+			>
+				<picture
+					class="image-container m-auto block w-11/12 p-2 text-center"
+				>
+					<img
+						class="logo changeable m-auto h-auto rotate-180 transition-all duration-500 ease-out [&.active]:rotate-0"
+						src="./images/logo-1.svg"
+						alt="logo"
+						width="200"
+						height="200"
+					/>
+				</picture>
+				<hr
+					class="m-auto h-0.5 w-[80%] border-0 bg-[var(--default-font-color)]"
+				/>
+				<nav>
+					<ul
+						id="nav-columnar-menu-list"
+						class="flex list-none flex-col items-center p-0 text-xl"
+					>
+						<SideBarLink href="#" label="Home" iconType="house" />
+						<SideBarLink
+							href="#work"
+							label="Work"
+							iconType="code-blocks"
+						/>
+						<SideBarLink
+							href="#aboutMe"
+							label="About me"
+							iconType="user"
+						/>
+						<SideBarLink
+							href="#contact"
+							label="Contact"
+							iconType="contact-phone"
+						/>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</nav>
 </header>
