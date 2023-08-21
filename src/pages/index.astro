@@ -8,10 +8,10 @@ import Presentation from '../components/Presentation.astro';
 ---
 
 <script>
-	import { reveal } from '../utils/scrollEvents';
+	import { hideRevealElements } from '../utils/scrollEvents';
 	import { touchOutsideColumnNavbar, touchIcon } from '../utils/touchEvents';
 
-	document.addEventListener('scroll', reveal);
+	document.addEventListener('scroll', hideRevealElements);
 	document.addEventListener('touchstart', touchOutsideColumnNavbar, {
 		passive: true,
 	});
