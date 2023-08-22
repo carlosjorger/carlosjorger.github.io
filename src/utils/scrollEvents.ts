@@ -1,4 +1,4 @@
-// TODO: try to use requestAnimationFrame https://developer.mozilla.org/en-US/docs/Web/API/Document/scroll_event
+// TODO: wait that the element class is changed
 function hideRevealElement(element: Element, isScrollingDown: boolean) {
 	const { top, bottom } = element.getBoundingClientRect();
 	const isActive = top <= window.innerHeight - 100 && bottom >= 100;
