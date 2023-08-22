@@ -1,4 +1,4 @@
-// TODO: wait that the element class is changed
+// TODO: replace this event with animation-timeline in the future
 function hideRevealElement(element: Element, isScrollingDown: boolean) {
 	const { top, bottom } = element.getBoundingClientRect();
 	const isActive = top <= window.innerHeight - 100 && bottom >= 100;
