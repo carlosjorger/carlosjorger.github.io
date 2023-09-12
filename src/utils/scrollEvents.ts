@@ -1,7 +1,8 @@
 // TODO: replace this event with animation-timeline in the future
+// TODO: change animation effect
 function hideRevealElement(element: Element, isScrollingDown: boolean) {
 	const { top, bottom } = element.getBoundingClientRect();
-	const isActive = top <= window.innerHeight - 100 && bottom >= 100;
+	const isActive = top <= window.innerHeight - 130 && bottom >= 130;
 	const [targetClass, oldclass] = isScrollingDown
 		? ['inactive-down', 'inactive-up']
 		: ['inactive-up', 'inactive-down'];
