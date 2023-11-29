@@ -10,18 +10,31 @@ import IconElement from '../shared/IconElement.astro';
 			class="m-0 flex list-none flex-row justify-between p-0.5 max-sm:hidden [&>li]:self-center"
 		>
 			<li class="p-1">
-				<Link href="#">
+				<Link href="#" arialLabel="Go to presentation">
 					<IconElement iconType="house" height="h-6" width="w-7" />
 				</Link>
 			</li>
 			<li class="mx-2">
-				<Link href="#work">Work</Link>
-				<Link href="#aboutMe">About me</Link>
-				<Link href="#contact">Contact</Link>
+				<Link href="#work" arialLabel="See my work experience">
+					Work
+				</Link>
+				<Link
+					href="#aboutMe"
+					arialLabel="Additional information about me"
+				>
+					About me
+				</Link>
+				<Link
+					href="#contact"
+					arialLabel="You can contact me throught..."
+				>
+					Contact
+				</Link>
 			</li>
 		</ul>
 	</nav>
 	<nav class="fixed top-0 z-[2] hidden w-full max-sm:block">
+		<!-- TODO: add bars animation -->
 		<div
 			class="changeable z-[2] w-full p-3 shadow-[0px_0px_20px] backdrop-blur"
 		>

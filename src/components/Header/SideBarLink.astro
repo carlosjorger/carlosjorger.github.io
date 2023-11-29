@@ -13,7 +13,7 @@ const { iconType, href, label } = Astro.props;
 	class="flex w-40 items-center justify-start p-2 transition-colors ease-in-out active:bg-[#241c2d]"
 >
 	<IconElement iconType={iconType} height="h-6" width="w-6" />
-	<Link href={href}>
+	<Link href={href} arialLabel="Go to presentation">
 		<h2 class="pl-1">{label}</h2>
 	</Link>
 </li>
