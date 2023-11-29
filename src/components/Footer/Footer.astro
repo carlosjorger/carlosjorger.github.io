@@ -7,9 +7,9 @@ import CustomLink from '../shared/CustomLink.astro';
 <footer>
 	<div class="grid h-screen">
 		<div id="contact" class="flex flex-col justify-center">
-			<div class="reveal">
+			<section>
 				<Subtitle center>Contact</Subtitle>
-				<address class="text-center">
+				<address class="reveal text-center">
 					<Contact
 						href="mailto:rodriguezcuelloc@gmail.com"
 						title="contact via this email address"
@@ -31,23 +31,26 @@ import CustomLink from '../shared/CustomLink.astro';
 						iconType="twitter"
 					/>
 				</address>
-			</div>
+			</section>
 		</div>
 		<div
 			class="flex flex-col justify-center font-lato text-[var(--default-font-color)]"
 		>
-			<p class="reveal mx-auto my-0 text-center text-xl">
+			<p class="reveal mx-auto my-0 mb-12 text-center text-xl">
 				<strong class="inline italic">© 2022 Carlos Jorge</strong>
 				<br />
-				<CustomLink
-					href="https://github.com/carlosjorger/carlosjorger.github.io"
-				>
-					Published
-				</CustomLink>
-				 in
-				<CustomLink href="https://pages.github.com/">
-					Github Page
-				</CustomLink>
+				<span>
+					<CustomLink
+						href="https://github.com/carlosjorger/carlosjorger.github.io"
+					>
+						Published
+					</CustomLink>
+					 in
+					<CustomLink href="https://pages.github.com/">
+						Github Page
+					</CustomLink>
+					<span></span>
+				</span>
 			</p>
 		</div>
 	</div>

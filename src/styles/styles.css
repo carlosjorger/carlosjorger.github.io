@@ -1,6 +1,8 @@
 :root {
 	--default-font-family: 'Lato', sans-serif;
 	--default-font-color: rgb(222, 207, 253);
+	--default-font-color2: rgb(177, 171, 189);
+
 	--default-secundary-font-color: rgb(6, 232, 232);
 	--default-background-color: rgb(36, 23, 48);
 	--default-background-color-shadow: rgb(15, 12, 20);
@@ -43,29 +45,21 @@ a {
 	display: inline-block;
 }
 /* || UTILITIES */
-.reveal.inactive-down {
-	opacity: 0 !important;
-	transition: all 500ms ease-in;
-	transform: translate(0vh, 3vh);
-}
-.reveal.inactive-up {
-	opacity: 0 !important;
-	transition: all 500ms ease-in;
-	transform: translate(0vh, -3vh);
-}
 .reveal {
 	animation: reveal-animation linear both;
 	animation-timeline: view();
-	animation-range: entry 20% cover 35%;
+	animation-range: entry 15% cover 30%;
 }
 @keyframes reveal-animation {
 	from {
 		opacity: 0;
 		transform: translate(0vh, 15vh);
+		scale: 0.7;
 	}
 	to {
 		opacity: 1;
 		transform: translate(0vh, 0);
+		scale: 1;
 	}
 }
 /* || SITEWIDE */
