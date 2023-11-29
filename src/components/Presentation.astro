@@ -2,18 +2,20 @@
 import CustomParagraph from './shared/CustomParagraph.astro';
 ---
 
-<section id="home" class="h-screen">
-	<div class="p-4 font-lato text-[var(--default-font-color)]">
+<section id="home" class="flex h-screen flex-col justify-evenly">
+	<div class="p-4 font-lato text-[var(--default-font-color)] max-sm:p-2">
 		<div class="reveal">
 			<h1
-				class="mx-0 my-3 animate-presentation-title text-4xl text-[var(--default-secundary-font-color)]"
+				class="mx-0 my-3 animate-presentation-title text-4xl text-[var(--default-secundary-font-color)] max-sm:text-5xl"
 			>
 				Hi, I am <br class="hidden max-sm:inline" />Carlos Jorge, <br />
 				 Web developer!
 			</h1>
 		</div>
 		<div class="reveal">
-			<h2 class="mx-0 my-3 animate-presentation-main-skill text-3xl">
+			<h2
+				class="mx-0 my-3 animate-presentation-main-skill text-3xl max-sm:text-4xl"
+			>
 				Welcome to my personal portfolio!
 			</h2>
 		</div>

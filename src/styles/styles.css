@@ -34,7 +34,7 @@ section {
 	/* for guide */
 	/* border: solid 3px aqua; */
 	width: 60%;
-	margin: 3em auto;
+	margin: 0 auto;
 	padding-top: 2em;
 	z-index: 2;
 }
@@ -83,19 +83,11 @@ a {
 	section {
 		width: 70%;
 	}
-
-	p {
-		max-width: 600px;
-	}
 }
 
 @media (max-width: 885px) {
 	:root {
 		font-size: 20px;
-	}
-
-	p {
-		max-width: 450px;
 	}
 
 	section {
@@ -113,7 +105,7 @@ a {
 	}
 
 	section {
-		width: 75%;
+		width: 80%;
 	}
 }
 
@@ -122,12 +114,8 @@ a {
 		font-size: 15px;
 	}
 
-	p {
-		max-width: 85%;
-	}
-
 	section {
-		width: 80%;
+		width: 90%;
 	}
 }
 
@@ -136,11 +124,7 @@ a {
 		font-size: 10px;
 	}
 
-	p {
-		max-width: 90%;
-	}
-
 	section {
-		width: 85%;
+		width: 95%;
 	}
 }
