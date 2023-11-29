@@ -8,10 +8,7 @@ import Presentation from '../components/Presentation.astro';
 ---
 
 <script>
-	import { hideRevealElements } from '../utils/scrollEvents';
 	import { touchOutsideColumnNavbar, touchIcon } from '../utils/touchEvents';
-
-	document.addEventListener('scroll', hideRevealElements);
 	document.addEventListener('touchstart', touchOutsideColumnNavbar, {
 		passive: true,
 	});
@@ -26,7 +23,6 @@ import Presentation from '../components/Presentation.astro';
 <Layout title="Carlos Jorge's personal portfolio website">
 	<Header />
 	<main>
-		<!-- TODO: apply scroll-timeline -->
 		<Presentation />
 		<Work />
 		<AboutMe />
