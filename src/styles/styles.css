@@ -1,7 +1,7 @@
 :root {
 	--default-font-family: 'Lato', sans-serif;
 	--default-font-color: rgb(222, 207, 253);
-	--default-font-color2: rgb(177, 171, 189);
+	--default-font-color2: rgb(190, 185, 201);
 
 	--default-secundary-font-color: rgb(6, 232, 232);
 	--default-background-color: rgb(36, 23, 48);
@@ -48,7 +48,7 @@ a {
 .reveal {
 	animation: reveal-animation linear both;
 	animation-timeline: view();
-	animation-range: entry 15% cover 30%;
+	animation-range: entry 15% cover 28%;
 }
 @keyframes reveal-animation {
 	from {
