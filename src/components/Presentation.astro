@@ -1,3 +1,7 @@
+---
+import CustomParagraph from './shared/CustomParagraph.astro';
+---
+
 <section id="home" class="h-screen">
 	<div class="p-4 font-lato text-[var(--default-font-color)]">
 		<div class="reveal">
@@ -13,13 +17,11 @@
 				Welcome to my personal portfolio!
 			</h2>
 		</div>
-		<div class="reveal">
-			<p
-				class="mx-0 my-3 animate-presentation-description text-[var(--default-font-color2)]"
-			>
+		<div class="mx-0 my-3 animate-presentation-description">
+			<CustomParagraph>
 				Cuban computer science from Havana University. Currently working
 				as full-stack engineer building .net and Vuejs applications.
-			</p>
+			</CustomParagraph>
 		</div>
 	</div>
 </section>

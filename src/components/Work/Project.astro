@@ -1,5 +1,7 @@
 ---
+import CustomParagraph from '../shared/CustomParagraph.astro';
 import IconElement from '../shared/IconElement.astro';
+
 export interface Props {
 	id: string;
 	title: string;
@@ -18,7 +20,7 @@ const { id, title, description, anchorLabel, githubLink } = Astro.props;
 		<h3 class="m-0">{title}</h3>
 	</header>
 	<div class="p-2 text-xs text-[#99F9F9]">
-		<p>{description}</p>
+		<CustomParagraph>{description}</CustomParagraph>
 	</div>
 	<div class="flex self-end">
 		<a href={githubLink} aria-label={anchorLabel} class="h-7"
