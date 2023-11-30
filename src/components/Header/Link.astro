@@ -1,6 +1,7 @@
 ---
 export interface Props {
 	href: string;
+	arialLabel: string;
 }
 const { href, arialLabel } = Astro.props;
 const sectionIdWhitoutHome = href.replace('#', '');
