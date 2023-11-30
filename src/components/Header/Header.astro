@@ -2,6 +2,7 @@
 import Link from './Link.astro';
 import SideBarLink from './SideBarLink.astro';
 import IconElement from '../shared/IconElement.astro';
+import HamburgerManuIcon from './HamburgerManuIcon.astro';
 ---
 
 <header>
@@ -34,16 +35,10 @@ import IconElement from '../shared/IconElement.astro';
 		</ul>
 	</nav>
 	<nav class="fixed top-0 z-[2] hidden w-full max-sm:block">
-		<!-- TODO: add bars animation -->
+		<HamburgerManuIcon />
 		<div
-			class="changeable z-[2] w-full p-3 shadow-[0px_0px_20px] backdrop-blur"
+			class="changeable z-[2] h-14 w-full p-3 shadow-[0px_0px_20px] backdrop-blur"
 		>
-			<IconElement
-				id="show-nav-columnar-menu"
-				iconType="bars"
-				height="h-8"
-				width="w-8"
-			/>
 		</div>
 		<div
 			class="nav-columnar-menu-background changeable bg-[rgba(0, 0, 0, 0)] invisible absolute top-0 z-50 mt-0 h-screen w-screen overflow-hidden p-0 transition-all delay-100 duration-300 ease-out [&.active]:bg-[#00000080] [&.active]:ease-in-out"

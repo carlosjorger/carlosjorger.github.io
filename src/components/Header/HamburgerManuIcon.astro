@@ -1,0 +1,25 @@
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const navBarIcon = document.getElementById('show-nav-columnar-menu');
+		navBarIcon.addEventListener('click', () => {
+			navBarIcon.classList.toggle('open');
+		});
+	});
+</script>
+<i
+	id="show-nav-columnar-menu"
+	class="change-sidebar group absolute z-[100] m-3 h-9 w-10"
+>
+	<span
+		class="absolute left-0 top-0 block h-1.5 w-full rounded-lg bg-teal-300 transition-all duration-300 group-[.open]:left-1/2 group-[.open]:top-3 group-[.open]:w-0"
+	></span>
+	<span
+		class="absolute top-3 block h-1.5 w-full rounded-lg bg-teal-300 transition-transform duration-300 group-[.open]:rotate-45"
+	></span>
+	<span
+		class="absolute top-3 block h-1.5 w-full rounded-lg bg-teal-300 transition-transform duration-300 group-[.open]:-rotate-45"
+	></span>
+	<span
+		class="absolute left-0 top-6 block h-1.5 w-full rounded-lg bg-teal-300 transition-all duration-300 group-[.open]:left-1/2 group-[.open]:top-3 group-[.open]:w-0"
+	></span>
+</i>
