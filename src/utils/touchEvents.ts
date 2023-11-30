@@ -1,3 +1,13 @@
+export function toggleHamburgerMenuIcon() {
+	const navBarIcon = document.getElementById('hamburger-menu-icon');
+	const [columnNavbarBackground] = document.getElementsByClassName(
+		'nav-columnar-menu-background'
+	);
+	const isColumnNavbarVisible =
+		(columnNavbarBackground as HTMLDivElement).style.visibility ===
+		'visible';
+	navBarIcon.classList.toggle('open', isColumnNavbarVisible);
+}
 function togleVisibility(element: HTMLDivElement) {
 	const visibility = element.style.visibility;
 	if (!visibility || visibility === 'hidden') {
@@ -8,6 +18,7 @@ function togleVisibility(element: HTMLDivElement) {
 }
 function changeColumnNavbarVisibility(columnNavbar: HTMLDivElement) {
 	togleVisibility(columnNavbar);
+	toggleHamburgerMenuIcon();
 	const changeableElements = document.getElementsByClassName('changeable');
 	for (const changeableElement of changeableElements) {
 		changeableElement.classList.toggle('active');

@@ -1,13 +1,19 @@
+---
+
+---
+
 <script>
+	import { toggleHamburgerMenuIcon } from '../../utils/touchEvents';
+
 	document.addEventListener('DOMContentLoaded', function () {
-		const navBarIcon = document.getElementById('show-nav-columnar-menu');
+		const navBarIcon = document.getElementById('hamburger-menu-icon');
 		navBarIcon.addEventListener('click', () => {
-			navBarIcon.classList.toggle('open');
+			toggleHamburgerMenuIcon();
 		});
 	});
 </script>
 <i
-	id="show-nav-columnar-menu"
+	id="hamburger-menu-icon"
 	class="change-sidebar group absolute z-[100] m-3 h-9 w-10"
 >
 	<span
