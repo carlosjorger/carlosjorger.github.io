@@ -8,24 +8,35 @@ export interface Props {
 	description: string;
 	anchorLabel: string;
 	githubLink: string;
+	imageSrc: string;
 }
-const { id, title, description, anchorLabel, githubLink } = Astro.props;
+const { id, title, description, anchorLabel, githubLink, imageSrc } =
+	Astro.props;
 ---
 
-<!-- TODO: improve component -->
+<!-- TODO: improve component --><!-- TODO: organize element in this component -->
 <article
 	id={id}
-	class="reveal m-2 flex flex-col self-start rounded border-[0.1rem] border-solid border-[var(--default-secundary-font-color)] bg-[#322644] p-1 font-lato shadow-lg shadow-black sm:w-[70%] md:w-[65%]"
+	class:list={[imageSrc]}
+	class="reveal m-2 flex min-h-[300px] flex-col self-start rounded border-[0.1rem] border-solid border-[var(--default-secundary-font-color)] bg-[#322644] bg-cover bg-center p-1 font-lato shadow-lg shadow-black sm:w-[70%] md:w-[65%]"
 >
-	<header class="p-2 text-[var(--default-font-color)]">
-		<h3 class="m-0">{title}</h3>
-	</header>
-	<div class="p-2 text-xs text-[#99F9F9]">
-		<CustomParagraph>{description}</CustomParagraph>
-	</div>
-	<div class="flex self-end">
-		<a href={githubLink} aria-label={anchorLabel} class="h-7"
-			><IconElement height="h-auto" width="w-6" iconType="github" /></a
-		>
+	<div
+		class="min-h-[300px] backdrop-brightness-50 transition-all duration-300 hover:backdrop-brightness-100"
+	>
+		<header class="p-2 text-[var(--default-font-color)]">
+			<h3 class="m-0">{title}</h3>
+		</header>
+		<div class="p-2 text-xs text-[#99F9F9]">
+			<CustomParagraph>{description}</CustomParagraph>
+		</div>
+		<div class="flex self-end">
+			<a href={githubLink} aria-label={anchorLabel} class="h-7"
+				><IconElement
+					height="h-auto"
+					width="w-6"
+					iconType="github"
+				/></a
+			>
+		</div>
 	</div>
 </article>
