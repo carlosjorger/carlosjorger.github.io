@@ -4,9 +4,9 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
-				portfolio: "url('./images/Portfolio.webp')",
-				rustycopier: "url('./images/Rustycopier.webp')",
-				cuvimakerExample: "url('./images/Cuvimaker-example.webp')",
+				portfolio: "url('/images/Portfolio.webp')",
+				rustycopier: "url('/images/Rustycopier.webp')",
+				cuvimakerExample: "url('/images/Cuvimaker-example.webp')",
 			},
 		},
 		fontFamily: {
