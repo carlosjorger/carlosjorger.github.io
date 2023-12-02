@@ -21,13 +21,13 @@ const { id, title, description, anchorLabel, githubLink, imageSrc } =
 	class="reveal m-2 flex w-full flex-col self-start rounded border-[0.1rem] border-solid border-[var(--default-secundary-font-color)] bg-[#322644] bg-cover bg-center bg-no-repeat font-lato shadow-lg shadow-black"
 >
 	<div
-		class="h-72 bg-[#5c497fc5] p-1 backdrop-brightness-[0.35] backdrop-grayscale transition-all duration-300 ease-in hover:bg-teal-600/0 hover:backdrop-grayscale-0 max-lg:h-80 max-md:h-64 max-sm:h-52"
+		class="h-72 bg-[#5c497fc5] p-1 backdrop-brightness-[0.35] backdrop-grayscale transition-all duration-300 ease-in hover:bg-teal-600/0 hover:backdrop-grayscale-0 max-lg:h-80 max-md:h-64 max-sm:h-52 hover:[&>*:first-child]:scale-110"
 	>
 		<section
-			class="reveal m-0 flex h-full w-3/4 flex-col items-start justify-end px-10 py-7"
+			class="m-0 flex h-full w-3/4 flex-col items-start justify-end px-10 py-7 transition-[transform]"
 		>
-			<header class="p-1 font-extrabold text-teal-200">
-				<h3 class="m-0 text-2xl">{title}</h3>
+			<header class="p-1 text-2xl font-extrabold text-teal-200">
+				<h3 class="m-0">{title}</h3>
 			</header>
 			<div class="p-1 pb-0 text-xs text-[#99F9F9]">
 				<CustomParagraph>{description}</CustomParagraph>
