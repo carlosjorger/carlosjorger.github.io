@@ -1,3 +1,13 @@
-<p class="reveal mb-3 text-[var(--default-font-color2)]">
+---
+export interface Props {
+	reveal?: boolean;
+}
+const { reveal = false } = Astro.props;
+---
+
+<p
+	class:list={[{ reveal: reveal }]}
+	class="mb-2.5 text-[var(--default-font-color2)]"
+>
 	<slot />
 </p>
