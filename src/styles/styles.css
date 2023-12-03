@@ -48,7 +48,7 @@ a {
 .reveal {
 	animation: reveal-animation linear both;
 	animation-timeline: view();
-	animation-range: entry 15% cover 28%;
+	animation-range: entry 20% cover 33%;
 }
 @keyframes reveal-animation {
 	from {
