@@ -2,13 +2,21 @@
 import Contact from './Contact.astro';
 import Subtitle from '../shared/Subtitle.astro';
 import CustomLink from '../shared/CustomLink.astro';
+import CustomParagraph from '../shared/CustomParagraph.astro';
 ---
 
 <footer>
-	<div class="grid h-screen max-sm:h-[100dvh]">
+	<div class="m-1 grid h-screen max-sm:h-[100dvh]">
 		<div id="contact" class="flex flex-col justify-center">
-			<section class="z-0">
+			<section class="z-0 mt-8 w-1/2 p-2 max-sm:w-[90%]">
 				<Subtitle center>Contact</Subtitle>
+				<div class="reveal mx-0 my-3 text-center">
+					<CustomParagraph>
+						I'm always open for new job oportunities or asking any
+						question. You can reach me through the following social
+						networks:
+					</CustomParagraph>
+				</div>
 				<address class="reveal text-center">
 					<Contact
 						href="mailto:rodriguezcuelloc@gmail.com"
@@ -36,7 +44,7 @@ import CustomLink from '../shared/CustomLink.astro';
 		<div
 			class="flex flex-col justify-center font-lato text-[var(--default-font-color)]"
 		>
-			<p class="reveal mx-auto my-0 mb-12 text-center text-2xl">
+			<p class="reveal mx-auto my-0 mb-12 text-center text-3xl">
 				<strong class="inline italic">© 2022 Carlos Jorge</strong>
 				<br />
 				<span>

@@ -17,7 +17,6 @@
 p {
 	color: var(--default-font-color);
 	font-family: var(--default-font-family);
-	max-width: 650px;
 	margin: 0.5em 0;
 }
 
@@ -98,10 +97,6 @@ a {
 @media (max-width: 665px) {
 	:root {
 		font-size: 15px;
-	}
-
-	p {
-		max-width: 330px;
 	}
 
 	section {
