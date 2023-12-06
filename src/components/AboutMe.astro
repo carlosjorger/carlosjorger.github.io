@@ -5,7 +5,7 @@ import CustomParagraph from './shared/CustomParagraph.astro';
 
 <section id="aboutMe" class="h-screen max-sm:h-[100dvh]">
 	<div class="flex h-[90%] flex-col justify-center break-words p-2">
-		<header class="reveal">
+		<header class="reveal pb-2">
 			<Subtitle left>About me</Subtitle>
 		</header>
 		<CustomParagraph reveal>
@@ -17,15 +17,12 @@ import CustomParagraph from './shared/CustomParagraph.astro';
 			Currently, I'm also working on frontend technologies like angular,
 			vue, html, css.
 		</CustomParagraph>
-		<CustomParagraph reveal>
-			In my free time I like listening to music, reading books or watching
-			movies from favorite directors.
-		</CustomParagraph>
 		<a
-			class="reveal mt-8 rounded-md border-2 border-teal-300 px-8 py-4 text-center text-2xl text-teal-300 transition-colors duration-500 ease-in hover:bg-teal-300 hover:text-[--default-background-color]"
-			href="/images/cv.pdf"
+			class="reveal mt-2 rounded-md border-2 border-teal-300 px-8 py-4 text-center text-2xl text-teal-300 transition-colors duration-500 ease-in hover:bg-teal-300 hover:text-[--default-background-color]"
+			href="/pdfs/resume.pdf"
 			target="_blank"
-			aria-label="Download Curriculum Vitae pdf">Curriculum Vitae</a
+			aria-label="Download Curriculum Vitae pdf"
+			download="resume.pdf">Curriculum Vitae</a
 		>
 	</div>
 </section>
