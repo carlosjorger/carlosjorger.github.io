@@ -3,7 +3,7 @@ import Subtitle from './shared/Subtitle.astro';
 import CustomParagraph from './shared/CustomParagraph.astro';
 ---
 
-<section id="aboutMe" class="h-screen max-sm:h-[100dvh]">
+<section id="aboutMe" class="h-screen max-sm:mt-12 max-sm:h-full">
 	<div class="flex h-[90%] flex-col justify-center break-words p-2">
 		<header class="reveal pb-2">
 			<Subtitle left>About me</Subtitle>
@@ -18,11 +18,10 @@ import CustomParagraph from './shared/CustomParagraph.astro';
 			vue, html, css.
 		</CustomParagraph>
 		<a
-			class="reveal mt-2 rounded-md border-2 border-teal-300 px-8 py-4 text-center text-2xl text-teal-300 transition-colors duration-500 ease-in hover:bg-teal-300 hover:text-[--default-background-color]"
+			class="reveal mt-2 rounded-md border-2 border-teal-300 px-8 py-4 text-center text-2xl text-teal-300 transition-colors duration-500 ease-in hover:bg-teal-300 hover:text-[--default-background-color] max-sm:mt-12"
 			href="/pdfs/resume.pdf"
 			target="_blank"
-			aria-label="Download Curriculum Vitae pdf"
-			download="resume.pdf">Curriculum Vitae</a
+			aria-label="Download Curriculum Vitae pdf">Curriculum Vitae</a
 		>
 	</div>
 </section>
