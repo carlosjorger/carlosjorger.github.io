@@ -21,17 +21,14 @@ const { id, title, description, anchorLabel, githubLink, imageSrc, website } =
 			document.querySelectorAll('.lazy-background')
 		);
 		if ('IntersectionObserver' in window) {
-			let lazyBackgroundObserver = new IntersectionObserver(
-				(entries, observer) => {
-					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							console.log(entry.target);
-							entry.target.classList.add('visibleImg');
-							lazyBackgroundObserver.unobserve(entry.target);
-						}
-					});
-				}
-			);
+			let lazyBackgroundObserver = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('visibleImg');
+						lazyBackgroundObserver.unobserve(entry.target);
+					}
+				});
+			});
 
 			lazyBackgrounds.forEach((lazyBackground: HTMLElement) => {
 				lazyBackgroundObserver.observe(lazyBackground);
