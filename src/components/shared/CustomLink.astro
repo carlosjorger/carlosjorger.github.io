@@ -1,13 +1,15 @@
 ---
 export interface Props {
 	href: string;
+	arialLabel: string;
 }
-const { href = '' } = Astro.props;
+const { href = '', arialLabel } = Astro.props;
 ---
 
 <a
 	class="bg-gradient-to-r from-teal-300 to-teal-300 bg-[length:0%_15%] bg-[0%_100%] bg-no-repeat text-teal-300 no-underline transition-all duration-300 ease-out visited:text-teal-300 hover:bg-[length:100%_15%] hover:ease-in-out active:bg-transparent"
 	href={href}
+	aria-label={arialLabel}
 >
 	<slot />
 </a>
