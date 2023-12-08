@@ -7,6 +7,7 @@ module.exports = {
 				portfolio: "url('/images/Portfolio.webp')",
 				rustycopier: "url('/images/Rustycopier.webp')",
 				cuvimakerExample: "url('/images/Cuvimaker-example.webp')",
+				placeholder: "url('/images/640x360.webp')",
 			},
 		},
 		fontFamily: {
