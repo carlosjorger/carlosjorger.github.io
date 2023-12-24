@@ -7,6 +7,9 @@ const { reveal = false, textColor = 'text-[var(--default-font-color2)]' } =
 	Astro.props;
 ---
 
-<p class:list={[{ reveal: reveal }, textColor]} class="] mb-2.5 text-lg">
+<p
+	class:list={[{ reveal: reveal }, textColor]}
+	class="] mb-2.5 text-lg max-sm:mb-1"
+>
 	<slot />
 </p>
