@@ -39,7 +39,7 @@ const { id, title, description, anchorLabel, githubLink, imageSrc, website } =
 <article
 	id={id}
 	class:list={[imageSrc]}
-	class="reveal lazy-background even-parent my-2 mb-10 flex w-11/12 flex-col self-start rounded border-[0.1rem] border-solid border-[var(--default-secundary-font-color)] bg-[#322644] bg-placeholder bg-cover bg-center bg-no-repeat font-lato shadow-lg shadow-black even:self-end even:text-right max-sm:mb-6 max-sm:mt-8"
+	class="reveal lazy-background even-parent my-2 mb-10 flex w-11/12 flex-col self-start rounded border-[0.1rem] border-solid border-[var(--default-secundary-font-color)] bg-[#322644] bg-placeholder bg-cover bg-center bg-no-repeat font-lato shadow-lg shadow-black even:self-end even:text-right max-sm:mb-6 max-sm:mt-8 max-sm:w-full max-sm:self-center max-sm:even:self-center max-sm:even:text-left"
 >
 	<div
 		class="h-60 bg-[#5c497fc5] p-1 backdrop-brightness-[0.2] backdrop-grayscale transition-all duration-300 ease-in-out hover:bg-teal-600/0 hover:backdrop-grayscale-0 max-lg:h-80 max-md:h-64 max-sm:h-52 [&>*:first-child]:hover:scale-110 max-sm:[&>*:first-child]:hover:scale-105"
@@ -85,7 +85,18 @@ const { id, title, description, anchorLabel, githubLink, imageSrc, website } =
 		align-items: flex-end !important;
 		margin-left: auto;
 	}
+
 	.even-parent:nth-child(even) .even-self-child {
 		align-self: flex-end !important;
+	}
+
+	@media (width <= 640px) {
+		.even-parent:nth-child(even) .even-child {
+			align-items: flex-start !important;
+			margin-left: auto;
+		}
+		.even-parent:nth-child(even) .even-self-child {
+			align-self: flex-start !important;
+		}
 	}
 </style>
