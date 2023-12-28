@@ -48,16 +48,16 @@ const { id, title, description, anchorLabel, githubLink, imageSrc, website } =
 			class="even-child m-0 flex h-full w-5/6 flex-col items-start justify-end p-6 transition-[transform] duration-300 max-sm:w-full max-sm:justify-between max-sm:px-2 max-sm:py-3"
 		>
 			<header
-				class="p-1 text-3xl font-extrabold text-teal-200 max-sm:text-[1.65rem]"
+				class="m-1 text-3xl font-extrabold text-teal-200 max-sm:text-[1.65rem]"
 			>
 				<h3 class="m-0">{title}</h3>
 			</header>
-			<div class="p-1 pb-0 text-xs text-[#99F9F9]">
+			<div class="m-1 pb-0 text-xs text-[#99F9F9]">
 				<CustomParagraph textColor="text-slate-50">
 					{description}
 				</CustomParagraph>
 			</div>
-			<div class="even-self-child flex flex-row self-start p-1">
+			<div class="even-self-child m-1 flex flex-row self-start">
 				<a href={githubLink} aria-label={anchorLabel} class="h-8"
 					><IconElement
 						height="h-auto"
