@@ -1,18 +1,16 @@
 ---
 import Link from './Link.astro';
-import IconElement from '../shared/IconElement.astro';
 export interface Props {
-	iconType: string;
 	href: string;
 	label: string;
 }
-const { iconType, href, label } = Astro.props;
+const { href, label } = Astro.props;
 ---
 
 <li
 	class="flex w-56 items-center justify-start p-2 transition-colors ease-in-out active:bg-[#241c2d]"
 >
-	<IconElement iconType={iconType} height="h-10" width="w-10" />
+	<slot />
 	<Link href={href} arialLabel="Go to presentation">
 		<h2 class="pl-3 text-3xl">{label}</h2>
 	</Link>

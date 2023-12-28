@@ -1,8 +1,12 @@
 ---
 import Link from './Link.astro';
 import SideBarLink from './SideBarLink.astro';
-import IconElement from '../shared/IconElement.astro';
 import HamburgerMenuIcon from './HamburgerMenuIcon.astro';
+import IconHome from '../icons/IconHome.astro';
+import IconContainer from '../icons/IconContainer.astro';
+import IconAddress from '../icons/IconAddress.astro';
+import IconUser from '../icons/IconUser.astro';
+import IconCode from '../icons/IconCode.astro';
 ---
 
 <header>
@@ -12,7 +16,9 @@ import HamburgerMenuIcon from './HamburgerMenuIcon.astro';
 		>
 			<li class="p-1">
 				<Link href="#home" arialLabel="Go to presentation">
-					<IconElement iconType="house" height="h-6" width="w-7" />
+					<IconContainer height="h-6" width="w-7">
+						<IconHome />
+					</IconContainer>
 				</Link>
 			</li>
 			<li class="mx-6 flex flex-row gap-x-6">
@@ -66,22 +72,26 @@ import HamburgerMenuIcon from './HamburgerMenuIcon.astro';
 						id="nav-columnar-menu-list"
 						class="flex list-none flex-col items-center p-0 text-xl"
 					>
-						<SideBarLink href="#" label="Home" iconType="house" />
-						<SideBarLink
-							href="#work"
-							label="Projects"
-							iconType="code-blocks"
-						/>
-						<SideBarLink
-							href="#aboutMe"
-							label="About me"
-							iconType="user"
-						/>
-						<SideBarLink
-							href="#contact"
-							label="Contact"
-							iconType="contact-phone"
-						/>
+						<SideBarLink href="#" label="Home">
+							<IconContainer height="h-7" width="w-7">
+								<IconHome />
+							</IconContainer>
+						</SideBarLink>
+						<SideBarLink href="#work" label="Projects">
+							<IconContainer height="h-7" width="w-7">
+								<IconCode />
+							</IconContainer>
+						</SideBarLink>
+						<SideBarLink href="#aboutMe" label="About me">
+							<IconContainer height="h-7" width="w-7">
+								<IconUser />
+							</IconContainer>
+						</SideBarLink>
+						<SideBarLink href="#contact" label="Contact">
+							<IconContainer height="h-7" width="w-7">
+								<IconAddress />
+							</IconContainer>
+						</SideBarLink>
 					</ul>
 				</nav>
 			</div>
