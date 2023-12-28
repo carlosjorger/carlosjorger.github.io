@@ -11,7 +11,7 @@ export interface Props {
 const { id = undefined, height, width, href, title } = Astro.props;
 ---
 
-<a href={href} aria-label={title} class={height}>
+<a href={href} aria-label={title} class:list={[height, 'm-1']}>
 	<IconContainer id={id} height={height} width={width}>
 		<slot />
 	</IconContainer>
