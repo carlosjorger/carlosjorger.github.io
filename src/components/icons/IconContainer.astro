@@ -9,7 +9,7 @@ const { height, width, id = undefined } = Astro.props;
 
 <i
 	id={id}
-	class="inline-block bg-no-repeat text-teal-300 ease-in-out hover:text-black hover:drop-shadow-[0rem_0rem_0.3rem_aqua] hover:transition-all hover:duration-500"
+	class="flex flex-col justify-center bg-no-repeat text-teal-300 ease-in-out hover:text-black hover:drop-shadow-[0rem_0rem_0.3rem_aqua] hover:transition-all hover:duration-500"
 	class:list={[height, width]}
 >
 	<slot />
