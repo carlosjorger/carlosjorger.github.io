@@ -3,6 +3,11 @@ import Contact from './Contact.astro';
 import Subtitle from '../shared/Subtitle.astro';
 import CustomLink from '../shared/CustomLink.astro';
 import CustomParagraph from '../shared/CustomParagraph.astro';
+import IconContact from '../icons/IconContact.astro';
+import IconMail from '../icons/IconMail.astro';
+import IconGithub from '../icons/IconGithub.astro';
+import IconLinkedin from '../icons/IconLinkedin.astro';
+import IconTwitter from '../icons/IconTwitter.astro';
 ---
 
 <footer>
@@ -10,34 +15,38 @@ import CustomParagraph from '../shared/CustomParagraph.astro';
 		<div id="contact" class="flex flex-col justify-center">
 			<section class="z-0 mt-8 w-1/2 p-2 max-sm:mt-0 max-sm:w-[90%]">
 				<Subtitle center>Contact</Subtitle>
-				<div class="reveal mx-0 my-3 text-center">
+				<div class="reveal mx-0 my-4 text-center">
 					<CustomParagraph>
 						I'm always open for new job oportunities or answer any
 						question. You can reach me through the following social
 						networks:
 					</CustomParagraph>
 				</div>
-				<address class="reveal text-center">
-					<Contact
+				<address class="reveal flex flex-row justify-evenly">
+					<IconContact
 						href="mailto:rodriguezcuelloc@gmail.com"
 						title="contact via this email address"
-						iconType="google"
-					/>
-					<Contact
+					>
+						<IconMail />
+					</IconContact>
+					<IconContact
 						href="https://github.com/carlosjorger"
 						title="See my github profile"
-						iconType="github"
-					/>
-					<Contact
+					>
+						<IconGithub />
+					</IconContact>
+					<IconContact
 						href="https://www.linkedin.com/in/carlosjorger/"
 						title="See my linkedin profile and connect with me"
-						iconType="linkedin"
-					/>
-					<Contact
+					>
+						<IconLinkedin />
+					</IconContact>
+					<IconContact
 						href="https://twitter.com/carlosjorgerc"
 						title="See my twitter profile and follow me"
-						iconType="twitter"
-					/>
+					>
+						<IconTwitter />
+					</IconContact>
 				</address>
 			</section>
 		</div>
@@ -54,7 +63,7 @@ import CustomParagraph from '../shared/CustomParagraph.astro';
 					>
 						Published
 					</CustomLink>
-					 in
+					in
 					<CustomLink
 						href="https://pages.github.com/"
 						arialLabel="Github pages link"

@@ -3,6 +3,8 @@ import CustomParagraph from '../shared/CustomParagraph.astro';
 import IconContainer from '../icons/IconContainer.astro';
 import IconLink from '../icons/IconLink.astro';
 import IconGithub from '../icons/IconGithubLink.astro';
+import IconLinkContainer from '../icons/IconLinkContainer.astro';
+
 export interface Props {
 	id: string;
 	title: string;
@@ -59,18 +61,25 @@ const { id, title, description, anchorLabel, githubLink, imageSrc, website } =
 				</CustomParagraph>
 			</div>
 			<div class="even-self-child m-1 flex flex-row self-start">
-				<a href={githubLink} aria-label={anchorLabel} class="h-8">
-					<IconContainer height="h-auto" width="w-7">
-						<IconGithub />
-					</IconContainer>
-				</a>
+				<IconLinkContainer
+					height="h-auto"
+					width="w-7"
+					href={githubLink}
+					title={anchorLabel}
+				>
+					<IconGithub />
+				</IconLinkContainer>
+
 				{
 					website !== undefined && (
-						<a href={website} aria-label={anchorLabel} class="h-7">
-							<IconContainer height="h-auto" width="w-7">
-								<IconLink />
-							</IconContainer>
-						</a>
+						<IconLinkContainer
+							height="h-auto"
+							width="w-7"
+							href={website}
+							title={anchorLabel}
+						>
+							<IconLink />
+						</IconLinkContainer>
 					)
 				}
 			</div>

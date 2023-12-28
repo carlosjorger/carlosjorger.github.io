@@ -1,0 +1,12 @@
+---
+import IconLinkContainer from './IconLinkContainer.astro';
+export interface Props {
+	href: string;
+	title: string;
+}
+const { href, title } = Astro.props;
+---
+
+<IconLinkContainer href={href} title={title} height="h-14" width="w-14">
+	<slot />
+</IconLinkContainer>
