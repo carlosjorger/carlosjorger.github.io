@@ -5,14 +5,9 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 import compressor from 'astro-compressor';
-import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://carlosjorger.github.io',
-	integrations: [
-		tailwind(),
-		compressor({ gzip: false, brotli: true }),
-		icon(),
-	],
+	integrations: [tailwind(), compressor({ gzip: false, brotli: true })],
 });
