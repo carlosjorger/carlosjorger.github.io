@@ -3,6 +3,16 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			fontSize: {
+				'4.5xl': [
+					'2.5rem',
+					{
+						lineHeight: '2.8rem',
+						letterSpacing: '-0.01em',
+						fontWeight: '500',
+					},
+				],
+			},
 			backgroundImage: {
 				portfolio: "url('/images/Portfolio.webp')",
 				rustycopier: "url('/images/Rustycopier.webp')",
