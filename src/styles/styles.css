@@ -4,7 +4,6 @@
 	--default-font-color2: #beb9c9;
 
 	--default-secundary-font-color: rgb(6, 232, 232);
-	/* TODO: change bg color with https://bg.ibelick.com/ */
 	--default-background-color: rgb(36, 23, 48);
 	--default-background-color-shadow: rgb(15, 12, 20);
 	background-color: var(--default-background-color);

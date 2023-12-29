@@ -2,34 +2,39 @@
 import CustomParagraph from './shared/CustomParagraph.astro';
 ---
 
-<section
-	id="home"
-	class="flex h-screen flex-col justify-evenly pt-0 max-sm:h-[100dvh]"
+<div
+	class="bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
 >
-	<div class="p-2 font-lato text-[var(--default-font-color)]">
-		<div class="reveal">
-			<h1
-				class="mx-0 my-3 animate-presentation-title text-5xl font-bold text-[var(--default-secundary-font-color)] max-sm:text-5xl"
+	<section
+		id="home"
+		class="flex h-screen flex-col justify-evenly pt-0 max-sm:h-[100dvh]"
+	>
+		<div class="p-2 font-lato text-[var(--default-font-color)]">
+			<div class="reveal">
+				<h1
+					class="mx-0 my-3 animate-presentation-title text-5xl font-bold text-[var(--default-secundary-font-color)] max-sm:text-5xl"
+				>
+					Hi, I am <br class="hidden max-sm:inline" />Carlos Jorge, <br
+					/>
+					Web developer!
+				</h1>
+			</div>
+			<div class="reveal">
+				<h2
+					class="mx-0 my-3 animate-presentation-main-skill text-4xl text-[2.52rem] font-bold max-sm:mt-4"
+				>
+					Welcome to my personal portfolio!
+				</h2>
+			</div>
+			<div
+				class="mx-0 my-6 animate-presentation-description break-words max-sm:mt-7"
 			>
-				Hi, I am <br class="hidden max-sm:inline" />Carlos Jorge, <br />
-				 Web developer!
-			</h1>
+				<CustomParagraph>
+					Cuban computer scientist from Havana University. Currently
+					working as full-stack engineer building .net and Vuejs
+					applications. I play with astro and rust in my free time
+				</CustomParagraph>
+			</div>
 		</div>
-		<div class="reveal">
-			<h2
-				class="mx-0 my-3 animate-presentation-main-skill text-4xl text-[2.52rem] font-bold max-sm:mt-4"
-			>
-				Welcome to my personal portfolio!
-			</h2>
-		</div>
-		<div
-			class="mx-0 my-6 animate-presentation-description break-words max-sm:mt-7"
-		>
-			<CustomParagraph>
-				Cuban computer scientist from Havana University. Currently
-				working as full-stack engineer building .net and Vuejs
-				applications. I play with astro and rust in my free time
-			</CustomParagraph>
-		</div>
-	</div>
-</section>
+	</section>
+</div>
