@@ -4,7 +4,9 @@
 	--default-font-color2: #beb9c9;
 
 	--default-secundary-font-color: rgb(6, 232, 232);
-	--default-background-color: rgb(36, 23, 48);
+	--default-secundary-font-color-2: hsl(180, 50%, 46.67%, 0.9);
+
+	--default-background-color: hsl(271.2, 35.21%, 11%);
 	--default-background-color-shadow: rgb(15, 12, 20);
 	background-color: var(--default-background-color);
 	font-size: 25px;
