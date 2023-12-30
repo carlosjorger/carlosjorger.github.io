@@ -10,7 +10,7 @@ import IconCode from '../icons/IconCode.astro';
 ---
 
 <header>
-	<nav class="fixed top-0 z-[4] w-full shadow-lg shadow-black backdrop-blur">
+	<nav class="header-animation fixed top-0 z-[4] w-full">
 		<ul
 			class="m-0 flex list-none flex-row justify-between p-0.5 max-sm:hidden [&>li]:self-center"
 		>
@@ -97,3 +97,20 @@ import IconCode from '../icons/IconCode.astro';
 		</div>
 	</nav>
 </header>
+<style>
+	.header-animation {
+		animation: header-animation linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 100vh;
+	}
+	@keyframes header-animation {
+		from {
+			backdrop-filter: blur(8px) opacity(0);
+			box-shadow: 0 0px 0px 0px black;
+		}
+		to {
+			backdrop-filter: blur(8px) opacity(1);
+			box-shadow: 0 10px 15px -3px black;
+		}
+	}
+</style>
