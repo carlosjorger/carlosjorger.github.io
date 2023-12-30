@@ -12,9 +12,9 @@ import IconCode from '../icons/IconCode.astro';
 <header>
 	<nav class="header-animation fixed top-0 z-[4] w-full">
 		<ul
-			class="m-0 flex list-none flex-row justify-between p-0.5 max-sm:hidden [&>li]:self-center"
+			class="m-0 mx-auto flex w-[60%] list-none flex-row justify-between p-0.5 max-md:w-[80%] max-sm:hidden max-sm:w-[90%] [&>li]:self-center"
 		>
-			<li class="p-1">
+			<li class="mt-1 p-1">
 				<Link href="#home" aria-label="Go to presentation">
 					<IconContainer class="h-6 w-7">
 						<IconHome />
@@ -22,7 +22,6 @@ import IconCode from '../icons/IconCode.astro';
 				</Link>
 			</li>
 			<li class="mx-6 flex flex-row gap-x-6">
-				<!-- TODO: improve design of header -->
 				<Link href="#work" aria-label="See my projects">Projects</Link>
 				<Link
 					href="#aboutMe"
