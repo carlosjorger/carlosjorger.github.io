@@ -10,7 +10,7 @@ export interface Props {
 const { id = undefined, href, title } = Astro.props;
 ---
 
-<a href={href} aria-label={title} class:list={['m-1']}>
+<a href={href} aria-label={title} class:list={['m-1']} target="_blank">
 	<IconContainer id={id} class={Astro.props.class}>
 		<slot />
 	</IconContainer>
