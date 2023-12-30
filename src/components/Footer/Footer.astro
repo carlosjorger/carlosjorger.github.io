@@ -7,6 +7,29 @@ import IconMail from '../icons/IconMail.astro';
 import IconGithub from '../icons/IconGithub.astro';
 import IconLinkedin from '../icons/IconLinkedin.astro';
 import IconTwitter from '../icons/IconTwitter.astro';
+
+const icons = [
+	{
+		href: 'mailto:rodriguezcuelloc@gmail.com',
+		title: 'contact via this email address',
+		iconComponent: IconMail,
+	},
+	{
+		href: 'https://github.com/carlosjorger',
+		title: 'See my github profile',
+		iconComponent: IconGithub,
+	},
+	{
+		href: 'https://www.linkedin.com/in/carlosjorger/',
+		title: 'See my linkedin profile and connect with me',
+		iconComponent: IconLinkedin,
+	},
+	{
+		href: 'https://twitter.com/carlosjorgerc',
+		title: 'See my twitter profile and follow me',
+		iconComponent: IconTwitter,
+	},
+];
 ---
 
 <footer>
@@ -21,31 +44,16 @@ import IconTwitter from '../icons/IconTwitter.astro';
 						networks:
 					</CustomParagraph>
 				</div>
-				<address class="reveal flex flex-row justify-evenly">
-					<IconContact
-						href="mailto:rodriguezcuelloc@gmail.com"
-						title="contact via this email address"
-					>
-						<IconMail />
-					</IconContact>
-					<IconContact
-						href="https://github.com/carlosjorger"
-						title="See my github profile"
-					>
-						<IconGithub />
-					</IconContact>
-					<IconContact
-						href="https://www.linkedin.com/in/carlosjorger/"
-						title="See my linkedin profile and connect with me"
-					>
-						<IconLinkedin />
-					</IconContact>
-					<IconContact
-						href="https://twitter.com/carlosjorgerc"
-						title="See my twitter profile and follow me"
-					>
-						<IconTwitter />
-					</IconContact>
+				<address
+					class="reveal mx-auto my-0 flex w-5/6 flex-row justify-evenly"
+				>
+					{
+						icons.map((icon) => (
+							<IconContact href={icon.href} title={icon.title}>
+								<icon.iconComponent />
+							</IconContact>
+						))
+					}
 				</address>
 			</section>
 		</div>
