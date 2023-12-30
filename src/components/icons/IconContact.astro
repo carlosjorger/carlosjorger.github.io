@@ -4,9 +4,8 @@ export interface Props {
 	href: string;
 	title: string;
 }
-const { href, title } = Astro.props;
 ---
 
-<IconLinkContainer href={href} title={title} height="h-12" width="w-12">
+<IconLinkContainer {...Astro.props} class="h-12 w-12">
 	<slot />
 </IconLinkContainer>

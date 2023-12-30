@@ -15,23 +15,23 @@ import IconCode from '../icons/IconCode.astro';
 			class="m-0 flex list-none flex-row justify-between p-0.5 max-sm:hidden [&>li]:self-center"
 		>
 			<li class="p-1">
-				<Link href="#home" arialLabel="Go to presentation">
-					<IconContainer height="h-6" width="w-7">
+				<Link href="#home" aria-label="Go to presentation">
+					<IconContainer class="h-6 w-7">
 						<IconHome />
 					</IconContainer>
 				</Link>
 			</li>
 			<li class="mx-6 flex flex-row gap-x-6">
-				<Link href="#work" arialLabel="See my projects">Projects</Link>
+				<Link href="#work" aria-label="See my projects">Projects</Link>
 				<Link
 					href="#aboutMe"
-					arialLabel="Additional information about me"
+					aria-label="Additional information about me"
 				>
 					About me
 				</Link>
 				<Link
 					href="#contact"
-					arialLabel="You can contact me throught..."
+					aria-label="You can contact me throught..."
 				>
 					Contact
 				</Link>
@@ -71,22 +71,22 @@ import IconCode from '../icons/IconCode.astro';
 						class="flex list-none flex-col items-center p-0 text-xl"
 					>
 						<SideBarLink href="#" label="Home">
-							<IconContainer height="h-7" width="w-7">
+							<IconContainer class="h-7 w-7">
 								<IconHome />
 							</IconContainer>
 						</SideBarLink>
 						<SideBarLink href="#work" label="Projects">
-							<IconContainer height="h-7" width="w-7">
+							<IconContainer class="h-7 w-7">
 								<IconCode />
 							</IconContainer>
 						</SideBarLink>
 						<SideBarLink href="#aboutMe" label="About me">
-							<IconContainer height="h-7" width="w-7">
+							<IconContainer class="h-7 w-7">
 								<IconUser />
 							</IconContainer>
 						</SideBarLink>
 						<SideBarLink href="#contact" label="Contact">
-							<IconContainer height="h-7" width="w-7">
+							<IconContainer class="h-7 w-7">
 								<IconAddress />
 							</IconContainer>
 						</SideBarLink>

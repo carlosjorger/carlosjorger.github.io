@@ -11,7 +11,7 @@ const { href, label } = Astro.props;
 	class="flex w-52 items-center justify-start p-2 transition-colors ease-in-out active:bg-[#241c2d]"
 >
 	<slot />
-	<Link href={href} arialLabel="Go to presentation">
+	<Link href={href} aria-label="Go to presentation">
 		<h2 class="pl-3 text-3xl">{label}</h2>
 	</Link>
 </li>

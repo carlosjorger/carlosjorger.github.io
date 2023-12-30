@@ -3,16 +3,15 @@ import IconContainer from '../icons/IconContainer.astro';
 
 export interface Props {
 	id?: string;
-	height: string;
-	width: string;
 	href: string;
 	title: string;
+	class?: string;
 }
-const { id = undefined, height, width, href, title } = Astro.props;
+const { id = undefined, href, title } = Astro.props;
 ---
 
-<a href={href} aria-label={title} class:list={[height, 'm-1']}>
-	<IconContainer id={id} height={height} width={width}>
+<a href={href} aria-label={title} class:list={['m-1']}>
+	<IconContainer id={id} class={Astro.props.class}>
 		<slot />
 	</IconContainer>
 </a>
