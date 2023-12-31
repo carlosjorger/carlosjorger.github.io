@@ -7,6 +7,20 @@ import IconContainer from '../icons/IconContainer.astro';
 import IconAddress from '../icons/IconAddress.astro';
 import IconUser from '../icons/IconUser.astro';
 import IconCode from '../icons/IconCode.astro';
+
+const headerLinks = [
+	{ href: '#work', 'aria-label': 'See my projects', label: 'Projects' },
+	{
+		href: '#aboutMe',
+		'aria-label': 'Additional information about me',
+		label: 'About me',
+	},
+	{
+		href: '#contact',
+		'aria-label': 'You can contact me throught...',
+		label: 'Contact',
+	},
+];
 ---
 
 <header>
@@ -22,19 +36,11 @@ import IconCode from '../icons/IconCode.astro';
 				</Link>
 			</li>
 			<li class="flex flex-row gap-x-6">
-				<Link href="#work" aria-label="See my projects">Projects</Link>
-				<Link
-					href="#aboutMe"
-					aria-label="Additional information about me"
-				>
-					About me
-				</Link>
-				<Link
-					href="#contact"
-					aria-label="You can contact me throught..."
-				>
-					Contact
-				</Link>
+				{
+					headerLinks.map(({ label, ...attributes }) => (
+						<Link {...attributes}>{label}</Link>
+					))
+				}
 			</li>
 		</ul>
 	</nav>
