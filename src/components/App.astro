@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './Header/Header.astro';
+import AboutMe from './AboutMe.astro';
+import Footer from './Footer/Footer.astro';
+import Work from './Work/Work.astro';
+import Presentation from './Presentation.astro';
+import { getI18N } from '../i18n/';
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<script>
+	import { touchOutsideColumnNavbar, touchIcon } from '../utils/touchEvents';
+	document.addEventListener('touchstart', touchOutsideColumnNavbar, {
+		passive: true,
+	});
+	document.addEventListener('DOMContentLoaded', function () {
+		const changeSiderElements =
+			document.getElementsByClassName('change-sidebar');
+		for (const element of changeSiderElements) {
+			element.addEventListener('click', touchIcon);
+		}
+	});
+</script>
+<!-- TODO: Add skills -->
+<Layout title="Carlos Jorge's personal portfolio website">
+	<Header />
+	<main>
+		<Presentation {...i18n} />
+		<Work />
+		<AboutMe />
+	</main>
+	<Footer />
+</Layout>

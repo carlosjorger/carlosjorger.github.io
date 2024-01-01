@@ -1,5 +1,19 @@
 ---
 import CustomParagraph from './shared/CustomParagraph.astro';
+export interface Props {
+	INTRO_TITLE: string;
+	INTRO_TITLE_AFTER_BR1: string;
+	INTRO_TITLE_AFTER_BR2: string;
+	INTRO_SUBTITLE: string;
+	INTRO_DESCRIPTION: string;
+}
+const {
+	INTRO_TITLE,
+	INTRO_TITLE_AFTER_BR1,
+	INTRO_TITLE_AFTER_BR2,
+	INTRO_SUBTITLE,
+	INTRO_DESCRIPTION,
+} = Astro.props;
 ---
 
 <div
@@ -14,25 +28,24 @@ import CustomParagraph from './shared/CustomParagraph.astro';
 				<h1
 					class="mx-0 my-3 animate-presentation-title text-5xl font-bold text-[var(--default-secundary-font-color)] max-sm:text-5xl"
 				>
-					Hi, I am <br class="hidden max-sm:inline" />Carlos Jorge, <br
-					/>
-					Web developer!
+					{INTRO_TITLE}<br class="hidden max-sm:inline" />
+					{INTRO_TITLE_AFTER_BR1}
+					<br />
+					{INTRO_TITLE_AFTER_BR2}
 				</h1>
 			</div>
 			<div class="reveal">
 				<h2
 					class="mx-0 my-3 animate-presentation-main-skill text-4.5xl font-bold max-sm:mt-4"
 				>
-					Welcome to my personal portfolio!
+					{INTRO_SUBTITLE}
 				</h2>
 			</div>
 			<div
 				class="mx-0 my-3 animate-presentation-description break-words max-sm:mt-7"
 			>
 				<CustomParagraph>
-					Cuban computer scientist from Havana University. Currently
-					working as full-stack engineer building .net and Vuejs
-					applications. I play with astro and rust in my free time
+					{INTRO_DESCRIPTION}
 				</CustomParagraph>
 			</div>
 		</div>

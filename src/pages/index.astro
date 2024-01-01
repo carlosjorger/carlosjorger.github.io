@@ -1,32 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header/Header.astro';
-import AboutMe from '../components/AboutMe.astro';
-import Footer from '../components/Footer/Footer.astro';
-import Work from '../components/Work/Work.astro';
-import Presentation from '../components/Presentation.astro';
+import App from '../components/App.astro';
 ---
 
-<script>
-	import { touchOutsideColumnNavbar, touchIcon } from '../utils/touchEvents';
-	document.addEventListener('touchstart', touchOutsideColumnNavbar, {
-		passive: true,
-	});
-	document.addEventListener('DOMContentLoaded', function () {
-		const changeSiderElements =
-			document.getElementsByClassName('change-sidebar');
-		for (const element of changeSiderElements) {
-			element.addEventListener('click', touchIcon);
-		}
-	});
-</script>
 <!-- TODO: Add skills -->
-<Layout title="Carlos Jorge's personal portfolio website">
-	<Header />
-	<main>
-		<Presentation />
-		<Work />
-		<AboutMe />
-	</main>
-	<Footer />
-</Layout>
+<App />
