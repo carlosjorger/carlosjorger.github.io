@@ -7,5 +7,17 @@
 	"INTRO_DESCRIPTION": "Soy un científico de la computación graduado en la Universidad de la Habana. Actualment trabajo como desarrollador full-stack creando aplicaciones de .net y Vuejs. En mis tiempos libres juego un poco con Astro y Rust ;)",
 	"ABOUT_ME_TITLE": "Acerca de mí",
 	"ABOUT_ME_DESCRIPTION": "Hola, Mi nombre es Carlos Jorge. Soy un desarrollador full-stack que disfura programar dentro y fuera del trabajo. Empecé a trabajar como desarrollador backend usando tecnologías .net y sql server.",
-	"ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH": "Actualmente. También trabajo con tecnologías frontend como angular, vue, html, css."
+	"ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH": "Actualmente. También trabajo con tecnologías frontend como angular, vue, html, css.",
+	"CONTACT_TITLE": "Contacto",
+	"CONTACT_DESCRIPTION": "Siempre abierto a nuevas oportunities de trabajo o responder cualquier pregunta. Puedes contactarme a través:",
+	"CONTACT_FOOTER": "© 2022 Carlos Jorge",
+	"CONTACT_FOOTER_PUBLISHED": "Publicado",
+	"CONTACT_FOOTER_PUBLISHED_ARIAL_LABEL": "Link del proyecto publicado en GitHub",
+	"CONTACT_FOOTER_AFTER_PUBLISHED": "en",
+	"CONTACT_FOOTER_GITHUB_PAGE": "Github Page",
+	"CONTACT_FOOTER_GITHUB_PAGE_ARIAL_LABEL": "Link de github pages",
+	"CONTACT_MAIL_ARIAL_LABEL": "Contactame a través de mi correo electrónico",
+	"CONTACT_GITHUB_ARIAL_LABEL": "Mira mi perfil de github",
+	"CONTACT_LINKEDIN_ARIAL_LABEL": "Mira mi perfil de linkedin profile y conecta conmigo",
+	"CONTACT_TWITTER_ARIAL_LABEL": "Mira mi perfil de twitter y sigueme"
 }
