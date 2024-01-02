@@ -1,21 +1,29 @@
 ---
 import Subtitle from './shared/Subtitle.astro';
 import CustomParagraph from './shared/CustomParagraph.astro';
+export interface Props {
+	ABOUT_ME_TITLE: string;
+	ABOUT_ME_DESCRIPTION: string;
+	ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH: string;
+}
+
+const {
+	ABOUT_ME_TITLE,
+	ABOUT_ME_DESCRIPTION,
+	ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH,
+} = Astro.props;
 ---
 
 <section id="aboutMe" class="h-screen max-sm:h-full max-sm:pt-16">
 	<div class="flex h-[90%] flex-col justify-center break-words p-2">
 		<header class="reveal pb-2">
-			<Subtitle left>About me</Subtitle>
+			<Subtitle left>{ABOUT_ME_TITLE}</Subtitle>
 		</header>
 		<CustomParagraph reveal>
-			Hello, My name is Carlos Jorge. I'm a full-stack engineer that enjoy
-			coding on and off the work. I started working as a backend developer
-			in 2020 using .net technologies and sql server.
+			{ABOUT_ME_DESCRIPTION}
 		</CustomParagraph>
 		<CustomParagraph reveal>
-			Currently, I'm also working on frontend technologies like angular,
-			vue, html, css.
+			{ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH}
 		</CustomParagraph>
 		<a
 			class="reveal mt-2 rounded-md border-2 border-[--default-secundary-font-color-2] py-2.5 text-center text-2xl font-bold text-teal-300 transition-colors duration-500 ease-out hover:bg-teal-300 hover:text-[--default-background-color] max-sm:mt-10"
