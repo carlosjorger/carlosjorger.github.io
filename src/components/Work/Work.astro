@@ -1,6 +1,11 @@
 ---
 import Project from './Project.astro';
 import Subtitle from '../shared/Subtitle.astro';
+
+export interface Props {
+	PROJECTS_TITLE: string;
+	PROJECTS_TITLE_AFTER_BR: string;
+}
 type Project = {
 	id: string;
 	description: string;
@@ -40,14 +45,15 @@ const projects = [
 		website: 'https://carlosjorger.github.io/portfolio/',
 	},
 ] as Project[];
+const { PROJECTS_TITLE, PROJECTS_TITLE_AFTER_BR } = Astro.props;
 ---
 
 <section id="work">
 	<div class="flex flex-col p-2">
 		<header class="reveal my-7 mb-2">
 			<Subtitle left>
-				Some projects<br />
-				I've made
+				{PROJECTS_TITLE}<br />
+				{PROJECTS_TITLE_AFTER_BR}
 			</Subtitle>
 		</header>
 		{projects.map((project) => <Project {...project} />)}

@@ -5,6 +5,8 @@
 	"INTRO_TITLE_AFTER_BR2": "Web developer!",
 	"INTRO_SUBTITLE": "Welcome to my personal portfolio!",
 	"INTRO_DESCRIPTION": "Cuban computer scientist from Havana University. Currently working as full-stack engineer building .net and Vuejs applications. I play with astro and rust in my free time",
+	"PROJECTS_TITLE": "Some projects",
+	"PROJECTS_TITLE_AFTER_BR": "I've made",
 	"ABOUT_ME_TITLE": "About me",
 	"ABOUT_ME_DESCRIPTION": "Hello, My name is Carlos Jorge. I'm a full-stack engineer that enjoy coding on and off the work. I started working as a backend developer in 2020 using .net technologies and sql server.",
 	"ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH": "Currently, I'm also working on frontend technologies like angular, vue, html, css.",
