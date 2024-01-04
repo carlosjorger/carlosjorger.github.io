@@ -8,6 +8,7 @@
 	"ABOUT_ME_TITLE": "Acerca de mí",
 	"ABOUT_ME_DESCRIPTION": "Hola, Mi nombre es Carlos Jorge. Soy un desarrollador full-stack que disfura programar dentro y fuera del trabajo. Empecé a trabajar como desarrollador backend usando tecnologías .net y sql server.",
 	"ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH": "Actualmente. También trabajo con tecnologías frontend como angular, vue, html, css.",
+	"ABOUT_ME_CV_ARIA_LABEL": "Descargar pdf del Curriculum Vitae",
 	"CONTACT_TITLE": "Contacto",
 	"CONTACT_DESCRIPTION": "Siempre abierto a nuevas oportunities de trabajo o responder cualquier pregunta. Puedes contactarme a través:",
 	"CONTACT_FOOTER": "© 2022 Carlos Jorge",

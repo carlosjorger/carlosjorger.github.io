@@ -8,6 +8,7 @@
 	"ABOUT_ME_TITLE": "About me",
 	"ABOUT_ME_DESCRIPTION": "Hello, My name is Carlos Jorge. I'm a full-stack engineer that enjoy coding on and off the work. I started working as a backend developer in 2020 using .net technologies and sql server.",
 	"ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH": "Currently, I'm also working on frontend technologies like angular, vue, html, css.",
+	"ABOUT_ME_CV_ARIA_LABEL": "Download Curriculum Vitae pdf",
 	"CONTACT_TITLE": "Contact",
 	"CONTACT_DESCRIPTION": "I'm always open for new job oportunities or answer any question. You can reach me through:",
 	"CONTACT_FOOTER": "© 2022 Carlos Jorge",

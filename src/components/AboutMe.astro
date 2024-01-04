@@ -5,12 +5,14 @@ export interface Props {
 	ABOUT_ME_TITLE: string;
 	ABOUT_ME_DESCRIPTION: string;
 	ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH: string;
+	ABOUT_ME_CV_ARIA_LABEL: string;
 }
 
 const {
 	ABOUT_ME_TITLE,
 	ABOUT_ME_DESCRIPTION,
 	ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH,
+	ABOUT_ME_CV_ARIA_LABEL,
 } = Astro.props;
 ---
 
@@ -29,7 +31,7 @@ const {
 			class="reveal mt-2 rounded-md border-2 border-[--default-secundary-font-color-2] py-2.5 text-center text-2xl font-bold text-teal-300 transition-colors duration-500 ease-out hover:bg-teal-300 hover:text-[--default-background-color] max-sm:mt-10"
 			href="/pdfs/resume.pdf"
 			target="_blank"
-			aria-label="Download Curriculum Vitae pdf">Curriculum Vitae</a
+			aria-label={ABOUT_ME_CV_ARIA_LABEL}>Curriculum Vitae</a
 		>
 	</div>
 </section>
