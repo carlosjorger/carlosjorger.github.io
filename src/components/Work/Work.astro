@@ -5,7 +5,16 @@ import Subtitle from '../shared/Subtitle.astro';
 export interface Props {
 	PROJECTS_TITLE: string;
 	PROJECTS_TITLE_AFTER_BR: string;
+	PROYECTS: {
+		CUVIMAKER: ProjectI18n;
+		RUSTY_COPIER: ProjectI18n;
+		ANGULAR_PORTFOLIO: ProjectI18n;
+	};
 }
+type ProjectI18n = {
+	description: string;
+	anchorLabel: string;
+};
 type Project = {
 	id: string;
 	description: string;
@@ -15,37 +24,34 @@ type Project = {
 	imageSrc: string;
 	website?: string;
 };
+const { PROJECTS_TITLE, PROJECTS_TITLE_AFTER_BR, PROYECTS } = Astro.props;
+
 const projects = [
 	{
 		id: 'online-cv-maker',
-		description:
-			'An online cv maker web application used to design a custom curriculum vitae.',
+
 		title: 'Cuvimaker',
-		anchorLabel: 'See my online cv maker github project',
 		githubLink: 'https://github.com/carlosjorger/cuvimaker',
 		imageSrc: '[&.visibleImg]:bg-cuvimakerExample',
 		website: 'https://cuvimaker.netlify.app/',
+		...PROYECTS.CUVIMAKER,
 	},
 	{
 		id: 'rusty-copier',
-		description: 'Its a copier implemented in rust programming language.',
 		title: 'Rusty Copier',
-		anchorLabel: 'See my rusty copier github project',
 		githubLink: 'https://github.com/carlosjorger/rustycopier',
 		imageSrc: '[&.visibleImg]:bg-rustycopier',
+		...PROYECTS.RUSTY_COPIER,
 	},
 	{
 		id: 'angular-portfolio',
-		description:
-			'It is a personal portfolio built with angular using really cool animation (Angular animations).',
 		title: 'Angular Portfolio',
-		anchorLabel: 'See my portfolio github project',
 		githubLink: 'https://github.com/carlosjorger/portfolio',
 		imageSrc: '[&.visibleImg]:bg-portfolio',
 		website: 'https://carlosjorger.github.io/portfolio/',
+		...PROYECTS.ANGULAR_PORTFOLIO,
 	},
 ] as Project[];
-const { PROJECTS_TITLE, PROJECTS_TITLE_AFTER_BR } = Astro.props;
 ---
 
 <section id="work">

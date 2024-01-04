@@ -7,7 +7,6 @@ import tailwind from '@astrojs/tailwind';
 import compressor from 'astro-compressor';
 
 // https://astro.build/config
-// TODO: add internationalization
 export default defineConfig({
 	site: 'https://carlosjorger.github.io',
 	integrations: [tailwind(), compressor({ gzip: false, brotli: true })],

@@ -28,5 +28,19 @@
 	"HEADER_ABOUT_ME_ARIA_LABEL": "Información adicional acerca de mí",
 	"HEADER_CONTACT_ARIA_LABEL": "Me puedes contactar a través de...",
 	"HEADER_HOME": "Portada",
-	"HEADER_HOME_ARIA_LABEL": "Ir a la presentatión"
+	"HEADER_HOME_ARIA_LABEL": "Ir a la presentatión",
+	"PROYECTS": {
+		"CUVIMAKER": {
+			"description": "Una aplicación web de crear curriculums usado para diseñar un curriculum vitae.",
+			"anchorLabel": "Mira el proyecto de github del cv maker"
+		},
+		"RUSTY_COPIER": {
+			"description": "Es un copiador implementado en el lenguaje de programación rust.",
+			"anchorLabel": "Mira el proyecto de github del rusty copier"
+		},
+		"ANGULAR_PORTFOLIO": {
+			"description": "Es un portafolio personal hecho en angular usando animaciones interesantes(Angular animations).",
+			"anchorLabel": "Mira el proyecto de github de mi portafolio"
+		}
+	}
 }
