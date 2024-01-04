@@ -19,5 +19,11 @@
 	"CONTACT_MAIL_ARIAL_LABEL": "Contact via this email address",
 	"CONTACT_GITHUB_ARIAL_LABEL": "See my github profile",
 	"CONTACT_LINKEDIN_ARIAL_LABEL": "See my linkedin profile and connect with me",
-	"CONTACT_TWITTER_ARIAL_LABEL": "See my twitter profile and follow me"
+	"CONTACT_TWITTER_ARIAL_LABEL": "See my twitter profile and follow me",
+	"HEADER_PROJECTS": "Projects",
+	"HEADER_PROJECTS_ARIAL_LABEL": "See my projects",
+	"HEADER_ABOUT_ME_ARIAL_LABEL": "Additional information about me",
+	"HEADER_CONTACT_ARIAL_LABEL": "You can contact me throught...",
+	"HEADER_HOME": "Home",
+	"HEADER_HOME_ARIAL_LABEL": "Go to presentation"
 }

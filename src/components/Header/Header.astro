@@ -7,18 +7,41 @@ import IconContainer from '../icons/IconContainer.astro';
 import IconAddress from '../icons/IconAddress.astro';
 import IconUser from '../icons/IconUser.astro';
 import IconCode from '../icons/IconCode.astro';
-
+export interface Props {
+	ABOUT_ME_TITLE: string;
+	CONTACT_TITLE: string;
+	HEADER_PROJECTS: string;
+	HEADER_HOME: string;
+	HEADER_HOME_ARIAL_LABEL: string;
+	HEADER_PROJECTS_ARIAL_LABEL: string;
+	HEADER_ABOUT_ME_ARIAL_LABEL: string;
+	HEADER_CONTACT_ARIAL_LABEL: string;
+}
+const {
+	ABOUT_ME_TITLE,
+	CONTACT_TITLE,
+	HEADER_PROJECTS,
+	HEADER_HOME,
+	HEADER_HOME_ARIAL_LABEL,
+	HEADER_PROJECTS_ARIAL_LABEL,
+	HEADER_ABOUT_ME_ARIAL_LABEL,
+	HEADER_CONTACT_ARIAL_LABEL,
+} = Astro.props;
 const headerLinks = [
-	{ href: '#work', 'aria-label': 'See my projects', label: 'Projects' },
+	{
+		href: '#work',
+		'aria-label': HEADER_PROJECTS_ARIAL_LABEL,
+		label: HEADER_PROJECTS,
+	},
 	{
 		href: '#aboutMe',
-		'aria-label': 'Additional information about me',
-		label: 'About me',
+		'aria-label': HEADER_ABOUT_ME_ARIAL_LABEL,
+		label: ABOUT_ME_TITLE,
 	},
 	{
 		href: '#contact',
-		'aria-label': 'You can contact me throught...',
-		label: 'Contact',
+		'aria-label': HEADER_CONTACT_ARIAL_LABEL,
+		label: CONTACT_TITLE,
 	},
 ];
 ---
@@ -29,7 +52,7 @@ const headerLinks = [
 			class="m-0 mx-auto flex w-[65%] list-none flex-row justify-between p-0.5 max-md:w-[80%] max-sm:hidden max-sm:w-[90%] [&>li]:self-center"
 		>
 			<li class="mt-1 p-1">
-				<Link href="#home" aria-label="Go to presentation">
+				<Link href="#home" aria-label={HEADER_HOME_ARIAL_LABEL}>
 					<IconContainer class="h-6 w-7">
 						<IconHome />
 					</IconContainer>
@@ -76,22 +99,38 @@ const headerLinks = [
 						id="nav-columnar-menu-list"
 						class="flex list-none flex-col items-center p-0 text-xl"
 					>
-						<SideBarLink href="#" label="Home">
+						<SideBarLink
+							href="#"
+							aria-label={HEADER_HOME_ARIAL_LABEL}
+							label={HEADER_HOME}
+						>
 							<IconContainer class="h-7 w-7">
 								<IconHome />
 							</IconContainer>
 						</SideBarLink>
-						<SideBarLink href="#work" label="Projects">
+						<SideBarLink
+							href="#work"
+							aria-label={HEADER_PROJECTS_ARIAL_LABEL}
+							label={HEADER_PROJECTS}
+						>
 							<IconContainer class="h-7 w-7">
 								<IconCode />
 							</IconContainer>
 						</SideBarLink>
-						<SideBarLink href="#aboutMe" label="About me">
+						<SideBarLink
+							href="#aboutMe"
+							aria-label={HEADER_ABOUT_ME_ARIAL_LABEL}
+							label={ABOUT_ME_TITLE}
+						>
 							<IconContainer class="h-7 w-7">
 								<IconUser />
 							</IconContainer>
 						</SideBarLink>
-						<SideBarLink href="#contact" label="Contact">
+						<SideBarLink
+							href="#contact"
+							aria-label={HEADER_CONTACT_ARIAL_LABEL}
+							label={CONTACT_TITLE}
+						>
 							<IconContainer class="h-7 w-7">
 								<IconAddress />
 							</IconContainer>
