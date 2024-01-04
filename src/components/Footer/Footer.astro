@@ -11,48 +11,48 @@ export interface Props {
 	CONTACT_TITLE: string;
 	CONTACT_DESCRIPTION: string;
 	CONTACT_FOOTER_PUBLISHED: string;
-	CONTACT_FOOTER_PUBLISHED_ARIAL_LABEL: string;
+	CONTACT_FOOTER_PUBLISHED_ARIA_LABEL: string;
 	CONTACT_FOOTER_AFTER_PUBLISHED: string;
 	CONTACT_FOOTER_GITHUB_PAGE: string;
-	CONTACT_FOOTER_GITHUB_PAGE_ARIAL_LABEL: string;
-	CONTACT_MAIL_ARIAL_LABEL: string;
-	CONTACT_GITHUB_ARIAL_LABEL: string;
-	CONTACT_LINKEDIN_ARIAL_LABEL: string;
-	CONTACT_TWITTER_ARIAL_LABEL: string;
+	CONTACT_FOOTER_GITHUB_PAGE_ARIA_LABEL: string;
+	CONTACT_MAIL_ARIA_LABEL: string;
+	CONTACT_GITHUB_ARIA_LABEL: string;
+	CONTACT_LINKEDIN_ARIA_LABEL: string;
+	CONTACT_TWITTER_ARIA_LABEL: string;
 }
 
 const {
 	CONTACT_TITLE,
 	CONTACT_DESCRIPTION,
 	CONTACT_FOOTER_PUBLISHED,
-	CONTACT_FOOTER_PUBLISHED_ARIAL_LABEL,
+	CONTACT_FOOTER_PUBLISHED_ARIA_LABEL,
 	CONTACT_FOOTER_AFTER_PUBLISHED,
 	CONTACT_FOOTER_GITHUB_PAGE,
-	CONTACT_FOOTER_GITHUB_PAGE_ARIAL_LABEL,
-	CONTACT_MAIL_ARIAL_LABEL,
-	CONTACT_GITHUB_ARIAL_LABEL,
-	CONTACT_LINKEDIN_ARIAL_LABEL,
-	CONTACT_TWITTER_ARIAL_LABEL,
+	CONTACT_FOOTER_GITHUB_PAGE_ARIA_LABEL,
+	CONTACT_MAIL_ARIA_LABEL,
+	CONTACT_GITHUB_ARIA_LABEL,
+	CONTACT_LINKEDIN_ARIA_LABEL,
+	CONTACT_TWITTER_ARIA_LABEL,
 } = Astro.props;
 const icons = [
 	{
 		href: 'mailto:rodriguezcuelloc@gmail.com',
-		title: CONTACT_MAIL_ARIAL_LABEL,
+		title: CONTACT_MAIL_ARIA_LABEL,
 		iconComponent: IconMail,
 	},
 	{
 		href: 'https://github.com/carlosjorger',
-		title: CONTACT_GITHUB_ARIAL_LABEL,
+		title: CONTACT_GITHUB_ARIA_LABEL,
 		iconComponent: IconGithub,
 	},
 	{
 		href: 'https://www.linkedin.com/in/carlosjorger/',
-		title: CONTACT_LINKEDIN_ARIAL_LABEL,
+		title: CONTACT_LINKEDIN_ARIA_LABEL,
 		iconComponent: IconLinkedin,
 	},
 	{
 		href: 'https://twitter.com/carlosjorgerc',
-		title: CONTACT_TWITTER_ARIAL_LABEL,
+		title: CONTACT_TWITTER_ARIA_LABEL,
 		iconComponent: IconTwitter,
 	},
 ];
@@ -92,14 +92,14 @@ const icons = [
 				<span>
 					<CustomLink
 						href="https://github.com/carlosjorger/carlosjorger.github.io"
-						aria-label={CONTACT_FOOTER_PUBLISHED_ARIAL_LABEL}
+						aria-label={CONTACT_FOOTER_PUBLISHED_ARIA_LABEL}
 					>
 						{CONTACT_FOOTER_PUBLISHED}
 					</CustomLink>
 					{CONTACT_FOOTER_AFTER_PUBLISHED}
 					<CustomLink
 						href="https://pages.github.com/"
-						aria-label={CONTACT_FOOTER_GITHUB_PAGE_ARIAL_LABEL}
+						aria-label={CONTACT_FOOTER_GITHUB_PAGE_ARIA_LABEL}
 					>
 						{CONTACT_FOOTER_GITHUB_PAGE}
 					</CustomLink>

@@ -12,35 +12,35 @@ export interface Props {
 	CONTACT_TITLE: string;
 	HEADER_PROJECTS: string;
 	HEADER_HOME: string;
-	HEADER_HOME_ARIAL_LABEL: string;
-	HEADER_PROJECTS_ARIAL_LABEL: string;
-	HEADER_ABOUT_ME_ARIAL_LABEL: string;
-	HEADER_CONTACT_ARIAL_LABEL: string;
+	HEADER_HOME_ARIA_LABEL: string;
+	HEADER_PROJECTS_ARIA_LABEL: string;
+	HEADER_ABOUT_ME_ARIA_LABEL: string;
+	HEADER_CONTACT_ARIA_LABEL: string;
 }
 const {
 	ABOUT_ME_TITLE,
 	CONTACT_TITLE,
 	HEADER_PROJECTS,
 	HEADER_HOME,
-	HEADER_HOME_ARIAL_LABEL,
-	HEADER_PROJECTS_ARIAL_LABEL,
-	HEADER_ABOUT_ME_ARIAL_LABEL,
-	HEADER_CONTACT_ARIAL_LABEL,
+	HEADER_HOME_ARIA_LABEL,
+	HEADER_PROJECTS_ARIA_LABEL,
+	HEADER_ABOUT_ME_ARIA_LABEL,
+	HEADER_CONTACT_ARIA_LABEL,
 } = Astro.props;
 const headerLinks = [
 	{
 		href: '#work',
-		'aria-label': HEADER_PROJECTS_ARIAL_LABEL,
+		'aria-label': HEADER_PROJECTS_ARIA_LABEL,
 		label: HEADER_PROJECTS,
 	},
 	{
 		href: '#aboutMe',
-		'aria-label': HEADER_ABOUT_ME_ARIAL_LABEL,
+		'aria-label': HEADER_ABOUT_ME_ARIA_LABEL,
 		label: ABOUT_ME_TITLE,
 	},
 	{
 		href: '#contact',
-		'aria-label': HEADER_CONTACT_ARIAL_LABEL,
+		'aria-label': HEADER_CONTACT_ARIA_LABEL,
 		label: CONTACT_TITLE,
 	},
 ];
@@ -52,7 +52,7 @@ const headerLinks = [
 			class="m-0 mx-auto flex w-[65%] list-none flex-row justify-between p-0.5 max-md:w-[80%] max-sm:hidden max-sm:w-[90%] [&>li]:self-center"
 		>
 			<li class="mt-1 p-1">
-				<Link href="#home" aria-label={HEADER_HOME_ARIAL_LABEL}>
+				<Link href="#home" aria-label={HEADER_HOME_ARIA_LABEL}>
 					<IconContainer class="h-6 w-7">
 						<IconHome />
 					</IconContainer>
@@ -101,7 +101,7 @@ const headerLinks = [
 					>
 						<SideBarLink
 							href="#"
-							aria-label={HEADER_HOME_ARIAL_LABEL}
+							aria-label={HEADER_HOME_ARIA_LABEL}
 							label={HEADER_HOME}
 						>
 							<IconContainer class="h-7 w-7">
@@ -110,7 +110,7 @@ const headerLinks = [
 						</SideBarLink>
 						<SideBarLink
 							href="#work"
-							aria-label={HEADER_PROJECTS_ARIAL_LABEL}
+							aria-label={HEADER_PROJECTS_ARIA_LABEL}
 							label={HEADER_PROJECTS}
 						>
 							<IconContainer class="h-7 w-7">
@@ -119,7 +119,7 @@ const headerLinks = [
 						</SideBarLink>
 						<SideBarLink
 							href="#aboutMe"
-							aria-label={HEADER_ABOUT_ME_ARIAL_LABEL}
+							aria-label={HEADER_ABOUT_ME_ARIA_LABEL}
 							label={ABOUT_ME_TITLE}
 						>
 							<IconContainer class="h-7 w-7">
@@ -128,7 +128,7 @@ const headerLinks = [
 						</SideBarLink>
 						<SideBarLink
 							href="#contact"
-							aria-label={HEADER_CONTACT_ARIAL_LABEL}
+							aria-label={HEADER_CONTACT_ARIA_LABEL}
 							label={CONTACT_TITLE}
 						>
 							<IconContainer class="h-7 w-7">
