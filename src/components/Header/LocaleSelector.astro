@@ -1,0 +1,28 @@
+---
+const { currentLocale } = Astro;
+export interface Props {
+	SPANISH: string;
+	ENGLISH: string;
+}
+const { SPANISH, ENGLISH } = Astro.props;
+// TODO: improve design
+---
+
+<script>
+	const selects = document.getElementsByClassName('select_locale');
+	for (const select of selects) {
+		if (select instanceof HTMLSelectElement) {
+			select.addEventListener('change', () => {
+				console.log('a');
+				window.location.href = `/${select.value}`;
+			});
+		}
+	}
+</script>
+<label for="select_locale" class="sr-only">Select Locale</label>
+<select
+	class="select_locale text-md peer block border-0 border-b-2 border-gray-200 bg-transparent px-1 py-1 pt-0 text-[var(--default-font-color2)] focus:border-gray-200 focus:outline-none focus:ring-0 max-sm:text-2xl dark:border-gray-700 dark:text-gray-400"
+>
+	<option selected={currentLocale == 'en'} value="">{ENGLISH}</option>
+	<option selected={currentLocale == 'es'} value="es">{SPANISH}</option>
+</select>

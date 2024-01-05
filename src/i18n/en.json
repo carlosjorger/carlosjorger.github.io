@@ -42,5 +42,9 @@
 			"description": "It is a personal portfolio built with angular using really cool animation (Angular animations).",
 			"anchorLabel": "See my portfolio github project"
 		}
+	},
+	"LOCALES": {
+		"SPANISH": "Spanish",
+		"ENGLISH": "English"
 	}
 }

@@ -7,6 +7,7 @@ import IconContainer from '../icons/IconContainer.astro';
 import IconAddress from '../icons/IconAddress.astro';
 import IconUser from '../icons/IconUser.astro';
 import IconCode from '../icons/IconCode.astro';
+import LocaleSelector from './LocaleSelector.astro';
 export interface Props {
 	ABOUT_ME_TITLE: string;
 	CONTACT_TITLE: string;
@@ -16,6 +17,10 @@ export interface Props {
 	HEADER_PROJECTS_ARIA_LABEL: string;
 	HEADER_ABOUT_ME_ARIA_LABEL: string;
 	HEADER_CONTACT_ARIA_LABEL: string;
+	LOCALES: {
+		SPANISH: string;
+		ENGLISH: string;
+	};
 }
 const {
 	ABOUT_ME_TITLE,
@@ -26,6 +31,7 @@ const {
 	HEADER_PROJECTS_ARIA_LABEL,
 	HEADER_ABOUT_ME_ARIA_LABEL,
 	HEADER_CONTACT_ARIA_LABEL,
+	LOCALES,
 } = Astro.props;
 const headerLinks = [
 	{
@@ -59,6 +65,7 @@ const headerLinks = [
 				</Link>
 			</li>
 			<li class="flex flex-row gap-x-6">
+				<LocaleSelector {...LOCALES} />
 				{
 					headerLinks.map(({ label, ...attributes }) => (
 						<Link {...attributes}>{label}</Link>
@@ -70,8 +77,9 @@ const headerLinks = [
 	<nav class="fixed top-0 z-[2] hidden w-full max-sm:block">
 		<HamburgerMenuIcon />
 		<div
-			class="changeable z-[2] h-16 w-full p-3 shadow-[0px_0px_20px] backdrop-blur"
+			class="changeable z-[2] flex h-16 w-full flex-row justify-end p-3 shadow-[0px_0px_20px] backdrop-blur"
 		>
+			<LocaleSelector {...LOCALES} />
 		</div>
 		<div
 			class="nav-columnar-menu-background changeable bg-[rgba(0, 0, 0, 0)] invisible absolute top-0 z-50 mt-0 h-screen w-screen overflow-hidden p-0 transition-all delay-100 duration-300 ease-out max-sm:h-[100dvh] [&.active]:bg-[#00000080] [&.active]:ease-in-out"
