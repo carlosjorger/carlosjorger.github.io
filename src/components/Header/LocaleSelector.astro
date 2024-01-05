@@ -5,7 +5,7 @@ export interface Props {
 	ENGLISH: string;
 }
 const { SPANISH, ENGLISH } = Astro.props;
-// TODO: improve design
+// TODO: improve design using a Select with dropdown https://flowbite.com/docs/components/dropdowns/
 ---
 
 <script>
@@ -13,7 +13,6 @@ const { SPANISH, ENGLISH } = Astro.props;
 	for (const select of selects) {
 		if (select instanceof HTMLSelectElement) {
 			select.addEventListener('change', () => {
-				console.log('a');
 				window.location.href = `/${select.value}`;
 			});
 		}
@@ -21,8 +20,16 @@ const { SPANISH, ENGLISH } = Astro.props;
 </script>
 <label for="select_locale" class="sr-only">Select Locale</label>
 <select
-	class="select_locale text-md peer block border-0 border-b-2 border-gray-200 bg-transparent px-1 py-1 pt-0 text-[var(--default-font-color2)] focus:border-gray-200 focus:outline-none focus:ring-0 max-sm:text-2xl dark:border-gray-700 dark:text-gray-400"
+	class="select_locale text-md peer block border-0 border-b-2 border-[var(--default-font-color2)] bg-transparent px-2 py-1.5 pt-0 text-[var(--default-font-color2)] transition-all duration-200 ease-in-out focus:outline-none focus:ring-0"
 >
-	<option selected={currentLocale == 'en'} value="">{ENGLISH}</option>
-	<option selected={currentLocale == 'es'} value="es">{SPANISH}</option>
+	<option
+		class="bg-[--default-background-color-shadow]"
+		selected={currentLocale == 'en'}
+		value="">{ENGLISH}</option
+	>
+	<option
+		class="bg-[--default-background-color-shadow]"
+		selected={currentLocale == 'es'}
+		value="es">{SPANISH}</option
+	>
 </select>
