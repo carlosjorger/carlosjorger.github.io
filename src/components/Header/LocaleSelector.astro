@@ -23,7 +23,7 @@ const CURRENT_LANGUAGE = currentLocale === 'es' ? SPANISH : ENGLISH;
 <button
 	id="dropdownDefaultButton"
 	data-dropdown-toggle="dropdown"
-	class="inline-flex items-center rounded-lg bg-blue-700 px-2.5 py-1 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+	class="inline-flex h-auto items-center rounded-md bg-transparent px-2.5 text-center font-lato text-[var(--default-font-color2)] transition-all duration-200 ease-in-out hover:text-teal-300 focus:outline-none focus:ring-4 focus:ring-[--default-secundary-font-color-2] focus:drop-shadow-[0rem_0rem_0.3rem_aqua]"
 	type="button"
 	>{CURRENT_LANGUAGE}
 	<svg
@@ -42,25 +42,22 @@ const CURRENT_LANGUAGE = currentLocale === 'es' ? SPANISH : ENGLISH;
 	</svg>
 </button>
 
-<div
-	id="dropdown"
-	class="z-10 hidden w-24 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700"
->
+<div id="dropdown" class="z-10 hidden w-24 divide-y rounded-lg shadow">
 	<ul
-		class="py-2 text-sm text-gray-700 dark:text-gray-200"
+		class="rounded-md bg-[--default-background-color] py-2 text-sm shadow-lg"
 		aria-labelledby="dropdownDefaultButton"
 	>
 		<li>
 			<a
 				href="/es"
-				class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				class="block px-3 py-2 transition-all duration-200 ease-in-out hover:text-teal-300 hover:drop-shadow-[0rem_0rem_0.3rem_aqua]"
 				>{SPANISH}</a
 			>
 		</li>
 		<li>
 			<a
 				href="/"
-				class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				class="block px-3 py-2 transition-all duration-200 ease-in-out hover:text-teal-300 hover:drop-shadow-[0rem_0rem_0.3rem_aqua]"
 				>{ENGLISH}</a
 			>
 		</li>
