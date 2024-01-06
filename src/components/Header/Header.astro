@@ -65,7 +65,11 @@ const headerLinks = [
 				</Link>
 			</li>
 			<li class="flex flex-row gap-x-6">
-				<LocaleSelector {...LOCALES} />
+				<LocaleSelector
+					id="dropdownLocaleButton"
+					dropdown_id="dropdownLocaleButtonDropdown"
+					{...LOCALES}
+				/>
 				{
 					headerLinks.map(({ label, ...attributes }) => (
 						<Link {...attributes}>{label}</Link>
@@ -79,7 +83,11 @@ const headerLinks = [
 		<div
 			class="changeable z-[2] flex h-16 w-full flex-row justify-end p-3 shadow-[0px_0px_20px] backdrop-blur"
 		>
-			<LocaleSelector {...LOCALES} />
+			<LocaleSelector
+				id="dropdownLocaleButtonSideBar"
+				dropdown_id="dropdownLocaleButtonSideBarDropdown"
+				{...LOCALES}
+			/>
 		</div>
 		<div
 			class="nav-columnar-menu-background changeable bg-[rgba(0, 0, 0, 0)] invisible absolute top-0 z-50 mt-0 h-screen w-screen overflow-hidden p-0 transition-all delay-100 duration-300 ease-out max-sm:h-[100dvh] [&.active]:bg-[#00000080] [&.active]:ease-in-out"
