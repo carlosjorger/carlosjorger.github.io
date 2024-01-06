@@ -63,11 +63,14 @@ const { title } = Astro.props;
 			as="font"
 			href="https://fonts.googleapis.com/css?family=Lato:400italic%27&display=swap"
 		/>
-
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
+		<script
+			is:inline
+			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+		></script>
 	</body>
 </html>

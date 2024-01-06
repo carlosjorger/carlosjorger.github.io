@@ -5,6 +5,7 @@ export interface Props {
 	ENGLISH: string;
 }
 const { SPANISH, ENGLISH } = Astro.props;
+const CURRENT_LANGUAGE = currentLocale === 'es' ? SPANISH : ENGLISH;
 // TODO: improve design using a Select with dropdown https://flowbite.com/docs/components/dropdowns/
 ---
 
@@ -18,18 +19,50 @@ const { SPANISH, ENGLISH } = Astro.props;
 		}
 	}
 </script>
-<label for="select_locale" class="sr-only">Select Locale</label>
-<select
-	class="select_locale text-md peer block border-0 border-b-2 border-[var(--default-font-color2)] bg-transparent px-2 py-1.5 pt-0 text-[var(--default-font-color2)] transition-all duration-200 ease-in-out focus:outline-none focus:ring-0"
+
+<button
+	id="dropdownDefaultButton"
+	data-dropdown-toggle="dropdown"
+	class="inline-flex items-center rounded-lg bg-blue-700 px-2.5 py-1 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+	type="button"
+	>{CURRENT_LANGUAGE}
+	<svg
+		class="ms-3 h-2.5 w-2.5"
+		aria-hidden="true"
+		xmlns="http://www.w3.org/2000/svg"
+		fill="none"
+		viewBox="0 0 10 6"
+	>
+		<path
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			d="m1 1 4 4 4-4"></path>
+	</svg>
+</button>
+
+<div
+	id="dropdown"
+	class="z-10 hidden w-24 divide-y divide-gray-100 rounded-lg bg-white shadow dark:bg-gray-700"
 >
-	<option
-		class="bg-[--default-background-color-shadow]"
-		selected={currentLocale == 'en'}
-		value="">{ENGLISH}</option
+	<ul
+		class="py-2 text-sm text-gray-700 dark:text-gray-200"
+		aria-labelledby="dropdownDefaultButton"
 	>
-	<option
-		class="bg-[--default-background-color-shadow]"
-		selected={currentLocale == 'es'}
-		value="es">{SPANISH}</option
-	>
-</select>
+		<li>
+			<a
+				href="/es"
+				class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				>{SPANISH}</a
+			>
+		</li>
+		<li>
+			<a
+				href="/"
+				class="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+				>{ENGLISH}</a
+			>
+		</li>
+	</ul>
+</div>
