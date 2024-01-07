@@ -1,7 +1,11 @@
 ---
 import Project from './Project.astro';
 import Subtitle from '../shared/Subtitle.astro';
-
+import IconAstro from '../icons/IconAstro.astro';
+import IconTailwind from '../icons/IconTailwind.astro';
+import IconVue from '../icons/IconVue.astro';
+import IconAngular from '../icons/IconAngular.astro';
+import IconRust from '../icons/IconRust.astro';
 export interface Props {
 	PROJECTS_TITLE: string;
 	PROJECTS_TITLE_AFTER_BR: string;
@@ -15,6 +19,11 @@ type ProjectI18n = {
 	description: string;
 	anchorLabel: string;
 };
+export type TAG = {
+	name: string;
+	class: string;
+	icon: (_props: Record<string, any>) => any;
+};
 type Project = {
 	id: string;
 	description: string;
@@ -23,6 +32,35 @@ type Project = {
 	githubLink: string;
 	imageSrc: string;
 	website?: string;
+	tags: TAG[];
+};
+
+const TAGS = {
+	ASTRO: {
+		name: 'Astro',
+		class: 'bg-amber-800/60 text-amber-200/80 border-amber-200/80',
+		icon: IconAstro,
+	},
+	TAILWIND: {
+		name: 'Tailwind CSS',
+		class: 'bg-sky-800/60 text-sky-200/80 border-sky-200/80',
+		icon: IconTailwind,
+	},
+	VUE: {
+		name: 'Vue.js',
+		class: 'bg-emerald-800/60 text-emerald-200/80 border-emerald-200/80',
+		icon: IconVue,
+	},
+	ANGULAR: {
+		name: 'Angular',
+		class: 'bg-rose-800/60 text-rose-200/80 border-rose-200/80',
+		icon: IconAngular,
+	},
+	RUST: {
+		name: 'Rust',
+		class: 'bg-zinc-500/40 text-zinc-100/80 border-zinc-100/80',
+		icon: IconRust,
+	},
 };
 const { PROJECTS_TITLE, PROJECTS_TITLE_AFTER_BR, PROYECTS } = Astro.props;
 
@@ -35,6 +73,7 @@ const projects = [
 		imageSrc: '[&.visibleImg]:bg-cuvimakerExample',
 		website: 'https://cuvimaker.netlify.app/',
 		...PROYECTS.CUVIMAKER,
+		tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.VUE],
 	},
 	{
 		id: 'rusty-copier',
@@ -42,6 +81,7 @@ const projects = [
 		githubLink: 'https://github.com/carlosjorger/rustycopier',
 		imageSrc: '[&.visibleImg]:bg-rustycopier',
 		...PROYECTS.RUSTY_COPIER,
+		tags: [TAGS.RUST],
 	},
 	{
 		id: 'angular-portfolio',
@@ -50,6 +90,7 @@ const projects = [
 		imageSrc: '[&.visibleImg]:bg-portfolio',
 		website: 'https://carlosjorger.github.io/portfolio/',
 		...PROYECTS.ANGULAR_PORTFOLIO,
+		tags: [TAGS.ANGULAR],
 	},
 ] as Project[];
 ---

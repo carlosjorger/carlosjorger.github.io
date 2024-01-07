@@ -3,7 +3,8 @@ import CustomParagraph from '../shared/CustomParagraph.astro';
 import IconLink from '../icons/IconLink.astro';
 import IconGithub from '../icons/IconGithubLink.astro';
 import IconLinkContainer from '../icons/IconLinkContainer.astro';
-// TODO: add tags https://www.youtube.com/watch?v=HEMvsJTBweY&t=3941s
+import type { TAG } from './Work.astro';
+
 export interface Props {
 	id: string;
 	title: string;
@@ -12,9 +13,19 @@ export interface Props {
 	githubLink: string;
 	imageSrc: string;
 	website?: string;
+	tags: TAG[];
 }
-const { id, title, description, anchorLabel, githubLink, imageSrc, website } =
-	Astro.props;
+
+const {
+	id,
+	title,
+	description,
+	anchorLabel,
+	githubLink,
+	imageSrc,
+	website,
+	tags,
+} = Astro.props;
 ---
 
 <script>
@@ -63,6 +74,21 @@ const { id, title, description, anchorLabel, githubLink, imageSrc, website } =
 					{description}
 				</CustomParagraph>
 			</div>
+			<ul class="flex flex-row gap-x-2">
+				{
+					tags.map((tag) => (
+						<li>
+							<span
+								class="flex items-center gap-x-2 rounded-full border-2 p-1.5 px-2 text-sm drop-shadow-[0_15px_20px_black]"
+								class:list={[tag.class]}
+							>
+								<tag.icon class="size-4" />
+								<label>{tag.name}</label>
+							</span>
+						</li>
+					))
+				}
+			</ul>
 			<div class="even-self-child m-1 flex flex-row self-start">
 				<IconLinkContainer
 					class="h-7 w-7"
