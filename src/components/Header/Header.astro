@@ -21,6 +21,7 @@ export interface Props {
 		SPANISH: string;
 		ENGLISH: string;
 	};
+	public_src: string;
 }
 const {
 	ABOUT_ME_TITLE,
@@ -32,6 +33,7 @@ const {
 	HEADER_ABOUT_ME_ARIA_LABEL,
 	HEADER_CONTACT_ARIA_LABEL,
 	LOCALES,
+	public_src,
 } = Astro.props;
 const headerLinks = [
 	{
@@ -101,7 +103,7 @@ const headerLinks = [
 				>
 					<img
 						class="logo changeable m-auto h-auto rotate-180 transition-all duration-500 ease-out [&.active]:rotate-0"
-						src="./images/logo-1.svg"
+						src=`${public_src}/images/logo.svg`
 						alt="logo"
 						width="200"
 						height="200"
