@@ -6,7 +6,8 @@
 			"@components/*": ["./components/*"],
 			"@icons/*": ["./components/icons/*"],
 			"@pages/*": ["./pages/*"],
-			"@shared/*": ["./components/shared/*"]
+			"@shared/*": ["./components/shared/*"],
+			"@utils/*": ["./utils/*"]
 		}
 	}
 }
