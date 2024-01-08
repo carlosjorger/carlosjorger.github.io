@@ -24,7 +24,7 @@ const CURRENT_LANGUAGE = currentLocale === 'es' ? SPANISH : ENGLISH;
 <button
 	id={id}
 	data-dropdown-toggle={dropdown_id}
-	class="inline-flex h-auto items-center rounded-md bg-transparent px-2.5 text-center font-lato text-[var(--default-font-color2)] transition-all duration-200 ease-in-out hover:text-teal-300 focus:outline-none focus:ring-4 focus:ring-[--default-secundary-font-color-2] focus:drop-shadow-[0rem_0rem_0.3rem_aqua]"
+	class="inline-flex h-auto items-center rounded-md bg-transparent px-2.5 text-center font-lato text-[var(--default-font-color2)] transition-all duration-200 ease-in-out hover:text-teal-300 focus:outline-none focus:ring-4 focus:ring-[--default-secundary-font-color-2] focus:drop-shadow-[0rem_0rem_0.3rem_aqua] max-sm:text-xl"
 	type="button"
 	>{CURRENT_LANGUAGE}
 	<svg
@@ -43,11 +43,15 @@ const CURRENT_LANGUAGE = currentLocale === 'es' ? SPANISH : ENGLISH;
 	</svg>
 </button>
 
-<div id={dropdown_id} class="z-10 hidden w-24 divide-y rounded-lg shadow">
+<div
+	id={dropdown_id}
+	class="z-10 hidden w-24 divide-y rounded-lg shadow max-sm:w-28"
+>
 	<ul
-		class="rounded-md bg-[#453662] py-2 text-sm drop-shadow-[0rem_0rem_0.3rem_aqua]"
+		class="rounded-md bg-[#453662] py-2 text-sm drop-shadow-[0rem_0rem_0.3rem_aqua] max-sm:text-xl"
 		aria-labelledby={id}
 	>
+		<!-- TODO: create components for <li> -->
 		<li>
 			<a
 				href="/es"
