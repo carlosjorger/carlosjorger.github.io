@@ -1,11 +1,12 @@
 ---
-const { currentLocale } = Astro;
+import LocaleSelectorLink from './LocaleSelectorLink.astro';
 export interface Props {
 	SPANISH: string;
 	ENGLISH: string;
 	id: string;
 	dropdown_id: string;
 }
+const { currentLocale } = Astro;
 const { SPANISH, ENGLISH, id, dropdown_id } = Astro.props;
 const CURRENT_LANGUAGE = currentLocale === 'es' ? SPANISH : ENGLISH;
 ---
@@ -51,20 +52,7 @@ const CURRENT_LANGUAGE = currentLocale === 'es' ? SPANISH : ENGLISH;
 		class="rounded-md bg-[#453662] py-2 text-sm drop-shadow-[0rem_0rem_0.3rem_aqua] max-sm:text-xl"
 		aria-labelledby={id}
 	>
-		<!-- TODO: create components for <li> -->
-		<li>
-			<a
-				href="/es"
-				class="block px-3 py-2 transition-all duration-200 ease-in-out hover:text-teal-300 hover:drop-shadow-[0rem_0rem_0.3rem_aqua]"
-				>{SPANISH}</a
-			>
-		</li>
-		<li>
-			<a
-				href="/"
-				class="block px-3 py-2 transition-all duration-200 ease-in-out hover:text-teal-300 hover:drop-shadow-[0rem_0rem_0.3rem_aqua]"
-				>{ENGLISH}</a
-			>
-		</li>
+		<LocaleSelectorLink lang={SPANISH} href="/es" />
+		<LocaleSelectorLink lang={ENGLISH} href="/" />
 	</ul>
 </div>
