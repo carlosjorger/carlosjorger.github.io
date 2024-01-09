@@ -2,54 +2,39 @@
 import '../styles/styles.css';
 
 export interface Props {
-	title: string;
+	SEO_LANG: string;
+	SEO_LOCALE: string;
+	SEO_TITLE: string;
+	SEO_DESCRIPTION: string;
 }
 
-const { title } = Astro.props;
+const { SEO_LANG, SEO_LOCALE, SEO_TITLE, SEO_DESCRIPTION } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={SEO_LANG}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta
-			name="description"
-			content="Carlos Jorge's personal portfolio. I show my most important github projects. The main goals of these projects is having fun and learn new technologies, good practices and try to make real creative ideas"
-		/>
+		<meta name="description" content={SEO_DESCRIPTION} />
 		<meta
 			name="keywords"
 			content="HTML,CSS,JavaScript,Github,Repository,Portfolio,Website,Github Page"
 		/>
 		<meta name="author" content="carlosjorger" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta property="og:locale" content="en_US" />
+		<meta property="og:locale" content={SEO_LOCALE} />
 		<meta property="og:url" content="https://carlosjorger.github.io" />
 		<meta property="og:type" content="website" />
-		<meta
-			property="og:title"
-			content="Carlos Jorge's personal portfolio website"
-		/>
-		<meta
-			property="og:description"
-			content="Carlos Jorge's personal portfolio website. I show my most important github projects. The main goals of these projects is having fun and learn new technologies, good practices and try to make real creative ideas"
-		/>
-		<meta
-			property="og:site_name"
-			content="Carlos Jorge's personal portfolio website"
-		/>
+		<meta property="og:title" content={SEO_TITLE} />
+		<meta property="og:description" content={SEO_DESCRIPTION} />
+		<meta property="og:site_name" content={SEO_TITLE} />
 		<meta
 			property="og:image"
 			content="https://carlosjorger.github.io/images/purple-logo.png"
 		/>
-		<meta
-			property="twitter:description"
-			content="Carlos Jorge's personal portfolio website. I show my most important github projects. The main goals of these projects is having fun and learn new technologies, good practices and try to make real creative ideas"
-		/>
-		<meta
-			property="twitter:title"
-			content="Carlos Jorge's personal portfolio website"
-		/>
+		<meta property="twitter:description" content={SEO_DESCRIPTION} />
+		<meta property="twitter:title" content={SEO_TITLE} />
 		<link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -63,7 +48,7 @@ const { title } = Astro.props;
 			href="https://fonts.googleapis.com/css?family=Lato:400italic%27&display=swap"
 		/>
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{SEO_TITLE}</title>
 	</head>
 	<body>
 		<slot />
