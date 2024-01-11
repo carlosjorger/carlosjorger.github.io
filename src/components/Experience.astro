@@ -1,0 +1,51 @@
+---
+import Subtitle from './shared/Subtitle.astro';
+
+const jobs = [
+	{
+		date: 'Currently...',
+		ocupation: 'Fullstack Engineer in Myndgoals',
+		description:
+			'Working for Opus EHR a healthcare platform that tracks leads and manages patient data, enhancing client engagement and increasing admissions.',
+	},
+	{
+		date: 'March 2022',
+		ocupation: 'Fullstack Engineer in JYGASOFT',
+		description:
+			'Worked in a car assembly system using .net tecnologies and AngularJS',
+	},
+	{
+		date: 'November 2020',
+		ocupation: 'Data Engineer in DATYS',
+		description:
+			'Worked in a data virtualization tools improving the data flow performance of a cuban bank',
+	},
+];
+// TODO: add internationalization to Experience section
+---
+
+<section>
+	<header class="reveal pb-2">
+		<Subtitle left>Experience</Subtitle>
+	</header>
+	<ol
+		class="reveal-experience relative mx-5 border-s border-[var(--default-secundary-font-color-2)]"
+	>
+		{
+			jobs.map((job) => (
+				<li class="mb-10 ms-4">
+					<div class="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-teal-200 bg-teal-200" />
+					<time class="mb-1 text-sm font-normal leading-none text-teal-200">
+						{job.date}
+					</time>
+					<h3 class="reveal text-lg font-semibold text-slate-50">
+						{job.ocupation}
+					</h3>
+					<p class="reveal mb-4 text-base font-normal text-[var(--default-font-color3)] ">
+						{job.description}
+					</p>
+				</li>
+			))
+		}
+	</ol>
+</section>

@@ -65,6 +65,21 @@ a {
 		scale: 1;
 	}
 }
+.reveal-experience {
+	animation: reveal-experience-animation linear both;
+	animation-timeline: view();
+	animation-range: entry 20% cover 30%;
+}
+@keyframes reveal-experience-animation {
+	from {
+		opacity: 0;
+		transform: translate(0vh, 15vh);
+	}
+	to {
+		opacity: 1;
+		transform: translate(0vh, 0);
+	}
+}
 /* || SITEWIDE */
 
 @keyframes show-presentation-main-skill {
