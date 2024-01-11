@@ -32,6 +32,8 @@
 	"HEADER_CONTACT_ARIA_LABEL": "You can contact me throught...",
 	"HEADER_HOME": "Home",
 	"HEADER_HOME_ARIA_LABEL": "Go to presentation",
+	"HEADER_EXPERIENCE": "Experience",
+	"HEADER_EXPERIENCE_ARIA_LABEL": "See my work experience",
 	"PROYECTS": {
 		"CUVIMAKER": {
 			"description": "An online cv maker web application used to design a custom curriculum vitae.",

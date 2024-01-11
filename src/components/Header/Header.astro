@@ -7,16 +7,21 @@ import IconContainer from '@icons/IconContainer.astro';
 import IconAddress from '@icons/IconAddress.astro';
 import IconUser from '@icons/IconUser.astro';
 import IconCode from '@icons/IconCode.astro';
+import IconBriefcase from '@icons/IconBriefcase.astro';
+
 import LocaleSelector from './LocaleSelector.astro';
+
 export interface Props {
-	ABOUT_ME_TITLE: string;
-	CONTACT_TITLE: string;
 	HEADER_PROJECTS: string;
+	HEADER_PROJECTS_ARIA_LABEL: string;
 	HEADER_HOME: string;
 	HEADER_HOME_ARIA_LABEL: string;
-	HEADER_PROJECTS_ARIA_LABEL: string;
+	ABOUT_ME_TITLE: string;
 	HEADER_ABOUT_ME_ARIA_LABEL: string;
+	CONTACT_TITLE: string;
 	HEADER_CONTACT_ARIA_LABEL: string;
+	HEADER_EXPERIENCE: string;
+	HEADER_EXPERIENCE_ARIA_LABEL: string;
 	LOCALES: {
 		SPANISH: string;
 		ENGLISH: string;
@@ -33,6 +38,8 @@ const {
 	HEADER_ABOUT_ME_ARIA_LABEL,
 	HEADER_CONTACT_ARIA_LABEL,
 	LOCALES,
+	HEADER_EXPERIENCE,
+	HEADER_EXPERIENCE_ARIA_LABEL,
 	public_src,
 } = Astro.props;
 const headerLinks = [
@@ -40,16 +47,25 @@ const headerLinks = [
 		href: '#work',
 		'aria-label': HEADER_PROJECTS_ARIA_LABEL,
 		label: HEADER_PROJECTS,
+		icon: IconCode,
+	},
+	{
+		href: '#experience',
+		'aria-label': HEADER_EXPERIENCE_ARIA_LABEL,
+		label: HEADER_EXPERIENCE,
+		icon: IconBriefcase,
 	},
 	{
 		href: '#aboutMe',
 		'aria-label': HEADER_ABOUT_ME_ARIA_LABEL,
 		label: ABOUT_ME_TITLE,
+		icon: IconUser,
 	},
 	{
 		href: '#contact',
 		'aria-label': HEADER_CONTACT_ARIA_LABEL,
 		label: CONTACT_TITLE,
+		icon: IconAddress,
 	},
 ];
 ---
@@ -126,33 +142,18 @@ const headerLinks = [
 								<IconHome />
 							</IconContainer>
 						</SideBarLink>
-						<SideBarLink
-							href="#work"
-							aria-label={HEADER_PROJECTS_ARIA_LABEL}
-							label={HEADER_PROJECTS}
-						>
-							<IconContainer class="h-7 w-7">
-								<IconCode />
-							</IconContainer>
-						</SideBarLink>
-						<SideBarLink
-							href="#aboutMe"
-							aria-label={HEADER_ABOUT_ME_ARIA_LABEL}
-							label={ABOUT_ME_TITLE}
-						>
-							<IconContainer class="h-7 w-7">
-								<IconUser />
-							</IconContainer>
-						</SideBarLink>
-						<SideBarLink
-							href="#contact"
-							aria-label={HEADER_CONTACT_ARIA_LABEL}
-							label={CONTACT_TITLE}
-						>
-							<IconContainer class="h-7 w-7">
-								<IconAddress />
-							</IconContainer>
-						</SideBarLink>
+						{
+							headerLinks.map((headerLink) => {
+								const { icon, ...sideBarLink } = headerLink;
+								return (
+									<SideBarLink {...sideBarLink}>
+										<IconContainer class="h-7 w-7">
+											<headerLink.icon />
+										</IconContainer>
+									</SideBarLink>
+								);
+							})
+						}
 					</ul>
 				</nav>
 			</div>

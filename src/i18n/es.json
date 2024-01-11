@@ -32,6 +32,8 @@
 	"HEADER_CONTACT_ARIA_LABEL": "Puedes acceder a mi contacto a través de...",
 	"HEADER_HOME": "Portada",
 	"HEADER_HOME_ARIA_LABEL": "Ir a la presentatión",
+	"HEADER_EXPERIENCE": "Experiencia",
+	"HEADER_EXPERIENCE_ARIA_LABEL": "Mira mi experiencia de trabajo",
 	"PROYECTS": {
 		"CUVIMAKER": {
 			"description": "Una aplicación web de crear curriculums usado para diseñar un curriculum vitae.",
