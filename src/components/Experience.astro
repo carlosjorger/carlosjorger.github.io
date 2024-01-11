@@ -25,24 +25,24 @@ const jobs = [
 ---
 
 <section id="experience">
-	<header class="reveal pb-2">
+	<header class="reveal my-6 mb-2">
 		<Subtitle left>Experience</Subtitle>
 	</header>
 	<!-- TODO:align experience bar with home icon responsive -->
 	<ol
-		class="reveal-experience relative mx-[1.33rem] border-s border-[var(--default-secundary-font-color-2)]"
+		class="reveal-experience relative mx-[1.33rem] mt-6 border-s border-[var(--default-secundary-font-color-2)]"
 	>
 		{
 			jobs.map((job) => (
-				<li class="mb-10 ms-4">
+				<li class="mb-5 ms-4">
 					<div class="absolute -start-1.5 mt-1.5 h-3 w-3 rounded-full border border-teal-200 bg-teal-200" />
-					<time class="mb-1 text-sm font-normal leading-none text-teal-200">
+					<time class="reveal-experience mb-1 text-sm font-normal leading-none text-teal-200">
 						{job.date}
 					</time>
-					<h3 class="reveal text-lg font-semibold text-slate-50">
+					<h3 class="reveal text-base font-semibold text-slate-50">
 						{job.ocupation}
 					</h3>
-					<p class="reveal mb-4 text-base font-normal text-[var(--default-font-color3)] ">
+					<p class="reveal mb-2.5 text-sm font-normal text-[var(--default-font-color3)] ">
 						{job.description}
 					</p>
 				</li>

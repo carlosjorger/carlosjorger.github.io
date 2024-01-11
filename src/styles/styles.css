@@ -44,9 +44,9 @@ a {
 }
 /* || UTILITIES */
 .reveal {
-	animation: reveal-animation linear both;
+	animation: reveal-animation ease-in both;
 	animation-timeline: view();
-	animation-range: entry 20% cover 30%;
+	animation-range: entry 20% cover 26%;
 }
 .last-reveal {
 	animation: reveal-animation linear both;
@@ -68,7 +68,7 @@ a {
 .reveal-experience {
 	animation: reveal-experience-animation linear both;
 	animation-timeline: view();
-	animation-range: entry 20% cover 30%;
+	animation-range: entry 20% cover 45%;
 }
 @keyframes reveal-experience-animation {
 	from {
