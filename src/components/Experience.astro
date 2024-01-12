@@ -1,41 +1,30 @@
 ---
 import Subtitle from './shared/Subtitle.astro';
 
-const jobs = [
-	{
-		date: 'Currently...',
-		ocupation: 'Fullstack Engineer in Myndgoals',
-		description:
-			'Working for Opus EHR a healthcare platform that tracks leads and manages patient data, enhancing client engagement and increasing admissions.',
-	},
-	{
-		date: 'March 2022',
-		ocupation: 'Fullstack Engineer in JYGASOFT',
-		description:
-			'Worked in a car assembly system using .net tecnologies and AngularJS',
-	},
-	{
-		date: 'November 2020',
-		ocupation: 'Data Engineer in DATYS',
-		description:
-			'Worked in a data virtualization tools improving the data flow performance of a cuban bank',
-	},
-];
-// TODO: add internationalization to Experience section
+export interface Props {
+	HEADER_EXPERIENCE: string;
+	EXPERIENCE: Experience[];
+}
+
+type Experience = {
+	date: String;
+	ocupation: String;
+	description: String;
+};
+const { HEADER_EXPERIENCE, EXPERIENCE } = Astro.props;
 ---
 
 <section id="experience">
 	<header class="reveal my-7 mb-2 pt-2">
-		<Subtitle left>Experience</Subtitle>
+		<Subtitle left>{HEADER_EXPERIENCE}</Subtitle>
 	</header>
-	<!-- TODO:align experience bar with home icon responsive -->
 	<ol
 		class="reveal-experience relative mx-[1.33rem] mt-6 border-s border-[var(--default-secundary-font-color-2)]"
 	>
 		{
-			jobs.map((job) => (
+			EXPERIENCE.map((job) => (
 				<li class="mb-7 ms-4">
-					<div class="flex flex-row items-center">
+					<div class="flex flex-row items-start">
 						<div class="absolute -start-1.5 h-3 w-3 rounded-full border border-teal-200 bg-teal-200" />
 						<time class="mb-1 text-sm font-normal leading-none text-teal-200">
 							{job.date}

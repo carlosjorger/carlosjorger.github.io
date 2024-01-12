@@ -48,6 +48,23 @@
 			"anchorLabel": "Mira el proyecto de github de mi portafolio"
 		}
 	},
+	"EXPERIENCE": [
+		{
+			"date": "Actualmente...",
+			"ocupation": "Desarrollador Fullstack en Myndgoals",
+			"description": "Trabajando para Opus EHR una plataforma de atención médica que rastrea y maneja los datos de los paciente, mejorando el compromiso con el cliente y las admisiones."
+		},
+		{
+			"date": "Marzo del 2022",
+			"ocupation": "Desarrollador Fullstack en JYGASOFT",
+			"description": "Trabajé en un sistema de ensamblaje de autos usando tecnologías de .net y AngularJS."
+		},
+		{
+			"date": "Noviembre del 2020",
+			"ocupation": "Ingeniero de datos en DATYS",
+			"description": "Trabajé usando herramientas de virtualización de datos, mejorando el rendimiento del flujo de datos de un banco cubano."
+		}
+	],
 	"LOCALES": {
 		"SPANISH": "Español",
 		"ENGLISH": "Inglés"

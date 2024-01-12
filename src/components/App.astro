@@ -27,13 +27,13 @@ const i18n = getI18N({ currentLocale });
 		}
 	});
 </script>
-<!-- TODO: Add skills --><!-- TODO: Add Experience -->
+<!-- TODO: Add skills -->
 <Layout {...i18n}>
 	<Header {...i18n} {...Astro.props} />
 	<main>
 		<Presentation {...i18n} />
 		<Work {...i18n} />
-		<Experience />
+		<Experience {...i18n} />
 		<AboutMe {...i18n} />
 	</main>
 	<Footer {...i18n} />
