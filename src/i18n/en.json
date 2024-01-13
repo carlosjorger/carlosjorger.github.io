@@ -57,12 +57,12 @@
 		{
 			"date": "March 2022",
 			"ocupation": "Fullstack Engineer in JYGASOFT",
-			"description": "Worked in a car assembly system using .net tecnologies and AngularJS"
+			"description": "Worked in a car assembly system using .net tecnologies and AngularJS."
 		},
 		{
 			"date": "November 2020",
 			"ocupation": "Data Engineer in DATYS",
-			"description": "Worked using data virtualization tools improving the data flow performance of a cuban bank"
+			"description": "Worked using data virtualization tools improving the data flow performance of a cuban bank."
 		}
 	],
 	"LOCALES": {

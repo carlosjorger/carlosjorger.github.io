@@ -19,21 +19,21 @@ const { HEADER_EXPERIENCE, EXPERIENCE } = Astro.props;
 		<Subtitle left>{HEADER_EXPERIENCE}</Subtitle>
 	</header>
 	<ol
-		class="reveal-experience relative mx-[1.33rem] mt-6 border-s border-[var(--default-secundary-font-color-2)]"
+		class="reveal-experience relative mx-[1.33rem] mt-6 border-s border-[var(--default-font-color3)]"
 	>
 		{
 			EXPERIENCE.map((job) => (
-				<li class="mb-7 ms-4">
-					<div class="flex flex-row items-start">
-						<div class="absolute -start-1.5 h-3 w-3 rounded-full border border-teal-200 bg-teal-200" />
-						<time class="mb-1 text-sm font-normal leading-none text-teal-200">
+				<li class="mb-10 ms-3">
+					<div class="flex flex-row items-center">
+						<div class="absolute start-[-0.27rem] mb-1 h-2 w-2 rounded-full border border-[--default-background-color] bg-[var(--default-font-color3)]" />
+						<time class="mb-1 text-sm font-normal leading-none text-[var(--default-font-color3)]">
 							{job.date}
 						</time>
 					</div>
-					<h3 class="reveal my-1.5 text-base font-semibold text-slate-50">
+					<h3 class="reveal my-0.5 text-base font-semibold text-teal-200">
 						{job.ocupation}
 					</h3>
-					<p class="reveal mb-2.5 text-sm font-normal text-[var(--default-font-color3)] ">
+					<p class="reveal mb-2.5 text-sm font-normal text-[var(--default-font-color)]">
 						{job.description}
 					</p>
 				</li>
