@@ -97,7 +97,7 @@ a {
 	:root {
 		font-size: 25px;
 	}
-
+	/* TODO: convert section into a component */
 	section {
 		width: 70%;
 	}
