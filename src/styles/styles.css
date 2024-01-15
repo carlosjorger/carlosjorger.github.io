@@ -28,15 +28,6 @@ h3 {
 
 /* % always with the property width */
 
-section {
-	/* for guide */
-	/* border: solid 3px aqua; */
-	width: 70%;
-	margin: 0 auto;
-	padding-top: 2em;
-	z-index: 2;
-}
-
 a {
 	font-family: var(--default-font-family);
 	color: var(--default-font-color);
@@ -98,18 +89,11 @@ a {
 		font-size: 25px;
 	}
 	/* TODO: convert section into a component */
-	section {
-		width: 70%;
-	}
 }
 
 @media (max-width: 885px) {
 	:root {
 		font-size: 20px;
-	}
-
-	section {
-		width: 70%;
 	}
 }
 
@@ -117,28 +101,16 @@ a {
 	:root {
 		font-size: 15px;
 	}
-
-	section {
-		width: 80%;
-	}
 }
 
 @media (max-width: 510px) {
 	:root {
 		font-size: 15px;
 	}
-
-	section {
-		width: 90%;
-	}
 }
 
 @media (max-width: 350px) {
 	:root {
 		font-size: 10px;
-	}
-
-	section {
-		width: 95%;
 	}
 }

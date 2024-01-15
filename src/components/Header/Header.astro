@@ -8,8 +8,8 @@ import IconAddress from '@icons/IconAddress.astro';
 import IconUser from '@icons/IconUser.astro';
 import IconCode from '@icons/IconCode.astro';
 import IconBriefcase from '@icons/IconBriefcase.astro';
-
 import LocaleSelector from './LocaleSelector.astro';
+import WidthContainer from '@components/shared/WidthContainer.astro';
 
 export interface Props {
 	HEADER_PROJECTS: string;
@@ -72,29 +72,31 @@ const headerLinks = [
 
 <header>
 	<nav class="header-animation fixed top-0 z-[4] w-full">
-		<ul
-			class="m-0 mx-auto flex w-[70%] list-none flex-row justify-between p-0.5 max-md:w-[80%] max-sm:hidden max-sm:w-[90%] [&>li]:self-center"
-		>
-			<li class="mt-1 p-1">
-				<Link href="#home" aria-label={HEADER_HOME_ARIA_LABEL}>
-					<IconContainer class="h-6 w-7">
-						<IconHome />
-					</IconContainer>
-				</Link>
-			</li>
-			<li class="flex flex-row gap-x-4">
-				<LocaleSelector
-					id="dropdownLocaleButton"
-					dropdown_id="dropdownLocaleButtonDropdown"
-					{...LOCALES}
-				/>
-				{
-					headerLinks.map(({ label, ...attributes }) => (
-						<Link {...attributes}>{label}</Link>
-					))
-				}
-			</li>
-		</ul>
+		<WidthContainer>
+			<ul
+				class="flex list-none flex-row justify-between p-0.5 max-sm:hidden [&>li]:self-center"
+			>
+				<li class="mt-1 p-1">
+					<Link href="#home" aria-label={HEADER_HOME_ARIA_LABEL}>
+						<IconContainer class="h-6 w-7">
+							<IconHome />
+						</IconContainer>
+					</Link>
+				</li>
+				<li class="flex flex-row gap-x-4">
+					<LocaleSelector
+						id="dropdownLocaleButton"
+						dropdown_id="dropdownLocaleButtonDropdown"
+						{...LOCALES}
+					/>
+					{
+						headerLinks.map(({ label, ...attributes }) => (
+							<Link {...attributes}>{label}</Link>
+						))
+					}
+				</li>
+			</ul>
+		</WidthContainer>
 	</nav>
 	<nav class="fixed top-0 z-[2] hidden w-full max-sm:block">
 		<HamburgerMenuIcon />

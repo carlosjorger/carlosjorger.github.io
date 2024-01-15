@@ -1,5 +1,7 @@
 ---
 import CustomParagraph from '@shared/CustomParagraph.astro';
+import SectionContainer from './shared/SectionContainer.astro';
+
 export interface Props {
 	INTRO_TITLE: string;
 	INTRO_TITLE_AFTER_BR1: string;
@@ -19,7 +21,7 @@ const {
 <div
 	class="bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.4),rgba(255,255,255,0))]"
 >
-	<section
+	<SectionContainer
 		id="home"
 		class="flex h-screen flex-col justify-evenly pt-0 max-sm:h-[100dvh]"
 	>
@@ -49,5 +51,5 @@ const {
 				</CustomParagraph>
 			</div>
 		</div>
-	</section>
+	</SectionContainer>
 </div>

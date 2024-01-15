@@ -7,6 +7,8 @@ import IconMail from '@icons/IconMail.astro';
 import IconGithub from '@icons/IconGithub.astro';
 import IconLinkedin from '@icons/IconLinkedin.astro';
 import IconTwitter from '@icons/IconTwitter.astro';
+import SectionContainer from '@components/shared/SectionContainer.astro';
+
 export interface Props {
 	CONTACT_TITLE: string;
 	CONTACT_DESCRIPTION: string;
@@ -63,7 +65,9 @@ const icons = [
 		class="grid h-screen bg-[radial-gradient(ellipse_130%_100%_at__50%_-20%,rgba(255,255,255,0)_50%,var(--default-background-color-darker))] max-sm:h-[70dvh]"
 	>
 		<div id="contact" class="flex flex-col justify-center">
-			<section class="z-0 mt-10 w-1/2 p-2 max-sm:mt-0 max-sm:w-[90%]">
+			<section
+				class="z-0 mx-auto mt-10 w-1/2 p-2 max-sm:mt-0 max-sm:w-[90%]"
+			>
 				<Subtitle center>{CONTACT_TITLE}</Subtitle>
 				<div class="reveal mx-0 my-4 text-center">
 					<CustomParagraph>

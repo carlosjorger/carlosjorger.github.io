@@ -1,6 +1,8 @@
 ---
 import Subtitle from '@shared/Subtitle.astro';
 import CustomParagraph from '@shared/CustomParagraph.astro';
+import SectionContainer from './shared/SectionContainer.astro';
+
 export interface Props {
 	ABOUT_ME_TITLE: string;
 	ABOUT_ME_DESCRIPTION: string;
@@ -16,7 +18,7 @@ const {
 } = Astro.props;
 ---
 
-<section id="aboutMe" class="h-screen max-sm:h-full max-sm:pt-16">
+<SectionContainer id="aboutMe" class="h-screen max-sm:h-full max-sm:pt-16">
 	<div class="flex h-[87%] flex-col justify-center break-words p-2">
 		<header class="reveal pb-2">
 			<Subtitle left>{ABOUT_ME_TITLE}</Subtitle>
@@ -34,4 +36,4 @@ const {
 			aria-label={ABOUT_ME_CV_ARIA_LABEL}>Curriculum Vitae</a
 		>
 	</div>
-</section>
+</SectionContainer>

@@ -1,0 +1,14 @@
+---
+import WidthContainer from './WidthContainer.astro';
+export interface Props {
+	id?: string;
+	class?: string;
+}
+const { id } = Astro.props;
+---
+
+<WidthContainer>
+	<section id={id} class:list={[Astro.props.class]} class="z-[2] pt-1">
+		<slot />
+	</section>
+</WidthContainer>

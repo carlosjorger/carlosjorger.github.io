@@ -6,6 +6,8 @@ import IconTailwind from '@icons/IconTailwind.astro';
 import IconVue from '@icons/IconVue.astro';
 import IconAngular from '@icons/IconAngular.astro';
 import IconRust from '@icons/IconRust.astro';
+import SectionContainer from '@components/shared/SectionContainer.astro';
+
 export interface Props {
 	PROJECTS_TITLE: string;
 	PROJECTS_TITLE_AFTER_BR: string;
@@ -95,7 +97,7 @@ const projects = [
 ] as Project[];
 ---
 
-<section id="work">
+<SectionContainer id="work">
 	<div class="flex flex-col p-2">
 		<header class="reveal my-6 mb-2">
 			<Subtitle left>
@@ -105,4 +107,4 @@ const projects = [
 		</header>
 		{projects.map((project) => <Project {...project} />)}
 	</div>
-</section>
+</SectionContainer>
