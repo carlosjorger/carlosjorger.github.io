@@ -37,7 +37,7 @@ a {
 .reveal {
 	animation: reveal-animation ease-in both;
 	animation-timeline: view();
-	animation-range: entry 20% cover 30%;
+	animation-range: entry 20% cover 28%;
 }
 .last-reveal {
 	animation: reveal-animation linear both;
@@ -88,7 +88,6 @@ a {
 	:root {
 		font-size: 25px;
 	}
-	/* TODO: convert section into a component */
 }
 
 @media (max-width: 885px) {
