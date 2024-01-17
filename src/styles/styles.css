@@ -37,7 +37,7 @@ a {
 .reveal {
 	animation: reveal-animation ease-in both;
 	animation-timeline: view();
-	animation-range: entry 20% cover 29%;
+	animation-range: entry 20% cover 28%;
 }
 .last-reveal {
 	animation: reveal-animation linear both;
