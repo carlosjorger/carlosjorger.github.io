@@ -46,6 +46,10 @@
 		"ANGULAR_PORTFOLIO": {
 			"description": "Es un portafolio personal hecho en angular usando Angular animations.",
 			"anchorLabel": "Mira el proyecto de github de mi portafolio"
+		},
+		"VUE_FLUID_DND": {
+			"description": "Una librería de drag and drop de vue3 para ordenar toda clase de listas.",
+			"anchorLabel": "Mira VueFluidDnD, mi librería de drag and drop en github"
 		}
 	},
 	"EXPERIENCE": [

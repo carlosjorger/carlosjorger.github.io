@@ -21,6 +21,7 @@ module.exports = {
 				rustycopier: "url('/images/Rustycopier.webp')",
 				cuvimakerExample: "url('/images/Cuvimaker-example.webp')",
 				placeholder: "url('/images/640x360.webp')",
+				vuefluiddnd: "url('/images/VueFluidDnD.webp')",
 			},
 		},
 		fontFamily: {
