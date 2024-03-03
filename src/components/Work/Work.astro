@@ -15,6 +15,7 @@ export interface Props {
 		CUVIMAKER: ProjectI18n;
 		RUSTY_COPIER: ProjectI18n;
 		ANGULAR_PORTFOLIO: ProjectI18n;
+		VUE_FLUID_DND: ProjectI18n;
 	};
 }
 type ProjectI18n = {
@@ -86,13 +87,13 @@ const projects = [
 		tags: [TAGS.RUST],
 	},
 	{
-		id: 'angular-portfolio',
-		title: 'Angular Portfolio',
-		githubLink: 'https://github.com/carlosjorger/portfolio',
-		imageSrc: '[&.visibleImg]:bg-portfolio',
-		website: 'https://carlosjorger.github.io/portfolio/',
-		...PROYECTS.ANGULAR_PORTFOLIO,
-		tags: [TAGS.ANGULAR],
+		id: 'vue-fluid-dnd',
+		title: 'VueFluidDnD',
+		githubLink: 'https://github.com/carlosjorger/vue-fluid-dnd/',
+		imageSrc: '[&.visibleImg]:bg-vuefluiddnd',
+		website: 'https://vue-fluid-dnd.netlify.app/',
+		...PROYECTS.VUE_FLUID_DND,
+		tags: [TAGS.VUE],
 	},
 ] as Project[];
 ---
