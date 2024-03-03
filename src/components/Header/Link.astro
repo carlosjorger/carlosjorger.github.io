@@ -30,7 +30,7 @@ const sectionId = sectionIdWhitoutHome ? sectionIdWhitoutHome : 'home';
 </script>
 <custom-link data-section-id={sectionId}>
 	<a
-		class="change-sidebar mx-0.5 h-auto pb-0.5 text-[var(--default-font-color2)] no-underline transition-all duration-200 ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_0.3rem_aqua] [&.active]:text-[var(--default-secundary-font-color)] [&.active]:drop-shadow-[0rem_0rem_0.3rem_aqua]"
+		class="change-sidebar mx-0.5 h-auto pb-1 text-sm text-[var(--default-font-color2)] no-underline transition-all duration-200 ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_0.3rem_aqua] [&.active]:text-[var(--default-secundary-font-color)] [&.active]:drop-shadow-[0rem_0rem_0.3rem_aqua]"
 		class:list={[`link-${sectionId}`]}
 		{...Astro.props}
 	>
