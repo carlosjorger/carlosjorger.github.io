@@ -7,9 +7,9 @@
 	"INTRO_TITLE_AFTER_BR1": "Carlos Jorge,",
 	"INTRO_TITLE_AFTER_BR2": "Desarrollador Web!",
 	"INTRO_SUBTITLE": "Y este es mi portafolio!",
-	"INTRO_DESCRIPTION": "Soy un científico de la computación graduado en la Universidad de la Habana. Actualment trabajo como desarrollador full-stack creando aplicaciones de .net y Vuejs. En mis tiempos libres juego un poco con Astro y Rust ;)",
+	"INTRO_DESCRIPTION": "Soy un científico de la computación graduado en la Universidad de la Habana. Actualmente trabajo como desarrollador full-stack creando aplicaciones de .net y Vuejs. En mis tiempos libres juego un poco con Astro y Rust ;)",
 	"PROJECTS_TITLE": "Algunos proyectos",
-	"PROJECTS_TITLE_AFTER_BR": "Que construí",
+	"PROJECTS_TITLE_AFTER_BR": "Que he echo",
 	"ABOUT_ME_TITLE": "Acerca de mí",
 	"ABOUT_ME_DESCRIPTION": "Hola, Mi nombre es Carlos Jorge. Soy un desarrollador full-stack que disfura programar dentro y fuera del trabajo. Empecé a trabajar como desarrollador backend usando tecnologías .net y sql server.",
 	"ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH": "Actualmente. También trabajo con tecnologías frontend como angular, vue, html, css.",
@@ -56,7 +56,7 @@
 		{
 			"date": "Actualmente...",
 			"ocupation": "Desarrollador Fullstack en Myndgoals",
-			"description": "Trabajando para Opus EHR una plataforma de atención médica que rastrea y maneja los datos de los paciente, mejorando el compromiso con el cliente y las admisiones."
+			"description": "Trabajo para Opus EHR una plataforma de atención médica que rastrea y maneja los datos de los paciente, mejoro el compromiso con el cliente y las admisiones."
 		},
 		{
 			"date": "Marzo del 2022",
