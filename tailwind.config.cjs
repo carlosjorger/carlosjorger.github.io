@@ -15,6 +15,14 @@ module.exports = {
 						fontWeight: '500',
 					},
 				],
+				'4.75xl': [
+					'2.8rem',
+					{
+						lineHeight: '2.8rem',
+						letterSpacing: '-0.01em',
+						fontWeight: '500',
+					},
+				],
 			},
 			backgroundImage: {
 				portfolio: "url('/images/Portfolio.webp')",
