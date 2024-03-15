@@ -69,6 +69,15 @@ const { PROJECTS_TITLE, PROJECTS_TITLE_AFTER_BR, PROYECTS } = Astro.props;
 
 const projects = [
 	{
+		id: 'vue-fluid-dnd',
+		title: 'VueFluidDnD',
+		githubLink: 'https://github.com/carlosjorger/vue-fluid-dnd/',
+		imageSrc: '[&.visibleImg]:bg-vuefluiddnd',
+		website: 'https://vue-fluid-dnd.netlify.app/',
+		...PROYECTS.VUE_FLUID_DND,
+		tags: [TAGS.VUE],
+	},
+	{
 		id: 'online-cv-maker',
 
 		title: 'Cuvimaker',
@@ -85,15 +94,6 @@ const projects = [
 		imageSrc: '[&.visibleImg]:bg-rustycopier',
 		...PROYECTS.RUSTY_COPIER,
 		tags: [TAGS.RUST],
-	},
-	{
-		id: 'vue-fluid-dnd',
-		title: 'VueFluidDnD',
-		githubLink: 'https://github.com/carlosjorger/vue-fluid-dnd/',
-		imageSrc: '[&.visibleImg]:bg-vuefluiddnd',
-		website: 'https://vue-fluid-dnd.netlify.app/',
-		...PROYECTS.VUE_FLUID_DND,
-		tags: [TAGS.VUE],
 	},
 ] as Project[];
 ---
