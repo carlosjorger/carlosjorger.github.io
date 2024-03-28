@@ -40,7 +40,7 @@
 			"anchorLabel": "Mira el proyecto de github del cv maker"
 		},
 		"RUSTY_COPIER": {
-			"description": "Es un copiador implementado en el lenguaje de programación rust.",
+			"description": "Rusty Copier es un copiador implementado en el lenguaje de programación rust.",
 			"anchorLabel": "Mira el proyecto de github del rusty copier"
 		},
 		"ANGULAR_PORTFOLIO": {
@@ -48,7 +48,7 @@
 			"anchorLabel": "Mira el proyecto de github de mi portafolio"
 		},
 		"VUE_FLUID_DND": {
-			"description": "Una librería de drag and drop de vue3 para ordenar toda clase de listas.",
+			"description": "Vue Fluid DnD es una librería de drag and drop de vue3 para ordenar toda clase de listas.",
 			"anchorLabel": "Mira VueFluidDnD, mi librería de drag and drop en github"
 		}
 	},
