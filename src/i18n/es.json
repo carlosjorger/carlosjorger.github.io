@@ -48,7 +48,7 @@
 			"anchorLabel": "Mira el proyecto de github de mi portafolio"
 		},
 		"VUE_FLUID_DND": {
-			"description": "Vue Fluid DnD es una librería de drag and drop de vue3 para ordenar toda clase de listas.",
+			"description": "Vue Fluid DnD es una librería de drag and drop de vue3 para ordenar listas.",
 			"anchorLabel": "Mira VueFluidDnD, mi librería de drag and drop en github"
 		}
 	},
