@@ -36,7 +36,7 @@
 	"HEADER_EXPERIENCE_ARIA_LABEL": "See my work experience",
 	"PROYECTS": {
 		"CUVIMAKER": {
-			"description": "Cuvimaker is an online cv maker web application used to design a custom curriculum vitae.",
+			"description": "Its an online cv maker web application used to design a custom curriculum vitae.",
 			"anchorLabel": "See my online cv maker github project"
 		},
 		"RUSTY_COPIER": {
