@@ -36,11 +36,11 @@
 	"HEADER_EXPERIENCE_ARIA_LABEL": "See my work experience",
 	"PROYECTS": {
 		"CUVIMAKER": {
-			"description": "An online cv maker web application used to design a custom curriculum vitae.",
+			"description": "Cuvimaker is an online cv maker web application used to design a custom curriculum vitae.",
 			"anchorLabel": "See my online cv maker github project"
 		},
 		"RUSTY_COPIER": {
-			"description": "Its a copier implemented in rust programming language.",
+			"description": "Rusty Copier its a copier implemented in rust programming language.",
 			"anchorLabel": "See my rusty copier github project"
 		},
 		"ANGULAR_PORTFOLIO": {
@@ -48,7 +48,7 @@
 			"anchorLabel": "See my portfolio github project"
 		},
 		"VUE_FLUID_DND": {
-			"description": "A vue3 drag and drop library to sort all kind of lists.",
+			"description": "Vue Fluid DnD is a vue3 drag and drop library to sort all kind of lists.",
 			"anchorLabel": "See VueFluidDnD my drag and drop librery github project"
 		}
 	},
