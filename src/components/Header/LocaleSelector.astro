@@ -1,6 +1,9 @@
 ---
 //TODO: Add flags to locales
+import IconSelectDropdown from '@components/icons/IconSelectDropdown.astro';
 import LocaleSelectorLink from './LocaleSelectorLink.astro';
+import IconLanguage from '@components/icons/IconLanguage.astro';
+IconSelectDropdown;
 export interface Props {
 	SPANISH: string;
 	ENGLISH: string;
@@ -26,23 +29,12 @@ const CURRENT_LANGUAGE = currentLocale === 'es' ? SPANISH : ENGLISH;
 <button
 	id={id}
 	data-dropdown-toggle={dropdown_id}
-	class="inline-flex h-auto items-center rounded-md bg-transparent px-2 text-center font-lato text-sm text-[var(--default-font-color2)] transition-all duration-200 ease-in-out hover:text-teal-300 focus:outline-none focus:ring-4 focus:ring-[--default-secundary-font-color-2] focus:drop-shadow-[0rem_0rem_0.3rem_aqua] max-sm:text-xl"
+	class="inline-fle flex h-auto items-center gap-1 rounded-md bg-transparent px-2 text-center font-lato text-sm text-[var(--default-font-color2)] transition-all duration-200 ease-in-out hover:text-teal-300 focus:outline-none focus:ring-4 focus:ring-[--default-secundary-font-color-2] focus:drop-shadow-[0rem_0rem_0.3rem_aqua] max-sm:text-xl"
 	type="button"
-	>{CURRENT_LANGUAGE}
-	<svg
-		class="ms-2 h-2.5 w-2.5"
-		aria-hidden="true"
-		xmlns="http://www.w3.org/2000/svg"
-		fill="none"
-		viewBox="0 0 10 6"
-	>
-		<path
-			stroke="currentColor"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			stroke-width="2"
-			d="m1 1 4 4 4-4"></path>
-	</svg>
+>
+	<IconLanguage />
+	{CURRENT_LANGUAGE}
+	<IconSelectDropdown class="ms-0.5 h-2.5 w-2.5" />
 </button>
 
 <div
