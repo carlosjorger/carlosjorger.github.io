@@ -1,9 +1,10 @@
 ---
-//TODO: Add flags to locales
 import IconSelectDropdown from '@components/icons/IconSelectDropdown.astro';
 import LocaleSelectorLink from './LocaleSelectorLink.astro';
 import IconLanguage from '@components/icons/IconLanguage.astro';
-IconSelectDropdown;
+import IconSpanishFlag from '@components/icons/IconSpanishFlag.astro';
+import IconEnglishFlag from '@components/icons/IconEnglishFlag.astro';
+
 export interface Props {
 	SPANISH: string;
 	ENGLISH: string;
@@ -12,7 +13,21 @@ export interface Props {
 }
 const { currentLocale } = Astro;
 const { SPANISH, ENGLISH, id, dropdown_id } = Astro.props;
-const CURRENT_LANGUAGE = currentLocale === 'es' ? SPANISH : ENGLISH;
+const LANGUAGES_INFO = {
+	en: {
+		name: ENGLISH,
+		flag: IconEnglishFlag,
+		href: '/',
+	},
+	es: {
+		name: SPANISH,
+		flag: IconSpanishFlag,
+		href: '/es',
+	},
+};
+const LANGUAGES = [LANGUAGES_INFO['en'], LANGUAGES_INFO['es']];
+
+const CURRENT_LANGUAGE = LANGUAGES_INFO[currentLocale].name;
 ---
 
 <script>
@@ -45,7 +60,12 @@ const CURRENT_LANGUAGE = currentLocale === 'es' ? SPANISH : ENGLISH;
 		class="rounded-md bg-[hsl(271.2,35.21%,15%,80%)] text-sm drop-shadow-[0rem_0rem_0.3rem_black] max-sm:text-xl"
 		aria-labelledby={id}
 	>
-		<LocaleSelectorLink lang={SPANISH} href="/es" />
-		<LocaleSelectorLink lang={ENGLISH} href="/" />
+		{
+			LANGUAGES.map((lang) => (
+				<LocaleSelectorLink {...lang}>
+					<lang.flag class="h-4" />
+				</LocaleSelectorLink>
+			))
+		}
 	</ul>
 </div>

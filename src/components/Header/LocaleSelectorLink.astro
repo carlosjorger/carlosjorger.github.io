@@ -1,15 +1,15 @@
 ---
 export interface Props {
-	lang: string;
+	name: string;
 	href: string;
 }
-const { lang, href } = Astro.props;
+const { name, href } = Astro.props;
 ---
 
 <li>
 	<a
 		href={href}
-		class="block rounded-md bg-black/0 px-3 py-2 transition-all duration-200 ease-in-out hover:bg-black/5 hover:text-teal-300 hover:drop-shadow-[0rem_0rem_0.3rem_aqua]"
-		>{lang}</a
-	>
+		class="flex items-center gap-1.5 rounded-md bg-black/0 px-3 py-2 transition-all duration-200 ease-in-out hover:bg-black/5 hover:text-teal-300 hover:drop-shadow-[0rem_0rem_0.3rem_aqua]"
+		><slot />{name}
+	</a>
 </li>
