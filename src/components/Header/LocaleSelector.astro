@@ -44,20 +44,20 @@ const CURRENT_LANGUAGE = LANGUAGES_INFO[currentLocale].name;
 <button
 	id={id}
 	data-dropdown-toggle={dropdown_id}
-	class="inline-fle flex h-auto items-center gap-1 rounded-md bg-transparent px-2 text-center font-lato text-sm text-[var(--default-font-color2)] transition-all duration-200 ease-in-out hover:text-teal-300 focus:outline-none focus:ring-4 focus:ring-[--default-secundary-font-color-2] focus:drop-shadow-[0rem_0rem_0.3rem_aqua] max-sm:text-xl"
+	class="inline-fle flex h-auto items-center gap-1 rounded-md bg-transparent px-2 text-center font-lato text-xs text-[var(--default-font-color2)] transition-all duration-200 ease-in-out hover:text-teal-300 focus:outline-none focus:ring-4 focus:ring-[--default-secundary-font-color-2] focus:drop-shadow-[0rem_0rem_0.3rem_aqua] max-sm:text-xl"
 	type="button"
 >
-	<IconLanguage />
+	<IconLanguage class="h-3.5" />
 	{CURRENT_LANGUAGE}
 	<IconSelectDropdown class="ms-0.5 h-2.5 w-2.5" />
 </button>
 
 <div
 	id={dropdown_id}
-	class="z-10 hidden w-24 divide-y rounded-lg shadow max-sm:w-28"
+	class="z-10 hidden w-24 divide-y rounded-lg shadow max-sm:w-32"
 >
 	<ul
-		class="rounded-md bg-[hsl(271.2,35.21%,15%,80%)] text-sm drop-shadow-[0rem_0rem_0.3rem_black] max-sm:text-xl"
+		class="rounded-md bg-[hsl(271.2,35.21%,15%,80%)] text-xs drop-shadow-[0rem_0rem_0.3rem_black] max-sm:text-xl"
 		aria-labelledby={id}
 	>
 		{

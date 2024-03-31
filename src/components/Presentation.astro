@@ -28,7 +28,7 @@ const {
 		<div class="p-2 font-lato text-[var(--default-font-color)]">
 			<div class="reveal">
 				<h1
-					class="text-4.75xl mx-0 my-3 animate-presentation-title font-bold text-[var(--default-secundary-font-color)] max-sm:text-5xl"
+					class="mx-0 my-3 animate-presentation-title text-4.75xl font-bold text-[var(--default-secundary-font-color)] max-sm:text-5xl"
 				>
 					{INTRO_TITLE}<br class="hidden max-sm:inline" />
 					{INTRO_TITLE_AFTER_BR1}
@@ -46,9 +46,7 @@ const {
 			<div
 				class="mx-0 my-3 animate-presentation-description break-words max-sm:mt-7"
 			>
-				<CustomParagraph>
-					{INTRO_DESCRIPTION}
-				</CustomParagraph>
+				<CustomParagraph set:html={INTRO_DESCRIPTION} />
 			</div>
 		</div>
 	</SectionContainer>

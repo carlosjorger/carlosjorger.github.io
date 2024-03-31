@@ -7,12 +7,12 @@
 	"INTRO_TITLE_AFTER_BR1": "Carlos Jorge,",
 	"INTRO_TITLE_AFTER_BR2": "Web developer!",
 	"INTRO_SUBTITLE": "Welcome to my personal portfolio!",
-	"INTRO_DESCRIPTION": "Cuban computer scientist from Havana University. Currently working as full-stack engineer building .net and Vuejs applications. I play with astro and rust in my free time",
+	"INTRO_DESCRIPTION": "Cuban computer scientist from <b>Havana University</b>. Currently working as full-stack engineer building <b>.net</b> and <b>Vuejs</b> applications. I play with <b>Astro</b> and <b>Rust</b> in my free time",
 	"PROJECTS_TITLE": "Some projects",
 	"PROJECTS_TITLE_AFTER_BR": "I've made",
-	"ABOUT_ME_TITLE": "About me",
-	"ABOUT_ME_DESCRIPTION": "Hello, My name is Carlos Jorge. I'm a full-stack engineer that enjoy coding on and off the work. I started working as a backend developer in 2020 using .net technologies and sql server.",
-	"ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH": "Currently, I'm also working on frontend technologies like angular, vue, html, css.",
+	"ABOUT_ME_TITLE": "About",
+	"ABOUT_ME_DESCRIPTION": "Hello, My name is <strong>Carlos Jorge</strong>. I'm a full-stack engineer that enjoy coding on and off the work. I started working as a backend developer in 2020 using <b>.net</b> technologies and <b>sql server</b>.",
+	"ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH": "Currently, I'm also working on frontend technologies like <b>angular</b>, <b>vue</b>, <b>html</b>, <b>css</b>.",
 	"ABOUT_ME_CV_ARIA_LABEL": "Download Curriculum Vitae pdf",
 	"CONTACT_TITLE": "Contact",
 	"CONTACT_DESCRIPTION": "I'm always open for new job oportunities or answer any question. You can reach me through:",
@@ -36,11 +36,11 @@
 	"HEADER_EXPERIENCE_ARIA_LABEL": "See my work experience",
 	"PROYECTS": {
 		"CUVIMAKER": {
-			"description": "Its an online cv maker web application used to design a custom curriculum vitae.",
+			"description": "Its an online <em>cv maker</em> web application used to design a custom curriculum vitae.",
 			"anchorLabel": "See my online cv maker github project"
 		},
 		"RUSTY_COPIER": {
-			"description": "Rusty Copier its a copier implemented in rust programming language.",
+			"description": "<strong>Rusty Copier</strong> its a copier implemented in <b>Rust</b> programming language.",
 			"anchorLabel": "See my rusty copier github project"
 		},
 		"ANGULAR_PORTFOLIO": {
@@ -48,7 +48,7 @@
 			"anchorLabel": "See my portfolio github project"
 		},
 		"VUE_FLUID_DND": {
-			"description": "Vue Fluid DnD is a vue3 drag and drop library to sort all kind of lists.",
+			"description": "<strong>Vue Fluid DnD</strong> is a <b>vue3</b> <em>drag and drop</em> library to sort all kind of lists.",
 			"anchorLabel": "See VueFluidDnD my drag and drop librery github project"
 		}
 	},

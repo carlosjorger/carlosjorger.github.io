@@ -23,12 +23,11 @@ const {
 		<header class="reveal pb-2">
 			<Subtitle left>{ABOUT_ME_TITLE}</Subtitle>
 		</header>
-		<CustomParagraph reveal>
-			{ABOUT_ME_DESCRIPTION}
-		</CustomParagraph>
-		<CustomParagraph reveal>
-			{ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH}
-		</CustomParagraph>
+		<CustomParagraph set:html={ABOUT_ME_DESCRIPTION} reveal />
+		<CustomParagraph
+			reveal
+			set:html={ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH}
+		/>
 		<a
 			class="reveal mt-2 rounded-md border-2 border-[--default-secundary-font-color-2] py-2.5 text-center text-2xl font-bold text-teal-300 transition-colors duration-500 ease-out hover:bg-teal-300 hover:text-[--default-background-color] max-sm:mt-10"
 			href="/pdfs/resume.pdf"

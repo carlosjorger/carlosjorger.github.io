@@ -70,9 +70,10 @@ const {
 			<div
 				class="m-1 pb-0 text-xs text-[#99F9F9] drop-shadow-[0_15px_20px_black]"
 			>
-				<CustomParagraph textColor="text-slate-50">
-					{description}
-				</CustomParagraph>
+				<CustomParagraph
+					textColor="text-slate-50"
+					set:html={description}
+				/>
 			</div>
 			<ul class="flex flex-row gap-x-2">
 				{

@@ -7,12 +7,12 @@
 	"INTRO_TITLE_AFTER_BR1": "Carlos Jorge,",
 	"INTRO_TITLE_AFTER_BR2": "Desarrollador Web!",
 	"INTRO_SUBTITLE": "Y este es mi portafolio!",
-	"INTRO_DESCRIPTION": "Soy un científico de la computación graduado en la Universidad de la Habana. Actualmente trabajo como desarrollador full-stack creando aplicaciones de .net y Vuejs. En mis tiempos libres juego un poco con Astro y Rust ;)",
+	"INTRO_DESCRIPTION": "Soy un científico de la computación graduado en la <b>Universidad de la Habana</b>. Actualmente trabajo como desarrollador <i>full-stack</i> creando aplicaciones de <b>.net</b> y <b>Vuejs</b>. En mis tiempos libres juego un poco con <b>Astro</b> y <b>Rust</b>  ;)",
 	"PROJECTS_TITLE": "Algunos proyectos",
 	"PROJECTS_TITLE_AFTER_BR": "Que he echo",
 	"ABOUT_ME_TITLE": "Acerca de mí",
-	"ABOUT_ME_DESCRIPTION": "Hola, Mi nombre es Carlos Jorge. Soy un desarrollador full-stack que disfura programar dentro y fuera del trabajo. Empecé a trabajar como desarrollador backend usando tecnologías .net y sql server.",
-	"ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH": "Actualmente. También trabajo con tecnologías frontend como angular, vue, html, css.",
+	"ABOUT_ME_DESCRIPTION": "Hola, Mi nombre es <strong>Carlos Jorge</strong>. Soy un desarrollador <i>full-stack</i> que disfura programar dentro y fuera del trabajo. Empecé a trabajar como desarrollador <i>backend</i> usando tecnologías <b>.net</b> y <b>sql server</b>.",
+	"ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH": "Actualmente. También trabajo con tecnologías <i>frontend</i> como <b>angular</b>, <b>vue</b>, <b>html</b>, <b>css</b>.",
 	"ABOUT_ME_CV_ARIA_LABEL": "Descargar pdf del Curriculum Vitae",
 	"CONTACT_TITLE": "Contacto",
 	"CONTACT_DESCRIPTION": "Siempre abierto a nuevas oportunities de trabajo o responder cualquier pregunta. Puedes contactarme a través:",
@@ -36,19 +36,19 @@
 	"HEADER_EXPERIENCE_ARIA_LABEL": "Mira mi experiencia de trabajo",
 	"PROYECTS": {
 		"CUVIMAKER": {
-			"description": "Una aplicación web de crear curriculums usado para diseñar un curriculum vitae.",
+			"description": "Una aplicación web de crear curriculums usado para diseñar un currículum vítae.",
 			"anchorLabel": "Mira el proyecto de github del cv maker"
 		},
 		"RUSTY_COPIER": {
-			"description": "Rusty Copier es un copiador implementado en el lenguaje de programación rust.",
+			"description": "<strong>Rusty Copier</strong> es un copiador implementado en el lenguaje de programación <b>Rust</b>.",
 			"anchorLabel": "Mira el proyecto de github del rusty copier"
 		},
 		"ANGULAR_PORTFOLIO": {
-			"description": "Es un portafolio personal hecho en angular usando Angular animations.",
+			"description": "Es un portafolio personal hecho en angular usando <b>Angular animations</b>.",
 			"anchorLabel": "Mira el proyecto de github de mi portafolio"
 		},
 		"VUE_FLUID_DND": {
-			"description": "Vue Fluid DnD es una librería de drag and drop de vue3 para ordenar listas.",
+			"description": "<strong>Vue Fluid DnD</strong> es una librería de <i>drag and drop</i> de <b>vue3</b> para ordenar listas.",
 			"anchorLabel": "Mira VueFluidDnD, mi librería de drag and drop en github"
 		}
 	},
