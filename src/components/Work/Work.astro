@@ -7,6 +7,7 @@ import IconVue from '@icons/IconVue.astro';
 import IconAngular from '@icons/IconAngular.astro';
 import IconRust from '@icons/IconRust.astro';
 import SectionContainer from '@components/shared/SectionContainer.astro';
+import IconTypescript from '@components/icons/IconTypescript.astro';
 
 export interface Props {
 	PROJECTS_TITLE: string;
@@ -45,7 +46,7 @@ const TAGS = {
 		icon: IconAstro,
 	},
 	TAILWIND: {
-		name: 'Tailwind CSS',
+		name: 'Tailwindcss',
 		class: 'bg-sky-800/50 text-sky-200/80 border-sky-200/60',
 		icon: IconTailwind,
 	},
@@ -64,6 +65,11 @@ const TAGS = {
 		class: 'bg-zinc-400/40 text-zinc-100/80 border-zinc-100/60',
 		icon: IconRust,
 	},
+	TYPESCRIPT: {
+		name: 'Typescript',
+		class: 'bg-blue-800/50 text-blue-200/80 border-blue-200/60',
+		icon: IconTypescript,
+	},
 };
 const { PROJECTS_TITLE, PROJECTS_TITLE_AFTER_BR, PROYECTS } = Astro.props;
 
@@ -75,7 +81,15 @@ const projects = [
 		imageSrc: '[&.visibleImg]:bg-vuefluiddnd',
 		website: 'https://vue-fluid-dnd.netlify.app/',
 		...PROYECTS.VUE_FLUID_DND,
-		tags: [TAGS.VUE],
+		tags: [TAGS.VUE, TAGS.TYPESCRIPT],
+	},
+	{
+		id: 'rusty-copier',
+		title: 'Rusty Copier',
+		githubLink: 'https://github.com/carlosjorger/rustycopier',
+		imageSrc: '[&.visibleImg]:bg-rustycopier',
+		...PROYECTS.RUSTY_COPIER,
+		tags: [TAGS.RUST],
 	},
 	{
 		id: 'online-cv-maker',
@@ -85,15 +99,7 @@ const projects = [
 		imageSrc: '[&.visibleImg]:bg-cuvimakerExample',
 		website: 'https://cuvimaker.netlify.app/',
 		...PROYECTS.CUVIMAKER,
-		tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.VUE],
-	},
-	{
-		id: 'rusty-copier',
-		title: 'Rusty Copier',
-		githubLink: 'https://github.com/carlosjorger/rustycopier',
-		imageSrc: '[&.visibleImg]:bg-rustycopier',
-		...PROYECTS.RUSTY_COPIER,
-		tags: [TAGS.RUST],
+		tags: [TAGS.ASTRO, TAGS.VUE, TAGS.TAILWIND],
 	},
 ] as Project[];
 ---
@@ -106,6 +112,26 @@ const projects = [
 				{PROJECTS_TITLE_AFTER_BR}
 			</Subtitle>
 		</header>
-		{projects.map((project) => <Project {...project} />)}
+		<div class="grid grid-cols-2 gap-2 max-lg:grid-cols-1">
+			{
+				projects.map((project, index) => (
+					<Project
+						class={
+							projects.length % 2 == 1 &&
+							index == projects.length - 1
+								? 'col-[1/-1]'
+								: ''
+						}
+						tagsClass={
+							projects.length % 2 == 1 &&
+							index == projects.length - 1
+								? 'flex-row items-center max-lg:flex-col max-lg:items-start'
+								: 'flex-col'
+						}
+						{...project}
+					/>
+				))
+			}
+		</div>
 	</div>
 </SectionContainer>

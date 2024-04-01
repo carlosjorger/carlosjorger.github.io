@@ -2,14 +2,18 @@
 export interface Props {
 	reveal?: boolean;
 	textColor?: string;
+	fontSize?: string;
 }
-const { reveal = false, textColor = 'text-[var(--default-font-color3)]' } =
-	Astro.props;
+const {
+	reveal = false,
+	textColor = 'text-[var(--default-font-color3)]',
+	fontSize = 'text-lg',
+} = Astro.props;
 ---
 
 <p
-	class:list={[{ reveal: reveal }, textColor]}
-	class="mb-2.5 text-pretty text-lg max-sm:mb-1"
+	class:list={[{ reveal: reveal }, textColor, fontSize]}
+	class="mb-2.5 text-pretty max-sm:mb-1"
 >
 	<slot />
 </p>

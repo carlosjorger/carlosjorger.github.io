@@ -14,6 +14,8 @@ export interface Props {
 	imageSrc: string;
 	website?: string;
 	tags: TAG[];
+	class?: string;
+	tagsClass?: string;
 }
 
 const {
@@ -51,17 +53,17 @@ const {
 </script>
 <article
 	id={id}
-	class:list={[imageSrc]}
-	class="reveal lazy-background even-parent my-2 mb-10 flex w-11/12 flex-col self-start overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] bg-placeholder bg-cover bg-center bg-no-repeat font-lato shadow-lg shadow-black even:self-end even:text-right max-sm:mb-6 max-sm:mt-8 max-sm:w-full max-sm:self-center max-sm:even:self-center max-sm:even:text-left"
+	class:list={[imageSrc, Astro.props.class]}
+	class="reveal lazy-background flex flex-col overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] bg-placeholder bg-cover bg-center bg-no-repeat font-lato shadow-lg shadow-black max-sm:mb-6 max-sm:mt-8 max-sm:self-center"
 >
 	<div
-		class="h-64 bg-[#453662c5] p-1 backdrop-brightness-[0.4] backdrop-grayscale transition-all duration-300 ease-in-out hover:bg-teal-600/0 hover:backdrop-grayscale-0 max-lg:h-64 max-md:h-60 max-sm:h-60 [&>*:first-child]:hover:scale-110 max-sm:[&>*:first-child]:hover:scale-105"
+		class="h-full bg-[#453662c5] p-1 backdrop-brightness-[0.4] backdrop-grayscale transition-all duration-300 ease-in-out hover:bg-teal-600/0 hover:backdrop-grayscale-0 max-lg:h-64 max-md:h-60 max-sm:h-60 [&>*:first-child]:hover:scale-110 max-sm:[&>*:first-child]:hover:scale-105"
 	>
 		<article
-			class="even-child m-0 flex h-full w-11/12 flex-col items-start justify-end p-5 transition-[transform] duration-300 max-sm:w-full max-sm:justify-evenly max-sm:p-4 max-sm:px-3 max-sm:py-3"
+			class="m-0 flex h-full w-11/12 flex-col items-start justify-between p-4 transition-[transform] duration-300 max-sm:w-full max-sm:justify-evenly max-sm:p-4 max-sm:px-3 max-sm:py-3"
 		>
 			<header
-				class="m-1 text-3xl font-extrabold text-teal-200 max-sm:text-[1.65rem]"
+				class="m-1 text-xl font-extrabold text-teal-200 max-sm:text-[1.65rem]"
 			>
 				<h3 class="m-0 drop-shadow-[0_15px_20px_black]">
 					{title}
@@ -72,65 +74,51 @@ const {
 			>
 				<CustomParagraph
 					textColor="text-slate-50"
+					fontSize="text-sm"
 					set:html={description}
 				/>
 			</div>
-			<ul class="flex flex-row gap-x-2">
-				{
-					tags.map((tag) => (
-						<li>
-							<span
-								class="flex items-center gap-x-2 rounded-full border-2 p-1.5 px-2 text-sm drop-shadow-[0_15px_20px_black]"
-								class:list={[tag.class]}
-							>
-								<tag.icon class="size-4" />
-								<label>{tag.name}</label>
-							</span>
-						</li>
-					))
-				}
-			</ul>
-			<div class="even-self-child mt-3 flex flex-row self-start">
-				<IconLinkContainer
-					class="h-7 w-7"
-					href={githubLink}
-					title={anchorLabel}
-				>
-					<IconGithub />
-				</IconLinkContainer>
+			<div
+				class:list={Astro.props.tagsClass}
+				class="flex w-full justify-between gap-2"
+			>
+				<ul class="flex flex-row gap-x-1">
+					{
+						tags.map((tag) => (
+							<li>
+								<span
+									class="flex items-center gap-x-0.5 rounded-xl border-2 p-1.5 px-1 text-[0.65rem] drop-shadow-[0_15px_20px_black]"
+									class:list={[tag.class]}
+								>
+									<tag.icon class="size-2.5" />
+									<label>{tag.name}</label>
+								</span>
+							</li>
+						))
+					}
+				</ul>
+				<div class="flex flex-row self-start">
+					<IconLinkContainer
+						class="h-6 w-6"
+						href={githubLink}
+						title={anchorLabel}
+					>
+						<IconGithub />
+					</IconLinkContainer>
 
-				{
-					website !== undefined && (
-						<IconLinkContainer
-							class="h-7 w-7"
-							href={website}
-							title={anchorLabel}
-						>
-							<IconLink />
-						</IconLinkContainer>
-					)
-				}
+					{
+						website !== undefined && (
+							<IconLinkContainer
+								class="h-6 w-6"
+								href={website}
+								title={anchorLabel}
+							>
+								<IconLink />
+							</IconLinkContainer>
+						)
+					}
+				</div>
 			</div>
 		</article>
 	</div>
 </article>
-<style>
-	.even-parent:nth-child(even) .even-child {
-		align-items: flex-end !important;
-		margin-left: auto;
-	}
-
-	.even-parent:nth-child(even) .even-self-child {
-		align-self: flex-end !important;
-	}
-
-	@media (width <= 640px) {
-		.even-parent:nth-child(even) .even-child {
-			align-items: flex-start !important;
-			margin-left: auto;
-		}
-		.even-parent:nth-child(even) .even-self-child {
-			align-self: flex-start !important;
-		}
-	}
-</style>
