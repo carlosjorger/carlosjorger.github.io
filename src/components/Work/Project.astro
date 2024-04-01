@@ -54,11 +54,11 @@ const {
 <article
 	id={id}
 	class:list={[Astro.props.class]}
-	class="overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] font-lato shadow-lg shadow-black max-sm:self-center"
+	class="reveal overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] font-lato shadow-lg shadow-black max-sm:self-center"
 >
 	<div
 		class:list={[imageSrc]}
-		class="reveal lazy-background flex h-full flex-col overflow-hidden bg-placeholder bg-cover bg-center bg-no-repeat font-lato shadow-lg shadow-black hover:scale-110 max-sm:self-center"
+		class="lazy-background flex h-full scale-105 flex-col overflow-hidden bg-placeholder bg-cover bg-center bg-no-repeat font-lato shadow-lg shadow-black transition-transform duration-200 hover:scale-100 max-sm:self-center"
 	>
 		<div
 			class="h-full bg-[#453662c5] p-1 backdrop-brightness-[0.4] backdrop-grayscale transition-all duration-300 ease-in-out hover:bg-teal-600/0 hover:backdrop-grayscale-0 [&>*:first-child]:hover:scale-110 max-sm:[&>*:first-child]:hover:scale-105"
