@@ -84,17 +84,17 @@ const headerLinks = [
 					</Link>
 				</li>
 				<li class="flex flex-row gap-x-3">
-					<LocaleSelector
-						id="dropdownLocaleButton"
-						dropdown_id="dropdownLocaleButtonDropdown"
-						{...LOCALES}
-					/>
 					{
 						headerLinks.map(({ label, ...attributes }) => (
 							<Link {...attributes}>{label}</Link>
 						))
 					}
 				</li>
+				<LocaleSelector
+					id="dropdownLocaleButton"
+					dropdown_id="dropdownLocaleButtonDropdown"
+					{...LOCALES}
+				/>
 			</ul>
 		</WidthContainer>
 	</nav>
