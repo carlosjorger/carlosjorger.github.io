@@ -28,7 +28,7 @@ const { HEADER_EXPERIENCE, EXPERIENCE } = Astro.props;
 				<li class="mb-14 ms-5">
 					<div class="flex flex-row items-center">
 						<div class="absolute start-[-0.9rem] mb-1 h-7 w-7 overflow-hidden rounded-full border border-teal-200 bg-slate-300 shadow-lg shadow-teal-200">
-							<img src={`src/assets/${job.logoFile}`} alt="" />
+							<img src={`${job.logoFile}`} alt="" />
 						</div>
 						<time class="mb-1 text-sm font-normal leading-none text-[var(--default-font-color3)]">
 							{job.date}
