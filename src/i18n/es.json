@@ -56,17 +56,20 @@
 		{
 			"date": "Actualmente...",
 			"ocupation": "Desarrollador Fullstack en Myndgoals",
-			"description": "Trabajo para Opus EHR una plataforma de atención médica que rastrea y maneja los datos de los paciente, mejoro el compromiso con el cliente y las admisiones."
+			"description": "Trabajo para Opus EHR una plataforma de atención médica que rastrea y maneja los datos de los paciente, mejoro el compromiso con el cliente y las admisiones.",
+			"logoFile": "MyndGoals-logo.ico"
 		},
 		{
 			"date": "Marzo del 2022",
 			"ocupation": "Desarrollador Fullstack en JYGASOFT",
-			"description": "Trabajé en un sistema de ensamblaje de autos usando tecnologías de .net y AngularJS."
+			"description": "Trabajé en un sistema de ensamblaje de autos usando tecnologías de .net y AngularJS.",
+			"logoFile": "Jygasoft-logo.webp"
 		},
 		{
 			"date": "Noviembre del 2020",
 			"ocupation": "Ingeniero de datos en DATYS",
-			"description": "Trabajé usando herramientas de virtualización de datos, mejorando el rendimiento del flujo de datos de un banco cubano."
+			"description": "Trabajé usando herramientas de virtualización de datos, mejorando el rendimiento del flujo de datos de un banco cubano.",
+			"logoFile": "Datys-logo.webp"
 		}
 	],
 	"LOCALES": {

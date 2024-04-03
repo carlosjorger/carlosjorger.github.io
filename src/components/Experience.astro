@@ -11,6 +11,7 @@ type Experience = {
 	date: String;
 	ocupation: String;
 	description: String;
+	logoFile: string;
 };
 const { HEADER_EXPERIENCE, EXPERIENCE } = Astro.props;
 ---
@@ -20,13 +21,15 @@ const { HEADER_EXPERIENCE, EXPERIENCE } = Astro.props;
 		<Subtitle left>{HEADER_EXPERIENCE}</Subtitle>
 	</header>
 	<ol
-		class="reveal-experience relative mx-[1.33rem] mt-8 border-s border-[var(--default-font-color3)]"
+		class="reveal-experience relative mx-[1.33rem] mt-8 border-s border-teal-200"
 	>
 		{
 			EXPERIENCE.map((job) => (
-				<li class="mb-14 ms-3">
+				<li class="mb-14 ms-5">
 					<div class="flex flex-row items-center">
-						<div class="absolute start-[-0.27rem] mb-1 h-2 w-2 rounded-full border border-[--default-background-color] bg-[var(--default-font-color3)]" />
+						<div class="absolute start-[-0.9rem] mb-1 h-7 w-7 overflow-hidden rounded-full border border-teal-200 bg-slate-300 shadow-lg shadow-teal-200">
+							<img src={`src/assets/${job.logoFile}`} alt="" />
+						</div>
 						<time class="mb-1 text-sm font-normal leading-none text-[var(--default-font-color3)]">
 							{job.date}
 						</time>

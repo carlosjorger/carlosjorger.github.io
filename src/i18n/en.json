@@ -56,17 +56,20 @@
 		{
 			"date": "Currently...",
 			"ocupation": "Fullstack Engineer in Myndgoals",
-			"description": "Working for Opus EHR a healthcare platform that tracks leads and manages patient data, enhancing client engagement and increasing admissions."
+			"description": "Working for Opus EHR a healthcare platform that tracks leads and manages patient data, enhancing client engagement and increasing admissions.",
+			"logoFile": "MyndGoals-logo.ico"
 		},
 		{
 			"date": "March 2022",
 			"ocupation": "Fullstack Engineer in JYGASOFT",
-			"description": "Worked in a car assembly system using .net tecnologies and AngularJS."
+			"description": "Worked in a car assembly system using .net tecnologies and AngularJS.",
+			"logoFile": "Jygasoft-logo.webp"
 		},
 		{
 			"date": "November 2020",
 			"ocupation": "Data Engineer in DATYS",
-			"description": "Worked using data virtualization tools improving the data flow performance of a cuban bank."
+			"description": "Worked using data virtualization tools improving the data flow performance of a cuban bank.",
+			"logoFile": "Datys-logo.webp"
 		}
 	],
 	"LOCALES": {
