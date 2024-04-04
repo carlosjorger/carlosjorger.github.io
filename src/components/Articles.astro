@@ -1,0 +1,38 @@
+---
+import SectionContainer from './shared/SectionContainer.astro';
+import Subtitle from './shared/Subtitle.astro';
+
+export interface Props {
+	ARTICLE_TITLE: string;
+	ARTICLES: ArticleI18n[];
+}
+type ArticleI18n = {
+	name: string;
+	description: string;
+};
+const { ARTICLE_TITLE, ARTICLES } = Astro.props;
+console.log(ARTICLES);
+---
+
+<SectionContainer id="work">
+	<div class="flex flex-col p-2">
+		<header class="reveal my-6 mb-2">
+			<Subtitle left>
+				{ARTICLE_TITLE}
+			</Subtitle>
+		</header>
+		<div class="flex flex-col">
+			{
+				ARTICLES.map((article) => (
+					<article class="reveal overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] font-lato shadow-lg shadow-black max-sm:self-center">
+						<header class="m-1 text-xl font-extrabold text-teal-200 max-sm:text-[1.65rem]">
+							<h3 class="m-0 drop-shadow-[0_15px_20px_black]">
+								{article.name}
+							</h3>
+						</header>
+					</article>
+				))
+			}
+		</div>
+	</div>
+</SectionContainer>

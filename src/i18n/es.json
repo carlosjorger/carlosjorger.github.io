@@ -72,6 +72,13 @@
 			"logoFile": "Datys-logo.webp"
 		}
 	],
+	"ARTICLE_TITLE": "Artículos",
+	"ARTICLES": [
+		{
+			"name": "¿Como crear una librería para Vue3?",
+			"description": "En este artículo explicare paso a paso como crear un librería para Vue3 usando Vite** y **Typescript."
+		}
+	],
 	"LOCALES": {
 		"SPANISH": "Español",
 		"ENGLISH": "Inglés"

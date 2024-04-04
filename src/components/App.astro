@@ -7,6 +7,7 @@ import Work from './Work/Work.astro';
 import Presentation from './Presentation.astro';
 import { getI18N } from '../i18n/';
 import Experience from './Experience.astro';
+import Articles from './Articles.astro';
 export interface Props {
 	public_src: string;
 }
@@ -34,6 +35,7 @@ const i18n = getI18N({ currentLocale });
 		<Presentation {...i18n} />
 		<Work {...i18n} />
 		<Experience {...i18n} />
+		<Articles {...i18n} />
 		<AboutMe {...i18n} />
 	</main>
 	<Footer {...i18n} />
