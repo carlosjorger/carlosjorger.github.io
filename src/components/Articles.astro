@@ -1,4 +1,5 @@
 ---
+import CustomParagraph from './shared/CustomParagraph.astro';
 import SectionContainer from './shared/SectionContainer.astro';
 import Subtitle from './shared/Subtitle.astro';
 
@@ -9,9 +10,9 @@ export interface Props {
 type ArticleI18n = {
 	name: string;
 	description: string;
+	coverFile: string;
 };
 const { ARTICLE_TITLE, ARTICLES } = Astro.props;
-console.log(ARTICLES);
 ---
 
 <SectionContainer id="work">
@@ -24,13 +25,28 @@ console.log(ARTICLES);
 		<div class="flex flex-col">
 			{
 				ARTICLES.map((article) => (
-					<article class="reveal overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] font-lato shadow-lg shadow-black max-sm:self-center">
-						<header class="m-1 text-xl font-extrabold text-teal-200 max-sm:text-[1.65rem]">
-							<h3 class="m-0 drop-shadow-[0_15px_20px_black]">
-								{article.name}
-							</h3>
-						</header>
-					</article>
+					<a href="" class="reveal w-full">
+						<article class="flex gap-2 overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] p-2 font-lato shadow-md shadow-black transition-[transform,box-shadow] duration-200 hover:scale-[1.02] hover:shadow-2xl max-sm:flex-col max-sm:self-center max-sm:p-3">
+							<img
+								src={`images/${article.coverFile}`}
+								class="w-36 rounded-xl max-sm:w-full"
+								alt=""
+							/>
+
+							<section>
+								<header class="m-1 text-lg font-extrabold text-teal-200 max-md:text-xl">
+									<h3 class="m-0 drop-shadow-[0_15px_20px_black]">
+										{article.name}
+									</h3>
+								</header>
+								<CustomParagraph
+									textColor="text-slate-50"
+									set:html={article.description}
+									class="m-1 pb-0 text-xs text-[#99F9F9] drop-shadow-[0_15px_20px_black] max-sm:text-base"
+								/>
+							</section>
+						</article>
+					</a>
 				))
 			}
 		</div>
