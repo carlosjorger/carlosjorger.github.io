@@ -1,0 +1,9 @@
+---
+export interface Props {
+	class?: string;
+}
+---
+
+<h1 class="text-3xl font-bold max-sm:text-4xl" class:list={[Astro.props.class]}>
+	<slot />
+</h1>
