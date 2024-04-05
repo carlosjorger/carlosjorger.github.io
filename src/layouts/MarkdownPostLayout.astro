@@ -23,20 +23,20 @@ const i18n = getI18N({ currentLocale });
 
 const { frontmatter } = Astro.props;
 const public_src = currentLocale == 'en' ? '' : '..';
+const date = new Date(frontmatter.pubDate);
+const formatedDate = `${date.getMonth()}/${date.getDay()}/${date.getFullYear()}`;
 ---
 
 <!-- TODO: keep worging on styles -->
 <Layout {...i18n}>
-	<!-- TODO: change header in this page -->
 	<Header {...i18n} {public_src} />
-
 	<main>
 		<SectionContainer id="blog" class="m-0 mx-auto mt-4 w-11/12">
-			<p class="text-[var(--default-font-color)]">
-				{frontmatter.pubDate.slice(0, 10)}
+			<p class="text-sm text-[var(--default-font-color)]">
+				{formatedDate}
 			</p>
-			<header class="reveal pb-2">
-				<Title class="text-[var(--default-font-color)]"
+			<header class="reveal">
+				<Title class="mt-1 text-[var(--default-font-color)]"
 					>{frontmatter.title}</Title
 				>
 			</header>

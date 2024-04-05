@@ -2,6 +2,7 @@
 import CustomParagraph from './shared/CustomParagraph.astro';
 import SectionContainer from './shared/SectionContainer.astro';
 import Subtitle from './shared/Subtitle.astro';
+import { getHref } from 'i18n';
 
 export interface Props {
 	ARTICLE_TITLE: string;
@@ -14,6 +15,9 @@ type ArticleI18n = {
 	link: string;
 };
 const { ARTICLE_TITLE, ARTICLES } = Astro.props;
+const { currentLocale } = Astro;
+const urlPrefix = getHref(currentLocale);
+console.log;
 ---
 
 <SectionContainer id="work">
@@ -30,7 +34,7 @@ const { ARTICLE_TITLE, ARTICLES } = Astro.props;
 						<article class="flex gap-2 overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] p-2 font-lato shadow-md shadow-black transition-[transform,box-shadow] duration-200 hover:scale-[1.02] hover:shadow-2xl max-sm:flex-col max-sm:self-center max-sm:p-3">
 							<img
 								transition:name={article.name}
-								src={`images/${article.coverFile}`}
+								src={`/images/${article.coverFile}`}
 								class="w-36 rounded-xl max-sm:w-full"
 								alt=""
 							/>

@@ -24,5 +24,5 @@ const HREF_LANGUAGE = {
 	},
 };
 export const getHref = (currentLocale: string) => {
-	return HREF_LANGUAGE[currentLocale];
+	return HREF_LANGUAGE[currentLocale].href;
 };

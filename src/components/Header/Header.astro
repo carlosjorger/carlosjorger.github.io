@@ -10,6 +10,7 @@ import IconCode from '@icons/IconCode.astro';
 import IconBriefcase from '@icons/IconBriefcase.astro';
 import LocaleSelector from './LocaleSelector.astro';
 import WidthContainer from '@components/shared/WidthContainer.astro';
+import { getHref } from 'i18n';
 
 export interface Props {
 	HEADER_PROJECTS: string;
@@ -42,27 +43,30 @@ const {
 	HEADER_EXPERIENCE_ARIA_LABEL,
 	public_src,
 } = Astro.props;
+
+const { currentLocale } = Astro;
+const urlPrefix = getHref(currentLocale);
 const headerLinks = [
 	{
-		href: '#work',
+		href: `${urlPrefix}#work`,
 		'aria-label': HEADER_PROJECTS_ARIA_LABEL,
 		label: HEADER_PROJECTS,
 		icon: IconCode,
 	},
 	{
-		href: '#experience',
+		href: `${urlPrefix}#experience`,
 		'aria-label': HEADER_EXPERIENCE_ARIA_LABEL,
 		label: HEADER_EXPERIENCE,
 		icon: IconBriefcase,
 	},
 	{
-		href: '#aboutMe',
+		href: `${urlPrefix}#aboutMe`,
 		'aria-label': HEADER_ABOUT_ME_ARIA_LABEL,
 		label: ABOUT_ME_TITLE,
 		icon: IconUser,
 	},
 	{
-		href: '#contact',
+		href: `${urlPrefix}#contact`,
 		'aria-label': HEADER_CONTACT_ARIA_LABEL,
 		label: CONTACT_TITLE,
 		icon: IconAddress,
@@ -114,8 +118,6 @@ const headerLinks = [
 			'dropdownLocaleButton',
 			'dropdownLocaleButtonDropdown'
 		);
-
-		// select the two elements that we'll work with
 	});
 </script>
 <header>
@@ -125,7 +127,10 @@ const headerLinks = [
 				class="flex list-none flex-row items-center justify-between p-0.5 max-sm:hidden [&>li]:self-center"
 			>
 				<li class="mt-1 p-0.5">
-					<Link href="#home" aria-label={HEADER_HOME_ARIA_LABEL}>
+					<Link
+						href=`${urlPrefix}#home`
+						aria-label={HEADER_HOME_ARIA_LABEL}
+					>
 						<IconContainer class="h-6 w-7">
 							<IconHome />
 						</IconContainer>
