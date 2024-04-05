@@ -3,9 +3,8 @@ import Layout from './Layout.astro';
 import { getI18N } from '../i18n/';
 import Header from '@components/Header/Header.astro';
 import SectionContainer from '@components/shared/SectionContainer.astro';
-import Subtitle from '@components/shared/Subtitle.astro';
 import Title from '@components/shared/Title.astro';
-
+import '../styles/post-styles.css';
 export interface Props {
 	frontmatter: {
 		title: string;
@@ -31,7 +30,10 @@ const formatedDate = `${date.getMonth()}/${date.getDay()}/${date.getFullYear()}`
 <Layout {...i18n}>
 	<Header {...i18n} {public_src} />
 	<main>
-		<SectionContainer id="blog" class="m-0 mx-auto mt-4 w-11/12">
+		<SectionContainer
+			id="blog"
+			class="m-0 mx-auto mt-4 w-11/12 text-[var(--default-font-color)]"
+		>
 			<p class="text-sm text-[var(--default-font-color)]">
 				{formatedDate}
 			</p>
@@ -47,7 +49,11 @@ const formatedDate = `${date.getMonth()}/${date.getDay()}/${date.getFullYear()}`
 				height="520"
 				width="925"
 			/>
-			<slot />
+			<article
+				class="prose prose-custom dark:prose-invert lg:prose-lg prose-img:mx-auto mb-10 max-w-none break-words"
+			>
+				<slot />
+			</article>
 		</SectionContainer>
 	</main>
 </Layout>

@@ -31,6 +31,18 @@ module.exports = {
 				placeholder: "url('/images/640x360.webp')",
 				vuefluiddnd: "url('/images/VueFluidDnD.webp')",
 			},
+			typography: ({ theme }) => ({
+				custom: {
+					css: {
+						'--tw-prose-headings': 'var(--default-font-color)',
+						'--tw-prose-bold': theme('colors.teal[200]'),
+						'--tw-prose-code': theme('colors.teal[100]'),
+						'--tw-prose-links':
+							'var(--default-secundary-font-color)',
+						'--tw-prose-body': 'var(--default-font-color)',
+					},
+				},
+			}),
 		},
 		fontFamily: {
 			lato: ['Lato', 'sans-serif'],
@@ -51,5 +63,5 @@ module.exports = {
 				'500ms ease 400ms forwards show-presentation',
 		},
 	},
-	plugins: [require('flowbite/plugin')],
+	plugins: [require('flowbite/plugin'), require('@tailwindcss/typography')],
 };
