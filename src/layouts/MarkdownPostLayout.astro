@@ -24,33 +24,33 @@ const { frontmatter } = Astro.props;
 const public_src = currentLocale == 'en' ? '' : '..';
 const date = new Date(frontmatter.pubDate);
 const formatedDate = `${date.getMonth()}/${date.getDay()}/${date.getFullYear()}`;
+// TODO: use Astro api to list posts  https://docs.astro.build/es/tutorial/5-astro-api/
 ---
 
-<!-- TODO: keep worging on styles -->
 <Layout {...i18n}>
 	<Header {...i18n} {public_src} />
 	<main>
 		<SectionContainer
 			id="blog"
-			class="m-0 mx-auto mt-4 w-11/12 text-[var(--default-font-color)]"
+			class="m-0 mx-auto mt-6 text-[var(--default-font-color)]"
 		>
 			<p class="text-sm text-[var(--default-font-color)]">
 				{formatedDate}
 			</p>
 			<header class="reveal">
-				<Title class="mt-1 text-[var(--default-font-color)]"
+				<Title class="mt-5 text-[var(--default-font-color)]"
 					>{frontmatter.title}</Title
 				>
 			</header>
 			<img
 				transition:name={frontmatter.title}
-				class="reveal rounded-lg object-cover"
+				class="reveal my-7 rounded-lg object-cover"
 				{...frontmatter.image}
 				height="520"
 				width="925"
 			/>
 			<article
-				class="prose prose-custom dark:prose-invert lg:prose-lg prose-img:mx-auto mb-10 max-w-none break-words"
+				class="prose prose-custom mb-10 max-w-none break-words dark:prose-invert lg:prose-base prose-img:mx-auto"
 			>
 				<slot />
 			</article>

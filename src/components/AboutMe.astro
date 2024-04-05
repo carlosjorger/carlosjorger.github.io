@@ -23,8 +23,13 @@ const {
 		<header class="reveal pb-2">
 			<Subtitle left>{ABOUT_ME_TITLE}</Subtitle>
 		</header>
-		<CustomParagraph set:html={ABOUT_ME_DESCRIPTION} reveal />
 		<CustomParagraph
+			class="text-2xl"
+			set:html={ABOUT_ME_DESCRIPTION}
+			reveal
+		/>
+		<CustomParagraph
+			class="text-2xl"
 			reveal
 			set:html={ABOUT_ME_DESCRIPTION_SECOND_PARAGRAPH}
 		/>

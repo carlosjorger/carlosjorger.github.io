@@ -2,22 +2,13 @@
 import CustomParagraph from './shared/CustomParagraph.astro';
 import SectionContainer from './shared/SectionContainer.astro';
 import Subtitle from './shared/Subtitle.astro';
-import { getHref } from 'i18n';
 
 export interface Props {
 	ARTICLE_TITLE: string;
-	ARTICLES: ArticleI18n[];
 }
-type ArticleI18n = {
-	name: string;
-	description: string;
-	coverFile: string;
-	link: string;
-};
-const { ARTICLE_TITLE, ARTICLES } = Astro.props;
-const { currentLocale } = Astro;
-const urlPrefix = getHref(currentLocale);
-console.log;
+
+const { ARTICLE_TITLE } = Astro.props;
+const allPosts = await Astro.glob('../pages/posts/*.md');
 ---
 
 <SectionContainer id="work">
@@ -29,25 +20,25 @@ console.log;
 		</header>
 		<div class="flex flex-col">
 			{
-				ARTICLES.map((article) => (
-					<a href={`/posts/${article.link}`} class="reveal w-full">
+				allPosts.map((post) => (
+					<a href={post.url} class="reveal w-full">
 						<article class="flex gap-2 overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] p-2 font-lato shadow-md shadow-black transition-[transform,box-shadow] duration-200 hover:scale-[1.02] hover:shadow-2xl max-sm:flex-col max-sm:self-center max-sm:p-3">
 							<img
-								transition:name={article.name}
-								src={`/images/${article.coverFile}`}
+								transition:name={post.frontmatter.title}
+								src={post.frontmatter.image.src}
 								class="w-36 rounded-xl max-sm:w-full"
-								alt=""
+								alt={post.frontmatter.image.alt}
 							/>
 
 							<section>
 								<header class="m-1 text-lg font-extrabold text-teal-200 max-md:text-xl">
 									<h3 class="m-0 drop-shadow-[0_15px_20px_black]">
-										{article.name}
+										{post.frontmatter.title}
 									</h3>
 								</header>
 								<CustomParagraph
 									textColor="text-slate-50"
-									set:html={article.description}
+									set:html={post.frontmatter.description}
 									class="m-1 pb-0 text-xs text-[#99F9F9] drop-shadow-[0_15px_20px_black] max-sm:text-base"
 								/>
 							</section>

@@ -69,32 +69,32 @@ const {
 				<header
 					class="m-1 text-xl font-extrabold text-teal-200 max-sm:text-[1.65rem]"
 				>
-					<h3 class="m-0 drop-shadow-[0_15px_20px_black]">
+					<h3 class="m-0 text-3xl drop-shadow-[0_15px_20px_black]">
 						{title}
 					</h3>
 				</header>
 				<div
-					class="m-1 pb-0 text-xs text-[#99F9F9] drop-shadow-[0_15px_20px_black]"
+					class="m-1 pb-0 text-[#99F9F9] drop-shadow-[0_15px_20px_black]"
 				>
 					<CustomParagraph
 						textColor="text-slate-50"
-						fontSize="text-sm"
 						set:html={description}
+						class="text-xl"
 					/>
 				</div>
 				<div
 					class:list={Astro.props.tagsClass}
 					class="flex w-full justify-between gap-2"
 				>
-					<ul class="flex flex-row gap-x-1">
+					<ul class="flex flex-row gap-x-2">
 						{
 							tags.map((tag) => (
 								<li>
 									<span
-										class="flex items-center gap-x-0.5 rounded-xl border-2 p-1.5 px-1 text-[0.65rem] drop-shadow-[0_15px_20px_black]"
+										class="flex items-center gap-x-1 rounded-2xl border-2 p-2 px-1 text-base drop-shadow-[0_15px_20px_black]"
 										class:list={[tag.class]}
 									>
-										<tag.icon class="size-2.5" />
+										<tag.icon class="size-4" />
 										<label>{tag.name}</label>
 									</span>
 								</li>

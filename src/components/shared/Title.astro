@@ -4,6 +4,9 @@ export interface Props {
 }
 ---
 
-<h1 class="text-3xl font-bold max-sm:text-4xl" class:list={[Astro.props.class]}>
+<h1
+	class="text-[1.75rem] font-bold max-sm:text-4xl"
+	class:list={[Astro.props.class]}
+>
 	<slot />
 </h1>

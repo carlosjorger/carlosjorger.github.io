@@ -2,6 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: '¿Como crear una librería para Vue3?'
 pubDate: 2022-07-01
+description: 'En este artículo explicare paso a paso como crear un librería para Vue3 usando <strong>Vite</strong> y <strong>Typescript</strong>.'
 image:
     src: '/images/vue-library-article-cover.webp'
     alt: 'Vue logo'
@@ -226,4 +227,4 @@ Después sino estas registrado en **NPM** puedes hacerlo a través de la termina
 
 Gracias a las potencialidades de **Vite** podemos crear fácilmente una librería enriquecida con el tipado de **Vite**. Además, podemos adaptar el conocimiento adquirido en este artículo para hacer una librería para **Vanilla**, **React**, **Svelte**, etc. Si tiene alguna duda me puede contactar en [X](https://twitter.com/carlosjorgerc)
 o en [linkedin](https://www.linkedin.com/in/carlosjorger/).
-El repositorio del código mostrado se encuentra aquí https://github.com/carlosjorger/template-component-lib.
+El repositorio del código mostrado se encuentra aquí <https://github.com/carlosjorger/template-component-lib>.

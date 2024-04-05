@@ -73,14 +73,6 @@
 		}
 	],
 	"ARTICLE_TITLE": "Artículos",
-	"ARTICLES": [
-		{
-			"name": "¿Como crear una librería para Vue3?",
-			"description": "En este artículo explicare paso a paso como crear un librería para Vue3 usando<strong>Vite</strong> y <strong>Typescript</strong>.",
-			"coverFile": "vue-library-article-cover.webp",
-			"link": "como-crear-una-librer-a-para-vue3"
-		}
-	],
 	"LOCALES": {
 		"SPANISH": "Español",
 		"ENGLISH": "Inglés"
