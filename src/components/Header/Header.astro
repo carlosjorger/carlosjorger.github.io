@@ -70,6 +70,54 @@ const headerLinks = [
 ];
 ---
 
+<script>
+	const createDropdownEvents = (buttonId: string, dropdownID: string) => {
+		import('flowbite').then(({ Dropdown }) => {
+			const $buttonElement: HTMLElement | null = document.querySelector(
+				`#${buttonId}`
+			);
+			const $modalElement: HTMLElement | null = document.querySelector(
+				`#${dropdownID}`
+			);
+			const options = {
+				placement: 'bottom',
+				triggerType: 'click',
+				offsetSkidding: 0,
+				offsetDistance: 10,
+				delay: 300,
+				ignoreClickOutsideClass: false,
+				onHide: () => {},
+				onShow: () => {},
+				onToggle: () => {},
+			};
+			const instanceOptions = {
+				id: buttonId,
+				override: true,
+			};
+			const modal = new Dropdown(
+				$modalElement,
+				$buttonElement,
+				options as any,
+				instanceOptions
+			);
+			if ($buttonElement) {
+				$buttonElement.addEventListener('click', () => modal.show());
+			}
+		});
+	};
+	document.addEventListener('astro:page-load', async () => {
+		createDropdownEvents(
+			'dropdownLocaleButtonSideBar',
+			'dropdownLocaleButtonSideBarDropdown'
+		);
+		createDropdownEvents(
+			'dropdownLocaleButton',
+			'dropdownLocaleButtonDropdown'
+		);
+
+		// select the two elements that we'll work with
+	});
+</script>
 <header>
 	<nav class="header-animation fixed top-0 z-[4] w-full">
 		<WidthContainer>

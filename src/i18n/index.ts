@@ -15,3 +15,14 @@ export const getI18N = ({ currentLocale }: { currentLocale: string }) => {
 	}
 	return english;
 };
+const HREF_LANGUAGE = {
+	en: {
+		href: '/',
+	},
+	es: {
+		href: '/es',
+	},
+};
+export const getHref = (currentLocale: string) => {
+	return HREF_LANGUAGE[currentLocale];
+};

@@ -49,13 +49,14 @@ const { SEO_LANG, SEO_LOCALE, SEO_TITLE, SEO_DESCRIPTION } = Astro.props;
 		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{SEO_TITLE}</title>
-		<ViewTransitions />
 	</head>
+	<script
+		is:inline
+		src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+	></script>
 	<body>
+		<ViewTransitions />
+
 		<slot />
-		<script
-			is:inline
-			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
-		></script>
 	</body>
 </html>

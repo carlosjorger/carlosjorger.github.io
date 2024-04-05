@@ -16,16 +16,23 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <script>
-	import { touchOutsideColumnNavbar, touchIcon } from '@utils/touchEvents';
-	document.addEventListener('touchstart', touchOutsideColumnNavbar, {
-		passive: true,
-	});
-	document.addEventListener('DOMContentLoaded', function () {
-		const changeSiderElements =
-			document.getElementsByClassName('change-sidebar');
-		for (const element of changeSiderElements) {
-			element.addEventListener('click', touchIcon);
-		}
+	document.addEventListener('astro:page-load', async () => {
+		import('@utils/touchEvents').then(
+			({ touchOutsideColumnNavbar, touchIcon }) => {
+				document.addEventListener(
+					'touchstart',
+					touchOutsideColumnNavbar,
+					{
+						passive: true,
+					}
+				);
+				const changeSiderElements =
+					document.getElementsByClassName('change-sidebar');
+				for (const element of changeSiderElements) {
+					element.addEventListener('click', touchIcon);
+				}
+			}
+		);
 	});
 </script>
 <!-- TODO: Add skills -->

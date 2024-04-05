@@ -25,19 +25,6 @@ const { frontmatter } = Astro.props;
 const public_src = currentLocale == 'en' ? '' : '..';
 ---
 
-<script>
-	import { touchOutsideColumnNavbar, touchIcon } from '@utils/touchEvents';
-	document.addEventListener('touchstart', touchOutsideColumnNavbar, {
-		passive: true,
-	});
-	document.addEventListener('DOMContentLoaded', function () {
-		const changeSiderElements =
-			document.getElementsByClassName('change-sidebar');
-		for (const element of changeSiderElements) {
-			element.addEventListener('click', touchIcon);
-		}
-	});
-</script>
 <!-- TODO: keep worging on styles -->
 <Layout {...i18n}>
 	<!-- TODO: change header in this page -->

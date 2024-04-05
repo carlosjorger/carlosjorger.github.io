@@ -28,11 +28,9 @@ export function touchOutsideColumnNavbar(event: TouchEvent) {
 	const [columnNavbarBackground] = document.getElementsByClassName(
 		'nav-columnar-menu-background'
 	);
-
 	const columnNavbar = document.getElementById('nav-columnar-menu');
 
 	const touchedElement = event.targetTouches[0].target;
-
 	if (
 		touchedElement instanceof Node &&
 		columnNavbarBackground instanceof HTMLDivElement &&
