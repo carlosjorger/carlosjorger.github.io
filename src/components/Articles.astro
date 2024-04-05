@@ -25,11 +25,11 @@ const { ARTICLE_TITLE, ARTICLES } = Astro.props;
 		</header>
 		<div class="flex flex-col">
 			{
-				// TODO: add view-transition to image
 				ARTICLES.map((article) => (
 					<a href={`/posts/${article.link}`} class="reveal w-full">
 						<article class="flex gap-2 overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] p-2 font-lato shadow-md shadow-black transition-[transform,box-shadow] duration-200 hover:scale-[1.02] hover:shadow-2xl max-sm:flex-col max-sm:self-center max-sm:p-3">
 							<img
+								transition:name={article.name}
 								src={`images/${article.coverFile}`}
 								class="w-36 rounded-xl max-sm:w-full"
 								alt=""

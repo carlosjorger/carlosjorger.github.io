@@ -54,6 +54,7 @@ const public_src = currentLocale == 'en' ? '' : '..';
 				>
 			</header>
 			<img
+				transition:name={frontmatter.title}
 				class="reveal rounded-lg object-cover"
 				{...frontmatter.image}
 				height="520"

@@ -1,6 +1,6 @@
 ---
 import '../styles/styles.css';
-
+import { ViewTransitions } from 'astro:transitions';
 export interface Props {
 	SEO_LANG: string;
 	SEO_LOCALE: string;
@@ -49,6 +49,7 @@ const { SEO_LANG, SEO_LOCALE, SEO_TITLE, SEO_DESCRIPTION } = Astro.props;
 		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{SEO_TITLE}</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<slot />
