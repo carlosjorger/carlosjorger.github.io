@@ -1,4 +1,5 @@
 ---
+import { primaryFormatDate } from '@utils/dateUtils';
 import CustomParagraph from './shared/CustomParagraph.astro';
 import SectionContainer from './shared/SectionContainer.astro';
 import Subtitle from './shared/Subtitle.astro';
@@ -22,16 +23,23 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 			{
 				allPosts.map((post) => (
 					<a href={post.url} class="reveal w-full">
-						<article class="flex gap-2 overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] p-2 font-lato shadow-md shadow-black transition-[transform,box-shadow] duration-200 hover:scale-[1.02] hover:shadow-2xl max-sm:flex-col max-sm:self-center max-sm:p-3">
+						<article class="flex gap-4 overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] p-2 font-lato shadow-md shadow-black transition-[transform,box-shadow] duration-200 hover:scale-[1.02] hover:shadow-2xl max-sm:flex-col max-sm:self-center max-sm:p-3">
 							<img
 								transition:name={post.frontmatter.title}
 								src={post.frontmatter.image.src}
-								class="w-36 rounded-xl max-sm:w-full"
+								class="w-48 rounded-xl max-sm:w-full"
 								alt={post.frontmatter.image.alt}
 							/>
 
 							<section>
-								<header class="m-1 text-lg font-extrabold text-teal-200 max-md:text-xl">
+								<CustomParagraph
+									textColor="text-slate-50"
+									set:html={primaryFormatDate(
+										post.frontmatter.pubDate
+									)}
+									class=" mb-0 p-1 pb-0 text-lg text-lime-200/60  drop-shadow-[0_15px_20px_black] max-sm:text-base"
+								/>
+								<header class="m-1 text-2xl font-extrabold text-teal-200 max-md:text-3xl">
 									<h3 class="m-0 drop-shadow-[0_15px_20px_black]">
 										{post.frontmatter.title}
 									</h3>
@@ -39,7 +47,7 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 								<CustomParagraph
 									textColor="text-slate-50"
 									set:html={post.frontmatter.description}
-									class="m-1 pb-0 text-xs text-[#99F9F9] drop-shadow-[0_15px_20px_black] max-sm:text-base"
+									class="m-1 pb-0 text-lg text-[#99F9F9] drop-shadow-[0_15px_20px_black] max-sm:text-base"
 								/>
 							</section>
 						</article>

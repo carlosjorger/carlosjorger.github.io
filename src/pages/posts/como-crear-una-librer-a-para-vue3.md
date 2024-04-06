@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: '¿Como crear una librería para Vue3?'
-pubDate: 2022-07-01
+pubDate: 2024-04-04
 description: 'En este artículo explicare paso a paso como crear un librería para Vue3 usando <strong>Vite</strong> y <strong>Typescript</strong>.'
 image:
     src: '/images/vue-library-article-cover.webp'

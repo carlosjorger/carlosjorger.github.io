@@ -5,6 +5,7 @@ import Header from '@components/Header/Header.astro';
 import SectionContainer from '@components/shared/SectionContainer.astro';
 import Title from '@components/shared/Title.astro';
 import '../styles/post-styles.css';
+import { primaryFormatDate } from '@utils/dateUtils';
 export interface Props {
 	frontmatter: {
 		title: string;
@@ -22,17 +23,21 @@ const i18n = getI18N({ currentLocale });
 
 const { frontmatter } = Astro.props;
 const public_src = currentLocale == 'en' ? '' : '..';
-const date = new Date(frontmatter.pubDate);
-const formatedDate = `${date.getMonth()}/${date.getDay()}/${date.getFullYear()}`;
+
+const formatedDate = primaryFormatDate(frontmatter.pubDate);
 // TODO: use Astro api to list posts  https://docs.astro.build/es/tutorial/5-astro-api/
 ---
 
 <Layout {...i18n}>
+	<div
+		class="absolute -z-10 m-0 h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.4),rgba(255,255,255,0))]"
+	>
+	</div>
 	<Header {...i18n} {public_src} />
 	<main>
 		<SectionContainer
 			id="blog"
-			class="m-0 mx-auto mt-6 text-[var(--default-font-color)]"
+			class="m-0 mx-auto pt-20 text-[var(--default-font-color)]"
 		>
 			<p class="text-sm text-[var(--default-font-color)]">
 				{formatedDate}
