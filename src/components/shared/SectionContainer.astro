@@ -8,7 +8,7 @@ const { id } = Astro.props;
 ---
 
 <WidthContainer>
-	<section id={id} class:list={[Astro.props.class]} class="z-[2] pt-7">
+	<section id={id} class="z-[2] pt-7" class:list={[Astro.props.class]}>
 		<slot />
 	</section>
 </WidthContainer>

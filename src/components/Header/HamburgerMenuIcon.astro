@@ -1,10 +1,10 @@
 <script>
-	import { toggleHamburgerMenuIcon } from '@utils/touchEvents';
-
-	document.addEventListener('DOMContentLoaded', function () {
-		const navBarIcon = document.getElementById('hamburger-menu-icon');
-		navBarIcon.addEventListener('click', () => {
-			toggleHamburgerMenuIcon();
+	document.addEventListener('astro:page-load', function () {
+		import('@utils/touchEvents').then(({ toggleHamburgerMenuIcon }) => {
+			const navBarIcon = document.getElementById('hamburger-menu-icon');
+			navBarIcon.addEventListener('click', () => {
+				toggleHamburgerMenuIcon();
+			});
 		});
 	});
 </script>

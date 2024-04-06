@@ -119,6 +119,25 @@ const headerLinks = [
 			'dropdownLocaleButtonDropdown'
 		);
 	});
+
+	document.addEventListener('astro:page-load', async () => {
+		import('@utils/touchEvents').then(
+			({ touchOutsideColumnNavbar, touchIcon }) => {
+				document.addEventListener(
+					'touchstart',
+					touchOutsideColumnNavbar,
+					{
+						passive: true,
+					}
+				);
+				const changeSiderElements =
+					document.getElementsByClassName('change-sidebar');
+				for (const element of changeSiderElements) {
+					element.addEventListener('click', touchIcon);
+				}
+			}
+		);
+	});
 </script>
 <header>
 	<nav class="header-animation fixed top-0 z-[4] w-full">
@@ -131,7 +150,7 @@ const headerLinks = [
 						href=`${urlPrefix}#home`
 						aria-label={HEADER_HOME_ARIA_LABEL}
 					>
-						<IconContainer class="h-10 w-10">
+						<IconContainer class="h-9 w-9">
 							<IconHome />
 						</IconContainer>
 					</Link>

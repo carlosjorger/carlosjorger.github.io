@@ -15,26 +15,6 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
 
-<script>
-	document.addEventListener('astro:page-load', async () => {
-		import('@utils/touchEvents').then(
-			({ touchOutsideColumnNavbar, touchIcon }) => {
-				document.addEventListener(
-					'touchstart',
-					touchOutsideColumnNavbar,
-					{
-						passive: true,
-					}
-				);
-				const changeSiderElements =
-					document.getElementsByClassName('change-sidebar');
-				for (const element of changeSiderElements) {
-					element.addEventListener('click', touchIcon);
-				}
-			}
-		);
-	});
-</script>
 <!-- TODO: Add skills -->
 <Layout {...i18n}>
 	<Header {...i18n} {...Astro.props} />
