@@ -26,9 +26,12 @@ const public_src = currentLocale == 'en' ? '' : '..';
 
 const formatedDate = primaryFormatDate(frontmatter.pubDate);
 // TODO: use Astro api to list posts  https://docs.astro.build/es/tutorial/5-astro-api/
+const SEO_TITLE = frontmatter.title;
+const SEO_DESCRIPTION = frontmatter.description;
+const postLayoutProps = { ...i18n, SEO_TITLE, SEO_DESCRIPTION };
 ---
 
-<Layout {...i18n}>
+<Layout {...postLayoutProps}>
 	<div
 		class="absolute -z-10 m-0 h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.4),rgba(255,255,255,0))]"
 	>
