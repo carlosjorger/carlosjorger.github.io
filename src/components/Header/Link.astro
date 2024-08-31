@@ -1,11 +1,13 @@
 ---
+import { sequence } from 'astro:middleware';
+
 export interface Props {
 	href: string;
 	'aria-label': string;
 	target?: string;
 }
 const { href } = Astro.props;
-const sectionIdWhitoutHome = href.replace('#', '');
+const [, sectionIdWhitoutHome] = href.split('#');
 const sectionId = sectionIdWhitoutHome ? sectionIdWhitoutHome : 'home';
 ---
 
@@ -15,7 +17,7 @@ const sectionId = sectionIdWhitoutHome ? sectionIdWhitoutHome : 'home';
 		constructor() {
 			super();
 			const sectionId = this.dataset.sectionId;
-			document.addEventListener('DOMContentLoaded', function () {
+			document.addEventListener('astro:page-load', function () {
 				const section = document.getElementById(sectionId);
 				if (section) {
 					activeLinkBySection(section);
