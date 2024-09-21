@@ -10,9 +10,9 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/sitemap": "^3.1.2",
-		"@astrojs/tailwind": "^5.1.0",
-		"astro": "^4.5.15",
+		"@astrojs/sitemap": "^3.1.6",
+		"@astrojs/tailwind": "^5.1.1",
+		"astro": "^4.15.8",
 		"astro-compressor": "^0.4.1",
 		"flowbite": "^2.2.1",
 		"tailwindcss": "^3.4.3"
@@ -21,6 +21,7 @@
 		"@tailwindcss/typography": "^0.5.12",
 		"prettier": "^3.2.5",
 		"prettier-plugin-astro": "^0.13.0",
-		"prettier-plugin-tailwindcss": "^0.5.13"
+		"prettier-plugin-tailwindcss": "^0.5.13",
+		"typescript": "5.0.3"
 	}
 }
