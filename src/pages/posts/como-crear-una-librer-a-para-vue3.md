@@ -101,17 +101,21 @@ export default defineConfig({
 	],
 	build: {
 		lib: {
-			// src/indext.ts es donde se expone el código que se va a usar de le librería
+			// src/indext.ts es donde se expone el código
+			// que se va a usar de le librería
 			entry: path.resolve(__dirname, 'src/index.ts'),
 			name: 'TemplateVueComponentLib',
-			// el nombre de los archivos de salida cuando se le hace build al proyecto
+			// el nombre de los archivos de salida
+			// cuando se le hace build al proyecto
 			fileName: 'template-vue-component-lib',
 		},
 
 		rollupOptions: {
-			// asegúrate de externalizar las dependencias que no deben ser empaquetadas
-			// dentro de tu biblioteca, en este caso es `vue` ya que se hará uso del
-			// `vue` instalada por la aplicación que hace uso de esta librería.
+			// asegúrate de externalizar las dependencias
+			// que no deben ser empaquetadas dentro de tu
+			// biblioteca , en este caso es `vue` ya que
+			// se hará uso del `vue` instalada por la
+			// aplicación que hace uso de esta librería.
 			external: ['vue'],
 			output: {
 				globals: {

@@ -40,6 +40,10 @@ module.exports = {
 						'--tw-prose-links':
 							'var(--default-secundary-font-color)',
 						'--tw-prose-body': 'var(--default-font-color)',
+						pre: {
+							backgroundColor:
+								'var(--default-background-color-darker) !important',
+						},
 					},
 				},
 			}),
