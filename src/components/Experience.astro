@@ -27,8 +27,8 @@ const { HEADER_EXPERIENCE, EXPERIENCE } = Astro.props;
 			EXPERIENCE.map((job) => (
 				<li class=" mb-20 ms-8">
 					<div class="flex flex-row items-center">
-						<div class="absolute start-[-0.9rem] mb-1 h-7 w-7 overflow-hidden rounded-full border border-teal-200 bg-slate-300 shadow-lg shadow-teal-200">
-							<img src={`/images/${job.logoFile}`} alt="" />
+						<div class="absolute start-[-0.9rem] mb-1 w-7 overflow-hidden rounded-full border border-teal-200 bg-slate-300 shadow-lg shadow-teal-200">
+							<img class="aspect-square" src={`/images/${job.logoFile}`} alt="" />
 						</div>
 						<h3 class="reveal-experience-info my-0.5 text-xl font-semibold text-teal-200">
 							{job.ocupation}

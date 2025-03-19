@@ -4,10 +4,10 @@
 	"SEO_TITLE": "Carlos Jorge Rodríguez | Website",
 	"SEO_DESCRIPTION": "Carlos Jorge Rodríguez's personal portfolio website. I show my most important github projects. The main goals of these projects is having fun and learn new technologies, good practices and try to make real creative ideas",
 	"INTRO_TITLE": "Hi, I am",
-	"INTRO_TITLE_AFTER_BR1": "Carlos Jorge,",
-	"INTRO_TITLE_AFTER_BR2": "Web developer!",
+	"INTRO_TITLE_AFTER_BR1": "Carlos Jorge",
+	"INTRO_TITLE_AFTER_BR2": "",
 	"INTRO_SUBTITLE": "Welcome to my personal portfolio!",
-	"INTRO_DESCRIPTION": "Cuban computer scientist from <b>Havana University</b>. Currently working as full-stack engineer building <b>.net</b> and <b>Vuejs</b> applications. I play with <b>Astro</b> and <b>Rust</b> in my free time",
+	"INTRO_DESCRIPTION": "Cuban computer scientist from <b>Havana University</b>. Currently working as full-stack engineer building <b>.net</b> and <b>Vuejs</b> applications.",
 	"PROJECTS_TITLE": "Some projects",
 	"PROJECTS_TITLE_AFTER_BR": "I've made",
 	"ABOUT_ME_TITLE": "About",
@@ -57,7 +57,7 @@
 			"date": "Currently...",
 			"ocupation": "Fullstack Engineer in Myndgoals",
 			"description": "Working for Opus EHR a healthcare platform that tracks leads and manages patient data, enhancing client engagement and increasing admissions.",
-			"logoFile": "MyndGoals-logo.ico"
+			"logoFile": "MyndGoals-logo.webp"
 		},
 		{
 			"date": "March 2022",
