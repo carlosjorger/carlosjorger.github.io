@@ -1,6 +1,4 @@
 ---
-import { sequence } from 'astro:middleware';
-
 export interface Props {
 	href: string;
 	'aria-label': string;
@@ -32,7 +30,7 @@ const sectionId = sectionIdWhitoutHome ? sectionIdWhitoutHome : 'home';
 </script>
 <custom-link data-section-id={sectionId} class="flex items-center">
 	<a
-		class="change-sidebar mx-0.5 h-auto text-lg text-[var(--default-font-color2)] no-underline transition-all duration-200 ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_0.3rem_aqua] [&.active]:text-[var(--default-secundary-font-color)] [&.active]:drop-shadow-[0rem_0rem_0.3rem_aqua]"
+		class="change-sidebar mx-0.5 h-auto text-[var(--default-font-color2)] no-underline transition-all duration-200 ease-in-out hover:text-[var(--default-secundary-font-color)] hover:drop-shadow-[0rem_0rem_0.3rem_aqua] [&.active]:text-[var(--default-secundary-font-color)] [&.active]:drop-shadow-[0rem_0rem_0.3rem_aqua] text-base font-medium"
 		class:list={[`link-${sectionId}`]}
 		{...Astro.props}
 	>
