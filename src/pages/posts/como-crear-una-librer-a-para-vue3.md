@@ -10,7 +10,7 @@ image:
 
 Estas interesado en ir un paso más allá de crear un producto; estás frustrado de que el ecosistema de **Vue** no es tan rico como el de **React** en cuanto a librerías, frameworks, etc y quieres contribuir a este. Una buena idea podría ser crear tu propia librería donde podrías reutilizar tus propias componentes, composable o módulos js/ts.
 
-En este presente articulo plasmaré mis experiencia creando la librería de drad and drop [vue-fluid-dnd](https://github.com/carlosjorger/vue-fluid-dnd) para **Vue3** en la que actualmente estoy trabajando desde 0 usando **Vite** y **Typescript**. A diferencia de muchos artículos en internet voy a ir un paso más allá explicando un poco más algunos detalles de la configuración de nuestro proyecto que me hubiera gustado encontrarme cuando era un principiante.
+En este presente articulo plasmaré mis experiencia creando la librería de drad and drop [fluid-dnd](https://github.com/carlosjorger/fluid-dnd) para **Vue3** en la que actualmente estoy trabajando desde 0 usando **Vite** y **Typescript**. A diferencia de muchos artículos en internet voy a ir un paso más allá explicando un poco más algunos detalles de la configuración de nuestro proyecto que me hubiera gustado encontrarme cuando era un principiante.
 
 ### Creando el proyecto
 

@@ -48,8 +48,8 @@
 			"anchorLabel": "See my portfolio github project"
 		},
 		"VUE_FLUID_DND": {
-			"description": "<strong>Vue Fluid DnD</strong> is a <b>vue3</b> <em>drag and drop</em> library to sort all kind of lists.",
-			"anchorLabel": "See VueFluidDnD my drag and drop librery github project"
+			"description": "<strong>Fluid DnD</strong> is a <b>agnostic</b> <em>drag and drop</em> library to sort all kind of lists.",
+			"anchorLabel": "See Fluid DnD my drag and drop librery github project"
 		}
 	},
 	"EXPERIENCE": [

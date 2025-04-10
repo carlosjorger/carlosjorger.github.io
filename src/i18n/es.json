@@ -48,8 +48,8 @@
 			"anchorLabel": "Mira el proyecto de github de mi portafolio"
 		},
 		"VUE_FLUID_DND": {
-			"description": "<strong>Vue Fluid DnD</strong> es una librería de <i>drag and drop</i> de <b>vue3</b> para ordenar listas.",
-			"anchorLabel": "Mira VueFluidDnD, mi librería de drag and drop en github"
+			"description": "<strong>Fluid DnD</strong> es una librería de <i>drag and drop</i> <b>agnóstica</b> para ordenar listas.",
+			"anchorLabel": "Mira Fluid DnD, mi librería de drag and drop en github"
 		}
 	},
 	"EXPERIENCE": [

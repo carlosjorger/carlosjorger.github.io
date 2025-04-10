@@ -10,7 +10,7 @@ image:
 
 En las aplicaciones web que usan frameworks reactivos como **vue**, **react**, **angular**, etc es muy común la necesidad de organizar listas u otras colecciones de elementos ordenándolas o añadiendo, eliminando o trasladando elementos en estas.
 El ecosistemas de vue no es tan rico como el de react, existen buenas soluciones drag and drop para vue pero la mayoría son un wrapper de otra librería, no tienen suficiente mantenimiento o no tienen soporte para **Vue3**.
-Con [**Vue Fluid DnD**](https://vue-fluid-dnd.netlify.app/)presentamos una nueva solución inspiradas en la facilidad de uso [drag and drop from formkit](https://drag-and-drop.formkit.com/), las animaciones de [**react-beautiful-dnd**](https://react-beautiful-dnd.netlify.app/), etc.
+Con [**Vue Fluid DnD**](https://fluid-dnd.netlify.app/)presentamos una nueva solución inspiradas en la facilidad de uso [drag and drop from formkit](https://drag-and-drop.formkit.com/), las animaciones de [**react-beautiful-dnd**](https://react-beautiful-dnd.netlify.app/), etc.
 
 ## Vue Fluid DnD en acción
 
@@ -79,4 +79,4 @@ npm i vue-fluid-dnd
 ## Conclusiones
 
 En este artículo se hace una introducción a **Vue Fluid DnD** como alternativa a herramientas **drag and drop** en el ecosistema de **Vue 3**. Se muestra un ejemplo de su uso y se repasa brevemente las ventajas de dicha herramienta.
-Si te interesa que este proyecto siga adelante puedes dejar una estrella en el [repositorio](https://github.com/carlosjorger/vue-fluid-dnd) o mejor aún probar **Vue Fluid DnD** y darme algún feedback a través de un _issues_, un _pull request_ o escribirme a mi [correo personal](rodriguezcuelloc@gmail.com).
+Si te interesa que este proyecto siga adelante puedes dejar una estrella en el [repositorio](https://github.com/carlosjorger/fluid-dnd) o mejor aún probar **Vue Fluid DnD** y darme algún feedback a través de un _issues_, un _pull request_ o escribirme a mi [correo personal](rodriguezcuelloc@gmail.com).
