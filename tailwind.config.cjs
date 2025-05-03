@@ -51,6 +51,11 @@ module.exports = {
 		fontFamily: {
 			lato: ['Lato', 'sans-serif'],
 		},
+		backgroundSize: {
+			'cover': 'cover',
+			'105%': '105%',
+			'100%': '100%',
+		},
 		keyframes: {
 			'show-presentation': {
 				'0%': {

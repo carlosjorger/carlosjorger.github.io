@@ -11,7 +11,6 @@ import IconTypescript from '@components/icons/IconTypescript.astro';
 
 export interface Props {
 	PROJECTS_TITLE: string;
-	PROJECTS_TITLE_AFTER_BR: string;
 	PROYECTS: {
 		CUVIMAKER: ProjectI18n;
 		RUSTY_COPIER: ProjectI18n;
@@ -70,7 +69,7 @@ const TAGS = {
 		icon: IconTypescript,
 	},
 };
-const { PROJECTS_TITLE, PROJECTS_TITLE_AFTER_BR, PROYECTS } = Astro.props;
+const { PROJECTS_TITLE, PROYECTS } = Astro.props;
 
 const projects = [
 	{
@@ -107,11 +106,10 @@ const projects = [
 	<div class="flex flex-col p-2">
 		<header class="reveal my-5">
 			<Subtitle left>
-				{PROJECTS_TITLE}<br />
-				{PROJECTS_TITLE_AFTER_BR}
+				{PROJECTS_TITLE}
 			</Subtitle>
 		</header>
-		<div class="grid grid-cols-2 gap-2 max-lg:grid-cols-1">
+		<div class="grid grid-cols-2 gap-3 max-2xl:grid-cols-1">
 			{
 				projects.map((project, index) => (
 					<Project
