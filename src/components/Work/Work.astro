@@ -6,6 +6,8 @@ import IconTailwind from '@icons/IconTailwind.astro';
 import IconVue from '@icons/IconVue.astro';
 import IconAngular from '@icons/IconAngular.astro';
 import IconRust from '@icons/IconRust.astro';
+import IconSvelte from '@icons/IconSvelte.astro';
+import IconReact from '@icons/IconReact.astro';
 import SectionContainer from '@components/shared/SectionContainer.astro';
 import IconTypescript from '@components/icons/IconTypescript.astro';
 
@@ -49,9 +51,19 @@ const TAGS = {
 		icon: IconTailwind,
 	},
 	VUE: {
-		name: 'Vue.js',
+		name: 'Vue',
 		class: 'bg-emerald-800/50 text-emerald-200/80 border-emerald-200/60',
 		icon: IconVue,
+	},
+	REACT: {
+		name: 'React',
+		class: 'bg-cyan-800/50 text-cyan-200/80 border-cyan-200/60',
+		icon: IconReact,
+	},
+	SVELTE: {
+		name: 'Svelte',
+		class: 'bg-orange-800/50 text-orange-200/80 border-orange-200/60',
+		icon: IconSvelte,
 	},
 	ANGULAR: {
 		name: 'Angular',
@@ -73,15 +85,6 @@ const { PROJECTS_TITLE, PROYECTS } = Astro.props;
 
 const projects = [
 	{
-		id: 'fluid-dnd',
-		title: 'Fluid DnD',
-		githubLink: 'https://github.com/carlosjorger/fluid-dnd/',
-		imageSrc: '[&.visibleImg]:bg-vuefluiddnd',
-		website: 'https://fluid-dnd.netlify.app/',
-		...PROYECTS.VUE_FLUID_DND,
-		tags: [TAGS.VUE, TAGS.TYPESCRIPT],
-	},
-	{
 		id: 'rusty-copier',
 		title: 'Rusty Copier',
 		githubLink: 'https://github.com/carlosjorger/rustycopier',
@@ -98,6 +101,15 @@ const projects = [
 		website: 'https://cuvimaker.netlify.app/',
 		...PROYECTS.CUVIMAKER,
 		tags: [TAGS.ASTRO, TAGS.VUE, TAGS.TAILWIND],
+	},
+	{
+		id: 'fluid-dnd',
+		title: 'Fluid DnD',
+		githubLink: 'https://github.com/carlosjorger/fluid-dnd/',
+		imageSrc: '[&.visibleImg]:bg-vuefluiddnd',
+		website: 'https://fluid-dnd.netlify.app/',
+		...PROYECTS.VUE_FLUID_DND,
+		tags: [TAGS.VUE, TAGS.REACT, TAGS.SVELTE, TAGS.TYPESCRIPT],
 	},
 ] as Project[];
 ---

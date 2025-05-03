@@ -47,7 +47,7 @@
 			"anchorLabel": "See my portfolio github project"
 		},
 		"VUE_FLUID_DND": {
-			"description": "<strong>Fluid DnD</strong> is a <b>agnostic</b> <em>drag and drop</em> library to sort all kind of lists.",
+			"description": "<strong>Fluid DnD</strong> is a <b>agnostic</b> <em>drag and drop</em> library to sort all kind of lists. With current support for <b>vue</b>, <b>react</b> and <b>svelte</b>.",
 			"anchorLabel": "See Fluid DnD my drag and drop librery github project"
 		}
 	},

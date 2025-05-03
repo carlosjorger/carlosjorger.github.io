@@ -53,9 +53,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<link rel="canonical" href={canonicalURL} />
 		<title>{SEO_TITLE}</title>
 	</head>
-	<link rel="stylesheet"
-		is:inline
+	<script 
 		src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+		is:inline
 	/>
 	<body>
 		<ViewTransitions />
