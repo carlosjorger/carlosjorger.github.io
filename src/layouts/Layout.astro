@@ -34,8 +34,13 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 			property="og:image"
 			content="https://carlosjorger.github.io/images/purple-logo.png"
 		/>
+		<meta name="twitter:card" content="summary_large_image" />
 		<meta property="twitter:description" content={SEO_DESCRIPTION} />
 		<meta property="twitter:title" content={SEO_TITLE} />
+		<meta
+			name="twitter:image"
+			content="https://carlosjorger.github.io/images/purple-logo.png"
+		/>
 		<link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -53,10 +58,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<link rel="canonical" href={canonicalURL} />
 		<title>{SEO_TITLE}</title>
 	</head>
-	<script 
+	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
-		is:inline
-	/>
+		is:inline></script>
 	<body>
 		<ViewTransitions />
 		<slot />
