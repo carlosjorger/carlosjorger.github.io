@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = CollectionEntry<"blog">["data"];
+
+const { title, description, pubDate, image } =
+  Astro.props as Props;
+
+const pageUrl = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = new URL(image.src, Astro.site)
+function removeAllTags(str) {
+  return str.replace(/<\/?[\w\s="/.':;#-\/]+>/g, '');
+}
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description: removeAllTags(description),
+  datePublished: pubDate,
+  url: pageUrl,
+  thumbnailUrl: imageUrl,
+  image: {
+    "@type": "ImageObject",
+    url: imageUrl,
+    caption: image.alt,
+  },
+  author: {
+    "@type": "Person",
+    name: 'Carlos Rodríguez',
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

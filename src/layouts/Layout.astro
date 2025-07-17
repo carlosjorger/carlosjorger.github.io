@@ -61,6 +61,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
 		is:inline></script>
+	<slot name="structured-data" />
 	<body>
 		<ViewTransitions />
 		<slot />

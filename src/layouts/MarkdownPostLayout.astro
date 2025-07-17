@@ -6,6 +6,7 @@ import SectionContainer from '@components/shared/SectionContainer.astro';
 import Title from '@components/shared/Title.astro';
 import '../styles/post-styles.css';
 import { primaryFormatDate } from '@utils/dateUtils';
+import PostMeta from '@components/Header/PostMeta.astro';
 export interface Props {
 	frontmatter: {
 		title: string;
@@ -32,6 +33,7 @@ const postLayoutProps = { ...i18n, SEO_TITLE, SEO_DESCRIPTION };
 ---
 
 <Layout {...postLayoutProps}>
+	<PostMeta {...frontmatter} slot="structured-data" />
 	<div
 		class="absolute -z-10 m-0 h-screen w-full bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.4),rgba(255,255,255,0))]"
 	>
