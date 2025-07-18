@@ -41,7 +41,18 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 			name="twitter:image"
 			content="https://carlosjorger.github.io/images/purple-logo.png"
 		/>
-		<link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/images/favicon.png"
+			media="(prefers-color-scheme: light)"
+		/>
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/images/favicon-dark.png"
+			media="(prefers-color-scheme: dark)"
+		/>
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			rel="preload"
