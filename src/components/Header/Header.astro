@@ -207,24 +207,28 @@ const headerLinks = [
 						id="nav-columnar-menu-list"
 						class="flex list-none flex-col items-center p-0 text-xl"
 					>
-						<SideBarLink
-							href="#"
-							aria-label={HEADER_HOME_ARIA_LABEL}
-							label={HEADER_HOME}
-						>
-							<IconContainer class="h-7 w-7">
-								<IconHome />
-							</IconContainer>
-						</SideBarLink>
+						<li>
+							<SideBarLink
+								href="#"
+								aria-label={HEADER_HOME_ARIA_LABEL}
+								label={HEADER_HOME}
+							>
+								<IconContainer class="h-7 w-7">
+									<IconHome />
+								</IconContainer>
+							</SideBarLink>
+						</li>
 						{
 							headerLinks.map((headerLink) => {
 								const { icon, ...sideBarLink } = headerLink;
 								return (
-									<SideBarLink {...sideBarLink}>
-										<IconContainer class=" h-7 w-7">
-											<headerLink.icon />
-										</IconContainer>
-									</SideBarLink>
+									<li>
+										<SideBarLink {...sideBarLink}>
+											<IconContainer class=" h-7 w-7">
+												<headerLink.icon />
+											</IconContainer>
+										</SideBarLink>
+									</li>
 								);
 							})
 						}
