@@ -2,6 +2,8 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import compressor from 'astro-compressor';
 import sitemap from '@astrojs/sitemap';
+import mdx from '@astrojs/mdx';
+import remarkMdxImages from 'remark-mdx-images';
 
 export default defineConfig({
 	site: 'https://carlosjorger.github.io',
@@ -12,6 +14,9 @@ export default defineConfig({
 			brotli: true,
 		}),
 		sitemap(),
+		mdx({
+			remarkPlugins: [remarkMdxImages],
+		}),
 	],
 	i18n: {
 		defaultLocale: 'en',
