@@ -52,21 +52,16 @@ const CURRENT_LANGUAGE = LANGUAGES_INFO[currentLocale].name;
 	<IconSelectDropdown class="ms-0.5 h-2.5 w-2.5 max-sm:h-4 max-sm:w-4" />
 </button>
 
-<div
+<ul
 	id={dropdown_id}
-	class="z-10 hidden w-24 divide-y rounded-lg shadow max-sm:w-32"
-	tabindex="-1"
+	class="z-10 hidden w-24 divide-y rounded-md bg-[hsl(271.2,35.21%,15%,80%)] text-xs shadow drop-shadow-[0rem_0rem_0.3rem_black] max-sm:w-32 max-sm:text-xl"
+	aria-labelledby={id}
 >
-	<ul
-		class="rounded-md bg-[hsl(271.2,35.21%,15%,80%)] text-xs drop-shadow-[0rem_0rem_0.3rem_black] max-sm:text-xl"
-		aria-labelledby={id}
-	>
-		{
-			LANGUAGES.map((lang) => (
-				<LocaleSelectorLink {...lang}>
-					<lang.flag class="h-4" />
-				</LocaleSelectorLink>
-			))
-		}
-	</ul>
-</div>
+	{
+		LANGUAGES.map((lang) => (
+			<LocaleSelectorLink {...lang}>
+				<lang.flag class="h-4" />
+			</LocaleSelectorLink>
+		))
+	}
+</ul>

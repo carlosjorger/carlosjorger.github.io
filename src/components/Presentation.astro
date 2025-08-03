@@ -25,32 +25,24 @@ const {
 		id="home"
 		class="flex h-screen flex-col justify-evenly pt-0 max-sm:h-[100dvh]"
 	>
-		<div class="p-2 font-lato text-[var(--default-font-color)] max-w-2xl">
-			<div class="reveal">
-				<h1
-					class="mx-0 my-3 animate-presentation-title text-6xl font-bold text-[var(--default-secundary-font-color)] max-sm:text-4xl"
-				>
-					{INTRO_TITLE}<br class="hidden max-sm:inline" />
-					{INTRO_TITLE_AFTER_BR1}
-					<br />
-					{INTRO_TITLE_AFTER_BR2}
-				</h1>
-			</div>
-			<div class="reveal">
-				<h2
-					class="mx-0 my-3 animate-presentation-main-skill text-5xl font-bold max-sm:mt-4 max-sm:text-4xl"
-				>
-					{INTRO_SUBTITLE}
-				</h2>
-			</div>
-			<div
-				class="mx-0 my-3 animate-presentation-description break-words max-sm:mt-7"
+		<div class="max-w-2xl p-2 font-lato text-[var(--default-font-color)]">
+			<h1
+				class="mx-0 my-3 animate-presentation-title text-6xl font-bold text-[var(--default-secundary-font-color)] max-sm:text-4xl"
 			>
-				<CustomParagraph
-					set:html={INTRO_DESCRIPTION}
-					class="text-2xl max-sm:text-xl"
-				/>
-			</div>
+				{INTRO_TITLE}<br class="hidden max-sm:inline" />
+				{INTRO_TITLE_AFTER_BR1}
+				<br />
+				{INTRO_TITLE_AFTER_BR2}
+			</h1>
+			<h2
+				class="mx-0 my-3 animate-presentation-main-skill text-5xl font-bold max-sm:mt-4 max-sm:text-4xl"
+			>
+				{INTRO_SUBTITLE}
+			</h2>
+			<CustomParagraph
+				set:html={INTRO_DESCRIPTION}
+				class="mx-0 my-3 animate-presentation-description break-words text-2xl max-sm:mt-7 max-sm:text-xl"
+			/>
 		</div>
 	</SectionContainer>
 </div>

@@ -1,20 +1,21 @@
 ---
 export interface Props {
 	SEO_TITLE: string;
-    SEO_DESCRIPTION: string;
+	SEO_DESCRIPTION: string;
 }
 
-const {  SEO_TITLE, SEO_DESCRIPTION } = Astro.props;
+const { SEO_TITLE, SEO_DESCRIPTION } = Astro.props;
 
 let schema = JSON.stringify({
-  "@context": "https://schema.org/",
-  "@type": "WebSite",
-  "headline": SEO_TITLE,
-  "description": SEO_DESCRIPTION,
-  "author": {
-    "@type": "Person",
-    "name": "Carlos Rodríguez"
-  }
+	'@context': 'https://schema.org/',
+	'@type': 'WebSite',
+	headline: SEO_TITLE,
+	description: SEO_DESCRIPTION,
+	author: {
+		'@type': 'Person',
+		name: 'Carlos Rodríguez',
+	},
 });
 ---
-<script type="application/ld+json" set:html={schema}></script>
+
+<script type="application/ld+json" set:html={schema} />

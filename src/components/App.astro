@@ -18,7 +18,10 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <Layout {...i18n}>
-	<HeadMeta SEO_TITLE={i18n.SEO_TITLE} SEO_DESCRIPTION={i18n.SEO_DESCRIPTION} slot="structured-data" />
+	<HeadMeta
+		SEO_TITLE={i18n.SEO_TITLE}
+		SEO_DESCRIPTION={i18n.SEO_DESCRIPTION}
+	/>
 	<Header {...i18n} {...Astro.props} />
 	<main>
 		<Presentation {...i18n} />

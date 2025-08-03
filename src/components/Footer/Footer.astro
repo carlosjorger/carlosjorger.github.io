@@ -63,52 +63,48 @@ const icons = [
 	<div
 		class="grid h-screen bg-[radial-gradient(ellipse_130%_100%_at__50%_-20%,rgba(255,255,255,0)_50%,var(--default-background-color-darker))] max-sm:h-[70dvh]"
 	>
-		<div id="contact" class="flex flex-col justify-center">
-			<section
-				class="z-0 mx-auto mt-10 w-1/2 p-2 max-sm:mt-0 max-sm:w-[90%]"
-			>
-				<Subtitle class="reveal" center>{CONTACT_TITLE}</Subtitle>
-				<div class="reveal mx-0 my-4 text-center">
-					<CustomParagraph class="text-2xl max-sm:text-xl">
-						{CONTACT_DESCRIPTION}
-					</CustomParagraph>
-				</div>
-				<address
-					class="reveal mx-auto my-0 flex w-1/2 flex-row justify-evenly max-sm:w-3/4"
-				>
-					{
-						icons.map((icon) => (
-							<IconContact href={icon.href} title={icon.title}>
-								<icon.iconComponent />
-							</IconContact>
-						))
-					}
-				</address>
-			</section>
-		</div>
-		<div
-			class="flex flex-col justify-center font-lato text-[var(--default-font-color)]"
+		<section
+			id="contact"
+			class="z-0 mx-auto mt-10 flex w-1/2 flex-col justify-center p-2 max-sm:mt-0 max-sm:w-[90%]"
 		>
-			<p class="last-reveal mx-auto my-0 mb-12 text-center text-3xl">
-				<strong class="inline italic">© 2022 Carlos Jorge</strong>
-				<br />
-				<span>
-					<CustomLink
-						href="https://github.com/carlosjorger/carlosjorger.github.io"
-						aria-label={CONTACT_FOOTER_PUBLISHED_ARIA_LABEL}
-					>
-						{CONTACT_FOOTER_PUBLISHED}
-					</CustomLink>
-					{CONTACT_FOOTER_AFTER_PUBLISHED}
-					<CustomLink
-						href="https://pages.github.com/"
-						aria-label={CONTACT_FOOTER_GITHUB_PAGE_ARIA_LABEL}
-					>
-						{CONTACT_FOOTER_GITHUB_PAGE}
-					</CustomLink>
-					<span></span>
-				</span>
-			</p>
-		</div>
+			<Subtitle class="reveal" center>{CONTACT_TITLE}</Subtitle>
+			<CustomParagraph
+				class="reveal mx-0 my-4 text-center text-2xl max-sm:text-xl"
+			>
+				{CONTACT_DESCRIPTION}
+			</CustomParagraph>
+			<address
+				class="reveal mx-auto my-0 flex w-1/2 flex-row justify-evenly max-sm:w-3/4"
+			>
+				{
+					icons.map((icon) => (
+						<IconContact href={icon.href} title={icon.title}>
+							<icon.iconComponent />
+						</IconContact>
+					))
+				}
+			</address>
+		</section>
+		<p
+			class="last-reveal mx-auto my-0 mb-12 text-center text-3xl text-[var(--default-font-color)]"
+		>
+			<strong class="inline italic">© 2022 Carlos Jorge</strong>
+			<br />
+			<span>
+				<CustomLink
+					href="https://github.com/carlosjorger/carlosjorger.github.io"
+					aria-label={CONTACT_FOOTER_PUBLISHED_ARIA_LABEL}
+				>
+					{CONTACT_FOOTER_PUBLISHED}
+				</CustomLink>
+				{CONTACT_FOOTER_AFTER_PUBLISHED}
+				<CustomLink
+					href="https://pages.github.com/"
+					aria-label={CONTACT_FOOTER_GITHUB_PAGE_ARIA_LABEL}
+				>
+					{CONTACT_FOOTER_GITHUB_PAGE}
+				</CustomLink>
+			</span>
+		</p>
 	</div>
 </footer>
