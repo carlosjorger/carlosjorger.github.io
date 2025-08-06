@@ -58,13 +58,13 @@ const {
 >
 	<div
 		class:list={[imageSrc]}
-		class="lazy-background w-full aspect-auto overflow-hidden bg-placeholder bg-center bg-no-repeat font-lato shadow-lg shadow-black max-sm:self-center group bg-105% hover:bg-100% transition-[background-size] duration-300 ease-in-out"
+		class="lazy-background group aspect-auto w-full overflow-hidden bg-placeholder bg-105% bg-center bg-no-repeat font-lato shadow-lg shadow-black transition-[background-size] duration-300 ease-in-out hover:bg-100% max-sm:self-center"
 	>
 		<div
 			class="h-full bg-[#453662c5] p-1 backdrop-brightness-[0.4] backdrop-grayscale transition-all duration-300 ease-in-out hover:bg-teal-600/0 hover:backdrop-grayscale-0"
 		>
 			<article
-				class="m-0 flex min-h-72 w-11/12 flex-col items-start justify-between p-5 transition-[transform] duration-300 max-sm:w-full max-sm:justify-evenly max-sm:p-4 group-hover:scale-105 max-sm:group-hover:scale-105"
+				class="m-0 flex min-h-72 w-11/12 flex-col items-start justify-between p-5 transition-[transform] duration-300 group-hover:scale-105 max-sm:w-full max-sm:justify-evenly max-sm:p-4 max-sm:group-hover:scale-105"
 			>
 				<header
 					class="m-1 text-xl font-extrabold text-teal-200 max-sm:text-[1.65rem]"
@@ -73,20 +73,18 @@ const {
 						{title}
 					</h3>
 				</header>
-				<div
-					class="m-1 pb-0 text-[#99F9F9] drop-shadow-[0_15px_20px_black]"
-				>
-					<CustomParagraph
-						textColor="text-slate-50"
-						set:html={description}
-						class="text-xl"
-					/>
-				</div>
+				<CustomParagraph
+					textColor="text-slate-50"
+					set:html={description}
+					class="m-1 pb-0 text-xl text-[#99F9F9] drop-shadow-[0_15px_20px_black]"
+				/>
 				<div
 					class:list={Astro.props.tagsClass}
 					class="flex w-full justify-between gap-2"
 				>
-					<ul class="flex max-sm:grid max-sm:grid-cols-6 max-sm:gap-2 flex-row gap-3">
+					<ul
+						class="flex flex-row gap-3 max-sm:grid max-sm:grid-cols-6 max-sm:gap-2"
+					>
 						{
 							tags.map((tag) => (
 								<li
