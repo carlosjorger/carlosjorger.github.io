@@ -27,7 +27,9 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 							<img
 								transition:name={post.frontmatter.title}
 								src={post.frontmatter.image.src}
-								class="w-[234px] rounded-xl max-lg:w-full"
+								width="234"
+								height="144"
+								class="rounded-xl max-lg:w-full"
 								alt={post.frontmatter.image.alt}
 							/>
 							<section>
