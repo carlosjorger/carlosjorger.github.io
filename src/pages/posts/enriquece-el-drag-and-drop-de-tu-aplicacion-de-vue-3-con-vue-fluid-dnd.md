@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Presentando Vue Fluid DnD'
 pubDate: 2024-04-26
-description: 'En este artículo presenta a <strong>Vue Fluid DnD</strong> como una alternativa a funcionalidades drag and drop en <strong>Vue 3</strong>'
+description: 'Este artículo presenta a <strong>Vue Fluid DnD</strong> como una alternativa a funcionalidades drag and drop en <strong>Vue 3</strong>'
 image:
     src: '/images/vue-fluid-dnd-cover.webp'
     alt: 'Vue Fluid DnD logo'

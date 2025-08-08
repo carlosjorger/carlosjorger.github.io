@@ -23,11 +23,11 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 			{
 				allPosts.map((post) => (
 					<a href={post.url} class="reveal w-full">
-						<article class="flex gap-4 overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] p-2 font-lato shadow-md shadow-black transition-[transform,box-shadow] duration-200 hover:scale-[1.02] hover:shadow-2xl max-sm:flex-col max-sm:self-center max-sm:p-3">
+						<article class="flex gap-4 overflow-hidden rounded-2xl border-4 border-solid border-[var(--default-secundary-font-color-2)] bg-[#322644] p-2 font-lato shadow-md shadow-black transition-[transform,box-shadow] duration-200 hover:scale-[1.02] hover:shadow-2xl max-lg:flex-col max-lg:self-center max-sm:p-3">
 							<img
 								transition:name={post.frontmatter.title}
 								src={post.frontmatter.image.src}
-								class="aspect-video w-48 rounded-xl max-sm:w-full"
+								class="aspect-video w-56 rounded-xl max-lg:w-full"
 								alt={post.frontmatter.image.alt}
 							/>
 							<section>
