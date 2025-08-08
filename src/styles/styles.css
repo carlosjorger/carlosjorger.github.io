@@ -46,7 +46,10 @@
 	font-display: swap;
 	src: url("/fonts/Lato-BoldItalic.woff2") format("woff2");
 }
-
+h1 {
+  margin-block: 0.67em;
+  font-size: 2em;
+}
 h1,
 h2,
 h3 {
