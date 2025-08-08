@@ -31,6 +31,7 @@ const allPosts = await Astro.glob('../pages/posts/*.md');
 								height="144"
 								class="rounded-xl max-lg:w-full"
 								alt={post.frontmatter.image.alt}
+								loading="lazy"
 							/>
 							<section>
 								<CustomParagraph
